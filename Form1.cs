@@ -26,5 +26,10 @@ namespace final_motoDix
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
