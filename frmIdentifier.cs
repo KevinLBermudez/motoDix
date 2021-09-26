@@ -16,5 +16,20 @@ namespace final_motoDix
         {
             InitializeComponent();
         }
+
+        private void bfimgbtnMotorcyclist_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1();
+            login.Show();
+            this.Visible = false;
+            
+        }
+
+        private void bfimgbtnUser_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1();
+            login.Show();
+            this.Visible = false;
+        }
     }
 }

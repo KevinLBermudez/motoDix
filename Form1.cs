@@ -31,5 +31,10 @@ namespace final_motoDix
         {
 
         }
+
+        private void bftxtCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

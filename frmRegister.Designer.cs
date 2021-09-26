@@ -92,6 +92,7 @@ namespace final_motoDix
             this.bflblCreateAccount1.AutoEllipsis = false;
             this.bflblCreateAccount1.AutoSize = false;
             this.bflblCreateAccount1.AutoSizeHeightOnly = true;
+            this.bflblCreateAccount1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bflblCreateAccount1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bflblCreateAccount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.bflblCreateAccount1.ForeColor = System.Drawing.Color.Black;
@@ -905,7 +906,7 @@ namespace final_motoDix
             this.bfbtnRegister.IdleIconLeftImage = null;
             this.bfbtnRegister.IdleIconRightImage = null;
             this.bfbtnRegister.IndicateFocus = false;
-            this.bfbtnRegister.Location = new System.Drawing.Point(166, 425);
+            this.bfbtnRegister.Location = new System.Drawing.Point(165, 440);
             this.bfbtnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.bfbtnRegister.Name = "bfbtnRegister";
             this.bfbtnRegister.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
