@@ -84,6 +84,10 @@ namespace final_motoDix
             this.bftxtConfirmPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bfbtnRegister = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bflblCreateAccount2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bflblCreateAccount1
@@ -92,13 +96,15 @@ namespace final_motoDix
             this.bflblCreateAccount1.AutoEllipsis = false;
             this.bflblCreateAccount1.AutoSize = false;
             this.bflblCreateAccount1.AutoSizeHeightOnly = true;
+            this.bflblCreateAccount1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bflblCreateAccount1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bflblCreateAccount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.bflblCreateAccount1.ForeColor = System.Drawing.Color.Black;
-            this.bflblCreateAccount1.Location = new System.Drawing.Point(153, 29);
+            this.bflblCreateAccount1.ForeColor = System.Drawing.Color.Transparent;
+            this.bflblCreateAccount1.Location = new System.Drawing.Point(230, 45);
+            this.bflblCreateAccount1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bflblCreateAccount1.Name = "bflblCreateAccount1";
             this.bflblCreateAccount1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblCreateAccount1.Size = new System.Drawing.Size(107, 29);
+            this.bflblCreateAccount1.Size = new System.Drawing.Size(160, 40);
             this.bflblCreateAccount1.TabIndex = 0;
             this.bflblCreateAccount1.Text = "Create a ";
             this.bflblCreateAccount1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -133,9 +139,10 @@ namespace final_motoDix
             this.bftxtFirstName.IconRight = null;
             this.bftxtFirstName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtFirstName.Lines = new string[0];
-            this.bftxtFirstName.Location = new System.Drawing.Point(47, 92);
+            this.bftxtFirstName.Location = new System.Drawing.Point(70, 142);
+            this.bftxtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtFirstName.MaxLength = 32767;
-            this.bftxtFirstName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtFirstName.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtFirstName.Modified = false;
             this.bftxtFirstName.Multiline = false;
             this.bftxtFirstName.Name = "bftxtFirstName";
@@ -159,7 +166,7 @@ namespace final_motoDix
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtFirstName.OnIdleState = stateProperties4;
-            this.bftxtFirstName.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtFirstName.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtFirstName.PasswordChar = '\0';
             this.bftxtFirstName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtFirstName.PlaceholderText = "First name";
@@ -169,7 +176,7 @@ namespace final_motoDix
             this.bftxtFirstName.SelectionLength = 0;
             this.bftxtFirstName.SelectionStart = 0;
             this.bftxtFirstName.ShortcutsEnabled = true;
-            this.bftxtFirstName.Size = new System.Drawing.Size(193, 37);
+            this.bftxtFirstName.Size = new System.Drawing.Size(290, 57);
             this.bftxtFirstName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtFirstName.TabIndex = 1;
             this.bftxtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -208,9 +215,10 @@ namespace final_motoDix
             this.bftxtSecondName.IconRight = null;
             this.bftxtSecondName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSecondName.Lines = new string[0];
-            this.bftxtSecondName.Location = new System.Drawing.Point(293, 92);
+            this.bftxtSecondName.Location = new System.Drawing.Point(440, 142);
+            this.bftxtSecondName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtSecondName.MaxLength = 32767;
-            this.bftxtSecondName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtSecondName.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtSecondName.Modified = false;
             this.bftxtSecondName.Multiline = false;
             this.bftxtSecondName.Name = "bftxtSecondName";
@@ -234,7 +242,7 @@ namespace final_motoDix
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtSecondName.OnIdleState = stateProperties8;
-            this.bftxtSecondName.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtSecondName.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtSecondName.PasswordChar = '\0';
             this.bftxtSecondName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtSecondName.PlaceholderText = "Second name";
@@ -244,7 +252,7 @@ namespace final_motoDix
             this.bftxtSecondName.SelectionLength = 0;
             this.bftxtSecondName.SelectionStart = 0;
             this.bftxtSecondName.ShortcutsEnabled = true;
-            this.bftxtSecondName.Size = new System.Drawing.Size(193, 37);
+            this.bftxtSecondName.Size = new System.Drawing.Size(290, 57);
             this.bftxtSecondName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtSecondName.TabIndex = 2;
             this.bftxtSecondName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -283,9 +291,10 @@ namespace final_motoDix
             this.bftxtSurname.IconRight = null;
             this.bftxtSurname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSurname.Lines = new string[0];
-            this.bftxtSurname.Location = new System.Drawing.Point(47, 156);
+            this.bftxtSurname.Location = new System.Drawing.Point(70, 240);
+            this.bftxtSurname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtSurname.MaxLength = 32767;
-            this.bftxtSurname.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtSurname.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtSurname.Modified = false;
             this.bftxtSurname.Multiline = false;
             this.bftxtSurname.Name = "bftxtSurname";
@@ -309,7 +318,7 @@ namespace final_motoDix
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtSurname.OnIdleState = stateProperties12;
-            this.bftxtSurname.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtSurname.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtSurname.PasswordChar = '\0';
             this.bftxtSurname.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtSurname.PlaceholderText = "Surname";
@@ -319,7 +328,7 @@ namespace final_motoDix
             this.bftxtSurname.SelectionLength = 0;
             this.bftxtSurname.SelectionStart = 0;
             this.bftxtSurname.ShortcutsEnabled = true;
-            this.bftxtSurname.Size = new System.Drawing.Size(193, 37);
+            this.bftxtSurname.Size = new System.Drawing.Size(290, 57);
             this.bftxtSurname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtSurname.TabIndex = 3;
             this.bftxtSurname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -358,9 +367,10 @@ namespace final_motoDix
             this.bftxtSecondSurname.IconRight = null;
             this.bftxtSecondSurname.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSecondSurname.Lines = new string[0];
-            this.bftxtSecondSurname.Location = new System.Drawing.Point(293, 156);
+            this.bftxtSecondSurname.Location = new System.Drawing.Point(440, 240);
+            this.bftxtSecondSurname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtSecondSurname.MaxLength = 32767;
-            this.bftxtSecondSurname.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtSecondSurname.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtSecondSurname.Modified = false;
             this.bftxtSecondSurname.Multiline = false;
             this.bftxtSecondSurname.Name = "bftxtSecondSurname";
@@ -384,7 +394,7 @@ namespace final_motoDix
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtSecondSurname.OnIdleState = stateProperties16;
-            this.bftxtSecondSurname.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtSecondSurname.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtSecondSurname.PasswordChar = '\0';
             this.bftxtSecondSurname.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtSecondSurname.PlaceholderText = "Second Surname";
@@ -394,7 +404,7 @@ namespace final_motoDix
             this.bftxtSecondSurname.SelectionLength = 0;
             this.bftxtSecondSurname.SelectionStart = 0;
             this.bftxtSecondSurname.ShortcutsEnabled = true;
-            this.bftxtSecondSurname.Size = new System.Drawing.Size(193, 37);
+            this.bftxtSecondSurname.Size = new System.Drawing.Size(290, 57);
             this.bftxtSecondSurname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtSecondSurname.TabIndex = 4;
             this.bftxtSecondSurname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -433,9 +443,10 @@ namespace final_motoDix
             this.bftxtxEmail.IconRight = null;
             this.bftxtxEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtxEmail.Lines = new string[0];
-            this.bftxtxEmail.Location = new System.Drawing.Point(47, 225);
+            this.bftxtxEmail.Location = new System.Drawing.Point(70, 346);
+            this.bftxtxEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtxEmail.MaxLength = 32767;
-            this.bftxtxEmail.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtxEmail.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtxEmail.Modified = false;
             this.bftxtxEmail.Multiline = false;
             this.bftxtxEmail.Name = "bftxtxEmail";
@@ -459,7 +470,7 @@ namespace final_motoDix
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtxEmail.OnIdleState = stateProperties20;
-            this.bftxtxEmail.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtxEmail.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtxEmail.PasswordChar = '\0';
             this.bftxtxEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtxEmail.PlaceholderText = "E-mail";
@@ -469,7 +480,7 @@ namespace final_motoDix
             this.bftxtxEmail.SelectionLength = 0;
             this.bftxtxEmail.SelectionStart = 0;
             this.bftxtxEmail.ShortcutsEnabled = true;
-            this.bftxtxEmail.Size = new System.Drawing.Size(193, 37);
+            this.bftxtxEmail.Size = new System.Drawing.Size(290, 57);
             this.bftxtxEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtxEmail.TabIndex = 5;
             this.bftxtxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -508,9 +519,10 @@ namespace final_motoDix
             this.bftxtConfirmEmail.IconRight = null;
             this.bftxtConfirmEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmEmail.Lines = new string[0];
-            this.bftxtConfirmEmail.Location = new System.Drawing.Point(293, 225);
+            this.bftxtConfirmEmail.Location = new System.Drawing.Point(440, 346);
+            this.bftxtConfirmEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtConfirmEmail.MaxLength = 32767;
-            this.bftxtConfirmEmail.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtConfirmEmail.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtConfirmEmail.Modified = false;
             this.bftxtConfirmEmail.Multiline = false;
             this.bftxtConfirmEmail.Name = "bftxtConfirmEmail";
@@ -534,7 +546,7 @@ namespace final_motoDix
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtConfirmEmail.OnIdleState = stateProperties24;
-            this.bftxtConfirmEmail.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtConfirmEmail.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtConfirmEmail.PasswordChar = '\0';
             this.bftxtConfirmEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtConfirmEmail.PlaceholderText = "Confirm e-mail";
@@ -544,7 +556,7 @@ namespace final_motoDix
             this.bftxtConfirmEmail.SelectionLength = 0;
             this.bftxtConfirmEmail.SelectionStart = 0;
             this.bftxtConfirmEmail.ShortcutsEnabled = true;
-            this.bftxtConfirmEmail.Size = new System.Drawing.Size(193, 37);
+            this.bftxtConfirmEmail.Size = new System.Drawing.Size(290, 57);
             this.bftxtConfirmEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtConfirmEmail.TabIndex = 6;
             this.bftxtConfirmEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -583,9 +595,10 @@ namespace final_motoDix
             this.bftxtxMobileNumber.IconRight = null;
             this.bftxtxMobileNumber.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtxMobileNumber.Lines = new string[0];
-            this.bftxtxMobileNumber.Location = new System.Drawing.Point(47, 289);
+            this.bftxtxMobileNumber.Location = new System.Drawing.Point(70, 445);
+            this.bftxtxMobileNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtxMobileNumber.MaxLength = 32767;
-            this.bftxtxMobileNumber.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtxMobileNumber.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtxMobileNumber.Modified = false;
             this.bftxtxMobileNumber.Multiline = false;
             this.bftxtxMobileNumber.Name = "bftxtxMobileNumber";
@@ -609,7 +622,7 @@ namespace final_motoDix
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtxMobileNumber.OnIdleState = stateProperties28;
-            this.bftxtxMobileNumber.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtxMobileNumber.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtxMobileNumber.PasswordChar = '\0';
             this.bftxtxMobileNumber.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtxMobileNumber.PlaceholderText = "Mobile number";
@@ -619,7 +632,7 @@ namespace final_motoDix
             this.bftxtxMobileNumber.SelectionLength = 0;
             this.bftxtxMobileNumber.SelectionStart = 0;
             this.bftxtxMobileNumber.ShortcutsEnabled = true;
-            this.bftxtxMobileNumber.Size = new System.Drawing.Size(193, 37);
+            this.bftxtxMobileNumber.Size = new System.Drawing.Size(290, 57);
             this.bftxtxMobileNumber.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtxMobileNumber.TabIndex = 7;
             this.bftxtxMobileNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -658,9 +671,10 @@ namespace final_motoDix
             this.bftxtxConfirmMobileNumber.IconRight = null;
             this.bftxtxConfirmMobileNumber.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtxConfirmMobileNumber.Lines = new string[0];
-            this.bftxtxConfirmMobileNumber.Location = new System.Drawing.Point(293, 289);
+            this.bftxtxConfirmMobileNumber.Location = new System.Drawing.Point(440, 445);
+            this.bftxtxConfirmMobileNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtxConfirmMobileNumber.MaxLength = 32767;
-            this.bftxtxConfirmMobileNumber.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtxConfirmMobileNumber.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtxConfirmMobileNumber.Modified = false;
             this.bftxtxConfirmMobileNumber.Multiline = false;
             this.bftxtxConfirmMobileNumber.Name = "bftxtxConfirmMobileNumber";
@@ -684,7 +698,7 @@ namespace final_motoDix
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtxConfirmMobileNumber.OnIdleState = stateProperties32;
-            this.bftxtxConfirmMobileNumber.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtxConfirmMobileNumber.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtxConfirmMobileNumber.PasswordChar = '\0';
             this.bftxtxConfirmMobileNumber.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtxConfirmMobileNumber.PlaceholderText = "Confirm Mobile number";
@@ -694,7 +708,7 @@ namespace final_motoDix
             this.bftxtxConfirmMobileNumber.SelectionLength = 0;
             this.bftxtxConfirmMobileNumber.SelectionStart = 0;
             this.bftxtxConfirmMobileNumber.ShortcutsEnabled = true;
-            this.bftxtxConfirmMobileNumber.Size = new System.Drawing.Size(193, 37);
+            this.bftxtxConfirmMobileNumber.Size = new System.Drawing.Size(290, 57);
             this.bftxtxConfirmMobileNumber.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtxConfirmMobileNumber.TabIndex = 8;
             this.bftxtxConfirmMobileNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -733,9 +747,10 @@ namespace final_motoDix
             this.bftxtPassword.IconRight = null;
             this.bftxtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPassword.Lines = new string[0];
-            this.bftxtPassword.Location = new System.Drawing.Point(47, 359);
+            this.bftxtPassword.Location = new System.Drawing.Point(70, 552);
+            this.bftxtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtPassword.MaxLength = 32767;
-            this.bftxtPassword.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtPassword.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtPassword.Modified = false;
             this.bftxtPassword.Multiline = false;
             this.bftxtPassword.Name = "bftxtPassword";
@@ -759,7 +774,7 @@ namespace final_motoDix
             stateProperties36.ForeColor = System.Drawing.Color.Empty;
             stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtPassword.OnIdleState = stateProperties36;
-            this.bftxtPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtPassword.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtPassword.PasswordChar = '\0';
             this.bftxtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtPassword.PlaceholderText = "Passsword";
@@ -769,7 +784,7 @@ namespace final_motoDix
             this.bftxtPassword.SelectionLength = 0;
             this.bftxtPassword.SelectionStart = 0;
             this.bftxtPassword.ShortcutsEnabled = true;
-            this.bftxtPassword.Size = new System.Drawing.Size(193, 37);
+            this.bftxtPassword.Size = new System.Drawing.Size(290, 57);
             this.bftxtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtPassword.TabIndex = 9;
             this.bftxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -808,9 +823,10 @@ namespace final_motoDix
             this.bftxtConfirmPassword.IconRight = null;
             this.bftxtConfirmPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmPassword.Lines = new string[0];
-            this.bftxtConfirmPassword.Location = new System.Drawing.Point(293, 359);
+            this.bftxtConfirmPassword.Location = new System.Drawing.Point(440, 552);
+            this.bftxtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtConfirmPassword.MaxLength = 32767;
-            this.bftxtConfirmPassword.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtConfirmPassword.MinimumSize = new System.Drawing.Size(2, 2);
             this.bftxtConfirmPassword.Modified = false;
             this.bftxtConfirmPassword.Multiline = false;
             this.bftxtConfirmPassword.Name = "bftxtConfirmPassword";
@@ -834,7 +850,7 @@ namespace final_motoDix
             stateProperties40.ForeColor = System.Drawing.Color.Empty;
             stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtConfirmPassword.OnIdleState = stateProperties40;
-            this.bftxtConfirmPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtConfirmPassword.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bftxtConfirmPassword.PasswordChar = '\0';
             this.bftxtConfirmPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtConfirmPassword.PlaceholderText = "Confirm Passsword";
@@ -844,7 +860,7 @@ namespace final_motoDix
             this.bftxtConfirmPassword.SelectionLength = 0;
             this.bftxtConfirmPassword.SelectionStart = 0;
             this.bftxtConfirmPassword.ShortcutsEnabled = true;
-            this.bftxtConfirmPassword.Size = new System.Drawing.Size(193, 37);
+            this.bftxtConfirmPassword.Size = new System.Drawing.Size(290, 57);
             this.bftxtConfirmPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtConfirmPassword.TabIndex = 10;
             this.bftxtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -905,8 +921,8 @@ namespace final_motoDix
             this.bfbtnRegister.IdleIconLeftImage = null;
             this.bfbtnRegister.IdleIconRightImage = null;
             this.bfbtnRegister.IndicateFocus = false;
-            this.bfbtnRegister.Location = new System.Drawing.Point(166, 425);
-            this.bfbtnRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.bfbtnRegister.Location = new System.Drawing.Point(249, 654);
+            this.bfbtnRegister.Margin = new System.Windows.Forms.Padding(6);
             this.bfbtnRegister.Name = "bfbtnRegister";
             this.bfbtnRegister.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnRegister.OnDisabledState.BorderRadius = 1;
@@ -940,7 +956,7 @@ namespace final_motoDix
             this.bfbtnRegister.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bfbtnRegister.OnPressedState.IconLeftImage = null;
             this.bfbtnRegister.OnPressedState.IconRightImage = null;
-            this.bfbtnRegister.Size = new System.Drawing.Size(192, 29);
+            this.bfbtnRegister.Size = new System.Drawing.Size(288, 45);
             this.bfbtnRegister.TabIndex = 11;
             this.bfbtnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bfbtnRegister.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -956,22 +972,46 @@ namespace final_motoDix
             this.bflblCreateAccount2.AutoSizeHeightOnly = true;
             this.bflblCreateAccount2.CursorType = null;
             this.bflblCreateAccount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.bflblCreateAccount2.ForeColor = System.Drawing.Color.White;
-            this.bflblCreateAccount2.Location = new System.Drawing.Point(266, 29);
+            this.bflblCreateAccount2.ForeColor = System.Drawing.Color.Transparent;
+            this.bflblCreateAccount2.Location = new System.Drawing.Point(398, 45);
+            this.bflblCreateAccount2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bflblCreateAccount2.Name = "bflblCreateAccount2";
             this.bflblCreateAccount2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblCreateAccount2.Size = new System.Drawing.Size(149, 29);
+            this.bflblCreateAccount2.Size = new System.Drawing.Size(224, 40);
             this.bflblCreateAccount2.TabIndex = 12;
             this.bflblCreateAccount2.Text = "new account";
             this.bflblCreateAccount2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bflblCreateAccount2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bflblCreateAccount2.Click += new System.EventHandler(this.bflblCreateAccount2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(712, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(684, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(17, 18);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // frmRegisterClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(534, 510);
+            this.ClientSize = new System.Drawing.Size(761, 736);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bflblCreateAccount2);
             this.Controls.Add(this.bfbtnRegister);
             this.Controls.Add(this.bftxtConfirmPassword);
@@ -986,9 +1026,12 @@ namespace final_motoDix
             this.Controls.Add(this.bflblCreateAccount1);
             this.Controls.Add(this.bftxtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmRegisterClient";
             this.Text = "frmRegister";
             this.Load += new System.EventHandler(this.frmRegister_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1008,5 +1051,7 @@ namespace final_motoDix
         private Bunifu.UI.WinForms.BunifuTextBox bftxtConfirmPassword;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bfbtnRegister;
         private Bunifu.UI.WinForms.BunifuLabel bflblCreateAccount2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
