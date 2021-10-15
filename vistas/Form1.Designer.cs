@@ -417,6 +417,7 @@ namespace final_motoDix
             this.lblSignIn.Size = new System.Drawing.Size(52, 16);
             this.lblSignIn.TabIndex = 14;
             this.lblSignIn.Text = "Sign in";
+            this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
             // 
             // Form1
             // 

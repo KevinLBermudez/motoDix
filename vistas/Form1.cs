@@ -36,5 +36,14 @@ namespace final_motoDix
         {
 
         }
+
+        private void lblSignIn_Click(object sender, EventArgs e)
+        {
+
+
+            frmRegisterMotorcyclist register = new frmRegisterMotorcyclist();
+            register.Show();
+            this.Close();
+        }
     }
 }
