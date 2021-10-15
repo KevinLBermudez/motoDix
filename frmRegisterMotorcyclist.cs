@@ -36,5 +36,15 @@ namespace final_motoDix
         {
             bfpgRegister.PageIndex = 3;
         }
+
+        private void bfpgLicence_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bftxtSecondSurname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
