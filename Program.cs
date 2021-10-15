@@ -16,7 +16,7 @@ namespace final_motoDix
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegisterMotorcyclist());
+            Application.Run(new frmIdentifier());
         }
     }
 }

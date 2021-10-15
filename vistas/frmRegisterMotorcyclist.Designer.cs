@@ -99,7 +99,6 @@ namespace final_motoDix
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties62 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties63 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties64 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties65 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties66 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties67 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -201,7 +200,6 @@ namespace final_motoDix
             this.bftxtTransitoExpendedor = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtNumeroLicencia = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bfpgVehicleInfo = new System.Windows.Forms.TabPage();
-            this.bfbtnVehicleInfoFinish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bftxtAutoridadExpendedora = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtNumeroChasis = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtNumeroMotor = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -585,10 +583,10 @@ namespace final_motoDix
             this.bfpgRegister.Location = new System.Drawing.Point(47, 140);
             this.bfpgRegister.Multiline = true;
             this.bfpgRegister.Name = "bfpgRegister";
-            this.bfpgRegister.Page = this.bfpgPropietario;
-            this.bfpgRegister.PageIndex = 4;
-            this.bfpgRegister.PageName = "bfpgPropietario";
-            this.bfpgRegister.PageTitle = "Propietario";
+            this.bfpgRegister.Page = this.bfpgLicence;
+            this.bfpgRegister.PageIndex = 2;
+            this.bfpgRegister.PageName = "bfpgLicence";
+            this.bfpgRegister.PageTitle = "Licence";
             this.bfpgRegister.SelectedIndex = 0;
             this.bfpgRegister.Size = new System.Drawing.Size(675, 391);
             this.bfpgRegister.TabIndex = 11;
@@ -2249,7 +2247,7 @@ namespace final_motoDix
             // 
             // bfpgVehicleInfo
             // 
-            this.bfpgVehicleInfo.Controls.Add(this.bfbtnVehicleInfoFinish);
+            this.bfpgVehicleInfo.Controls.Add(this.bunifuButton22);
             this.bfpgVehicleInfo.Controls.Add(this.bftxtAutoridadExpendedora);
             this.bfpgVehicleInfo.Controls.Add(this.bftxtNumeroChasis);
             this.bfpgVehicleInfo.Controls.Add(this.bftxtNumeroMotor);
@@ -2268,99 +2266,6 @@ namespace final_motoDix
             this.bfpgVehicleInfo.TabIndex = 3;
             this.bfpgVehicleInfo.Text = "Vehicle";
             this.bfpgVehicleInfo.UseVisualStyleBackColor = true;
-            // 
-            // bfbtnVehicleInfoFinish
-            // 
-            this.bfbtnVehicleInfoFinish.AllowAnimations = true;
-            this.bfbtnVehicleInfoFinish.AllowMouseEffects = true;
-            this.bfbtnVehicleInfoFinish.AllowToggling = false;
-            this.bfbtnVehicleInfoFinish.AnimationSpeed = 200;
-            this.bfbtnVehicleInfoFinish.AutoGenerateColors = false;
-            this.bfbtnVehicleInfoFinish.AutoRoundBorders = false;
-            this.bfbtnVehicleInfoFinish.AutoSizeLeftIcon = true;
-            this.bfbtnVehicleInfoFinish.AutoSizeRightIcon = true;
-            this.bfbtnVehicleInfoFinish.BackColor = System.Drawing.Color.Transparent;
-            this.bfbtnVehicleInfoFinish.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.bfbtnVehicleInfoFinish.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bfbtnVehicleInfoFinish.BackgroundImage")));
-            this.bfbtnVehicleInfoFinish.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnVehicleInfoFinish.ButtonText = "Finish";
-            this.bfbtnVehicleInfoFinish.ButtonTextMarginLeft = 0;
-            this.bfbtnVehicleInfoFinish.ColorContrastOnClick = 45;
-            this.bfbtnVehicleInfoFinish.ColorContrastOnHover = 45;
-            this.bfbtnVehicleInfoFinish.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bfbtnVehicleInfoFinish.CustomizableEdges = borderEdges4;
-            this.bunifuTransition1.SetDecoration(this.bfbtnVehicleInfoFinish, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bfbtnVehicleInfoFinish.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bfbtnVehicleInfoFinish.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bfbtnVehicleInfoFinish.DisabledFillColor = System.Drawing.Color.Empty;
-            this.bfbtnVehicleInfoFinish.DisabledForecolor = System.Drawing.Color.Empty;
-            this.bfbtnVehicleInfoFinish.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bfbtnVehicleInfoFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bfbtnVehicleInfoFinish.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVehicleInfoFinish.IconLeft = null;
-            this.bfbtnVehicleInfoFinish.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bfbtnVehicleInfoFinish.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bfbtnVehicleInfoFinish.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bfbtnVehicleInfoFinish.IconMarginLeft = 11;
-            this.bfbtnVehicleInfoFinish.IconPadding = 10;
-            this.bfbtnVehicleInfoFinish.IconRight = null;
-            this.bfbtnVehicleInfoFinish.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bfbtnVehicleInfoFinish.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bfbtnVehicleInfoFinish.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bfbtnVehicleInfoFinish.IconSize = 25;
-            this.bfbtnVehicleInfoFinish.IdleBorderColor = System.Drawing.Color.Empty;
-            this.bfbtnVehicleInfoFinish.IdleBorderRadius = 0;
-            this.bfbtnVehicleInfoFinish.IdleBorderThickness = 0;
-            this.bfbtnVehicleInfoFinish.IdleFillColor = System.Drawing.Color.Empty;
-            this.bfbtnVehicleInfoFinish.IdleIconLeftImage = null;
-            this.bfbtnVehicleInfoFinish.IdleIconRightImage = null;
-            this.bfbtnVehicleInfoFinish.IndicateFocus = false;
-            this.bfbtnVehicleInfoFinish.Location = new System.Drawing.Point(468, 321);
-            this.bfbtnVehicleInfoFinish.Margin = new System.Windows.Forms.Padding(4);
-            this.bfbtnVehicleInfoFinish.Name = "bfbtnVehicleInfoFinish";
-            this.bfbtnVehicleInfoFinish.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bfbtnVehicleInfoFinish.OnDisabledState.BorderRadius = 35;
-            this.bfbtnVehicleInfoFinish.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnVehicleInfoFinish.OnDisabledState.BorderThickness = 1;
-            this.bfbtnVehicleInfoFinish.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bfbtnVehicleInfoFinish.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bfbtnVehicleInfoFinish.OnDisabledState.IconLeftImage = null;
-            this.bfbtnVehicleInfoFinish.OnDisabledState.IconRightImage = null;
-            this.bfbtnVehicleInfoFinish.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.bfbtnVehicleInfoFinish.onHoverState.BorderRadius = 35;
-            this.bfbtnVehicleInfoFinish.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnVehicleInfoFinish.onHoverState.BorderThickness = 1;
-            this.bfbtnVehicleInfoFinish.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.bfbtnVehicleInfoFinish.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVehicleInfoFinish.onHoverState.IconLeftImage = null;
-            this.bfbtnVehicleInfoFinish.onHoverState.IconRightImage = null;
-            this.bfbtnVehicleInfoFinish.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bfbtnVehicleInfoFinish.OnIdleState.BorderRadius = 35;
-            this.bfbtnVehicleInfoFinish.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnVehicleInfoFinish.OnIdleState.BorderThickness = 1;
-            this.bfbtnVehicleInfoFinish.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.bfbtnVehicleInfoFinish.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVehicleInfoFinish.OnIdleState.IconLeftImage = null;
-            this.bfbtnVehicleInfoFinish.OnIdleState.IconRightImage = null;
-            this.bfbtnVehicleInfoFinish.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bfbtnVehicleInfoFinish.OnPressedState.BorderRadius = 35;
-            this.bfbtnVehicleInfoFinish.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnVehicleInfoFinish.OnPressedState.BorderThickness = 1;
-            this.bfbtnVehicleInfoFinish.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bfbtnVehicleInfoFinish.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVehicleInfoFinish.OnPressedState.IconLeftImage = null;
-            this.bfbtnVehicleInfoFinish.OnPressedState.IconRightImage = null;
-            this.bfbtnVehicleInfoFinish.Size = new System.Drawing.Size(192, 29);
-            this.bfbtnVehicleInfoFinish.TabIndex = 38;
-            this.bfbtnVehicleInfoFinish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bfbtnVehicleInfoFinish.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bfbtnVehicleInfoFinish.TextMarginLeft = 0;
-            this.bfbtnVehicleInfoFinish.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bfbtnVehicleInfoFinish.UseDefaultRadiusAndThickness = true;
             // 
             // bftxtAutoridadExpendedora
             // 
@@ -3930,7 +3835,6 @@ namespace final_motoDix
         private Bunifu.UI.WinForms.BunifuTextBox bftxtFechaExpedicion;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtTransitoExpendedor;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtNumeroLicencia;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bfbtnVehicleInfoFinish;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtAutoridadExpendedora;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtNumeroChasis;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtNumeroMotor;
