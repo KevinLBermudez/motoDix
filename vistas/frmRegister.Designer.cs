@@ -119,12 +119,12 @@ namespace final_motoDix.Vistas
             this.bflblCreateAccount1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bflblCreateAccount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.bflblCreateAccount1.ForeColor = System.Drawing.Color.Black;
-            this.bflblCreateAccount1.Location = new System.Drawing.Point(300, 24);
+            this.bflblCreateAccount1.Location = new System.Drawing.Point(284, 24);
             this.bflblCreateAccount1.Name = "bflblCreateAccount1";
             this.bflblCreateAccount1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblCreateAccount1.Size = new System.Drawing.Size(107, 29);
+            this.bflblCreateAccount1.Size = new System.Drawing.Size(135, 29);
             this.bflblCreateAccount1.TabIndex = 0;
-            this.bflblCreateAccount1.Text = "Create a ";
+            this.bflblCreateAccount1.Text = "Crear una";
             this.bflblCreateAccount1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bflblCreateAccount1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.bflblCreateAccount1.Click += new System.EventHandler(this.bflblCreateAccount_Click);
@@ -141,9 +141,9 @@ namespace final_motoDix.Vistas
             this.bflblCreateAccount2.Location = new System.Drawing.Point(413, 24);
             this.bflblCreateAccount2.Name = "bflblCreateAccount2";
             this.bflblCreateAccount2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblCreateAccount2.Size = new System.Drawing.Size(149, 29);
+            this.bflblCreateAccount2.Size = new System.Drawing.Size(175, 29);
             this.bflblCreateAccount2.TabIndex = 12;
-            this.bflblCreateAccount2.Text = "new account";
+            this.bflblCreateAccount2.Text = "nueva cuenta";
             this.bflblCreateAccount2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.bflblCreateAccount2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
