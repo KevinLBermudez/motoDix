@@ -44,5 +44,10 @@ namespace final_motoDix.Vistas
         {
             AbrirFormInPanel<frmTravel>();
         }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
