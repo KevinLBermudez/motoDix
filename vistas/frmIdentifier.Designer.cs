@@ -1,5 +1,5 @@
 ﻿
-namespace final_motoDix
+namespace final_motoDix.Vistas
 {
     partial class frmIdentifier
     {
@@ -177,6 +177,7 @@ namespace final_motoDix
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIdentifier";
             this.Text = "frmIdentifier";
+            this.Load += new System.EventHandler(this.frmIdentifier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);

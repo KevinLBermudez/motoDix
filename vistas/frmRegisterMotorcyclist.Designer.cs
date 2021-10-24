@@ -1,5 +1,5 @@
 ﻿
-namespace final_motoDix
+namespace final_motoDix.Vistas
 {
     partial class frmRegisterMotorcyclist
     {

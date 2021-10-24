@@ -37,12 +37,14 @@ namespace final_motoDix.Vistas
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(346, 66);
+            this.bunifuLabel1.Location = new System.Drawing.Point(231, 43);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(74, 25);
+            this.bunifuLabel1.Size = new System.Drawing.Size(50, 15);
             this.bunifuLabel1.TabIndex = 0;
             this.bunifuLabel1.Text = "Welcome";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -50,13 +52,15 @@ namespace final_motoDix.Vistas
             // 
             // frmTravel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 520);
+            this.ClientSize = new System.Drawing.Size(597, 338);
             this.Controls.Add(this.bunifuLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTravel";
             this.Text = "frmTravel";
+            this.Load += new System.EventHandler(this.frmTravel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace final_motoDix
+namespace final_motoDix.Vistas
 {
     public partial class frmIdentifier : Form
     {
@@ -30,6 +30,11 @@ namespace final_motoDix
             Form1 login = new Form1();
             login.Show();
             this.Visible = false;
+        }
+
+        private void frmIdentifier_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

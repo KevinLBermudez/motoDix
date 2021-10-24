@@ -17,7 +17,7 @@ namespace final_motoDix.Vistas
             InitializeComponent();
         }
     
-     private void AbrirFormInPanel<MiFormulario> () where MiFormulario : Form, new()
+        private void AbrirFormInPanel<MiFormulario> () where MiFormulario : Form, new()
         {
             Form formulario;
             formulario = panelContenedor.Controls.OfType<MiFormulario>().FirstOrDefault();
@@ -38,13 +38,19 @@ namespace final_motoDix.Vistas
                 formulario.BringToFront();
             }
 
-
-
         }
+
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+
             AbrirFormInPanel<frmTravel>();
+        
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

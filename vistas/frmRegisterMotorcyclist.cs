@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace final_motoDix
+namespace final_motoDix.Vistas
 {
     public partial class frmRegisterMotorcyclist : Form
     {
