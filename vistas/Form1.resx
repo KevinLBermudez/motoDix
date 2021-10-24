@@ -120,15 +120,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bftxtCelular.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOAAAAAvCAYAAAD6k8aAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXJKnd6u/pAaDm1v+K+PCFAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA5CAYAAAAvHCcGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABSSURBVHhe7cMBCQBACASw71/Ka6ameBA22AMAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICLktRu9ff0AMPw1v/ovmL6AAAA
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="bfbtnLogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOAAAAAkCAYAAACQVDZDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKySURBVHhe7d0vjBNBFMfxlUgkottFIk8iTyKRGDyGBBIE
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKySURBVHhe7d0vjBNBFMfxlUgkottFIk8iTyKRGDyGBBIE
         5zDonW3ICRJCTiFQCBIU9sSJBlWHO1WgveP4Ey77lvemc4GGaem1na3o9yWfXC677Z64X97szHSbLVNF
         r7mRu+Zx18m+6k80DbA9wv99JQd52TwpKrkZ4pGmimfNNX8xJ0N1os7jfxiwffJKRpaLwsnromx2QmxW
         L32zq3lPenkpJ7ELA5imo8OxD6I2rRCj5craqqZ61CnrH7ELAZjNN61K7oY4Xa40eA91jDuMvTGAxWiO
@@ -155,7 +156,7 @@
   <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANsAAAFtCAYAAACOZx+cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARSSURBVHhe7dOxTcRQFEVBh7Tgb69MSEgpWwIhZdD5grVO
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARSSURBVHhe7dOxTcRQFEVBh7Tgb69MSEgpWwIhZdD5grVO
         QIT2ieZKkzy99ExmFm/bttdlWb6A88zz/HYk9twY431d1wdwifuR2jTtBf7zAJxg7+tITWxwJbFBRGwQ
         ERtExAYRsUFEbBARG0TEBhGxQURsEBEbRMQGEbFBRGwQERtExAYRsUFEbBARG0TEBhGxQURsEBEbRMQG
         EbFBRGwQERtExAYRsUFEbBARG0TEBhGxQURsEBEbRMQGEbFBRGwQERtExAYRsUFEbBARG0TEBhGxQURs
@@ -686,9 +687,10 @@
   </data>
   <data name="bfbtnContraseña.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOAAAAAvCAYAAAD6k8aAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXJKnd6u/pAaDm1v+K+PCFAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAA5CAYAAAAvHCcGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABSSURBVHhe7cMBCQBACASw71/Ka6ameBA22AMAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICLktRu9ff0AMPw1v/ovmL6AAAA
+        AElFTkSuQmCC
 </value>
   </data>
 </root>

@@ -122,7 +122,7 @@ namespace final_motoDix
             this.bftxtCelular.SelectionLength = 0;
             this.bftxtCelular.SelectionStart = 0;
             this.bftxtCelular.ShortcutsEnabled = true;
-            this.bftxtCelular.Size = new System.Drawing.Size(224, 47);
+            this.bftxtCelular.Size = new System.Drawing.Size(224, 57);
             this.bftxtCelular.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.bftxtCelular.TabIndex = 0;
             this.bftxtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -225,6 +225,7 @@ namespace final_motoDix
             this.bfbtnLogin.TextMarginLeft = 0;
             this.bfbtnLogin.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnLogin.UseDefaultRadiusAndThickness = true;
+            this.bfbtnLogin.Click += new System.EventHandler(this.bfbtnLogin_Click);
             // 
             // bunifuLabel1
             // 
@@ -349,7 +350,7 @@ namespace final_motoDix
             this.bfbtnContraseña.SelectionLength = 0;
             this.bfbtnContraseña.SelectionStart = 0;
             this.bfbtnContraseña.ShortcutsEnabled = true;
-            this.bfbtnContraseña.Size = new System.Drawing.Size(224, 47);
+            this.bfbtnContraseña.Size = new System.Drawing.Size(224, 57);
             this.bfbtnContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.bfbtnContraseña.TabIndex = 7;
             this.bfbtnContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -414,14 +415,14 @@ namespace final_motoDix
             this.lblSignIn.ForeColor = System.Drawing.Color.Gold;
             this.lblSignIn.Location = new System.Drawing.Point(408, 276);
             this.lblSignIn.Name = "lblSignIn";
-            this.lblSignIn.Size = new System.Drawing.Size(52, 16);
+            this.lblSignIn.Size = new System.Drawing.Size(83, 25);
             this.lblSignIn.TabIndex = 14;
             this.lblSignIn.Text = "Sign in";
             this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(645, 365);
