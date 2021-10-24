@@ -74,7 +74,7 @@ namespace final_motoDix.Vistas
             this.bftxtCelular.BorderThickness = 1;
             this.bftxtCelular.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bftxtCelular.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bftxtCelular.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bftxtCelular.DefaultFont = new System.Drawing.Font("Segoe UI", 12F);
             this.bftxtCelular.DefaultText = "";
             this.bftxtCelular.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.bftxtCelular.ForeColor = System.Drawing.Color.White;

@@ -201,7 +201,7 @@ namespace final_motoDix.Vistas
             this.bfchkLoginDetails.Cursor = System.Windows.Forms.Cursors.Default;
             this.bfchkLoginDetails.CustomCheckmarkImage = null;
             this.bunifuTransition1.SetDecoration(this.bfchkLoginDetails, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bfchkLoginDetails.Location = new System.Drawing.Point(181, 27);
+            this.bfchkLoginDetails.Location = new System.Drawing.Point(139, 24);
             this.bfchkLoginDetails.MinimumSize = new System.Drawing.Size(17, 17);
             this.bfchkLoginDetails.Name = "bfchkLoginDetails";
             this.bfchkLoginDetails.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -255,7 +255,7 @@ namespace final_motoDix.Vistas
             this.bfchkLicence.Cursor = System.Windows.Forms.Cursors.Default;
             this.bfchkLicence.CustomCheckmarkImage = null;
             this.bunifuTransition1.SetDecoration(this.bfchkLicence, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bfchkLicence.Location = new System.Drawing.Point(564, 27);
+            this.bfchkLicence.Location = new System.Drawing.Point(522, 24);
             this.bfchkLicence.MinimumSize = new System.Drawing.Size(17, 17);
             this.bfchkLicence.Name = "bfchkLicence";
             this.bfchkLicence.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -300,7 +300,7 @@ namespace final_motoDix.Vistas
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(320, 36);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(278, 33);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(49, 20);
@@ -313,12 +313,12 @@ namespace final_motoDix.Vistas
             this.bunifuLabel2.CursorType = null;
             this.bunifuTransition1.SetDecoration(this.bunifuLabel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(225, 36);
+            this.bunifuLabel2.Location = new System.Drawing.Point(183, 33);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(89, 20);
+            this.bunifuLabel2.Size = new System.Drawing.Size(87, 20);
             this.bunifuLabel2.TabIndex = 6;
-            this.bunifuLabel2.Text = "Login details";
+            this.bunifuLabel2.Text = "Inicio sesion";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -329,12 +329,12 @@ namespace final_motoDix.Vistas
             this.bunifuLabel3.CursorType = null;
             this.bunifuTransition1.SetDecoration(this.bunifuLabel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(608, 36);
+            this.bunifuLabel3.Location = new System.Drawing.Point(566, 33);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(55, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(165, 20);
             this.bunifuLabel3.TabIndex = 7;
-            this.bunifuLabel3.Text = "Licence ";
+            this.bunifuLabel3.Text = "Licencia de conduccion";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -348,7 +348,7 @@ namespace final_motoDix.Vistas
             this.bunifuSeparator3.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(507, 36);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(465, 33);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator3.Size = new System.Drawing.Size(57, 20);
@@ -373,7 +373,7 @@ namespace final_motoDix.Vistas
             this.bfchkVehicleInfo.Cursor = System.Windows.Forms.Cursors.Default;
             this.bfchkVehicleInfo.CustomCheckmarkImage = null;
             this.bunifuTransition1.SetDecoration(this.bfchkVehicleInfo, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bfchkVehicleInfo.Location = new System.Drawing.Point(375, 27);
+            this.bfchkVehicleInfo.Location = new System.Drawing.Point(333, 24);
             this.bfchkVehicleInfo.MinimumSize = new System.Drawing.Size(17, 17);
             this.bfchkVehicleInfo.Name = "bfchkVehicleInfo";
             this.bfchkVehicleInfo.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -415,12 +415,12 @@ namespace final_motoDix.Vistas
             this.bunifuLabel4.CursorType = null;
             this.bunifuTransition1.SetDecoration(this.bunifuLabel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.Location = new System.Drawing.Point(419, 36);
+            this.bunifuLabel4.Location = new System.Drawing.Point(377, 33);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(82, 20);
+            this.bunifuLabel4.Size = new System.Drawing.Size(57, 20);
             this.bunifuLabel4.TabIndex = 10;
-            this.bunifuLabel4.Text = "Vehicle info";
+            this.bunifuLabel4.Text = "vehiculo";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -2292,10 +2292,10 @@ namespace final_motoDix.Vistas
             this.bfpgRegisterVehicle.Location = new System.Drawing.Point(75, 71);
             this.bfpgRegisterVehicle.Multiline = true;
             this.bfpgRegisterVehicle.Name = "bfpgRegisterVehicle";
-            this.bfpgRegisterVehicle.Page = this.bfpgLicence;
-            this.bfpgRegisterVehicle.PageIndex = 3;
-            this.bfpgRegisterVehicle.PageName = "bfpgLicence";
-            this.bfpgRegisterVehicle.PageTitle = "licencia";
+            this.bfpgRegisterVehicle.Page = this.bfpgLogin;
+            this.bfpgRegisterVehicle.PageIndex = 0;
+            this.bfpgRegisterVehicle.PageName = "bfpgLogin";
+            this.bfpgRegisterVehicle.PageTitle = "Login";
             this.bfpgRegisterVehicle.SelectedIndex = 0;
             this.bfpgRegisterVehicle.Size = new System.Drawing.Size(742, 427);
             this.bfpgRegisterVehicle.TabIndex = 11;
