@@ -45,5 +45,10 @@ namespace final_motoDix
             register.Show();
             this.Close();
         }
+
+        private void bfbtnLogin_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
