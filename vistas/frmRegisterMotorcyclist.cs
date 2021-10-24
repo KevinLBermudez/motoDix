@@ -22,46 +22,6 @@ namespace final_motoDix
             
         }
 
-        private void bfbtnProfileInfoNext_Click(object sender, EventArgs e)
-        {
-            bfpgRegister.PageIndex = 1;
-            bfchkProfileInfo.Checked = true;
-        }
-
-        private void bfbtnLofinDetailsNext_Click(object sender, EventArgs e)
-        {
-            bfpgRegister.PageIndex = 2;
-            bfchkLoginDetails.Checked = true;
-        }
-
-        private void bfbtnLicenceNext_Click(object sender, EventArgs e)
-        {
-            bfpgRegister.PageIndex = 3;
-            bfchkLicence.Checked = true;
-        }
-
-        private void bfbtnVehicleNext_Click(object sender, EventArgs e)
-        {
-            bfpgRegister.PageIndex = 4;
-        }
-
-        private void bfbtnPropietarioNext_Click(object sender, EventArgs e)
-        {
-            bfpgRegister.PageIndex = 5;
-        }
-
-        private void bfbtnSoatNext_Click(object sender, EventArgs e)
-        {
-            bfpgRegister.PageIndex = 6;
-        }
-
-        private void bfbtnInfoFinish_Click(object sender, EventArgs e)
-        {
-            bfchkVehicleInfo.Checked = true;
-        }
-
-       
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -72,6 +32,33 @@ namespace final_motoDix
         {
             DialogResult resultado = MessageBox.Show("¿Desea salir de la aplicacion?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             e.Cancel = (resultado == DialogResult.No);
+        }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+            bfchkLoginDetails.Checked = true;
+
+            bfpgRegisterVehicle.PageIndex = 1;
+            
+        }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+
+            bfpgRegisterVehicle.PageIndex = 2;
+
+        }
+
+        private void bfbtnLicenceNext_Click(object sender, EventArgs e)
+        {
+            bfchkVehicleInfo.Checked = true;
+            bfpgRegisterVehicle.PageIndex = 3;
+
+        }
+
+        private void bfbtnInfoFinish_Click(object sender, EventArgs e)
+        {
+            bfchkLicence.Checked = true;
         }
     }
 }

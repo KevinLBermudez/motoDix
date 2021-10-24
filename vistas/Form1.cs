@@ -41,7 +41,7 @@ namespace final_motoDix
         {
 
 
-            frmRegisterMotorcyclist register = new frmRegisterMotorcyclist();
+            frmRegisterClient register = new frmRegisterClient();
             register.Show();
             this.Close();
         }

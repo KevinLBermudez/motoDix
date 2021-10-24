@@ -36,5 +36,15 @@ namespace final_motoDix
         {
 
         }
+
+        private void bfbtnRegisterNext_Click(object sender, EventArgs e)
+        {
+            bfpgPersonInfo.PageIndex = 1;
+        }
+
+        private void bftpInfoPersonal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

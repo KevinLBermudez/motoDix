@@ -411,6 +411,7 @@ namespace final_motoDix
             // lblSignIn
             // 
             this.lblSignIn.AutoSize = true;
+            this.lblSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSignIn.ForeColor = System.Drawing.Color.Gold;
             this.lblSignIn.Location = new System.Drawing.Point(408, 276);
             this.lblSignIn.Name = "lblSignIn";
