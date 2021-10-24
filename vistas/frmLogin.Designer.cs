@@ -1,7 +1,7 @@
 ﻿
 namespace final_motoDix.Vistas
 {
-    partial class Form1
+    partial class frmLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,18 +29,17 @@ namespace final_motoDix.Vistas
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bftxtCelular = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bfbtnLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.bfbtnContraseña = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -49,6 +48,7 @@ namespace final_motoDix.Vistas
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSignIn = new System.Windows.Forms.Label();
+            this.bfbtnLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -122,7 +122,7 @@ namespace final_motoDix.Vistas
             this.bftxtCelular.SelectionLength = 0;
             this.bftxtCelular.SelectionStart = 0;
             this.bftxtCelular.ShortcutsEnabled = true;
-            this.bftxtCelular.Size = new System.Drawing.Size(224, 57);
+            this.bftxtCelular.Size = new System.Drawing.Size(224, 47);
             this.bftxtCelular.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.bftxtCelular.TabIndex = 0;
             this.bftxtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -133,99 +133,6 @@ namespace final_motoDix.Vistas
             this.bftxtCelular.UseSystemPasswordChar = false;
             this.bftxtCelular.WordWrap = true;
             this.bftxtCelular.TextChanged += new System.EventHandler(this.bftxtCelular_TextChanged);
-            // 
-            // bfbtnLogin
-            // 
-            this.bfbtnLogin.AllowAnimations = true;
-            this.bfbtnLogin.AllowMouseEffects = true;
-            this.bfbtnLogin.AllowToggling = false;
-            this.bfbtnLogin.AnimationSpeed = 200;
-            this.bfbtnLogin.AutoGenerateColors = false;
-            this.bfbtnLogin.AutoRoundBorders = false;
-            this.bfbtnLogin.AutoSizeLeftIcon = true;
-            this.bfbtnLogin.AutoSizeRightIcon = true;
-            this.bfbtnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.bfbtnLogin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.bfbtnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bfbtnLogin.BackgroundImage")));
-            this.bfbtnLogin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnLogin.ButtonText = "Log in";
-            this.bfbtnLogin.ButtonTextMarginLeft = 0;
-            this.bfbtnLogin.ColorContrastOnClick = 45;
-            this.bfbtnLogin.ColorContrastOnHover = 45;
-            this.bfbtnLogin.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bfbtnLogin.CustomizableEdges = borderEdges1;
-            this.bfbtnLogin.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bfbtnLogin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bfbtnLogin.DisabledFillColor = System.Drawing.Color.Empty;
-            this.bfbtnLogin.DisabledForecolor = System.Drawing.Color.Empty;
-            this.bfbtnLogin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bfbtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bfbtnLogin.ForeColor = System.Drawing.Color.White;
-            this.bfbtnLogin.IconLeft = null;
-            this.bfbtnLogin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bfbtnLogin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bfbtnLogin.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bfbtnLogin.IconMarginLeft = 11;
-            this.bfbtnLogin.IconPadding = 10;
-            this.bfbtnLogin.IconRight = null;
-            this.bfbtnLogin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bfbtnLogin.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bfbtnLogin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bfbtnLogin.IconSize = 25;
-            this.bfbtnLogin.IdleBorderColor = System.Drawing.Color.Empty;
-            this.bfbtnLogin.IdleBorderRadius = 0;
-            this.bfbtnLogin.IdleBorderThickness = 0;
-            this.bfbtnLogin.IdleFillColor = System.Drawing.Color.Empty;
-            this.bfbtnLogin.IdleIconLeftImage = null;
-            this.bfbtnLogin.IdleIconRightImage = null;
-            this.bfbtnLogin.IndicateFocus = false;
-            this.bfbtnLogin.Location = new System.Drawing.Point(321, 236);
-            this.bfbtnLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.bfbtnLogin.Name = "bfbtnLogin";
-            this.bfbtnLogin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bfbtnLogin.OnDisabledState.BorderRadius = 35;
-            this.bfbtnLogin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnLogin.OnDisabledState.BorderThickness = 1;
-            this.bfbtnLogin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bfbtnLogin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bfbtnLogin.OnDisabledState.IconLeftImage = null;
-            this.bfbtnLogin.OnDisabledState.IconRightImage = null;
-            this.bfbtnLogin.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.bfbtnLogin.onHoverState.BorderRadius = 35;
-            this.bfbtnLogin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnLogin.onHoverState.BorderThickness = 1;
-            this.bfbtnLogin.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.bfbtnLogin.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnLogin.onHoverState.IconLeftImage = null;
-            this.bfbtnLogin.onHoverState.IconRightImage = null;
-            this.bfbtnLogin.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bfbtnLogin.OnIdleState.BorderRadius = 35;
-            this.bfbtnLogin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnLogin.OnIdleState.BorderThickness = 1;
-            this.bfbtnLogin.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.bfbtnLogin.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnLogin.OnIdleState.IconLeftImage = null;
-            this.bfbtnLogin.OnIdleState.IconRightImage = null;
-            this.bfbtnLogin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bfbtnLogin.OnPressedState.BorderRadius = 35;
-            this.bfbtnLogin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bfbtnLogin.OnPressedState.BorderThickness = 1;
-            this.bfbtnLogin.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bfbtnLogin.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnLogin.OnPressedState.IconLeftImage = null;
-            this.bfbtnLogin.OnPressedState.IconRightImage = null;
-            this.bfbtnLogin.Size = new System.Drawing.Size(224, 36);
-            this.bfbtnLogin.TabIndex = 2;
-            this.bfbtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bfbtnLogin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bfbtnLogin.TextMarginLeft = 0;
-            this.bfbtnLogin.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bfbtnLogin.UseDefaultRadiusAndThickness = true;
-            this.bfbtnLogin.Click += new System.EventHandler(this.bfbtnLogin_Click);
             // 
             // bunifuLabel1
             // 
@@ -350,7 +257,7 @@ namespace final_motoDix.Vistas
             this.bfbtnContraseña.SelectionLength = 0;
             this.bfbtnContraseña.SelectionStart = 0;
             this.bfbtnContraseña.ShortcutsEnabled = true;
-            this.bfbtnContraseña.Size = new System.Drawing.Size(224, 57);
+            this.bfbtnContraseña.Size = new System.Drawing.Size(224, 47);
             this.bfbtnContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.bfbtnContraseña.TabIndex = 7;
             this.bfbtnContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -416,17 +323,108 @@ namespace final_motoDix.Vistas
             this.lblSignIn.ForeColor = System.Drawing.Color.Gold;
             this.lblSignIn.Location = new System.Drawing.Point(408, 276);
             this.lblSignIn.Name = "lblSignIn";
-            this.lblSignIn.Size = new System.Drawing.Size(83, 25);
+            this.lblSignIn.Size = new System.Drawing.Size(52, 16);
             this.lblSignIn.TabIndex = 14;
             this.lblSignIn.Text = "Sign in";
             this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
             // 
-            // Form1
+            // bfbtnLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.bfbtnLogin.AllowAnimations = true;
+            this.bfbtnLogin.AllowMouseEffects = true;
+            this.bfbtnLogin.AllowToggling = false;
+            this.bfbtnLogin.AnimationSpeed = 200;
+            this.bfbtnLogin.AutoGenerateColors = false;
+            this.bfbtnLogin.AutoRoundBorders = true;
+            this.bfbtnLogin.AutoSizeLeftIcon = true;
+            this.bfbtnLogin.AutoSizeRightIcon = true;
+            this.bfbtnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.bfbtnLogin.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bfbtnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bfbtnLogin.BackgroundImage")));
+            this.bfbtnLogin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnLogin.ButtonText = "Log in";
+            this.bfbtnLogin.ButtonTextMarginLeft = 0;
+            this.bfbtnLogin.ColorContrastOnClick = 45;
+            this.bfbtnLogin.ColorContrastOnHover = 45;
+            this.bfbtnLogin.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bfbtnLogin.CustomizableEdges = borderEdges1;
+            this.bfbtnLogin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bfbtnLogin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnLogin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnLogin.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnLogin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.bfbtnLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bfbtnLogin.ForeColor = System.Drawing.Color.White;
+            this.bfbtnLogin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfbtnLogin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnLogin.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bfbtnLogin.IconMarginLeft = 11;
+            this.bfbtnLogin.IconPadding = 10;
+            this.bfbtnLogin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfbtnLogin.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnLogin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bfbtnLogin.IconSize = 25;
+            this.bfbtnLogin.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnLogin.IdleBorderRadius = 38;
+            this.bfbtnLogin.IdleBorderThickness = 1;
+            this.bfbtnLogin.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnLogin.IdleIconLeftImage = null;
+            this.bfbtnLogin.IdleIconRightImage = null;
+            this.bfbtnLogin.IndicateFocus = false;
+            this.bfbtnLogin.Location = new System.Drawing.Point(326, 232);
+            this.bfbtnLogin.Name = "bfbtnLogin";
+            this.bfbtnLogin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnLogin.OnDisabledState.BorderRadius = 1;
+            this.bfbtnLogin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnLogin.OnDisabledState.BorderThickness = 1;
+            this.bfbtnLogin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnLogin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnLogin.OnDisabledState.IconLeftImage = null;
+            this.bfbtnLogin.OnDisabledState.IconRightImage = null;
+            this.bfbtnLogin.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnLogin.onHoverState.BorderRadius = 1;
+            this.bfbtnLogin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnLogin.onHoverState.BorderThickness = 1;
+            this.bfbtnLogin.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnLogin.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnLogin.onHoverState.IconLeftImage = null;
+            this.bfbtnLogin.onHoverState.IconRightImage = null;
+            this.bfbtnLogin.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnLogin.OnIdleState.BorderRadius = 1;
+            this.bfbtnLogin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnLogin.OnIdleState.BorderThickness = 1;
+            this.bfbtnLogin.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnLogin.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnLogin.OnIdleState.IconLeftImage = null;
+            this.bfbtnLogin.OnIdleState.IconRightImage = null;
+            this.bfbtnLogin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnLogin.OnPressedState.BorderRadius = 1;
+            this.bfbtnLogin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnLogin.OnPressedState.BorderThickness = 1;
+            this.bfbtnLogin.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnLogin.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnLogin.OnPressedState.IconLeftImage = null;
+            this.bfbtnLogin.OnPressedState.IconRightImage = null;
+            this.bfbtnLogin.Size = new System.Drawing.Size(219, 40);
+            this.bfbtnLogin.TabIndex = 16;
+            this.bfbtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bfbtnLogin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bfbtnLogin.TextMarginLeft = 0;
+            this.bfbtnLogin.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bfbtnLogin.UseDefaultRadiusAndThickness = true;
+            this.bfbtnLogin.Click += new System.EventHandler(this.bfbtnLogin_Click);
+            // 
+            // frmLogin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(645, 365);
+            this.Controls.Add(this.bfbtnLogin);
             this.Controls.Add(this.lblSignIn);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnMinimizar);
@@ -434,12 +432,12 @@ namespace final_motoDix.Vistas
             this.Controls.Add(this.bftxtCelular);
             this.Controls.Add(this.bfbtnContraseña);
             this.Controls.Add(this.bunifuLabel1);
-            this.Controls.Add(this.bfbtnLogin);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "frmLogin";
             this.Opacity = 0.97D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -454,7 +452,6 @@ namespace final_motoDix.Vistas
         #endregion
 
         private Bunifu.UI.WinForms.BunifuTextBox bftxtCelular;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bfbtnLogin;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
         private Bunifu.UI.WinForms.BunifuTextBox bfbtnContraseña;
@@ -463,6 +460,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblSignIn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnLogin;
     }
 }
 

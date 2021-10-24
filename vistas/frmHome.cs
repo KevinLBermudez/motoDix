@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace final_motoDix.Vistas
 {
-    public partial class frmMain : Form
+    public partial class frmHome : Form
     {
-        public frmMain()
+        public frmHome()
         {
             InitializeComponent();
         }
@@ -40,17 +40,9 @@ namespace final_motoDix.Vistas
 
         }
 
-
-        private void frmMain_Load(object sender, EventArgs e)
+        private void frmHome_Load(object sender, EventArgs e)
         {
-
             AbrirFormInPanel<frmTravel>();
-        
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

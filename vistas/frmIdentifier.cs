@@ -19,7 +19,7 @@ namespace final_motoDix.Vistas
 
         private void bfimgbtnMotorcyclist_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            frmLogin login = new frmLogin();
             login.Show();
             this.Visible = false;
             
@@ -27,7 +27,7 @@ namespace final_motoDix.Vistas
 
         private void bfimgbtnUser_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            frmLogin login = new frmLogin();
             login.Show();
             this.Visible = false;
         }

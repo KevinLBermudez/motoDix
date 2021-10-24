@@ -186,11 +186,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos\conexion.modelo.cs" />
-    <Compile Include="Vistas\Form1.cs">
+    <Compile Include="Vistas\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Vistas\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\frmIdentifier.cs">
       <SubType>Form</SubType>
@@ -198,11 +198,11 @@
     <Compile Include="Vistas\frmIdentifier.Designer.cs">
       <DependentUpon>frmIdentifier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\frmMain.cs">
+    <Compile Include="Vistas\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Vistas\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\frmRegister.cs">
       <SubType>Form</SubType>
@@ -224,14 +224,14 @@
     <Compile Include="Vistas\frmTravel.Designer.cs">
       <DependentUpon>frmTravel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vistas\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmIdentifier.resx">
       <DependentUpon>frmIdentifier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>

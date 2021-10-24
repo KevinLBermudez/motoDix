@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu;
 
 namespace final_motoDix.Vistas
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -44,11 +45,15 @@ namespace final_motoDix.Vistas
             this.Close();
         }
 
+       
+
         private void bfbtnLogin_Click(object sender, EventArgs e)
         {
-            frmMain main = new frmMain();
-            main.Show();
-        
+            frmHome home = new frmHome();
+
+            home.Show();
+
+            this.Close();
         }
     }
 }
