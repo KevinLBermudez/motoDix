@@ -55,5 +55,15 @@ namespace final_motoDix.Vistas
             login.Show();
             this.Close();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ptbCrearCuentaMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -32,5 +32,21 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+        private void ptbMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ptbMaximizar_Click(object sender, EventArgs e)
+        {
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+        }
+
+        private void ptbCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

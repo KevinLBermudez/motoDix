@@ -59,5 +59,41 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+        private void bfbtnMisViajes_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel<frmHistory>();
+        }
+
+        private void bfbtnViajar_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel<frmTravel>();
+        }
+
+        private void ptbMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ptbMaximizar_Click(object sender, EventArgs e)
+        {
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+        }
+
+        private void ptbCerrar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult =  MessageBox.Show("Seguro que deseas salir de la aplicación", "Exit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
+
+        private void bfpbImagenPerfil_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel<frmPerfil>();    
+        }
     }
 }

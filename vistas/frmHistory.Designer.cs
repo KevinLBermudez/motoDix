@@ -64,7 +64,7 @@ namespace final_motoDix.Vistas
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -109,6 +109,7 @@ namespace final_motoDix.Vistas
             // 
             this.bflblDesde.AllowParentOverrides = false;
             this.bflblDesde.AutoEllipsis = false;
+            this.bflblDesde.Cursor = System.Windows.Forms.Cursors.Default;
             this.bflblDesde.CursorType = System.Windows.Forms.Cursors.Default;
             this.bflblDesde.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bflblDesde.Location = new System.Drawing.Point(36, 93);
@@ -146,6 +147,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkDesde.DisabledColor = System.Drawing.Color.Gray;
             this.bfdtpkDesde.DisplayWeekNumbers = false;
             this.bfdtpkDesde.DPHeight = 0;
+            this.bfdtpkDesde.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bfdtpkDesde.FillDatePicker = false;
             this.bfdtpkDesde.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bfdtpkDesde.ForeColor = System.Drawing.Color.Black;
@@ -154,7 +156,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkDesde.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bfdtpkDesde.LeftTextMargin = 5;
             this.bfdtpkDesde.Location = new System.Drawing.Point(36, 122);
-            this.bfdtpkDesde.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bfdtpkDesde.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdtpkDesde.Name = "bfdtpkDesde";
             this.bfdtpkDesde.Size = new System.Drawing.Size(286, 32);
             this.bfdtpkDesde.TabIndex = 3;
@@ -171,6 +173,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkHasta.DisabledColor = System.Drawing.Color.Gray;
             this.bfdtpkHasta.DisplayWeekNumbers = false;
             this.bfdtpkHasta.DPHeight = 0;
+            this.bfdtpkHasta.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bfdtpkHasta.FillDatePicker = false;
             this.bfdtpkHasta.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bfdtpkHasta.ForeColor = System.Drawing.Color.Black;
@@ -179,7 +182,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkHasta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bfdtpkHasta.LeftTextMargin = 5;
             this.bfdtpkHasta.Location = new System.Drawing.Point(397, 122);
-            this.bfdtpkHasta.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bfdtpkHasta.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdtpkHasta.Name = "bfdtpkHasta";
             this.bfdtpkHasta.Size = new System.Drawing.Size(286, 32);
             this.bfdtpkHasta.TabIndex = 4;

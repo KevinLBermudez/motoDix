@@ -29,13 +29,15 @@ namespace final_motoDix.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.panelVertical = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bfpbImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfbtnTipoUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -45,37 +47,46 @@ namespace final_motoDix.Vistas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.bfpbImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuGradientPanel1.SuspendLayout();
+            this.panelHeader = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.ptbMaximizar = new System.Windows.Forms.PictureBox();
+            this.ptbCerrar = new System.Windows.Forms.PictureBox();
+            this.ptbMinizar = new System.Windows.Forms.PictureBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panelVertical.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).BeginInit();
+            this.panelContenedor.SuspendLayout();
+            this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMinizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuGradientPanel1
+            // panelVertical
             // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.panel1);
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuButton21);
-            this.bunifuGradientPanel1.Controls.Add(this.bfbtnMisViajes);
-            this.bunifuGradientPanel1.Controls.Add(this.bfbtnViajar);
-            this.bunifuGradientPanel1.Controls.Add(this.bfbtnTrabajaConNosotros);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(211, 652);
-            this.bunifuGradientPanel1.TabIndex = 0;
-            this.bunifuGradientPanel1.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
+            this.panelVertical.BackColor = System.Drawing.Color.Transparent;
+            this.panelVertical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelVertical.BackgroundImage")));
+            this.panelVertical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelVertical.BorderRadius = 1;
+            this.panelVertical.Controls.Add(this.panel1);
+            this.panelVertical.Controls.Add(this.bunifuButton21);
+            this.panelVertical.Controls.Add(this.bfbtnMisViajes);
+            this.panelVertical.Controls.Add(this.bfbtnViajar);
+            this.panelVertical.Controls.Add(this.bfbtnTrabajaConNosotros);
+            this.panelVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelVertical.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelVertical.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelVertical.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelVertical.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelVertical.Location = new System.Drawing.Point(0, 0);
+            this.panelVertical.Margin = new System.Windows.Forms.Padding(2);
+            this.panelVertical.Name = "panelVertical";
+            this.panelVertical.Quality = 10;
+            this.panelVertical.Size = new System.Drawing.Size(211, 652);
+            this.panelVertical.TabIndex = 0;
+            this.panelVertical.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
             // 
             // panel1
             // 
@@ -83,10 +94,27 @@ namespace final_motoDix.Vistas
             this.panel1.Controls.Add(this.bunifuLabel1);
             this.panel1.Controls.Add(this.bfbtnTipoUsuario);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 194);
             this.panel1.TabIndex = 5;
+            // 
+            // bfpbImagenPerfil
+            // 
+            this.bfpbImagenPerfil.AllowFocused = false;
+            this.bfpbImagenPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bfpbImagenPerfil.AutoSizeHeight = true;
+            this.bfpbImagenPerfil.BorderRadius = 53;
+            this.bfpbImagenPerfil.Image = ((System.Drawing.Image)(resources.GetObject("bfpbImagenPerfil.Image")));
+            this.bfpbImagenPerfil.IsCircle = true;
+            this.bfpbImagenPerfil.Location = new System.Drawing.Point(44, 8);
+            this.bfpbImagenPerfil.Name = "bfpbImagenPerfil";
+            this.bfpbImagenPerfil.Size = new System.Drawing.Size(106, 106);
+            this.bfpbImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bfpbImagenPerfil.TabIndex = 6;
+            this.bfpbImagenPerfil.TabStop = false;
+            this.bfpbImagenPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bfpbImagenPerfil.Click += new System.EventHandler(this.bfpbImagenPerfil_Click);
             // 
             // bunifuLabel1
             // 
@@ -96,7 +124,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuLabel1.Location = new System.Drawing.Point(8, 120);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(102, 15);
@@ -116,7 +144,7 @@ namespace final_motoDix.Vistas
             this.bfbtnTipoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bfbtnTipoUsuario.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.bfbtnTipoUsuario.Location = new System.Drawing.Point(8, 149);
-            this.bfbtnTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnTipoUsuario.Name = "bfbtnTipoUsuario";
             this.bfbtnTipoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bfbtnTipoUsuario.Size = new System.Drawing.Size(104, 25);
@@ -174,7 +202,7 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
             this.bunifuButton21.Location = new System.Drawing.Point(2, 620);
-            this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.OnDisabledState.BorderRadius = 1;
@@ -264,7 +292,7 @@ namespace final_motoDix.Vistas
             this.bfbtnMisViajes.IdleIconRightImage = null;
             this.bfbtnMisViajes.IndicateFocus = false;
             this.bfbtnMisViajes.Location = new System.Drawing.Point(3, 270);
-            this.bfbtnMisViajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnMisViajes.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnMisViajes.Name = "bfbtnMisViajes";
             this.bfbtnMisViajes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnMisViajes.OnDisabledState.BorderRadius = 1;
@@ -305,6 +333,7 @@ namespace final_motoDix.Vistas
             this.bfbtnMisViajes.TextMarginLeft = 0;
             this.bfbtnMisViajes.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnMisViajes.UseDefaultRadiusAndThickness = true;
+            this.bfbtnMisViajes.Click += new System.EventHandler(this.bfbtnMisViajes_Click);
             // 
             // bfbtnViajar
             // 
@@ -354,7 +383,7 @@ namespace final_motoDix.Vistas
             this.bfbtnViajar.IdleIconRightImage = null;
             this.bfbtnViajar.IndicateFocus = false;
             this.bfbtnViajar.Location = new System.Drawing.Point(5, 213);
-            this.bfbtnViajar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnViajar.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnViajar.Name = "bfbtnViajar";
             this.bfbtnViajar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnViajar.OnDisabledState.BorderRadius = 1;
@@ -395,6 +424,7 @@ namespace final_motoDix.Vistas
             this.bfbtnViajar.TextMarginLeft = 0;
             this.bfbtnViajar.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnViajar.UseDefaultRadiusAndThickness = true;
+            this.bfbtnViajar.Click += new System.EventHandler(this.bfbtnViajar_Click);
             // 
             // bfbtnTrabajaConNosotros
             // 
@@ -444,7 +474,7 @@ namespace final_motoDix.Vistas
             this.bfbtnTrabajaConNosotros.IdleIconRightImage = null;
             this.bfbtnTrabajaConNosotros.IndicateFocus = false;
             this.bfbtnTrabajaConNosotros.Location = new System.Drawing.Point(3, 581);
-            this.bfbtnTrabajaConNosotros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnTrabajaConNosotros.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnTrabajaConNosotros.Name = "bfbtnTrabajaConNosotros";
             this.bfbtnTrabajaConNosotros.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnTrabajaConNosotros.OnDisabledState.BorderRadius = 1;
@@ -508,29 +538,77 @@ namespace final_motoDix.Vistas
             // 
             // panelContenedor
             // 
+            this.panelContenedor.Controls.Add(this.panelHeader);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(211, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(896, 652);
             this.panelContenedor.TabIndex = 17;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
-            // bfpbImagenPerfil
+            // panelHeader
             // 
-            this.bfpbImagenPerfil.AllowFocused = false;
-            this.bfpbImagenPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bfpbImagenPerfil.AutoSizeHeight = true;
-            this.bfpbImagenPerfil.BorderRadius = 53;
-            this.bfpbImagenPerfil.Image = ((System.Drawing.Image)(resources.GetObject("bfpbImagenPerfil.Image")));
-            this.bfpbImagenPerfil.IsCircle = true;
-            this.bfpbImagenPerfil.Location = new System.Drawing.Point(44, 8);
-            this.bfpbImagenPerfil.Name = "bfpbImagenPerfil";
-            this.bfpbImagenPerfil.Size = new System.Drawing.Size(106, 106);
-            this.bfpbImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bfpbImagenPerfil.TabIndex = 6;
-            this.bfpbImagenPerfil.TabStop = false;
-            this.bfpbImagenPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.panelHeader.BackColor = System.Drawing.Color.Transparent;
+            this.panelHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelHeader.BackgroundImage")));
+            this.panelHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHeader.BorderRadius = 1;
+            this.panelHeader.Controls.Add(this.ptbMaximizar);
+            this.panelHeader.Controls.Add(this.ptbCerrar);
+            this.panelHeader.Controls.Add(this.ptbMinizar);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelHeader.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelHeader.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelHeader.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Quality = 10;
+            this.panelHeader.Size = new System.Drawing.Size(896, 29);
+            this.panelHeader.TabIndex = 0;
+            // 
+            // ptbMaximizar
+            // 
+            this.ptbMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMaximizar.Image")));
+            this.ptbMaximizar.Location = new System.Drawing.Point(851, 3);
+            this.ptbMaximizar.Name = "ptbMaximizar";
+            this.ptbMaximizar.Size = new System.Drawing.Size(17, 18);
+            this.ptbMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbMaximizar.TabIndex = 61;
+            this.ptbMaximizar.TabStop = false;
+            this.ptbMaximizar.Click += new System.EventHandler(this.ptbMaximizar_Click);
+            // 
+            // ptbCerrar
+            // 
+            this.ptbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptbCerrar.Image")));
+            this.ptbCerrar.Location = new System.Drawing.Point(874, 3);
+            this.ptbCerrar.Name = "ptbCerrar";
+            this.ptbCerrar.Size = new System.Drawing.Size(18, 18);
+            this.ptbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCerrar.TabIndex = 60;
+            this.ptbCerrar.TabStop = false;
+            this.ptbCerrar.Click += new System.EventHandler(this.ptbCerrar_Click);
+            // 
+            // ptbMinizar
+            // 
+            this.ptbMinizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbMinizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMinizar.Image")));
+            this.ptbMinizar.Location = new System.Drawing.Point(826, 3);
+            this.ptbMinizar.Name = "ptbMinizar";
+            this.ptbMinizar.Size = new System.Drawing.Size(17, 18);
+            this.ptbMinizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbMinizar.TabIndex = 59;
+            this.ptbMinizar.TabStop = false;
+            this.ptbMinizar.Click += new System.EventHandler(this.ptbMinizar_Click);
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panelHeader;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // frmHome
             // 
@@ -541,28 +619,33 @@ namespace final_motoDix.Vistas
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.panelVertical);
             this.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmHome_Load);
-            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.panelVertical.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMinizar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel panelVertical;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelContenedor;
@@ -574,5 +657,10 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bfbtnTipoUsuario;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPictureBox bfpbImagenPerfil;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel panelHeader;
+        private System.Windows.Forms.PictureBox ptbMaximizar;
+        private System.Windows.Forms.PictureBox ptbCerrar;
+        private System.Windows.Forms.PictureBox ptbMinizar;
     }
 }

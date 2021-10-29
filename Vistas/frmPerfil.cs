@@ -10,28 +10,32 @@ using System.Windows.Forms;
 
 namespace final_motoDix.Vistas
 {
-    public partial class frmHistory : Form
+    public partial class frmPerfil : Form
     {
-        public frmHistory()
+        public frmPerfil()
         {
             InitializeComponent();
         }
 
-        private void ptbMinizarHViajes_Click(object sender, EventArgs e)
+        private void frmPerfil_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
 
         }
 
-        private void ptbMaximizarHViajes_Click(object sender, EventArgs e)
+        private void ptbCerrarPerfil_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ptbMaximizarPerfil_Click(object sender, EventArgs e)
         {
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
 
-        private void ptbCerrarHViajes_Click(object sender, EventArgs e)
+        private void ptbMinizarPerfil_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
