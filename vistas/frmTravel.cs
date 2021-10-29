@@ -27,5 +27,10 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+        private void bunifuVScrollBar1_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
+        {
+
+        }
     }
 }
