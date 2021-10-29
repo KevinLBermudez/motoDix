@@ -32,5 +32,10 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+        private void bunifuSeparator4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

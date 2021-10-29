@@ -59,5 +59,12 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+        private void bfbtnMisViajes_Click(object sender, EventArgs e)
+        {
+
+            AbrirFormInPanel<frmHistory>();
+
+        }
     }
 }

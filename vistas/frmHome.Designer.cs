@@ -30,26 +30,25 @@ namespace final_motoDix.Vistas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bfpbImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfbtnTipoUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnMisViajes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnViajar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnTrabajaConNosotros = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.bfpbImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.bfbtnSolicitudesConductor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +58,7 @@ namespace final_motoDix.Vistas
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.bfbtnSolicitudesConductor);
             this.bunifuGradientPanel1.Controls.Add(this.panel1);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuButton21);
             this.bunifuGradientPanel1.Controls.Add(this.bfbtnMisViajes);
@@ -70,10 +70,10 @@ namespace final_motoDix.Vistas
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(211, 652);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(203, 652);
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
             // 
@@ -83,10 +83,26 @@ namespace final_motoDix.Vistas
             this.panel1.Controls.Add(this.bunifuLabel1);
             this.panel1.Controls.Add(this.bfbtnTipoUsuario);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 194);
             this.panel1.TabIndex = 5;
+            // 
+            // bfpbImagenPerfil
+            // 
+            this.bfpbImagenPerfil.AllowFocused = false;
+            this.bfpbImagenPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bfpbImagenPerfil.AutoSizeHeight = true;
+            this.bfpbImagenPerfil.BorderRadius = 53;
+            this.bfpbImagenPerfil.Image = ((System.Drawing.Image)(resources.GetObject("bfpbImagenPerfil.Image")));
+            this.bfpbImagenPerfil.IsCircle = true;
+            this.bfpbImagenPerfil.Location = new System.Drawing.Point(44, 8);
+            this.bfpbImagenPerfil.Name = "bfpbImagenPerfil";
+            this.bfpbImagenPerfil.Size = new System.Drawing.Size(106, 106);
+            this.bfpbImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bfpbImagenPerfil.TabIndex = 6;
+            this.bfpbImagenPerfil.TabStop = false;
+            this.bfpbImagenPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // bunifuLabel1
             // 
@@ -96,7 +112,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuLabel1.Location = new System.Drawing.Point(8, 120);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(102, 15);
@@ -116,7 +132,7 @@ namespace final_motoDix.Vistas
             this.bfbtnTipoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bfbtnTipoUsuario.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.bfbtnTipoUsuario.Location = new System.Drawing.Point(8, 149);
-            this.bfbtnTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnTipoUsuario.Name = "bfbtnTipoUsuario";
             this.bfbtnTipoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bfbtnTipoUsuario.Size = new System.Drawing.Size(104, 25);
@@ -145,11 +161,11 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
             this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuButton21.CustomizableEdges = borderEdges2;
             this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -174,7 +190,7 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
             this.bunifuButton21.Location = new System.Drawing.Point(2, 620);
-            this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.OnDisabledState.BorderRadius = 1;
@@ -235,11 +251,11 @@ namespace final_motoDix.Vistas
             this.bfbtnMisViajes.ColorContrastOnClick = 45;
             this.bfbtnMisViajes.ColorContrastOnHover = 45;
             this.bfbtnMisViajes.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bfbtnMisViajes.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bfbtnMisViajes.CustomizableEdges = borderEdges3;
             this.bfbtnMisViajes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnMisViajes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnMisViajes.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -263,8 +279,8 @@ namespace final_motoDix.Vistas
             this.bfbtnMisViajes.IdleIconLeftImage = null;
             this.bfbtnMisViajes.IdleIconRightImage = null;
             this.bfbtnMisViajes.IndicateFocus = false;
-            this.bfbtnMisViajes.Location = new System.Drawing.Point(3, 270);
-            this.bfbtnMisViajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnMisViajes.Location = new System.Drawing.Point(3, 255);
+            this.bfbtnMisViajes.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnMisViajes.Name = "bfbtnMisViajes";
             this.bfbtnMisViajes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnMisViajes.OnDisabledState.BorderRadius = 1;
@@ -298,13 +314,14 @@ namespace final_motoDix.Vistas
             this.bfbtnMisViajes.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bfbtnMisViajes.OnPressedState.IconLeftImage = null;
             this.bfbtnMisViajes.OnPressedState.IconRightImage = null;
-            this.bfbtnMisViajes.Size = new System.Drawing.Size(207, 42);
+            this.bfbtnMisViajes.Size = new System.Drawing.Size(199, 42);
             this.bfbtnMisViajes.TabIndex = 2;
             this.bfbtnMisViajes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bfbtnMisViajes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bfbtnMisViajes.TextMarginLeft = 0;
             this.bfbtnMisViajes.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnMisViajes.UseDefaultRadiusAndThickness = true;
+            this.bfbtnMisViajes.Click += new System.EventHandler(this.bfbtnMisViajes_Click);
             // 
             // bfbtnViajar
             // 
@@ -325,11 +342,11 @@ namespace final_motoDix.Vistas
             this.bfbtnViajar.ColorContrastOnClick = 45;
             this.bfbtnViajar.ColorContrastOnHover = 45;
             this.bfbtnViajar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.bfbtnViajar.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bfbtnViajar.CustomizableEdges = borderEdges4;
             this.bfbtnViajar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnViajar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnViajar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -354,7 +371,7 @@ namespace final_motoDix.Vistas
             this.bfbtnViajar.IdleIconRightImage = null;
             this.bfbtnViajar.IndicateFocus = false;
             this.bfbtnViajar.Location = new System.Drawing.Point(5, 213);
-            this.bfbtnViajar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnViajar.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnViajar.Name = "bfbtnViajar";
             this.bfbtnViajar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnViajar.OnDisabledState.BorderRadius = 1;
@@ -415,11 +432,11 @@ namespace final_motoDix.Vistas
             this.bfbtnTrabajaConNosotros.ColorContrastOnClick = 45;
             this.bfbtnTrabajaConNosotros.ColorContrastOnHover = 45;
             this.bfbtnTrabajaConNosotros.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bfbtnTrabajaConNosotros.CustomizableEdges = borderEdges4;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.bfbtnTrabajaConNosotros.CustomizableEdges = borderEdges5;
             this.bfbtnTrabajaConNosotros.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnTrabajaConNosotros.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnTrabajaConNosotros.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -444,7 +461,7 @@ namespace final_motoDix.Vistas
             this.bfbtnTrabajaConNosotros.IdleIconRightImage = null;
             this.bfbtnTrabajaConNosotros.IndicateFocus = false;
             this.bfbtnTrabajaConNosotros.Location = new System.Drawing.Point(3, 581);
-            this.bfbtnTrabajaConNosotros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bfbtnTrabajaConNosotros.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnTrabajaConNosotros.Name = "bfbtnTrabajaConNosotros";
             this.bfbtnTrabajaConNosotros.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnTrabajaConNosotros.OnDisabledState.BorderRadius = 1;
@@ -486,51 +503,145 @@ namespace final_motoDix.Vistas
             this.bfbtnTrabajaConNosotros.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnTrabajaConNosotros.UseDefaultRadiusAndThickness = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(787, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(815, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
             // panelContenedor
             // 
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(211, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedor.Location = new System.Drawing.Point(203, 0);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(896, 652);
+            this.panelContenedor.Size = new System.Drawing.Size(904, 652);
             this.panelContenedor.TabIndex = 17;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
-            // bfpbImagenPerfil
+            // bunifuFormDock1
             // 
-            this.bfpbImagenPerfil.AllowFocused = false;
-            this.bfpbImagenPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bfpbImagenPerfil.AutoSizeHeight = true;
-            this.bfpbImagenPerfil.BorderRadius = 53;
-            this.bfpbImagenPerfil.Image = ((System.Drawing.Image)(resources.GetObject("bfpbImagenPerfil.Image")));
-            this.bfpbImagenPerfil.IsCircle = true;
-            this.bfpbImagenPerfil.Location = new System.Drawing.Point(44, 8);
-            this.bfpbImagenPerfil.Name = "bfpbImagenPerfil";
-            this.bfpbImagenPerfil.Size = new System.Drawing.Size(106, 106);
-            this.bfpbImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bfpbImagenPerfil.TabIndex = 6;
-            this.bfpbImagenPerfil.TabStop = false;
-            this.bfpbImagenPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuFormDock1.AllowFormDragging = true;
+            this.bunifuFormDock1.AllowFormDropShadow = true;
+            this.bunifuFormDock1.AllowFormResizing = true;
+            this.bunifuFormDock1.AllowHidingBottomRegion = true;
+            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
+            this.bunifuFormDock1.ContainerControl = this;
+            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
+            this.bunifuFormDock1.DockingOptions.DockAll = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
+            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
+            this.bunifuFormDock1.DockingOptions.DockLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockRight = true;
+            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
+            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
+            this.bunifuFormDock1.ParentForm = this;
+            this.bunifuFormDock1.ShowCursorChanges = true;
+            this.bunifuFormDock1.ShowDockingIndicators = true;
+            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
+            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
+            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
+            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
+            // 
+            // bfbtnSolicitudesConductor
+            // 
+            this.bfbtnSolicitudesConductor.AllowAnimations = true;
+            this.bfbtnSolicitudesConductor.AllowMouseEffects = true;
+            this.bfbtnSolicitudesConductor.AllowToggling = false;
+            this.bfbtnSolicitudesConductor.AnimationSpeed = 200;
+            this.bfbtnSolicitudesConductor.AutoGenerateColors = false;
+            this.bfbtnSolicitudesConductor.AutoRoundBorders = false;
+            this.bfbtnSolicitudesConductor.AutoSizeLeftIcon = true;
+            this.bfbtnSolicitudesConductor.AutoSizeRightIcon = true;
+            this.bfbtnSolicitudesConductor.BackColor = System.Drawing.Color.Transparent;
+            this.bfbtnSolicitudesConductor.BackColor1 = System.Drawing.Color.Transparent;
+            this.bfbtnSolicitudesConductor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bfbtnSolicitudesConductor.BackgroundImage")));
+            this.bfbtnSolicitudesConductor.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnSolicitudesConductor.ButtonText = "Solicitudes";
+            this.bfbtnSolicitudesConductor.ButtonTextMarginLeft = 0;
+            this.bfbtnSolicitudesConductor.ColorContrastOnClick = 45;
+            this.bfbtnSolicitudesConductor.ColorContrastOnHover = 45;
+            this.bfbtnSolicitudesConductor.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bfbtnSolicitudesConductor.CustomizableEdges = borderEdges1;
+            this.bfbtnSolicitudesConductor.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bfbtnSolicitudesConductor.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnSolicitudesConductor.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnSolicitudesConductor.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnSolicitudesConductor.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.bfbtnSolicitudesConductor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bfbtnSolicitudesConductor.ForeColor = System.Drawing.Color.White;
+            this.bfbtnSolicitudesConductor.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfbtnSolicitudesConductor.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnSolicitudesConductor.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bfbtnSolicitudesConductor.IconMarginLeft = 11;
+            this.bfbtnSolicitudesConductor.IconPadding = 10;
+            this.bfbtnSolicitudesConductor.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfbtnSolicitudesConductor.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnSolicitudesConductor.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bfbtnSolicitudesConductor.IconSize = 25;
+            this.bfbtnSolicitudesConductor.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.bfbtnSolicitudesConductor.IdleBorderRadius = 1;
+            this.bfbtnSolicitudesConductor.IdleBorderThickness = 1;
+            this.bfbtnSolicitudesConductor.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bfbtnSolicitudesConductor.IdleIconLeftImage = null;
+            this.bfbtnSolicitudesConductor.IdleIconRightImage = null;
+            this.bfbtnSolicitudesConductor.IndicateFocus = false;
+            this.bfbtnSolicitudesConductor.Location = new System.Drawing.Point(3, 311);
+            this.bfbtnSolicitudesConductor.Margin = new System.Windows.Forms.Padding(2);
+            this.bfbtnSolicitudesConductor.Name = "bfbtnSolicitudesConductor";
+            this.bfbtnSolicitudesConductor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnSolicitudesConductor.OnDisabledState.BorderRadius = 1;
+            this.bfbtnSolicitudesConductor.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnSolicitudesConductor.OnDisabledState.BorderThickness = 1;
+            this.bfbtnSolicitudesConductor.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnSolicitudesConductor.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnSolicitudesConductor.OnDisabledState.IconLeftImage = null;
+            this.bfbtnSolicitudesConductor.OnDisabledState.IconRightImage = null;
+            this.bfbtnSolicitudesConductor.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnSolicitudesConductor.onHoverState.BorderRadius = 1;
+            this.bfbtnSolicitudesConductor.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnSolicitudesConductor.onHoverState.BorderThickness = 1;
+            this.bfbtnSolicitudesConductor.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnSolicitudesConductor.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnSolicitudesConductor.onHoverState.IconLeftImage = null;
+            this.bfbtnSolicitudesConductor.onHoverState.IconRightImage = null;
+            this.bfbtnSolicitudesConductor.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.bfbtnSolicitudesConductor.OnIdleState.BorderRadius = 1;
+            this.bfbtnSolicitudesConductor.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnSolicitudesConductor.OnIdleState.BorderThickness = 1;
+            this.bfbtnSolicitudesConductor.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.bfbtnSolicitudesConductor.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnSolicitudesConductor.OnIdleState.IconLeftImage = null;
+            this.bfbtnSolicitudesConductor.OnIdleState.IconRightImage = null;
+            this.bfbtnSolicitudesConductor.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnSolicitudesConductor.OnPressedState.BorderRadius = 1;
+            this.bfbtnSolicitudesConductor.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnSolicitudesConductor.OnPressedState.BorderThickness = 1;
+            this.bfbtnSolicitudesConductor.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnSolicitudesConductor.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnSolicitudesConductor.OnPressedState.IconLeftImage = null;
+            this.bfbtnSolicitudesConductor.OnPressedState.IconRightImage = null;
+            this.bfbtnSolicitudesConductor.Size = new System.Drawing.Size(199, 42);
+            this.bfbtnSolicitudesConductor.TabIndex = 6;
+            this.bfbtnSolicitudesConductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bfbtnSolicitudesConductor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bfbtnSolicitudesConductor.TextMarginLeft = 0;
+            this.bfbtnSolicitudesConductor.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bfbtnSolicitudesConductor.UseDefaultRadiusAndThickness = true;
             // 
             // frmHome
             // 
@@ -539,13 +650,11 @@ namespace final_motoDix.Vistas
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1107, 652);
             this.Controls.Add(this.panelContenedor);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
@@ -553,8 +662,6 @@ namespace final_motoDix.Vistas
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).EndInit();
             this.ResumeLayout(false);
 
@@ -563,8 +670,6 @@ namespace final_motoDix.Vistas
         #endregion
 
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelContenedor;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnViajar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnTrabajaConNosotros;
@@ -574,5 +679,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bfbtnTipoUsuario;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPictureBox bfpbImagenPerfil;
+        private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnSolicitudesConductor;
     }
 }

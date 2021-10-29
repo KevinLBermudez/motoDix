@@ -64,7 +64,7 @@ namespace final_motoDix.Vistas
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -96,12 +96,12 @@ namespace final_motoDix.Vistas
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(36, 194);
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(36, 198);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(812, 277);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(718, 267);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -109,6 +109,7 @@ namespace final_motoDix.Vistas
             // 
             this.bflblDesde.AllowParentOverrides = false;
             this.bflblDesde.AutoEllipsis = false;
+            this.bflblDesde.Cursor = System.Windows.Forms.Cursors.Default;
             this.bflblDesde.CursorType = System.Windows.Forms.Cursors.Default;
             this.bflblDesde.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bflblDesde.Location = new System.Drawing.Point(36, 93);
@@ -146,6 +147,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkDesde.DisabledColor = System.Drawing.Color.Gray;
             this.bfdtpkDesde.DisplayWeekNumbers = false;
             this.bfdtpkDesde.DPHeight = 0;
+            this.bfdtpkDesde.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bfdtpkDesde.FillDatePicker = false;
             this.bfdtpkDesde.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bfdtpkDesde.ForeColor = System.Drawing.Color.Black;
@@ -154,9 +156,9 @@ namespace final_motoDix.Vistas
             this.bfdtpkDesde.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bfdtpkDesde.LeftTextMargin = 5;
             this.bfdtpkDesde.Location = new System.Drawing.Point(36, 122);
-            this.bfdtpkDesde.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bfdtpkDesde.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdtpkDesde.Name = "bfdtpkDesde";
-            this.bfdtpkDesde.Size = new System.Drawing.Size(286, 32);
+            this.bfdtpkDesde.Size = new System.Drawing.Size(217, 32);
             this.bfdtpkDesde.TabIndex = 3;
             this.bfdtpkDesde.Value = new System.DateTime(2021, 10, 24, 12, 45, 0, 0);
             // 
@@ -171,6 +173,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkHasta.DisabledColor = System.Drawing.Color.Gray;
             this.bfdtpkHasta.DisplayWeekNumbers = false;
             this.bfdtpkHasta.DPHeight = 0;
+            this.bfdtpkHasta.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.bfdtpkHasta.FillDatePicker = false;
             this.bfdtpkHasta.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bfdtpkHasta.ForeColor = System.Drawing.Color.Black;
@@ -179,9 +182,9 @@ namespace final_motoDix.Vistas
             this.bfdtpkHasta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bfdtpkHasta.LeftTextMargin = 5;
             this.bfdtpkHasta.Location = new System.Drawing.Point(397, 122);
-            this.bfdtpkHasta.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bfdtpkHasta.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdtpkHasta.Name = "bfdtpkHasta";
-            this.bfdtpkHasta.Size = new System.Drawing.Size(286, 32);
+            this.bfdtpkHasta.Size = new System.Drawing.Size(208, 32);
             this.bfdtpkHasta.TabIndex = 4;
             this.bfdtpkHasta.Value = new System.DateTime(2021, 10, 24, 12, 49, 0, 0);
             // 
@@ -232,7 +235,7 @@ namespace final_motoDix.Vistas
             this.bfbtnLimpiarFiltro.IdleIconLeftImage = null;
             this.bfbtnLimpiarFiltro.IdleIconRightImage = null;
             this.bfbtnLimpiarFiltro.IndicateFocus = false;
-            this.bfbtnLimpiarFiltro.Location = new System.Drawing.Point(745, 165);
+            this.bfbtnLimpiarFiltro.Location = new System.Drawing.Point(640, 169);
             this.bfbtnLimpiarFiltro.Name = "bfbtnLimpiarFiltro";
             this.bfbtnLimpiarFiltro.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnLimpiarFiltro.OnDisabledState.BorderRadius = 1;
@@ -331,7 +334,7 @@ namespace final_motoDix.Vistas
             this.bfbtnConsultarHistorial.IdleIconLeftImage = null;
             this.bfbtnConsultarHistorial.IdleIconRightImage = null;
             this.bfbtnConsultarHistorial.IndicateFocus = false;
-            this.bfbtnConsultarHistorial.Location = new System.Drawing.Point(708, 122);
+            this.bfbtnConsultarHistorial.Location = new System.Drawing.Point(636, 122);
             this.bfbtnConsultarHistorial.Name = "bfbtnConsultarHistorial";
             this.bfbtnConsultarHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnConsultarHistorial.OnDisabledState.BorderRadius = 1;
@@ -377,7 +380,7 @@ namespace final_motoDix.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 506);
+            this.ClientSize = new System.Drawing.Size(785, 516);
             this.ControlBox = false;
             this.Controls.Add(this.bfbtnConsultarHistorial);
             this.Controls.Add(this.lblHistorial);
