@@ -20,6 +20,7 @@ namespace final_motoDix.Vistas
         private void frmTravel_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void bunifuSeparator1_Click(object sender, EventArgs e)
