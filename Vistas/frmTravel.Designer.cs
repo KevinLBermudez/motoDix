@@ -68,10 +68,11 @@ namespace final_motoDix.Vistas
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(355, 43);
+            this.bunifuLabel1.Location = new System.Drawing.Point(237, 28);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(133, 37);
+            this.bunifuLabel1.Size = new System.Drawing.Size(89, 25);
             this.bunifuLabel1.TabIndex = 0;
             this.bunifuLabel1.Text = "Welcome";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -81,12 +82,13 @@ namespace final_motoDix.Vistas
             // 
             this.bflblPuntoInicio.AllowParentOverrides = false;
             this.bflblPuntoInicio.AutoEllipsis = false;
+            this.bflblPuntoInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.bflblPuntoInicio.CursorType = System.Windows.Forms.Cursors.Default;
             this.bflblPuntoInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bflblPuntoInicio.Location = new System.Drawing.Point(154, 116);
             this.bflblPuntoInicio.Name = "bflblPuntoInicio";
             this.bflblPuntoInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblPuntoInicio.Size = new System.Drawing.Size(119, 25);
+            this.bflblPuntoInicio.Size = new System.Drawing.Size(80, 15);
             this.bflblPuntoInicio.TabIndex = 1;
             this.bflblPuntoInicio.Text = "Punto de Inicio";
             this.bflblPuntoInicio.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -101,7 +103,7 @@ namespace final_motoDix.Vistas
             this.bfbtnPuntoFinal.Location = new System.Drawing.Point(525, 116);
             this.bfbtnPuntoFinal.Name = "bfbtnPuntoFinal";
             this.bfbtnPuntoFinal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bfbtnPuntoFinal.Size = new System.Drawing.Size(113, 25);
+            this.bfbtnPuntoFinal.Size = new System.Drawing.Size(76, 15);
             this.bfbtnPuntoFinal.TabIndex = 2;
             this.bfbtnPuntoFinal.Text = "Punto de Final";
             this.bfbtnPuntoFinal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -372,7 +374,7 @@ namespace final_motoDix.Vistas
             this.bflblEViaje.Location = new System.Drawing.Point(82, 418);
             this.bflblEViaje.Name = "bflblEViaje";
             this.bflblEViaje.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblEViaje.Size = new System.Drawing.Size(123, 25);
+            this.bflblEViaje.Size = new System.Drawing.Size(81, 15);
             this.bflblEViaje.TabIndex = 7;
             this.bflblEViaje.Text = "Estado del viaje";
             this.bflblEViaje.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -419,7 +421,7 @@ namespace final_motoDix.Vistas
             this.bflblInformaciónConductor.Location = new System.Drawing.Point(82, 528);
             this.bflblInformaciónConductor.Name = "bflblInformaciónConductor";
             this.bflblInformaciónConductor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblInformaciónConductor.Size = new System.Drawing.Size(211, 25);
+            this.bflblInformaciónConductor.Size = new System.Drawing.Size(142, 15);
             this.bflblInformaciónConductor.TabIndex = 10;
             this.bflblInformaciónConductor.Text = "Información del conductor";
             this.bflblInformaciónConductor.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -452,7 +454,7 @@ namespace final_motoDix.Vistas
             this.bflblSexo.Location = new System.Drawing.Point(149, 634);
             this.bflblSexo.Name = "bflblSexo";
             this.bflblSexo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblSexo.Size = new System.Drawing.Size(38, 25);
+            this.bflblSexo.Size = new System.Drawing.Size(25, 15);
             this.bflblSexo.TabIndex = 12;
             this.bflblSexo.Text = "Sexo";
             this.bflblSexo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -467,7 +469,7 @@ namespace final_motoDix.Vistas
             this.bflblNombreConductor.Location = new System.Drawing.Point(149, 603);
             this.bflblNombreConductor.Name = "bflblNombreConductor";
             this.bflblNombreConductor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblNombreConductor.Size = new System.Drawing.Size(181, 25);
+            this.bflblNombreConductor.Size = new System.Drawing.Size(121, 15);
             this.bflblNombreConductor.TabIndex = 13;
             this.bflblNombreConductor.Text = "Nombre del conductor";
             this.bflblNombreConductor.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -482,7 +484,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel2.Location = new System.Drawing.Point(486, 528);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(211, 25);
+            this.bunifuLabel2.Size = new System.Drawing.Size(142, 15);
             this.bunifuLabel2.TabIndex = 14;
             this.bunifuLabel2.Text = "Información del conductor";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -497,7 +499,7 @@ namespace final_motoDix.Vistas
             this.bflblPlaca.Location = new System.Drawing.Point(468, 609);
             this.bflblPlaca.Name = "bflblPlaca";
             this.bflblPlaca.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblPlaca.Size = new System.Drawing.Size(40, 25);
+            this.bflblPlaca.Size = new System.Drawing.Size(28, 15);
             this.bflblPlaca.TabIndex = 15;
             this.bflblPlaca.Text = "Placa";
             this.bflblPlaca.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -512,7 +514,7 @@ namespace final_motoDix.Vistas
             this.bflblColor.Location = new System.Drawing.Point(468, 671);
             this.bflblColor.Name = "bflblColor";
             this.bflblColor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblColor.Size = new System.Drawing.Size(43, 25);
+            this.bflblColor.Size = new System.Drawing.Size(29, 15);
             this.bflblColor.TabIndex = 16;
             this.bflblColor.Text = "Color";
             this.bflblColor.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -527,7 +529,7 @@ namespace final_motoDix.Vistas
             this.bflblMarca.Location = new System.Drawing.Point(468, 640);
             this.bflblMarca.Name = "bflblMarca";
             this.bflblMarca.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblMarca.Size = new System.Drawing.Size(48, 25);
+            this.bflblMarca.Size = new System.Drawing.Size(33, 15);
             this.bflblMarca.TabIndex = 17;
             this.bflblMarca.Text = "Marca";
             this.bflblMarca.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -551,33 +553,12 @@ namespace final_motoDix.Vistas
             // 
             // frmTravel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(617, 399);
-=======
-            this.ClientSize = new System.Drawing.Size(750, 732);
-            this.Controls.Add(this.bunifuSeparator3);
-            this.Controls.Add(this.bflblMarca);
-            this.Controls.Add(this.bflblColor);
-            this.Controls.Add(this.bflblPlaca);
-            this.Controls.Add(this.bunifuLabel2);
-            this.Controls.Add(this.bflblNombreConductor);
-            this.Controls.Add(this.bflblSexo);
-            this.Controls.Add(this.bunifuRadioButton1);
-            this.Controls.Add(this.bflblInformaciónConductor);
-            this.Controls.Add(this.bunifuSeparator2);
-            this.Controls.Add(this.bflblEstadoViaje);
-            this.Controls.Add(this.bflblEViaje);
-            this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.bfbtnSolicitarViaje);
-            this.Controls.Add(this.bftxtPuntoFinal);
-            this.Controls.Add(this.bftxtPuntoInicio);
-            this.Controls.Add(this.bfbtnPuntoFinal);
-            this.Controls.Add(this.bflblPuntoInicio);
->>>>>>> 4ccb025cdaee79c3682ec00da4afd43fbf780953
+            this.ClientSize = new System.Drawing.Size(582, 372);
             this.Controls.Add(this.bunifuLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTravel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTravel";
