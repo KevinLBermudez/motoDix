@@ -95,5 +95,16 @@ namespace final_motoDix.Vistas
         {
             AbrirFormInPanel<frmPerfil>();    
         }
+
+        private void bfbtnTrabajaConNosotros_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel<frmRegisterMotorcyclist>();
+
+        }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel<frmAyuda>();
+        }
     }
 }

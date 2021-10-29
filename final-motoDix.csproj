@@ -186,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos\conexion.modelo.cs" />
+    <Compile Include="Vistas\frmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmAyuda.Designer.cs">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\frmHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <Compile Include="Vistas\frmTravel.Designer.cs">
       <DependentUpon>frmTravel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\frmAyuda.resx">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmHistory.resx">
       <DependentUpon>frmHistory.cs</DependentUpon>
     </EmbeddedResource>
