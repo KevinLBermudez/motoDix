@@ -875,7 +875,7 @@ namespace final_motoDix.Vistas
             this.bfbtnInfoFinish.TextMarginLeft = 0;
             this.bfbtnInfoFinish.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnInfoFinish.UseDefaultRadiusAndThickness = true;
-            this.bfbtnInfoFinish.Click += new System.EventHandler(this.bfbtnInfoFinish_Click);
+            //this.bfbtnInfoFinish.Click += new System.EventHandler(this.bfbtnInfoFinish_Click);
             // 
             // bftxtConfirmPassword
             // 
