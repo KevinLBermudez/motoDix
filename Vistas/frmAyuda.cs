@@ -22,5 +22,13 @@ namespace final_motoDix.Vistas
             MessageBox.Show("Tu texto se envio correctamente", "Perfecto");
             this.Close();
         }
+
+        private void frmAyuda_Load(object sender, EventArgs e)
+        {
+            cmbTipoComentario.Items.Add("Problema");
+            cmbTipoComentario.Items.Add("Duda");
+            cmbTipoComentario.Items.Add("Sugerencias");
+            cmbTipoComentario.Items.Add("Felicitaciones");
+        }
     }
 }
