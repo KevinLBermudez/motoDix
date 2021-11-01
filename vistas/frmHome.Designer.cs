@@ -539,6 +539,7 @@ namespace final_motoDix.Vistas
             // panelContenedor
             // 
             this.panelContenedor.Controls.Add(this.panelHeader);
+            this.panelContenedor.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(211, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
