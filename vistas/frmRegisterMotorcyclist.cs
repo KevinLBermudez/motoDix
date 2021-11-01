@@ -30,8 +30,7 @@ namespace final_motoDix.Vistas
 
         private void frmRegisterMotorcyclist_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Desea salir de la aplicacion?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            e.Cancel = (resultado == DialogResult.No);
+       
         }
 
         private void bunifuButton22_Click(object sender, EventArgs e)

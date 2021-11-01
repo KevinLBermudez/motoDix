@@ -37,5 +37,10 @@ namespace final_motoDix.Vistas
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void bunifuPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

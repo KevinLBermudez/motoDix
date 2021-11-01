@@ -75,6 +75,7 @@ namespace final_motoDix.Vistas
             this.panelVertical.Controls.Add(this.bfbtnMisViajes);
             this.panelVertical.Controls.Add(this.bfbtnViajar);
             this.panelVertical.Controls.Add(this.bfbtnTrabajaConNosotros);
+            this.panelVertical.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelVertical.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
             this.panelVertical.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
