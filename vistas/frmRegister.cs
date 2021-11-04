@@ -65,7 +65,7 @@ namespace final_motoDix.Vistas
 
         private void bfbtnInfoFinish_Click_1(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+            frmLogin login = new frmLogin(1);
             login.Show();
             this.Close();
         }
