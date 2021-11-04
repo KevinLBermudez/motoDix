@@ -19,7 +19,7 @@ namespace final_motoDix.Vistas
 
         private void bfimgbtnMotorcyclist_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+            frmLogin login = new frmLogin(2);
             login.Show();
             this.Visible = false;
             
@@ -27,7 +27,7 @@ namespace final_motoDix.Vistas
 
         private void bfimgbtnUser_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+            frmLogin login = new frmLogin(1);
             login.Show();
             this.Visible = false;
         }
@@ -45,6 +45,13 @@ namespace final_motoDix.Vistas
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bfimgAdministrador_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin(3);
+            login.Show();
+            this.Visible = false;
         }
     }
 }

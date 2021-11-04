@@ -37,6 +37,8 @@ namespace final_motoDix.Vistas
             this.bfimgbtnMotorcyclist = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bfimgbtnUser = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.bfimgAdministrador = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -48,12 +50,12 @@ namespace final_motoDix.Vistas
             this.bflblMotorcyclist.CursorType = null;
             this.bflblMotorcyclist.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.bflblMotorcyclist.ForeColor = System.Drawing.Color.White;
-            this.bflblMotorcyclist.Location = new System.Drawing.Point(104, 256);
+            this.bflblMotorcyclist.Location = new System.Drawing.Point(60, 243);
             this.bflblMotorcyclist.Name = "bflblMotorcyclist";
             this.bflblMotorcyclist.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bflblMotorcyclist.Size = new System.Drawing.Size(139, 29);
             this.bflblMotorcyclist.TabIndex = 3;
-            this.bflblMotorcyclist.Text = "Motorcyclist";
+            this.bflblMotorcyclist.Text = "Motociclista";
             this.bflblMotorcyclist.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblMotorcyclist.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -64,19 +66,19 @@ namespace final_motoDix.Vistas
             this.bflblUser.CursorType = null;
             this.bflblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.bflblUser.ForeColor = System.Drawing.Color.White;
-            this.bflblUser.Location = new System.Drawing.Point(400, 256);
+            this.bflblUser.Location = new System.Drawing.Point(295, 243);
             this.bflblUser.Name = "bflblUser";
             this.bflblUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblUser.Size = new System.Drawing.Size(55, 29);
+            this.bflblUser.Size = new System.Drawing.Size(90, 29);
             this.bflblUser.TabIndex = 4;
-            this.bflblUser.Text = "User";
+            this.bflblUser.Text = "Usuario";
             this.bflblUser.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblUser.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(542, 12);
+            this.btnMinimizar.Location = new System.Drawing.Point(623, 12);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(17, 18);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,7 +89,7 @@ namespace final_motoDix.Vistas
             // btnCerrar
             // 
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(565, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(649, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(18, 18);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +117,7 @@ namespace final_motoDix.Vistas
             this.bfimgbtnMotorcyclist.ImageSize = new System.Drawing.Size(139, 133);
             this.bfimgbtnMotorcyclist.ImageZoomSize = new System.Drawing.Size(159, 153);
             this.bfimgbtnMotorcyclist.InitialImage = ((System.Drawing.Image)(resources.GetObject("bfimgbtnMotorcyclist.InitialImage")));
-            this.bfimgbtnMotorcyclist.Location = new System.Drawing.Point(93, 84);
+            this.bfimgbtnMotorcyclist.Location = new System.Drawing.Point(50, 84);
             this.bfimgbtnMotorcyclist.Name = "bfimgbtnMotorcyclist";
             this.bfimgbtnMotorcyclist.Rotation = 0;
             this.bfimgbtnMotorcyclist.ShowActiveImage = true;
@@ -150,7 +152,7 @@ namespace final_motoDix.Vistas
             this.bfimgbtnUser.ImageSize = new System.Drawing.Size(144, 133);
             this.bfimgbtnUser.ImageZoomSize = new System.Drawing.Size(164, 153);
             this.bfimgbtnUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("bfimgbtnUser.InitialImage")));
-            this.bfimgbtnUser.Location = new System.Drawing.Point(339, 84);
+            this.bfimgbtnUser.Location = new System.Drawing.Point(260, 84);
             this.bfimgbtnUser.Name = "bfimgbtnUser";
             this.bfimgbtnUser.Rotation = 0;
             this.bfimgbtnUser.ShowActiveImage = true;
@@ -205,12 +207,65 @@ namespace final_motoDix.Vistas
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
+            // bfimgAdministrador
+            // 
+            this.bfimgAdministrador.ActiveImage = null;
+            this.bfimgAdministrador.AllowAnimations = true;
+            this.bfimgAdministrador.AllowBuffering = false;
+            this.bfimgAdministrador.AllowToggling = false;
+            this.bfimgAdministrador.AllowZooming = true;
+            this.bfimgAdministrador.AllowZoomingOnFocus = false;
+            this.bfimgAdministrador.BackColor = System.Drawing.Color.Transparent;
+            this.bfimgAdministrador.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bfimgAdministrador.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bfimgAdministrador.ErrorImage")));
+            this.bfimgAdministrador.FadeWhenInactive = false;
+            this.bfimgAdministrador.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bfimgAdministrador.Image = ((System.Drawing.Image)(resources.GetObject("bfimgAdministrador.Image")));
+            this.bfimgAdministrador.ImageActive = null;
+            this.bfimgAdministrador.ImageLocation = null;
+            this.bfimgAdministrador.ImageMargin = 20;
+            this.bfimgAdministrador.ImageSize = new System.Drawing.Size(144, 133);
+            this.bfimgAdministrador.ImageZoomSize = new System.Drawing.Size(164, 153);
+            this.bfimgAdministrador.InitialImage = ((System.Drawing.Image)(resources.GetObject("bfimgAdministrador.InitialImage")));
+            this.bfimgAdministrador.Location = new System.Drawing.Point(476, 84);
+            this.bfimgAdministrador.Name = "bfimgAdministrador";
+            this.bfimgAdministrador.Rotation = 0;
+            this.bfimgAdministrador.ShowActiveImage = true;
+            this.bfimgAdministrador.ShowCursorChanges = true;
+            this.bfimgAdministrador.ShowImageBorders = true;
+            this.bfimgAdministrador.ShowSizeMarkers = false;
+            this.bfimgAdministrador.Size = new System.Drawing.Size(164, 153);
+            this.bfimgAdministrador.TabIndex = 17;
+            this.bfimgAdministrador.ToolTipText = "";
+            this.bfimgAdministrador.WaitOnLoad = false;
+            this.bfimgAdministrador.Zoom = 20;
+            this.bfimgAdministrador.ZoomSpeed = 10;
+            this.bfimgAdministrador.Click += new System.EventHandler(this.bfimgAdministrador_Click);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel1.Location = new System.Drawing.Point(478, 243);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(162, 29);
+            this.bunifuLabel1.TabIndex = 18;
+            this.bunifuLabel1.Text = "Administrador";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // frmIdentifier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(595, 352);
+            this.ClientSize = new System.Drawing.Size(695, 352);
+            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.bfimgAdministrador);
             this.Controls.Add(this.bfimgbtnUser);
             this.Controls.Add(this.bfimgbtnMotorcyclist);
             this.Controls.Add(this.btnCerrar);
@@ -237,5 +292,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuImageButton bfimgbtnMotorcyclist;
         private Bunifu.UI.WinForms.BunifuImageButton bfimgbtnUser;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuImageButton bfimgAdministrador;
     }
 }

@@ -132,7 +132,6 @@ namespace final_motoDix.Vistas
             this.bftxtCelular.TextPlaceholder = "Celular o correo";
             this.bftxtCelular.UseSystemPasswordChar = false;
             this.bftxtCelular.WordWrap = true;
-            this.bftxtCelular.TextChanged += new System.EventHandler(this.bftxtCelular_TextChanged);
             // 
             // bunifuLabel1
             // 
@@ -316,7 +315,6 @@ namespace final_motoDix.Vistas
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblSignIn
             // 
@@ -441,7 +439,6 @@ namespace final_motoDix.Vistas
             this.Opacity = 0.97D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);

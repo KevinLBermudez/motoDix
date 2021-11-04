@@ -13,30 +13,14 @@ namespace final_motoDix.Vistas
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        int rol;
+        
+        public frmLogin(int rol)
         {
+            this.rol =rol;
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bftxtCelular_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblSignIn_Click(object sender, EventArgs e)
         {
