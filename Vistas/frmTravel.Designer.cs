@@ -96,6 +96,7 @@ namespace final_motoDix.Vistas
             this.lblEfectivo = new System.Windows.Forms.Label();
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.bfbtnPagar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.mapa = new GMap.NET.WindowsForms.GMapControl();
             this.bfCardVehiculo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1211,12 +1212,39 @@ namespace final_motoDix.Vistas
             this.bfbtnPagar.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnPagar.UseDefaultRadiusAndThickness = true;
             // 
+            // mapa
+            // 
+            this.mapa.Bearing = 0F;
+            this.mapa.CanDragMap = true;
+            this.mapa.EmptyTileColor = System.Drawing.Color.Navy;
+            this.mapa.GrayScaleMode = false;
+            this.mapa.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.mapa.LevelsKeepInMemory = 5;
+            this.mapa.Location = new System.Drawing.Point(55, 141);
+            this.mapa.MarkersEnabled = true;
+            this.mapa.MaxZoom = 2;
+            this.mapa.MinZoom = 2;
+            this.mapa.MouseWheelZoomEnabled = true;
+            this.mapa.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.mapa.Name = "mapa";
+            this.mapa.NegativeMode = false;
+            this.mapa.PolygonsEnabled = true;
+            this.mapa.RetryLoadTile = 0;
+            this.mapa.RoutesEnabled = true;
+            this.mapa.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.mapa.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.mapa.ShowTileGridLines = false;
+            this.mapa.Size = new System.Drawing.Size(687, 340);
+            this.mapa.TabIndex = 48;
+            this.mapa.Zoom = 0D;
+            // 
             // frmTravel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1028, 920);
+            this.Controls.Add(this.mapa);
             this.Controls.Add(this.bfbtnPagar);
             this.Controls.Add(this.lblTotalPagar);
             this.Controls.Add(this.lblEfectivo);
@@ -1303,5 +1331,6 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.Label lblEfectivo;
         private System.Windows.Forms.Label lblTotalPagar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnPagar;
+        private GMap.NET.WindowsForms.GMapControl mapa;
     }
 }

@@ -222,7 +222,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelos\conexion.modelo.cs" />
+    <Compile Include="Controladores\clsCiudad.controller.cs" />
+    <Compile Include="Controladores\clsDepartamento.controller.cs" />
+    <Compile Include="Controladores\clsPerson.controller.cs" />
+    <Compile Include="Modelos\clsCiudad.model.cs" />
+    <Compile Include="Modelos\clsDepartamento.model.cs" />
+    <Compile Include="Modelos\clsPerson.model.cs" />
+    <Compile Include="Modelos\clsConexion.model.cs" />
     <Compile Include="Vistas\frmAyuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,9 +336,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controladores\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

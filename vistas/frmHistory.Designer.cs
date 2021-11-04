@@ -380,7 +380,7 @@ namespace final_motoDix.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 516);
+            this.ClientSize = new System.Drawing.Size(785, 504);
             this.ControlBox = false;
             this.Controls.Add(this.bfbtnConsultarHistorial);
             this.Controls.Add(this.lblHistorial);
