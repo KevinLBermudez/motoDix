@@ -6,12 +6,64 @@ using System.Threading.Tasks;
 using Npgsql;
 using System.Windows.Forms;
 using System.Data;
+using final_motoDix.helpers;
 
 namespace final_motoDix.Modelos
 {
+
+    public struct Persona
+    {
+        private string idDocumentPersona;
+        private DateTime dateOfBirth;
+        private string firstName;
+        private string secondName;
+        private string surname;
+        private string secondSurname;
+        private string profilePicture;
+        private string gender;
+        private string state ;
+        private string email;
+        private int idRol;
+        private string rolName;
+
+        public Persona(string idDocumentPersona, DateTime dateOfBirth, string firstName, string secondName, string surname, string secondSurname, string profilePicture, string gender, string state, string email, int idRol, string rolName)
+        {
+             this.idDocumentPersona = idDocumentPersona;
+             this.dateOfBirth = dateOfBirth;
+             this.firstName = firstName;
+             this.secondName = secondName;
+             this.surname = surname;
+             this.secondSurname = secondSurname;
+             this.profilePicture = profilePicture;
+             this.gender = gender;
+             this.state = state;
+             this.email = email;
+             this.idRol = idRol;
+             this.rolName = rolName;
+        }
+
+
+        public string IdDocumentPersona { get => idDocumentPersona; set => idDocumentPersona = value; }
+        public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
+        public string FirstName { get => firstName; set => firstName = value; }
+        public string SecondName { get => secondName; set => secondName = value; }
+        public string Surname { get => surname; set => surname = value; }
+        public string SecondSurname { get => secondSurname; set => secondSurname = value; }
+        public string ProfilePicture { get => profilePicture; set => profilePicture = value; }
+        public string Gender { get => gender; set => gender = value; }
+        public string State { get => state; set => state = value; }
+        public string Email { get => email; set => email = value; }
+        public int IdRol { get => idRol; set => idRol = value; }
+        public string RolName { get => rolName; set => rolName = value; }
+    }
+
+
     class clsPersonModel
     {
+        private clsCloudinary cloud;
 
+        private Persona persona;
+        
         private NpgsqlConnection conexionPersona;
 
         private string idDocumentPerson;
@@ -44,6 +96,8 @@ namespace final_motoDix.Modelos
         public string CredentialPassword { get => credentialPassword; set => credentialPassword = value; }
         public int IdRol { get => idRol; set => idRol = value; }
 
+        public Persona Persona { get => persona; set => persona = value; }
+
         public clsPersonModel(string idDocumentPerson, DateTime dateOfBirth, string firstName, string secondName, string surname, string secondSurname, string profilePicture, string gender, string idCity, string email, string credentialPassword, int idRol)
         {
 
@@ -61,6 +115,16 @@ namespace final_motoDix.Modelos
             IdRol = idRol;
 
             conexionPersona = clsConexion.realizarConexion();
+            cloud = new clsCloudinary();
+
+        }
+
+        public clsPersonModel(string email, string credentialPassword, int idRol)
+        {
+            Email = email;
+            CredentialPassword = credentialPassword;
+            IdRol = idRol;
+            conexionPersona = clsConexion.realizarConexion();
 
         }
 
@@ -75,6 +139,24 @@ namespace final_motoDix.Modelos
 
         public bool CrearPersona()
         {
+            if (profilePicture.Trim() != "null")
+            {
+
+                Task.Run(async () =>
+                {
+
+                    Task<string> vs = cloud.cargarImagen(profilePicture);
+
+                    string rutaCloudinary = await vs;
+
+                    profilePicture = rutaCloudinary;
+
+                }).GetAwaiter().GetResult();
+
+
+            }
+
+
             validarConexion();
             NpgsqlCommand query = new NpgsqlCommand();
             query.Connection = conexionPersona;
@@ -120,5 +202,65 @@ namespace final_motoDix.Modelos
 
         }
 
+        public Persona login()
+        {
+            validarConexion();
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionPersona;
+            query.CommandText = "select * from App_Login(@Email,@CredentialPassword,@IdRol)";
+
+            query.Parameters.Add("@IdRol", NpgsqlTypes.NpgsqlDbType.Smallint).Value = idRol;
+            query.Parameters.Add("@Email", NpgsqlTypes.NpgsqlDbType.Varchar).Value = email;
+            query.Parameters.Add("@CredentialPassword", NpgsqlTypes.NpgsqlDbType.Varchar).Value = credentialPassword;
+
+            try
+            {
+                NpgsqlDataReader persona = query.ExecuteReader();
+
+                while (persona.Read())
+                {
+                    if(persona["profilePicture"] == DBNull.Value)
+                    {
+                        ProfilePicture = "";
+                    }
+                    else
+                    {
+                        ProfilePicture = (string) persona["profilePicture"];
+                    };
+
+                    if (persona["secondName"] == DBNull.Value)
+                    {
+                        SecondName = "";
+
+                    }
+                    else
+                    {
+                        SecondName = (string)persona["secondName"];
+                    };
+                    if(persona["secondSurname"] ==  DBNull.Value)
+                    {
+                        SecondSurname = "";
+                    }
+                    else
+                    {
+                        SecondSurname = (string)persona["secondSurname"];
+                    };
+
+                    Persona = new Persona((string)persona["idDocumentPerson"],Convert.ToDateTime( persona["dateOfBirth"]), (string)persona["firstname"],
+                        SecondName, (string)persona["surname"], SecondSurname,
+                        ProfilePicture, (string)persona["gender"], (string)persona["state"], (string)persona["email"],Convert.ToInt16(persona["idRol"]),(string)persona["nameRol"]);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+
+            return Persona;
+        
+        }
     }
 }

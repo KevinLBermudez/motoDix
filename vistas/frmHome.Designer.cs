@@ -38,8 +38,8 @@ namespace final_motoDix.Vistas
             this.panelVertical = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bfpbImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bfbtnTipoUsuario = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bflblNombreUsuario = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bflblTipoUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnMisViajes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnViajar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -92,8 +92,8 @@ namespace final_motoDix.Vistas
             // panel1
             // 
             this.panel1.Controls.Add(this.bfpbImagenPerfil);
-            this.panel1.Controls.Add(this.bunifuLabel1);
-            this.panel1.Controls.Add(this.bfbtnTipoUsuario);
+            this.panel1.Controls.Add(this.bflblNombreUsuario);
+            this.panel1.Controls.Add(this.bflblTipoUsuario);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -117,43 +117,42 @@ namespace final_motoDix.Vistas
             this.bfpbImagenPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             this.bfpbImagenPerfil.Click += new System.EventHandler(this.bfpbImagenPerfil_Click);
             // 
-            // bunifuLabel1
+            // bflblNombreUsuario
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(8, 120);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(102, 15);
-            this.bunifuLabel1.TabIndex = 2;
-            this.bunifuLabel1.Text = "Nombre de usuario";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bflblNombreUsuario.AllowParentOverrides = false;
+            this.bflblNombreUsuario.AutoEllipsis = false;
+            this.bflblNombreUsuario.CursorType = null;
+            this.bflblNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bflblNombreUsuario.ForeColor = System.Drawing.Color.White;
+            this.bflblNombreUsuario.Location = new System.Drawing.Point(8, 120);
+            this.bflblNombreUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.bflblNombreUsuario.Name = "bflblNombreUsuario";
+            this.bflblNombreUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bflblNombreUsuario.Size = new System.Drawing.Size(102, 15);
+            this.bflblNombreUsuario.TabIndex = 2;
+            this.bflblNombreUsuario.Text = "Nombre de usuario";
+            this.bflblNombreUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bflblNombreUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bfbtnTipoUsuario
+            // bflblTipoUsuario
             // 
-            this.bfbtnTipoUsuario.AllowParentOverrides = false;
-            this.bfbtnTipoUsuario.AutoEllipsis = false;
-            this.bfbtnTipoUsuario.AutoSize = false;
-            this.bfbtnTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bfbtnTipoUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bfbtnTipoUsuario.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bfbtnTipoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bfbtnTipoUsuario.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bfbtnTipoUsuario.Location = new System.Drawing.Point(8, 149);
-            this.bfbtnTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.bfbtnTipoUsuario.Name = "bfbtnTipoUsuario";
-            this.bfbtnTipoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bfbtnTipoUsuario.Size = new System.Drawing.Size(104, 25);
-            this.bfbtnTipoUsuario.TabIndex = 1;
-            this.bfbtnTipoUsuario.Text = "Tipo de usuario";
-            this.bfbtnTipoUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bfbtnTipoUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bfbtnTipoUsuario.Click += new System.EventHandler(this.bunifuLabel1_Click);
+            this.bflblTipoUsuario.AllowParentOverrides = false;
+            this.bflblTipoUsuario.AutoEllipsis = false;
+            this.bflblTipoUsuario.AutoSize = false;
+            this.bflblTipoUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bflblTipoUsuario.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bflblTipoUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bflblTipoUsuario.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bflblTipoUsuario.Location = new System.Drawing.Point(8, 149);
+            this.bflblTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.bflblTipoUsuario.Name = "bflblTipoUsuario";
+            this.bflblTipoUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bflblTipoUsuario.Size = new System.Drawing.Size(104, 25);
+            this.bflblTipoUsuario.TabIndex = 1;
+            this.bflblTipoUsuario.Text = "Tipo de usuario";
+            this.bflblTipoUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bflblTipoUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bflblTipoUsuario.Click += new System.EventHandler(this.bunifuLabel1_Click);
             // 
             // bunifuButton21
             // 
@@ -658,8 +657,8 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnMisViajes;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuLabel bfbtnTipoUsuario;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bflblTipoUsuario;
+        private Bunifu.UI.WinForms.BunifuLabel bflblNombreUsuario;
         private Bunifu.UI.WinForms.BunifuPictureBox bfpbImagenPerfil;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.UI.WinForms.BunifuGradientPanel panelHeader;

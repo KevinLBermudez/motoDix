@@ -5,9 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using final_motoDix.Controladores;
+using final_motoDix.helpers;
 
 namespace final_motoDix.Vistas
 {
@@ -17,6 +19,9 @@ namespace final_motoDix.Vistas
         clsPersonController persona;
         clsDepartamentoController departamento;
         clsCiudadController ciudad;
+        clsCloudinary cloud;
+        string profilePicture = "null";
+
 
         public frmRegisterClient()
         {
@@ -94,7 +99,6 @@ namespace final_motoDix.Vistas
              string secondName = bftxtSegundoNombre.Text;
              string surname = bftxtPrimerApellido.Text;
              string secondSurname = bftxtSegundoApellido.Text;
-             string profilePicture = "null";
              string gender = cmbGenero.Text;
              string idCity = cmbCiudad.SelectedValue.ToString();
             //login
@@ -133,6 +137,15 @@ namespace final_motoDix.Vistas
                 MessageBox.Show(cmbCiudad.SelectedValue.ToString());
 
             }
+        }
+
+        private  void brbtnCargarImagenPerfil_Click(object sender, EventArgs e)
+        {
+            cloud = new clsCloudinary();
+
+            profilePicture = cloud.cargarUnArchivo(bfImagenPerfil);
+           
+
         }
     }
 }

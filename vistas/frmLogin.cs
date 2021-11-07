@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu;
+using final_motoDix.Modelos;
+using final_motoDix.Controladores;
 
 namespace final_motoDix.Vistas
 {
     public partial class frmLogin : Form
     {
         int rol;
+        clsPersonController persona;
+        public Persona infoPersona;
         
+
         public frmLogin(int rol)
         {
             this.rol =rol;
@@ -33,10 +38,12 @@ namespace final_motoDix.Vistas
 
         private void bfbtnLogin_Click(object sender, EventArgs e)
         {
-            frmHome home = new frmHome();
-
+            string email = bftxtEmail.Text;
+            string password = bftxtContraseña.Text;
+            persona = new clsPersonController(email, password, rol);
+            infoPersona = persona.ejecutarLogin();
+            frmHome home = new frmHome(infoPersona);
             home.Show();
-
             this.Close();
         }
 

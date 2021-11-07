@@ -49,14 +49,6 @@ namespace final_motoDix.Vistas
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.bflblPuntoInicio = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfbtnPuntoFinal = new Bunifu.UI.WinForms.BunifuLabel();
@@ -591,7 +583,7 @@ namespace final_motoDix.Vistas
             this.bunifuRating1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
             this.bunifuRating1.HoverFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
             this.bunifuRating1.InnerRadius = 2F;
-            this.bunifuRating1.Location = new System.Drawing.Point(261, 823);
+            this.bunifuRating1.Location = new System.Drawing.Point(258, 780);
             this.bunifuRating1.Name = "bunifuRating1";
             this.bunifuRating1.OuterRadius = 10F;
             this.bunifuRating1.RatedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
@@ -607,7 +599,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblCalificacionConductor.AutoSize = true;
             this.lblCalificacionConductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalificacionConductor.Location = new System.Drawing.Point(37, 823);
+            this.lblCalificacionConductor.Location = new System.Drawing.Point(34, 780);
             this.lblCalificacionConductor.Name = "lblCalificacionConductor";
             this.lblCalificacionConductor.Size = new System.Drawing.Size(193, 20);
             this.lblCalificacionConductor.TabIndex = 40;
@@ -617,7 +609,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblDistanciaViaje.AutoSize = true;
             this.lblDistanciaViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistanciaViaje.Location = new System.Drawing.Point(37, 790);
+            this.lblDistanciaViaje.Location = new System.Drawing.Point(34, 747);
             this.lblDistanciaViaje.Name = "lblDistanciaViaje";
             this.lblDistanciaViaje.Size = new System.Drawing.Size(132, 20);
             this.lblDistanciaViaje.TabIndex = 39;
@@ -627,7 +619,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblTiempoViaje.AutoSize = true;
             this.lblTiempoViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempoViaje.Location = new System.Drawing.Point(37, 758);
+            this.lblTiempoViaje.Location = new System.Drawing.Point(34, 715);
             this.lblTiempoViaje.Name = "lblTiempoViaje";
             this.lblTiempoViaje.Size = new System.Drawing.Size(207, 20);
             this.lblTiempoViaje.TabIndex = 38;
@@ -642,10 +634,10 @@ namespace final_motoDix.Vistas
             this.bunifuSeparator4.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator4.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator4.LineThickness = 1;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(3, 742);
+            this.bunifuSeparator4.Location = new System.Drawing.Point(3, 689);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
             this.bunifuSeparator4.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator4.Size = new System.Drawing.Size(1016, 13);
+            this.bunifuSeparator4.Size = new System.Drawing.Size(862, 13);
             this.bunifuSeparator4.TabIndex = 37;
             // 
             // bfCardVehiculo
@@ -658,7 +650,7 @@ namespace final_motoDix.Vistas
             this.bfCardVehiculo.Controls.Add(this.lblColor);
             this.bfCardVehiculo.Controls.Add(this.lblMarca);
             this.bfCardVehiculo.LeftSahddow = false;
-            this.bfCardVehiculo.Location = new System.Drawing.Point(463, 604);
+            this.bfCardVehiculo.Location = new System.Drawing.Point(460, 551);
             this.bfCardVehiculo.Name = "bfCardVehiculo";
             this.bfCardVehiculo.RightSahddow = true;
             this.bfCardVehiculo.ShadowDepth = 20;
@@ -696,7 +688,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblInformacionVehiculo.AutoSize = true;
             this.lblInformacionVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacionVehiculo.Location = new System.Drawing.Point(459, 561);
+            this.lblInformacionVehiculo.Location = new System.Drawing.Point(456, 508);
             this.lblInformacionVehiculo.Name = "lblInformacionVehiculo";
             this.lblInformacionVehiculo.Size = new System.Drawing.Size(179, 20);
             this.lblInformacionVehiculo.TabIndex = 35;
@@ -706,7 +698,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblNombreConductor.AutoSize = true;
             this.lblNombreConductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreConductor.Location = new System.Drawing.Point(139, 628);
+            this.lblNombreConductor.Location = new System.Drawing.Point(136, 575);
             this.lblNombreConductor.Name = "lblNombreConductor";
             this.lblNombreConductor.Size = new System.Drawing.Size(120, 36);
             this.lblNombreConductor.TabIndex = 34;
@@ -716,7 +708,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblInformacionConductor.AutoSize = true;
             this.lblInformacionConductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacionConductor.Location = new System.Drawing.Point(51, 561);
+            this.lblInformacionConductor.Location = new System.Drawing.Point(48, 508);
             this.lblInformacionConductor.Name = "lblInformacionConductor";
             this.lblInformacionConductor.Size = new System.Drawing.Size(193, 20);
             this.lblInformacionConductor.TabIndex = 32;
@@ -731,16 +723,16 @@ namespace final_motoDix.Vistas
             this.bunifuSeparator5.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator5.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator5.LineThickness = 1;
-            this.bunifuSeparator5.Location = new System.Drawing.Point(0, 537);
+            this.bunifuSeparator5.Location = new System.Drawing.Point(0, 484);
             this.bunifuSeparator5.Name = "bunifuSeparator5";
             this.bunifuSeparator5.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator5.Size = new System.Drawing.Size(1019, 21);
+            this.bunifuSeparator5.Size = new System.Drawing.Size(865, 21);
             this.bunifuSeparator5.TabIndex = 31;
             // 
             // lblEstadoViaje
             // 
             this.lblEstadoViaje.AutoSize = true;
-            this.lblEstadoViaje.Location = new System.Drawing.Point(636, 518);
+            this.lblEstadoViaje.Location = new System.Drawing.Point(628, 454);
             this.lblEstadoViaje.Name = "lblEstadoViaje";
             this.lblEstadoViaje.Size = new System.Drawing.Size(53, 13);
             this.lblEstadoViaje.TabIndex = 30;
@@ -757,7 +749,7 @@ namespace final_motoDix.Vistas
             this.bfpgbEstadoViaje.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.bfpgbEstadoViaje.BorderRadius = 9;
             this.bfpgbEstadoViaje.BorderThickness = 1;
-            this.bfpgbEstadoViaje.Location = new System.Drawing.Point(194, 518);
+            this.bfpgbEstadoViaje.Location = new System.Drawing.Point(186, 454);
             this.bfpgbEstadoViaje.Maximum = 100;
             this.bfpgbEstadoViaje.MaximumValue = 100;
             this.bfpgbEstadoViaje.Minimum = 0;
@@ -776,7 +768,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblEstadoViajeTitulo.AutoSize = true;
             this.lblEstadoViajeTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoViajeTitulo.Location = new System.Drawing.Point(37, 511);
+            this.lblEstadoViajeTitulo.Location = new System.Drawing.Point(29, 447);
             this.lblEstadoViajeTitulo.Name = "lblEstadoViajeTitulo";
             this.lblEstadoViajeTitulo.Size = new System.Drawing.Size(120, 20);
             this.lblEstadoViajeTitulo.TabIndex = 28;
@@ -791,10 +783,10 @@ namespace final_motoDix.Vistas
             this.bunifuSeparator6.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator6.LineThickness = 1;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(0, 487);
+            this.bunifuSeparator6.Location = new System.Drawing.Point(0, 427);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
             this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator6.Size = new System.Drawing.Size(1016, 21);
+            this.bunifuSeparator6.Size = new System.Drawing.Size(865, 21);
             this.bunifuSeparator6.TabIndex = 26;
             // 
             // bunifuButton21
@@ -1041,7 +1033,7 @@ namespace final_motoDix.Vistas
             this.lnlLlegada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lnlLlegada.AutoSize = true;
             this.lnlLlegada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnlLlegada.Location = new System.Drawing.Point(242, 34);
+            this.lnlLlegada.Location = new System.Drawing.Point(176, 34);
             this.lnlLlegada.Name = "lnlLlegada";
             this.lnlLlegada.Size = new System.Drawing.Size(128, 20);
             this.lnlLlegada.TabIndex = 22;
@@ -1077,7 +1069,7 @@ namespace final_motoDix.Vistas
             this.bunifuImageButton1.ImageSize = new System.Drawing.Size(78, 69);
             this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(98, 89);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(35, 604);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(32, 551);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 0;
             this.bunifuImageButton1.ShowActiveImage = true;
@@ -1095,7 +1087,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblFactura.AutoSize = true;
             this.lblFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFactura.Location = new System.Drawing.Point(516, 758);
+            this.lblFactura.Location = new System.Drawing.Point(516, 715);
             this.lblFactura.Name = "lblFactura";
             this.lblFactura.Size = new System.Drawing.Size(64, 20);
             this.lblFactura.TabIndex = 43;
@@ -1105,7 +1097,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblDescuento.AutoSize = true;
             this.lblDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescuento.Location = new System.Drawing.Point(516, 790);
+            this.lblDescuento.Location = new System.Drawing.Point(516, 747);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(87, 20);
             this.lblDescuento.TabIndex = 44;
@@ -1115,7 +1107,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblEfectivo.AutoSize = true;
             this.lblEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEfectivo.Location = new System.Drawing.Point(516, 825);
+            this.lblEfectivo.Location = new System.Drawing.Point(516, 782);
             this.lblEfectivo.Name = "lblEfectivo";
             this.lblEfectivo.Size = new System.Drawing.Size(173, 20);
             this.lblEfectivo.TabIndex = 45;
@@ -1125,7 +1117,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblTotalPagar.AutoSize = true;
             this.lblTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPagar.Location = new System.Drawing.Point(516, 859);
+            this.lblTotalPagar.Location = new System.Drawing.Point(516, 816);
             this.lblTotalPagar.Name = "lblTotalPagar";
             this.lblTotalPagar.Size = new System.Drawing.Size(110, 20);
             this.lblTotalPagar.TabIndex = 46;
@@ -1178,7 +1170,7 @@ namespace final_motoDix.Vistas
             this.bfbtnPagar.IdleIconLeftImage = null;
             this.bfbtnPagar.IdleIconRightImage = null;
             this.bfbtnPagar.IndicateFocus = false;
-            this.bfbtnPagar.Location = new System.Drawing.Point(862, 870);
+            this.bfbtnPagar.Location = new System.Drawing.Point(520, 858);
             this.bfbtnPagar.Name = "bfbtnPagar";
             this.bfbtnPagar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnPagar.OnDisabledState.BorderRadius = 1;
@@ -1242,7 +1234,7 @@ namespace final_motoDix.Vistas
             this.mapa.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.mapa.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.mapa.ShowTileGridLines = false;
-            this.mapa.Size = new System.Drawing.Size(687, 340);
+            this.mapa.Size = new System.Drawing.Size(482, 271);
             this.mapa.TabIndex = 48;
             this.mapa.Zoom = 0D;
             // 
@@ -1251,7 +1243,7 @@ namespace final_motoDix.Vistas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1028, 920);
+            this.ClientSize = new System.Drawing.Size(896, 920);
             this.Controls.Add(this.mapa);
             this.Controls.Add(this.bfbtnPagar);
             this.Controls.Add(this.lblTotalPagar);

@@ -93,7 +93,6 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerApellidoPerfil = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtSegundoNombrePerfil = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtPrimerNombrePerfil = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -555,7 +554,7 @@ namespace final_motoDix.Vistas
             this.bunifuPictureBox1.BorderRadius = 59;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(21, 71);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(21, 73);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(118, 118);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1034,53 +1033,12 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerNombrePerfil.UseSystemPasswordChar = false;
             this.bftxtPrimerNombrePerfil.WordWrap = true;
             // 
-            // bunifuVScrollBar1
-            // 
-            this.bunifuVScrollBar1.AllowCursorChanges = true;
-            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
-            this.bunifuVScrollBar1.BindingContainer = this;
-            this.bunifuVScrollBar1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.BorderRadius = 14;
-            this.bunifuVScrollBar1.BorderThickness = 1;
-            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar1.LargeChange = 50;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(575, 1);
-            this.bunifuVScrollBar1.Maximum = 150;
-            this.bunifuVScrollBar1.Minimum = 0;
-            this.bunifuVScrollBar1.MinimumThumbLength = 18;
-            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
-            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(14, 747);
-            this.bunifuVScrollBar1.SmallChange = 1;
-            this.bunifuVScrollBar1.TabIndex = 53;
-            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.Gray;
-            this.bunifuVScrollBar1.ThumbLength = 247;
-            this.bunifuVScrollBar1.ThumbMargin = 1;
-            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Proportional;
-            this.bunifuVScrollBar1.Value = 0;
-            // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 747);
-            this.Controls.Add(this.bunifuVScrollBar1);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(592, 750);
             this.Controls.Add(this.lblDatosPersonales);
             this.Controls.Add(this.cmbGeneroPerfil);
             this.Controls.Add(this.bflblGenero);
@@ -1131,6 +1089,5 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuTextBox bftxtPrimerApellidoPerfil;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtSegundoNombrePerfil;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtPrimerNombrePerfil;
-        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
     }
 }

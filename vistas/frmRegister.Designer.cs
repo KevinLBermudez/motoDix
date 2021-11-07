@@ -52,7 +52,7 @@ namespace final_motoDix.Vistas
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -69,6 +69,7 @@ namespace final_motoDix.Vistas
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bflblCreateAccount1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bflblCreateAccount2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.ptbCrearCuentaMinimizar = new System.Windows.Forms.PictureBox();
@@ -97,11 +98,14 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmarEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtxEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.bfImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.brbtnCargarImagenPerfil = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaCerrar)).BeginInit();
             this.bfpgPersonInfo.SuspendLayout();
             this.bftpInfoPersonal.SuspendLayout();
             this.bftgLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bfImagenPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // bflblCreateAccount1
@@ -816,6 +820,8 @@ namespace final_motoDix.Vistas
             // 
             // bftgLogin
             // 
+            this.bftgLogin.Controls.Add(this.brbtnCargarImagenPerfil);
+            this.bftgLogin.Controls.Add(this.bfImagenPerfil);
             this.bftgLogin.Controls.Add(this.bfbtnInfoFinish);
             this.bftgLogin.Controls.Add(this.bftxtConfirmPassword);
             this.bftgLogin.Controls.Add(this.bftxtPassword);
@@ -848,11 +854,11 @@ namespace final_motoDix.Vistas
             this.bfbtnInfoFinish.ColorContrastOnClick = 45;
             this.bfbtnInfoFinish.ColorContrastOnHover = 45;
             this.bfbtnInfoFinish.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bfbtnInfoFinish.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bfbtnInfoFinish.CustomizableEdges = borderEdges3;
             this.bfbtnInfoFinish.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnInfoFinish.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnInfoFinish.DisabledFillColor = System.Drawing.Color.Empty;
@@ -950,7 +956,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmPassword.IconRight = null;
             this.bftxtConfirmPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmPassword.Lines = new string[0];
-            this.bftxtConfirmPassword.Location = new System.Drawing.Point(403, 112);
+            this.bftxtConfirmPassword.Location = new System.Drawing.Point(392, 244);
             this.bftxtConfirmPassword.MaxLength = 32767;
             this.bftxtConfirmPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtConfirmPassword.Modified = false;
@@ -1025,7 +1031,7 @@ namespace final_motoDix.Vistas
             this.bftxtPassword.IconRight = null;
             this.bftxtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPassword.Lines = new string[0];
-            this.bftxtPassword.Location = new System.Drawing.Point(103, 112);
+            this.bftxtPassword.Location = new System.Drawing.Point(92, 244);
             this.bftxtPassword.MaxLength = 32767;
             this.bftxtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPassword.Modified = false;
@@ -1100,7 +1106,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmarEmail.IconRight = null;
             this.bftxtConfirmarEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmarEmail.Lines = new string[0];
-            this.bftxtConfirmarEmail.Location = new System.Drawing.Point(403, 49);
+            this.bftxtConfirmarEmail.Location = new System.Drawing.Point(392, 181);
             this.bftxtConfirmarEmail.MaxLength = 32767;
             this.bftxtConfirmarEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtConfirmarEmail.Modified = false;
@@ -1175,7 +1181,7 @@ namespace final_motoDix.Vistas
             this.bftxtxEmail.IconRight = null;
             this.bftxtxEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtxEmail.Lines = new string[0];
-            this.bftxtxEmail.Location = new System.Drawing.Point(103, 49);
+            this.bftxtxEmail.Location = new System.Drawing.Point(92, 181);
             this.bftxtxEmail.MaxLength = 32767;
             this.bftxtxEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtxEmail.Modified = false;
@@ -1262,6 +1268,112 @@ namespace final_motoDix.Vistas
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
+            // bfImagenPerfil
+            // 
+            this.bfImagenPerfil.AllowFocused = false;
+            this.bfImagenPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bfImagenPerfil.AutoSizeHeight = true;
+            this.bfImagenPerfil.BorderRadius = 42;
+            this.bfImagenPerfil.Image = ((System.Drawing.Image)(resources.GetObject("bfImagenPerfil.Image")));
+            this.bfImagenPerfil.IsCircle = true;
+            this.bfImagenPerfil.Location = new System.Drawing.Point(92, 31);
+            this.bfImagenPerfil.Name = "bfImagenPerfil";
+            this.bfImagenPerfil.Size = new System.Drawing.Size(85, 85);
+            this.bfImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bfImagenPerfil.TabIndex = 41;
+            this.bfImagenPerfil.TabStop = false;
+            this.bfImagenPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // brbtnCargarImagenPerfil
+            // 
+            this.brbtnCargarImagenPerfil.AllowAnimations = true;
+            this.brbtnCargarImagenPerfil.AllowMouseEffects = true;
+            this.brbtnCargarImagenPerfil.AllowToggling = false;
+            this.brbtnCargarImagenPerfil.AnimationSpeed = 200;
+            this.brbtnCargarImagenPerfil.AutoGenerateColors = false;
+            this.brbtnCargarImagenPerfil.AutoRoundBorders = false;
+            this.brbtnCargarImagenPerfil.AutoSizeLeftIcon = true;
+            this.brbtnCargarImagenPerfil.AutoSizeRightIcon = true;
+            this.brbtnCargarImagenPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.brbtnCargarImagenPerfil.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.brbtnCargarImagenPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("brbtnCargarImagenPerfil.BackgroundImage")));
+            this.brbtnCargarImagenPerfil.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.brbtnCargarImagenPerfil.ButtonText = "Seleccionar imagen de perfil";
+            this.brbtnCargarImagenPerfil.ButtonTextMarginLeft = 0;
+            this.brbtnCargarImagenPerfil.ColorContrastOnClick = 45;
+            this.brbtnCargarImagenPerfil.ColorContrastOnHover = 45;
+            this.brbtnCargarImagenPerfil.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.brbtnCargarImagenPerfil.CustomizableEdges = borderEdges2;
+            this.brbtnCargarImagenPerfil.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.brbtnCargarImagenPerfil.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.brbtnCargarImagenPerfil.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.brbtnCargarImagenPerfil.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.brbtnCargarImagenPerfil.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.brbtnCargarImagenPerfil.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.brbtnCargarImagenPerfil.ForeColor = System.Drawing.Color.White;
+            this.brbtnCargarImagenPerfil.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.brbtnCargarImagenPerfil.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.brbtnCargarImagenPerfil.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.brbtnCargarImagenPerfil.IconMarginLeft = 11;
+            this.brbtnCargarImagenPerfil.IconPadding = 10;
+            this.brbtnCargarImagenPerfil.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.brbtnCargarImagenPerfil.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.brbtnCargarImagenPerfil.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.brbtnCargarImagenPerfil.IconSize = 25;
+            this.brbtnCargarImagenPerfil.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.brbtnCargarImagenPerfil.IdleBorderRadius = 1;
+            this.brbtnCargarImagenPerfil.IdleBorderThickness = 1;
+            this.brbtnCargarImagenPerfil.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.brbtnCargarImagenPerfil.IdleIconLeftImage = null;
+            this.brbtnCargarImagenPerfil.IdleIconRightImage = null;
+            this.brbtnCargarImagenPerfil.IndicateFocus = false;
+            this.brbtnCargarImagenPerfil.Location = new System.Drawing.Point(183, 55);
+            this.brbtnCargarImagenPerfil.Name = "brbtnCargarImagenPerfil";
+            this.brbtnCargarImagenPerfil.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.brbtnCargarImagenPerfil.OnDisabledState.BorderRadius = 1;
+            this.brbtnCargarImagenPerfil.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.brbtnCargarImagenPerfil.OnDisabledState.BorderThickness = 1;
+            this.brbtnCargarImagenPerfil.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.brbtnCargarImagenPerfil.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.brbtnCargarImagenPerfil.OnDisabledState.IconLeftImage = null;
+            this.brbtnCargarImagenPerfil.OnDisabledState.IconRightImage = null;
+            this.brbtnCargarImagenPerfil.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.brbtnCargarImagenPerfil.onHoverState.BorderRadius = 1;
+            this.brbtnCargarImagenPerfil.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.brbtnCargarImagenPerfil.onHoverState.BorderThickness = 1;
+            this.brbtnCargarImagenPerfil.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.brbtnCargarImagenPerfil.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.brbtnCargarImagenPerfil.onHoverState.IconLeftImage = null;
+            this.brbtnCargarImagenPerfil.onHoverState.IconRightImage = null;
+            this.brbtnCargarImagenPerfil.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.brbtnCargarImagenPerfil.OnIdleState.BorderRadius = 1;
+            this.brbtnCargarImagenPerfil.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.brbtnCargarImagenPerfil.OnIdleState.BorderThickness = 1;
+            this.brbtnCargarImagenPerfil.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.brbtnCargarImagenPerfil.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.brbtnCargarImagenPerfil.OnIdleState.IconLeftImage = null;
+            this.brbtnCargarImagenPerfil.OnIdleState.IconRightImage = null;
+            this.brbtnCargarImagenPerfil.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.brbtnCargarImagenPerfil.OnPressedState.BorderRadius = 1;
+            this.brbtnCargarImagenPerfil.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.brbtnCargarImagenPerfil.OnPressedState.BorderThickness = 1;
+            this.brbtnCargarImagenPerfil.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.brbtnCargarImagenPerfil.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.brbtnCargarImagenPerfil.OnPressedState.IconLeftImage = null;
+            this.brbtnCargarImagenPerfil.OnPressedState.IconRightImage = null;
+            this.brbtnCargarImagenPerfil.Size = new System.Drawing.Size(188, 20);
+            this.brbtnCargarImagenPerfil.TabIndex = 42;
+            this.brbtnCargarImagenPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.brbtnCargarImagenPerfil.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.brbtnCargarImagenPerfil.TextMarginLeft = 0;
+            this.brbtnCargarImagenPerfil.TextPadding = new System.Windows.Forms.Padding(0);
+            this.brbtnCargarImagenPerfil.UseDefaultRadiusAndThickness = true;
+            this.brbtnCargarImagenPerfil.Click += new System.EventHandler(this.brbtnCargarImagenPerfil_Click);
+            // 
             // frmRegisterClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1283,6 +1395,7 @@ namespace final_motoDix.Vistas
             this.bftpInfoPersonal.ResumeLayout(false);
             this.bftpInfoPersonal.PerformLayout();
             this.bftgLogin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bfImagenPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1317,5 +1430,7 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.ComboBox cmbDepartamento;
         private System.Windows.Forms.ComboBox cmbCiudad;
         private Bunifu.UI.WinForms.BunifuLabel lblCiudad;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 brbtnCargarImagenPerfil;
+        private Bunifu.UI.WinForms.BunifuPictureBox bfImagenPerfil;
     }
 }
