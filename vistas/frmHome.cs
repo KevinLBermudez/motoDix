@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using final_motoDix.Modelos;
 
 namespace final_motoDix.Vistas
 {
     public partial class frmHome : Form
     {
-        public frmHome()
+        public Persona infoPersona;
+
+
+        public frmHome(Persona infoPersona)
         {
+            this.infoPersona = infoPersona;
+
             InitializeComponent();
         }
     
@@ -43,6 +49,10 @@ namespace final_motoDix.Vistas
         private void frmHome_Load(object sender, EventArgs e)
         {
             AbrirFormInPanel<frmTravel>();
+            bflblNombreUsuario.Text = infoPersona.FirstName +" " + infoPersona.SecondName + " " + infoPersona.Surname + " " + infoPersona.SecondSurname;
+            bflblTipoUsuario.Text = infoPersona.RolName;
+            bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
+            
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)
