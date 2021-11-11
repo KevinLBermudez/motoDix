@@ -280,7 +280,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsRegisterDriver.cs" />
+    <Compile Include="Controladores\clsDriver.controller.cs" />
+    <Compile Include="Modelos\clsDriver.model.cs" />
     <Compile Include="Controladores\clsCiudad.controller.cs" />
     <Compile Include="Controladores\clsDepartamento.controller.cs" />
     <Compile Include="Controladores\clsPerson.controller.cs" />

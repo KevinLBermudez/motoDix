@@ -13,6 +13,7 @@ namespace final_motoDix.Modelos
 
     public struct Persona
     {
+        // Estructura - Objeto ( Para tener acceso a los datos)
         private string idDocumentPersona;
         private DateTime dateOfBirth;
         private string firstName;
@@ -26,6 +27,7 @@ namespace final_motoDix.Modelos
         private int idRol;
         private string rolName;
 
+        //Constructor de la estructura 
         public Persona(string idDocumentPersona, DateTime dateOfBirth, string firstName, string secondName, string surname, string secondSurname, string profilePicture, string gender, string state, string email, int idRol, string rolName)
         {
              this.idDocumentPersona = idDocumentPersona;
@@ -42,7 +44,7 @@ namespace final_motoDix.Modelos
              this.rolName = rolName;
         }
 
-
+        //Propiedades, recibir y enviar datos.
         public string IdDocumentPersona { get => idDocumentPersona; set => idDocumentPersona = value; }
         public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
         public string FirstName { get => firstName; set => firstName = value; }
@@ -60,12 +62,15 @@ namespace final_motoDix.Modelos
 
     class clsPersonModel
     {
+        //Configuracion para subir fotos de perfil
         private clsCloudinary cloud;
-
+        //Para llamar a la estructura
         private Persona persona;
-        
+        //variable para despues conectar a la base de datos.
         private NpgsqlConnection conexionPersona;
 
+
+        //Lo que hay en el modelo de la base de datos.
         private string idDocumentPerson;
         private DateTime dateOfBirth;
         private string firstName;
@@ -77,12 +82,13 @@ namespace final_motoDix.Modelos
         private DateTime dateRegistration = DateTime.Now;
         private string state = "Activo";
         private string idCity;
-
         //login
         private string email;
         private string credentialPassword;
         private int idRol;
 
+
+        //Propiedades, Enviar y recibir datos.
         public string IdDocumentPerson { get => idDocumentPerson; set => idDocumentPerson = value; }
         public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
         public string FirstName { get => firstName; set => firstName = value; }
@@ -96,8 +102,13 @@ namespace final_motoDix.Modelos
         public string CredentialPassword { get => credentialPassword; set => credentialPassword = value; }
         public int IdRol { get => idRol; set => idRol = value; }
 
+        //Propiedad de la variable de tipo estructura
+        //Para enviar y recibir datos a cualquier variable que este dentro de persona
         public Persona Persona { get => persona; set => persona = value; }
 
+
+        //Constructor
+        //Recibir datos para asignar valor a las variables
         public clsPersonModel(string idDocumentPerson, DateTime dateOfBirth, string firstName, string secondName, string surname, string secondSurname, string profilePicture, string gender, string idCity, string email, string credentialPassword, int idRol)
         {
 
@@ -113,21 +124,20 @@ namespace final_motoDix.Modelos
             Email = email;
             CredentialPassword = credentialPassword;
             IdRol = idRol;
-
             conexionPersona = clsConexion.realizarConexion();
             cloud = new clsCloudinary();
-
         }
 
+        //Constructor para login
         public clsPersonModel(string email, string credentialPassword, int idRol)
         {
             Email = email;
             CredentialPassword = credentialPassword;
             IdRol = idRol;
             conexionPersona = clsConexion.realizarConexion();
-
         }
 
+        //Función para validar la conexion
         public void validarConexion()
         {
             if (conexionPersona == null)
@@ -137,6 +147,7 @@ namespace final_motoDix.Modelos
             }
         }
 
+        //Función para crear una persona
         public bool CrearPersona()
         {
             if (profilePicture.Trim() != "null")
@@ -156,7 +167,7 @@ namespace final_motoDix.Modelos
 
             }
 
-
+         
             validarConexion();
             NpgsqlCommand query = new NpgsqlCommand();
             query.Connection = conexionPersona;
@@ -167,7 +178,7 @@ namespace final_motoDix.Modelos
                 "@dateResgistration,@IdCity" +
                 ",@Email,@CredentialPassword,@IdRol)";
 
-
+            //Parametros para el procedimiento almacenado de login
             query.Parameters.Add("@IdDocumentPerson", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDocumentPerson;
             query.Parameters.Add("@DateOfBirth", NpgsqlTypes.NpgsqlDbType.Date).Value = dateOfBirth;
             query.Parameters.Add("@FirstName", NpgsqlTypes.NpgsqlDbType.Varchar).Value = firstName;
@@ -185,6 +196,8 @@ namespace final_motoDix.Modelos
 
             try
             {
+                //Trata de ejecutar el procedimiento almacenado 
+                //Con el try catch verificamos si no hay errores
                 if(query.ExecuteNonQuery() == 1)
                 {
                     return true;
@@ -202,6 +215,7 @@ namespace final_motoDix.Modelos
 
         }
 
+        //Función para logearse
         public Persona login()
         {
             validarConexion();
