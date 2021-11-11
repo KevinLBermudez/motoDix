@@ -60,6 +60,7 @@ namespace final_motoDix.Modelos
 
     class clsPersonModel
     {
+
         private clsCloudinary cloud;
 
         private Persona persona;
@@ -252,6 +253,8 @@ namespace final_motoDix.Modelos
 
                 }
 
+                
+                
             }
             catch (Exception ex)
             {
@@ -262,5 +265,6 @@ namespace final_motoDix.Modelos
             return Persona;
         
         }
+
     }
 }

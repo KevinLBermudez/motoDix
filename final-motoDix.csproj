@@ -216,6 +216,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SQLite.Linq.1.0.115.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Device" />
     <Reference Include="System.Linq, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Linq.4.1.0\lib\net463\System.Linq.dll</HintPath>
       <Private>True</Private>
@@ -283,11 +284,14 @@
     <Compile Include="Controladores\clsCiudad.controller.cs" />
     <Compile Include="Controladores\clsDepartamento.controller.cs" />
     <Compile Include="Controladores\clsPerson.controller.cs" />
+    <Compile Include="Controladores\clsViaje.controller.cs" />
     <Compile Include="helpers\clsCloudinary.cs" />
+    <Compile Include="helpers\clsMapa.cs" />
     <Compile Include="Modelos\clsCiudad.model.cs" />
     <Compile Include="Modelos\clsDepartamento.model.cs" />
     <Compile Include="Modelos\clsPerson.model.cs" />
     <Compile Include="Modelos\clsConexion.model.cs" />
+    <Compile Include="Modelos\clsViaje.model.cs" />
     <Compile Include="Vistas\frmAyuda.cs">
       <SubType>Form</SubType>
     </Compile>

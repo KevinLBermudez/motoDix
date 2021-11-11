@@ -144,7 +144,6 @@ namespace final_motoDix.Vistas
             cloud = new clsCloudinary();
 
             profilePicture = cloud.cargarUnArchivo(bfImagenPerfil);
-           
 
         }
     }

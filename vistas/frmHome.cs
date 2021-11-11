@@ -42,6 +42,7 @@ namespace final_motoDix.Vistas
             else
             {
                 formulario.BringToFront();
+
             }
 
         }
