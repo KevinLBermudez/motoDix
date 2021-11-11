@@ -25,7 +25,6 @@ namespace final_motoDix.Controladores
         public clsPersonController(string email, string credentialPassword, int idRol)
         {
             persona = new clsPersonModel(email, credentialPassword, idRol);
-
         }
 
         public void ejecutarCrearPersona()
@@ -42,13 +41,11 @@ namespace final_motoDix.Controladores
             }
         }
 
-
         public Persona ejecutarLogin()
         {
            infoPersona =  persona.login();
 
             return infoPersona;
-        
         }
 
     }
