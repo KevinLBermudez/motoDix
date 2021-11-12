@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using NpgsqlTypes;
 using System.Windows.Forms;
 using System.Data;
 using final_motoDix.helpers;
@@ -256,17 +257,17 @@ namespace final_motoDix.Modelos
             query.Parameters.Add("@IdRol", NpgsqlTypes.NpgsqlDbType.Smallint).Value = idRol;
             query.Parameters.Add("@Licenseplate", NpgsqlTypes.NpgsqlDbType.Varchar).Value = licenseplate;
             query.Parameters.Add("@Color", NpgsqlTypes.NpgsqlDbType.Varchar).Value = color;
-            query.Parameters.Add("@Model", NpgsqlTypes.NpgsqlDbType.Varchar).Value = model;
-            query.Parameters.Add("@Cylindercapacity", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cylindercapacity;
-            query.Parameters.Add("@Brand", NpgsqlTypes.NpgsqlDbType.Date).Value = brand;
-            query.Parameters.Add("@Expeditiondatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Varchar).Value = expeditiondatetechnomechanics;
-            query.Parameters.Add("@Expirationdatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Varchar).Value = expirationdatetechnomechanics;
-            query.Parameters.Add("@Expeditiondatesoat", NpgsqlTypes.NpgsqlDbType.Varchar).Value = expeditiondatesoat;
-            query.Parameters.Add("@Initialvaliditysoat", NpgsqlTypes.NpgsqlDbType.Smallint).Value = initialvaliditysoat;
-            query.Parameters.Add("@Finalvaliditysoat", NpgsqlTypes.NpgsqlDbType.Varchar).Value = finalvaliditysoat;
+            query.Parameters.Add("@Model", NpgsqlTypes.NpgsqlDbType.Integer).Value = model;
+            query.Parameters.Add("@Cylindercapacity", NpgsqlTypes.NpgsqlDbType.Integer).Value = cylindercapacity;
+            query.Parameters.Add("@Brand", NpgsqlTypes.NpgsqlDbType.Varchar).Value = brand;
+            query.Parameters.Add("@Expeditiondatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Date).Value = expeditiondatetechnomechanics;
+            query.Parameters.Add("@Expirationdatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Date).Value = expirationdatetechnomechanics;
+            query.Parameters.Add("@Expeditiondatesoat", NpgsqlTypes.NpgsqlDbType.Date).Value = expeditiondatesoat;
+            query.Parameters.Add("@Initialvaliditysoat", NpgsqlTypes.NpgsqlDbType.Date).Value = initialvaliditysoat;
+            query.Parameters.Add("@Finalvaliditysoat", NpgsqlTypes.NpgsqlDbType.Date).Value = finalvaliditysoat;
             query.Parameters.Add("@Statee", NpgsqlTypes.NpgsqlDbType.Varchar).Value = statee;
             query.Parameters.Add("@Iddocumentowner", NpgsqlTypes.NpgsqlDbType.Varchar).Value = iddocumentowner;
-            query.Parameters.Add("@Firstname", NpgsqlTypes.NpgsqlDbType.Smallint).Value = firstname;
+            query.Parameters.Add("@Firstname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = firstname;
             query.Parameters.Add("@Secondname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondname;
             query.Parameters.Add("@Surname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = surname;
             query.Parameters.Add("@Secondsurname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondsurname;
@@ -276,26 +277,21 @@ namespace final_motoDix.Modelos
             query.Parameters.Add("@Category", NpgsqlTypes.NpgsqlDbType.Varchar).Value = category;
             query.Parameters.Add("@Service", NpgsqlTypes.NpgsqlDbType.Varchar).Value = service;
             query.Parameters.Add("@ValityDriver", NpgsqlTypes.NpgsqlDbType.Date).Value = validity;
-            query.Parameters.Add("@Stade", NpgsqlTypes.NpgsqlDbType.Smallint).Value = stade;
-            query.Parameters.Add("@Assignmentdate", NpgsqlTypes.NpgsqlDbType.Varchar).Value = assignmentdate;
-            query.Parameters.Add("@Assignmentstate", NpgsqlTypes.NpgsqlDbType.Smallint).Value = assignmentstate;
+            query.Parameters.Add("@Stade", NpgsqlTypes.NpgsqlDbType.Varchar).Value = stade;
+            query.Parameters.Add("@Assignmentdate", NpgsqlTypes.NpgsqlDbType.Date).Value = assignmentdate;
+            query.Parameters.Add("@Assignmentstate", NpgsqlTypes.NpgsqlDbType.Varchar).Value = assignmentstate;
 
             //Trata de ejecutar el procedimiento almacenado 
             //Con el try catch verificamos si no hay errores
             try
             {
-                if (query.ExecuteNonQuery() == 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                query.ExecuteNonQuery();
+                return true;
+
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(err.ToString());
                 return false;
             }
 
