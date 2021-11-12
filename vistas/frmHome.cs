@@ -49,7 +49,15 @@ namespace final_motoDix.Vistas
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-            AbrirFormInPanel<frmTravel>();
+            Form viaje = new frmTravel(infoPersona);
+            viaje.TopLevel = false;
+            viaje.FormBorderStyle = FormBorderStyle.None;
+            viaje.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(viaje);
+            viaje.Show();
+            viaje.BringToFront();
+            
+
             bflblNombreUsuario.Text = infoPersona.FirstName +" " + infoPersona.SecondName + " " + infoPersona.Surname + " " + infoPersona.SecondSurname;
             bflblTipoUsuario.Text = infoPersona.RolName;
             bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
@@ -78,7 +86,7 @@ namespace final_motoDix.Vistas
 
         private void bfbtnViajar_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel<frmTravel>();
+            //AbrirFormInPanel<frmTravel>();
         }
 
         private void ptbMinizar_Click(object sender, EventArgs e)
@@ -116,6 +124,11 @@ namespace final_motoDix.Vistas
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel<frmAyuda>();
+        }
+
+        private void bfbtnVerSolicitudes_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel<frmSolicitudViajes>();
         }
     }
 }
