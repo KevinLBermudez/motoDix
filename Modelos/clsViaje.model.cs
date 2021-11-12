@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace final_motoDix.Modelos
 {
@@ -44,6 +45,11 @@ namespace final_motoDix.Modelos
             conexionViaje = clsConexion.realizarConexion();
 
         }
+        public clsViajeModel()
+        {
+            conexionViaje = clsConexion.realizarConexion();
+
+        }
         public void validarConexion()
         {
             if (conexionViaje == null)
@@ -59,7 +65,7 @@ namespace final_motoDix.Modelos
             NpgsqlCommand query = new NpgsqlCommand();
             query.Connection = conexionViaje;
 
-            query.CommandText = "CALL public.app_travel_init(@travelId,'@idDocumentPerson,null,'@startPoint,'@arrivalPoint,@dateTimeTrip ,'@state";
+            query.CommandText = "CALL public.app_travel_init(@travelId,@idDocumentPerson,@startPoint,@arrivalPoint,@dateTimeTrip ,@state)";
 
             query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
             query.Parameters.Add("@idDocumentPerson", NpgsqlTypes.NpgsqlDbType.Varchar).Value = IdDocumentPerson;
@@ -71,14 +77,10 @@ namespace final_motoDix.Modelos
 
             try
             {
-                if (query.ExecuteNonQuery() == 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                query.ExecuteNonQuery();
+                
+                return true;
+               
             }
             catch (Exception err)
             {
@@ -87,6 +89,40 @@ namespace final_motoDix.Modelos
             }
 
         }
+
+        public DataTable obtenerViajesSolicitados()
+        {
+
+            validarConexion();
+            string consulta = "select * from public.listar_viajes_solicitados();";
+
+            NpgsqlCommand query = new NpgsqlCommand(consulta,conexionViaje);
+
+
+            try
+            {
+                DataTable dtViajes = new DataTable();
+
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query);
+                adapter.Fill(dtViajes);
+                return dtViajes;
+
+                /* NpgsqlDataReader viajes = query.ExecuteReader();
+                 DataTable dtViajes = new DataTable();
+                 dtViajes.Load(viajes);
+                 return dtViajes;*/
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error en la conexion");
+                return null;
+               
+            }
+
+
+        }
+
+
 
     }
 }

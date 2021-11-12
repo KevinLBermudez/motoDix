@@ -21,11 +21,15 @@ namespace final_motoDix.Vistas
         clsViajeController viaje;
         public Persona infoPersona;
 
-        public frmTravel()
+        public frmTravel(Persona infoPersona)
         {
+            this.infoPersona = infoPersona;
+
             InitializeComponent();
 
         }
+
+
         public void cargarInfoPersona(Persona infoPersona)
         {
             this.infoPersona = infoPersona;
@@ -84,9 +88,8 @@ namespace final_motoDix.Vistas
                 string state = "Solicitado";
                 mapa.validarRuta();
 
-                viaje = new clsViajeController(infoPersona.IdDocumentPersona,mapa.infoViajeRuta[0].Dato,mapa.infoViajeRuta[1].Dato, state);
-
-
+                viaje = new clsViajeController(infoPersona.IdDocumentPersona,mapa.infoViajeRuta[2].Dato,mapa.infoViajeRuta[3].Dato, state);
+                viaje.ejecutarSolicitarViaje();
             }
             catch (Exception err)
             {

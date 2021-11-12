@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using final_motoDix.Controladores;
 namespace final_motoDix.Vistas
 {
     public partial class frmSolicitudViajes : Form
     {
+        clsViajeController viajes;
+
         public frmSolicitudViajes()
         {
             InitializeComponent();
@@ -21,5 +23,18 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+        private void frmSolicitudViajes_Load(object sender, EventArgs e)
+        {
+            viajes = new clsViajeController();
+            viajes.ejecutarObtenerViajesSolicitados(bfdgvSolicitudes);
+        }
+
+        private void contadorSolicitud_Tick(object sender, EventArgs e)
+        {
+             viajes.ejecutarObtenerViajesSolicitados(bfdgvSolicitudes);
+            
+        }
     }
+       
 }

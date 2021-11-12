@@ -198,14 +198,10 @@ namespace final_motoDix.Modelos
             {
                 //Trata de ejecutar el procedimiento almacenado 
                 //Con el try catch verificamos si no hay errores
-                if(query.ExecuteNonQuery() == 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                query.ExecuteNonQuery();
+                
+                return true;
+
             }
             catch (Exception ex)
             {
@@ -265,8 +261,7 @@ namespace final_motoDix.Modelos
                         ProfilePicture, (string)persona["gender"], (string)persona["state"], (string)persona["email"],Convert.ToInt16(persona["idRol"]),(string)persona["nameRol"]);
 
                 }
-
-                
+                persona.Close();
                 
             }
             catch (Exception ex)
