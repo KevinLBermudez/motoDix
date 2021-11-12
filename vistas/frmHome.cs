@@ -19,13 +19,8 @@ namespace final_motoDix.Vistas
         public frmHome(Persona infoPersona)
         {
             this.infoPersona = infoPersona;
-            
+
             InitializeComponent();
-            if (infoPersona.IdRol == 1)
-            {
-                bfbtnVerSolicitudes.Enabled = false;
-                bfbtnVerSolicitudes.Visible = false;
-            }
         }
     
         private void AbrirFormInPanel<MiFormulario> () where MiFormulario : Form, new()
@@ -69,7 +64,20 @@ namespace final_motoDix.Vistas
             
         }
 
-        
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void bfbtnMisViajes_Click(object sender, EventArgs e)
         {
