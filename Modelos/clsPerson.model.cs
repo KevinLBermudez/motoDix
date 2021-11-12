@@ -278,7 +278,7 @@ namespace final_motoDix.Modelos
                 MessageBox.Show(ex.ToString());
             }
 
-
+            //conexionPersona.Close();
             return Persona;
         
         }

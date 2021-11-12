@@ -64,7 +64,6 @@ namespace final_motoDix.Vistas
             clsDriverController controladorConductor = new clsDriverController(bftxtDocumentoIdentidad.Text, bftxtxEmail.Text, bftxtPassword.Text, 2, bftxtPlacaVehiculo.Text, bftxtColor.Text, Convert.ToInt32(bftxtModelo.Text), Convert.ToInt32(bftxtCilindraje.Text), bftxtMarca.Text, bfdtpExpedicionTecnomecanica.Value, bftxtExpiracionTecnomecanica.Value, bfdtpExpedicionSoat.Value, bfdtpFechaInicioSoat.Value, bfdtpFechaFinalSoat.Value, "Valido", bftxtDocumentoPropietario.Text, bftxtPrimerNombrePropietario.Text, bftxtSegundoNombrePropietario.Text, bftxtPrimerApellidoPropietario.Text, bftxtSegundoApellidoPropietario.Text, bftxtTransitoExpendedor.Text, bfdtpExpedicion.Value, bftxtRestricciones.Text, bfCategoria.Text,"Privado", bfdtpVigencia.Value,"Valido",DateTime.Now, "Null");
 
             controladorConductor.ejecutarCrearDriver();
-
         }
 
         private void cmbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
