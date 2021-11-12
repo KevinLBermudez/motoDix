@@ -166,6 +166,15 @@ namespace final_motoDix.Modelos
 
 
             }
+            else
+            {
+                if(gender == "Masculino")
+                {
+                    profilePicture = "https://res.cloudinary.com/dhameorhz/image/upload/v1636677166/defaulHombre_xssu9f.jpg";
+                }else{
+                    profilePicture = "https://res.cloudinary.com/dhameorhz/image/upload/v1636677160/defaultMujer_akkrqi.jpg";
+                }
+            }
 
          
             validarConexion();

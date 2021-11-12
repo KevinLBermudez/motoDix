@@ -12,6 +12,7 @@ using final_motoDix.Modelos;
 using final_motoDix.helpers;
 using GMap.NET.MapProviders;
 using GMap.NET;
+using Bunifu.UI.WinForms;
 
 namespace final_motoDix.Vistas
 {
@@ -28,7 +29,6 @@ namespace final_motoDix.Vistas
             InitializeComponent();
 
         }
-
 
         public void cargarInfoPersona(Persona infoPersona)
         {
@@ -87,15 +87,29 @@ namespace final_motoDix.Vistas
             {
                 string state = "Solicitado";
                 mapa.validarRuta();
-
-                viaje = new clsViajeController(infoPersona.IdDocumentPersona,mapa.infoViajeRuta[2].Dato,mapa.infoViajeRuta[3].Dato, state);
+                lblDistanciaViajeValor.Text = mapa.infoViajeRuta[0].Dato;
+                lblTiempoValor.Text = mapa.infoViajeRuta[1].Dato;
+                bftxtPuntoInicio.Text = mapa.infoViajeRuta[2].Dato;
+                bftxtPuntoFinal.Text = mapa.infoViajeRuta[3].Dato;
+                viaje = new clsViajeController(infoPersona.IdDocumentPersona, mapa.infoViajeRuta[2].Dato, mapa.infoViajeRuta[3].Dato, state);
                 viaje.ejecutarSolicitarViaje();
+
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
 
+        }
+
+        private void gMapControl_MouseEnter(object sender, EventArgs e)
+        {
+            this.AutoScroll = false;
+        }
+
+        private void frmTravel_MouseEnter(object sender, EventArgs e)
+        {
+            this.AutoScroll = true;
         }
     }
 }

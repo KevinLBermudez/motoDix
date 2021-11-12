@@ -27,17 +27,17 @@ namespace final_motoDix.Controladores
             persona = new clsPersonModel(email, credentialPassword, idRol);
         }
 
-        public void ejecutarCrearPersona()
+        public bool ejecutarCrearPersona()
         {
             if (persona.CrearPersona())
             {
                 MessageBox.Show("Persona creado correctamente");
-
+                return true;
             }
             else
             {
                 MessageBox.Show("Error interno");
-
+                return false;
             }
         }
 

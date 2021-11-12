@@ -90,7 +90,6 @@ namespace final_motoDix.Vistas
             this.panelVertical.Quality = 10;
             this.panelVertical.Size = new System.Drawing.Size(211, 652);
             this.panelVertical.TabIndex = 0;
-            this.panelVertical.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
             // 
             // panel1
             // 
@@ -155,7 +154,6 @@ namespace final_motoDix.Vistas
             this.bflblTipoUsuario.Text = "Tipo de usuario";
             this.bflblTipoUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblTipoUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bflblTipoUsuario.Click += new System.EventHandler(this.bunifuLabel1_Click);
             // 
             // bunifuButton21
             // 
@@ -551,7 +549,6 @@ namespace final_motoDix.Vistas
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(896, 652);
             this.panelContenedor.TabIndex = 17;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // panelHeader
             // 

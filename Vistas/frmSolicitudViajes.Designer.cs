@@ -526,7 +526,7 @@ namespace final_motoDix.Vistas
             this.bfbtnAceptar.IdleIconLeftImage = null;
             this.bfbtnAceptar.IdleIconRightImage = null;
             this.bfbtnAceptar.IndicateFocus = false;
-            this.bfbtnAceptar.Location = new System.Drawing.Point(594, 557);
+            this.bfbtnAceptar.Location = new System.Drawing.Point(590, 496);
             this.bfbtnAceptar.Name = "bfbtnAceptar";
             this.bfbtnAceptar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnAceptar.OnDisabledState.BorderRadius = 1;

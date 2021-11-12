@@ -61,12 +61,11 @@ namespace final_motoDix.helpers
             map.MapProvider = GMapProviders.GoogleMap;
             map.Zoom = 10;
             map.ShowCenter = false;
-            map.AutoScroll = true;
+            map.AutoScroll = false;
             PointLatLng defaultPoint = new PointLatLng(6.2509889857684655, -75.57290454506146);
             map.Position =  defaultPoint;
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
-
 
         }
 
@@ -84,11 +83,11 @@ namespace final_motoDix.helpers
                     {
                         lat = eve.Position.Location.Latitude;
                         lng = eve.Position.Location.Longitude;
-                        map.Zoom = 20;
                         posicionActual = new PointLatLng(lat, lng);
                         map.Position = posicionActual;
-                        map.Zoom = 10;
                         seleccionarPunto(posicionActual, map, "Posicion actual");
+                        map.Zoom = 10;
+
                     }
 
                 };
@@ -121,6 +120,7 @@ namespace final_motoDix.helpers
                 capaInicio = markers;
                 map.Overlays.Add(capaInicio);
                 puntoInicio = punto;
+                map.Position = puntoInicio;
 
             }else if (puntoFinal.IsEmpty)
             {
