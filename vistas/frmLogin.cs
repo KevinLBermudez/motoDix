@@ -57,5 +57,18 @@ namespace final_motoDix.Vistas
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void bftxtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                string email = bftxtEmail.Text;
+                string password = bftxtContraseña.Text;
+                persona = new clsPersonController(email, password, rol);
+                infoPersona = persona.ejecutarLogin();
+                frmHome home = new frmHome(infoPersona);
+                home.Show();
+                this.Close();
+            }
+        }
     }
 }
