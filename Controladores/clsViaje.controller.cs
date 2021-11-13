@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using final_motoDix.Modelos;
 using System.Data;
+using static final_motoDix.Estructuras.EViaje;
+
 namespace final_motoDix.Controladores
 {
     class clsViajeController
     {
 
         private clsViajeModel viaje;
-
+        EstViaje eViaje;
 
         public clsViajeController( string idDocumentPerson, string startPoint, string arrivalPoint, string state)
         {
@@ -26,17 +28,31 @@ namespace final_motoDix.Controladores
         {
             viaje = new clsViajeModel();
         }
-
-        public void ejecutarSolicitarViaje()
+        public clsViajeController(string travelId)
         {
-            if (viaje.solicitudViaje())
+            viaje = new clsViajeModel(travelId);
+        }
+
+        public clsViajeController(string travelId,string licencePlate, string idDocumentPersonDriver)
+        {
+            viaje = new clsViajeModel(travelId, idDocumentPersonDriver, licencePlate, "Aceptado");
+
+        }
+
+        public string ejecutarSolicitarViaje()
+        {
+            try
             {
-                MessageBox.Show("Se solicito el viaje exitosamente");
+                 string travelId = viaje.solicitudViaje();
+                return travelId;
             }
-            else
+            catch (Exception err)
             {
+
                 MessageBox.Show("Error al solicitar viaje");
+                return null;
             }
+           
 
         }
 
@@ -61,6 +77,39 @@ namespace final_motoDix.Controladores
             {
                 MessageBox.Show("Error interno");
             }
+        }
+
+        public bool ejecutaraceptarViaje()
+        {
+            try
+            {
+                viaje.aceptarViaje();
+                return true;
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show("Error interno");
+                return false;
+            }
+        }   
+
+        public EstViaje ejecutarMonitoreoViaje()
+        {
+            try
+            {
+                eViaje = viaje.monitorearViaje();
+                return eViaje;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error interno");
+
+                return eViaje;
+
+            }
+
         }
 
     }

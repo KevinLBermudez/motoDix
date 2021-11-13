@@ -31,12 +31,13 @@ namespace final_motoDix.Vistas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.panelVertical = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bfbtnVerSolicitudes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bfpbImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bflblNombreUsuario = new Bunifu.UI.WinForms.BunifuLabel();
@@ -53,7 +54,6 @@ namespace final_motoDix.Vistas
             this.ptbCerrar = new System.Windows.Forms.PictureBox();
             this.ptbMinizar = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bfbtnVerSolicitudes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.panelVertical.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).BeginInit();
@@ -88,9 +88,99 @@ namespace final_motoDix.Vistas
             this.panelVertical.Margin = new System.Windows.Forms.Padding(2);
             this.panelVertical.Name = "panelVertical";
             this.panelVertical.Quality = 10;
-            this.panelVertical.Size = new System.Drawing.Size(211, 652);
+            this.panelVertical.Size = new System.Drawing.Size(211, 742);
             this.panelVertical.TabIndex = 0;
-            this.panelVertical.Click += new System.EventHandler(this.bunifuGradientPanel1_Click);
+            // 
+            // bfbtnVerSolicitudes
+            // 
+            this.bfbtnVerSolicitudes.AllowAnimations = true;
+            this.bfbtnVerSolicitudes.AllowMouseEffects = true;
+            this.bfbtnVerSolicitudes.AllowToggling = false;
+            this.bfbtnVerSolicitudes.AnimationSpeed = 200;
+            this.bfbtnVerSolicitudes.AutoGenerateColors = false;
+            this.bfbtnVerSolicitudes.AutoRoundBorders = false;
+            this.bfbtnVerSolicitudes.AutoSizeLeftIcon = true;
+            this.bfbtnVerSolicitudes.AutoSizeRightIcon = true;
+            this.bfbtnVerSolicitudes.BackColor = System.Drawing.Color.Transparent;
+            this.bfbtnVerSolicitudes.BackColor1 = System.Drawing.Color.Transparent;
+            this.bfbtnVerSolicitudes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bfbtnVerSolicitudes.BackgroundImage")));
+            this.bfbtnVerSolicitudes.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnVerSolicitudes.ButtonText = "Ver solicitudes";
+            this.bfbtnVerSolicitudes.ButtonTextMarginLeft = 0;
+            this.bfbtnVerSolicitudes.ColorContrastOnClick = 45;
+            this.bfbtnVerSolicitudes.ColorContrastOnHover = 45;
+            this.bfbtnVerSolicitudes.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bfbtnVerSolicitudes.CustomizableEdges = borderEdges1;
+            this.bfbtnVerSolicitudes.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bfbtnVerSolicitudes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnVerSolicitudes.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnVerSolicitudes.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnVerSolicitudes.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.bfbtnVerSolicitudes.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bfbtnVerSolicitudes.ForeColor = System.Drawing.Color.White;
+            this.bfbtnVerSolicitudes.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfbtnVerSolicitudes.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnVerSolicitudes.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bfbtnVerSolicitudes.IconMarginLeft = 11;
+            this.bfbtnVerSolicitudes.IconPadding = 10;
+            this.bfbtnVerSolicitudes.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfbtnVerSolicitudes.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnVerSolicitudes.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bfbtnVerSolicitudes.IconSize = 25;
+            this.bfbtnVerSolicitudes.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.bfbtnVerSolicitudes.IdleBorderRadius = 1;
+            this.bfbtnVerSolicitudes.IdleBorderThickness = 1;
+            this.bfbtnVerSolicitudes.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bfbtnVerSolicitudes.IdleIconLeftImage = null;
+            this.bfbtnVerSolicitudes.IdleIconRightImage = null;
+            this.bfbtnVerSolicitudes.IndicateFocus = false;
+            this.bfbtnVerSolicitudes.Location = new System.Drawing.Point(3, 316);
+            this.bfbtnVerSolicitudes.Margin = new System.Windows.Forms.Padding(2);
+            this.bfbtnVerSolicitudes.Name = "bfbtnVerSolicitudes";
+            this.bfbtnVerSolicitudes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnVerSolicitudes.OnDisabledState.BorderRadius = 1;
+            this.bfbtnVerSolicitudes.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnVerSolicitudes.OnDisabledState.BorderThickness = 1;
+            this.bfbtnVerSolicitudes.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnVerSolicitudes.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnVerSolicitudes.OnDisabledState.IconLeftImage = null;
+            this.bfbtnVerSolicitudes.OnDisabledState.IconRightImage = null;
+            this.bfbtnVerSolicitudes.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnVerSolicitudes.onHoverState.BorderRadius = 1;
+            this.bfbtnVerSolicitudes.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnVerSolicitudes.onHoverState.BorderThickness = 1;
+            this.bfbtnVerSolicitudes.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnVerSolicitudes.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnVerSolicitudes.onHoverState.IconLeftImage = null;
+            this.bfbtnVerSolicitudes.onHoverState.IconRightImage = null;
+            this.bfbtnVerSolicitudes.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.bfbtnVerSolicitudes.OnIdleState.BorderRadius = 1;
+            this.bfbtnVerSolicitudes.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnVerSolicitudes.OnIdleState.BorderThickness = 1;
+            this.bfbtnVerSolicitudes.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.bfbtnVerSolicitudes.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnVerSolicitudes.OnIdleState.IconLeftImage = null;
+            this.bfbtnVerSolicitudes.OnIdleState.IconRightImage = null;
+            this.bfbtnVerSolicitudes.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnVerSolicitudes.OnPressedState.BorderRadius = 1;
+            this.bfbtnVerSolicitudes.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnVerSolicitudes.OnPressedState.BorderThickness = 1;
+            this.bfbtnVerSolicitudes.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnVerSolicitudes.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnVerSolicitudes.OnPressedState.IconLeftImage = null;
+            this.bfbtnVerSolicitudes.OnPressedState.IconRightImage = null;
+            this.bfbtnVerSolicitudes.Size = new System.Drawing.Size(205, 38);
+            this.bfbtnVerSolicitudes.TabIndex = 6;
+            this.bfbtnVerSolicitudes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bfbtnVerSolicitudes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bfbtnVerSolicitudes.TextMarginLeft = 0;
+            this.bfbtnVerSolicitudes.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bfbtnVerSolicitudes.UseDefaultRadiusAndThickness = true;
+            this.bfbtnVerSolicitudes.Click += new System.EventHandler(this.bfbtnVerSolicitudes_Click);
             // 
             // panel1
             // 
@@ -102,6 +192,7 @@ namespace final_motoDix.Vistas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 194);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bfpbImagenPerfil
             // 
@@ -136,6 +227,7 @@ namespace final_motoDix.Vistas
             this.bflblNombreUsuario.Text = "Nombre de usuario";
             this.bflblNombreUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblNombreUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bflblNombreUsuario.Click += new System.EventHandler(this.bflblNombreUsuario_Click);
             // 
             // bflblTipoUsuario
             // 
@@ -155,7 +247,6 @@ namespace final_motoDix.Vistas
             this.bflblTipoUsuario.Text = "Tipo de usuario";
             this.bflblTipoUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblTipoUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bflblTipoUsuario.Click += new System.EventHandler(this.bunifuLabel1_Click);
             // 
             // bunifuButton21
             // 
@@ -549,7 +640,7 @@ namespace final_motoDix.Vistas
             this.panelContenedor.Location = new System.Drawing.Point(211, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(896, 652);
+            this.panelContenedor.Size = new System.Drawing.Size(954, 742);
             this.panelContenedor.TabIndex = 17;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
@@ -570,14 +661,14 @@ namespace final_motoDix.Vistas
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Quality = 10;
-            this.panelHeader.Size = new System.Drawing.Size(896, 29);
+            this.panelHeader.Size = new System.Drawing.Size(954, 29);
             this.panelHeader.TabIndex = 0;
             // 
             // ptbMaximizar
             // 
             this.ptbMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMaximizar.Image")));
-            this.ptbMaximizar.Location = new System.Drawing.Point(851, 3);
+            this.ptbMaximizar.Location = new System.Drawing.Point(909, 3);
             this.ptbMaximizar.Name = "ptbMaximizar";
             this.ptbMaximizar.Size = new System.Drawing.Size(17, 18);
             this.ptbMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -589,7 +680,7 @@ namespace final_motoDix.Vistas
             // 
             this.ptbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptbCerrar.Image")));
-            this.ptbCerrar.Location = new System.Drawing.Point(874, 3);
+            this.ptbCerrar.Location = new System.Drawing.Point(932, 3);
             this.ptbCerrar.Name = "ptbCerrar";
             this.ptbCerrar.Size = new System.Drawing.Size(18, 18);
             this.ptbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -601,7 +692,7 @@ namespace final_motoDix.Vistas
             // 
             this.ptbMinizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMinizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMinizar.Image")));
-            this.ptbMinizar.Location = new System.Drawing.Point(826, 3);
+            this.ptbMinizar.Location = new System.Drawing.Point(884, 3);
             this.ptbMinizar.Name = "ptbMinizar";
             this.ptbMinizar.Size = new System.Drawing.Size(17, 18);
             this.ptbMinizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -616,103 +707,12 @@ namespace final_motoDix.Vistas
             this.bunifuDragControl1.TargetControl = this.panelHeader;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // bfbtnVerSolicitudes
-            // 
-            this.bfbtnVerSolicitudes.AllowAnimations = true;
-            this.bfbtnVerSolicitudes.AllowMouseEffects = true;
-            this.bfbtnVerSolicitudes.AllowToggling = false;
-            this.bfbtnVerSolicitudes.AnimationSpeed = 200;
-            this.bfbtnVerSolicitudes.AutoGenerateColors = false;
-            this.bfbtnVerSolicitudes.AutoRoundBorders = false;
-            this.bfbtnVerSolicitudes.AutoSizeLeftIcon = true;
-            this.bfbtnVerSolicitudes.AutoSizeRightIcon = true;
-            this.bfbtnVerSolicitudes.BackColor = System.Drawing.Color.Transparent;
-            this.bfbtnVerSolicitudes.BackColor1 = System.Drawing.Color.Transparent;
-            this.bfbtnVerSolicitudes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bfbtnVerSolicitudes.BackgroundImage")));
-            this.bfbtnVerSolicitudes.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bfbtnVerSolicitudes.ButtonText = "Ver solicitudes";
-            this.bfbtnVerSolicitudes.ButtonTextMarginLeft = 0;
-            this.bfbtnVerSolicitudes.ColorContrastOnClick = 45;
-            this.bfbtnVerSolicitudes.ColorContrastOnHover = 45;
-            this.bfbtnVerSolicitudes.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bfbtnVerSolicitudes.CustomizableEdges = borderEdges1;
-            this.bfbtnVerSolicitudes.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bfbtnVerSolicitudes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bfbtnVerSolicitudes.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bfbtnVerSolicitudes.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bfbtnVerSolicitudes.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bfbtnVerSolicitudes.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bfbtnVerSolicitudes.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVerSolicitudes.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bfbtnVerSolicitudes.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bfbtnVerSolicitudes.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bfbtnVerSolicitudes.IconMarginLeft = 11;
-            this.bfbtnVerSolicitudes.IconPadding = 10;
-            this.bfbtnVerSolicitudes.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bfbtnVerSolicitudes.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bfbtnVerSolicitudes.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bfbtnVerSolicitudes.IconSize = 25;
-            this.bfbtnVerSolicitudes.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.bfbtnVerSolicitudes.IdleBorderRadius = 1;
-            this.bfbtnVerSolicitudes.IdleBorderThickness = 1;
-            this.bfbtnVerSolicitudes.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bfbtnVerSolicitudes.IdleIconLeftImage = null;
-            this.bfbtnVerSolicitudes.IdleIconRightImage = null;
-            this.bfbtnVerSolicitudes.IndicateFocus = false;
-            this.bfbtnVerSolicitudes.Location = new System.Drawing.Point(3, 316);
-            this.bfbtnVerSolicitudes.Margin = new System.Windows.Forms.Padding(2);
-            this.bfbtnVerSolicitudes.Name = "bfbtnVerSolicitudes";
-            this.bfbtnVerSolicitudes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bfbtnVerSolicitudes.OnDisabledState.BorderRadius = 1;
-            this.bfbtnVerSolicitudes.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bfbtnVerSolicitudes.OnDisabledState.BorderThickness = 1;
-            this.bfbtnVerSolicitudes.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bfbtnVerSolicitudes.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bfbtnVerSolicitudes.OnDisabledState.IconLeftImage = null;
-            this.bfbtnVerSolicitudes.OnDisabledState.IconRightImage = null;
-            this.bfbtnVerSolicitudes.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bfbtnVerSolicitudes.onHoverState.BorderRadius = 1;
-            this.bfbtnVerSolicitudes.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bfbtnVerSolicitudes.onHoverState.BorderThickness = 1;
-            this.bfbtnVerSolicitudes.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bfbtnVerSolicitudes.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVerSolicitudes.onHoverState.IconLeftImage = null;
-            this.bfbtnVerSolicitudes.onHoverState.IconRightImage = null;
-            this.bfbtnVerSolicitudes.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.bfbtnVerSolicitudes.OnIdleState.BorderRadius = 1;
-            this.bfbtnVerSolicitudes.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bfbtnVerSolicitudes.OnIdleState.BorderThickness = 1;
-            this.bfbtnVerSolicitudes.OnIdleState.FillColor = System.Drawing.Color.Transparent;
-            this.bfbtnVerSolicitudes.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVerSolicitudes.OnIdleState.IconLeftImage = null;
-            this.bfbtnVerSolicitudes.OnIdleState.IconRightImage = null;
-            this.bfbtnVerSolicitudes.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bfbtnVerSolicitudes.OnPressedState.BorderRadius = 1;
-            this.bfbtnVerSolicitudes.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bfbtnVerSolicitudes.OnPressedState.BorderThickness = 1;
-            this.bfbtnVerSolicitudes.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bfbtnVerSolicitudes.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bfbtnVerSolicitudes.OnPressedState.IconLeftImage = null;
-            this.bfbtnVerSolicitudes.OnPressedState.IconRightImage = null;
-            this.bfbtnVerSolicitudes.Size = new System.Drawing.Size(205, 38);
-            this.bfbtnVerSolicitudes.TabIndex = 6;
-            this.bfbtnVerSolicitudes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bfbtnVerSolicitudes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bfbtnVerSolicitudes.TextMarginLeft = 0;
-            this.bfbtnVerSolicitudes.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bfbtnVerSolicitudes.UseDefaultRadiusAndThickness = true;
-            this.bfbtnVerSolicitudes.Click += new System.EventHandler(this.bfbtnVerSolicitudes_Click);
-            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1107, 652);
+            this.ClientSize = new System.Drawing.Size(1165, 742);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

@@ -6,11 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using static final_motoDix.Estructuras.EViaje;
 
 namespace final_motoDix.Modelos
 {
     class clsViajeModel
     {
+        EstViaje viaje;
+
         private NpgsqlConnection conexionViaje;
 
         private string travelId;
@@ -50,6 +53,23 @@ namespace final_motoDix.Modelos
             conexionViaje = clsConexion.realizarConexion();
 
         }
+        public clsViajeModel(string travelId)
+        {
+            TravelId = travelId;
+            conexionViaje = clsConexion.realizarConexion();
+
+        }
+
+        public clsViajeModel(string travelId, string idDocumentPersonDriver, string licensePlate, string state)
+        {
+            TravelId = travelId;
+            IdDocumentPersonDriver = idDocumentPersonDriver;
+            LicensePlate = licensePlate;
+            State = state;
+            conexionViaje = clsConexion.realizarConexion();
+
+        }
+
         public void validarConexion()
         {
             if (conexionViaje == null)
@@ -59,7 +79,7 @@ namespace final_motoDix.Modelos
             }
         }
 
-        public bool solicitudViaje()
+        public string solicitudViaje()
         {
             validarConexion();
             NpgsqlCommand query = new NpgsqlCommand();
@@ -79,13 +99,13 @@ namespace final_motoDix.Modelos
             {
                 query.ExecuteNonQuery();
                 
-                return true;
+                return travelId;
                
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.ToString());
-                return false;
+                return null;
             }
 
         }
@@ -107,10 +127,7 @@ namespace final_motoDix.Modelos
                 adapter.Fill(dtViajes);
                 return dtViajes;
 
-                /* NpgsqlDataReader viajes = query.ExecuteReader();
-                 DataTable dtViajes = new DataTable();
-                 dtViajes.Load(viajes);
-                 return dtViajes;*/
+     
             }
             catch (Exception err)
             {
@@ -120,6 +137,88 @@ namespace final_motoDix.Modelos
             }
 
 
+        }
+
+        public bool aceptarViaje()
+        {
+            validarConexion();
+
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionViaje;
+
+            query.CommandText = "CALL public.app_accept_travel(@travelId,@licenseplate,@idDocumentPersonDriver,@state)";
+
+            query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
+            query.Parameters.Add("@idDocumentPersonDriver", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDocumentPersonDriver;
+            query.Parameters.Add("@licenseplate", NpgsqlTypes.NpgsqlDbType.Varchar).Value = licensePlate;
+            query.Parameters.Add("@state", NpgsqlTypes.NpgsqlDbType.Varchar).Value = state;
+
+
+            try
+            {
+                query.ExecuteNonQuery();
+                
+                return true;
+               
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+                return false;
+            }
+        }
+
+        public EstViaje monitorearViaje()
+        {
+            validarConexion();
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionViaje;
+
+            query.CommandText = "select * from Ver_estadoViaje(@travelId)";
+
+            query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
+
+            try
+            {
+                NpgsqlDataReader data = query.ExecuteReader();
+                string secondName;
+                string secondSurname;
+                while (data.Read())
+                {
+                    if (data[2].ToString() == "null")
+                    {
+                        secondName = "";
+                    }
+                    else
+                    {
+                        secondName = data[2].ToString();
+                    }
+                    if (data[4].ToString() == "null")
+                    {
+                        secondSurname = "";
+                    }
+                    else
+                    {
+                        secondSurname = data[4].ToString();
+                    }
+
+
+                    viaje = new EstViaje(data[0].ToString(), data[1].ToString(), secondName, data[3].ToString(),
+                        secondSurname, data[5].ToString(), data[6].ToString(), data[7].ToString(), data[8].ToString(),
+                        data[9].ToString());
+
+                }
+                data.Close();
+
+                return viaje;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            return viaje;
         }
 
 

@@ -7,10 +7,11 @@ using Npgsql;
 using System.Windows.Forms;
 using System.Data;
 using final_motoDix.helpers;
+using final_motoDix.Estructuras;
 
 namespace final_motoDix.Modelos
 {
-    public struct Driver
+    /*public struct Driver
     {
         // Estructura - Objeto ( Para tener acceso a los datos)
         private string p_idDocumentPersonCredentials;
@@ -48,7 +49,6 @@ namespace final_motoDix.Modelos
         private DateTime p_assignmentdate;
         private string p_assignmentstate;
 
-        //Constructor de la estructura 
         public Driver(string p_idDocumentPersonCredentials, string p_emailCredentials, string p_credentialpasswordCredentials, string p_idrolCredentials, string p_iddocumentowner, string p_firstnameOwner, string p_secondnameOwner, string p_surnameOwner, string p_secondsurnameOwner, string p_licenseplateVehicle, int p_cylindercapacityVehicle, int p_modelVehicle, string p_brandVehicle, string p_colorVehicle, DateTime p_expeditiondatesoatVehicle, DateTime p_initialvaliditysoatVehicle, DateTime p_finalvaliditysoatVehicle, DateTime p_expeditiondatetechnomechanicsVehicle, DateTime p_expirationdatetechnomechanicsVehicle, string p_transitexpenderDriver, DateTime p_expeditiondateDriver, string p_restrictionsDriver, string p_categoryDriver, string p_serviceDriver, string p_validityDriver, DateTime p_assignmentdate, string p_assignmentstate)
         {
             this.p_idDocumentPersonCredentials = p_idDocumentPersonCredentials;
@@ -109,122 +109,141 @@ namespace final_motoDix.Modelos
         public string P_validityDriver { get => p_validityDriver; set => p_validityDriver = value; }
         public DateTime P_assignmentdate { get => p_assignmentdate; set => p_assignmentdate = value; }
         public string P_assignmentstate { get => p_assignmentstate; set => p_assignmentstate = value; }
-    }
-    class clsDriverModel
+    }*/
+    public class clsDriverModel : Iconductor 
     {
+        public string idDocumentPersonDriver { get; set; }
+        public DateTime dateofbirth { get ; set ; }
+        public string firstname { get ; set ; }
+        public string secondname { get ; set ; }
+        public string surname { get ; set ; }
+        public string secondsurname { get ; set ; }
+        public string profilePicture { get ; set ; }
+        public string gender { get ; set ; }
+        public string state { get ; set ; }
+        public string idcity { get ; set ; }
+        public string email { get ; set ; }
+        public int idRol { get ; set ; }
+        public string licensetransitexpender { get ; set ; }
+        public DateTime licenseexpeditiondate { get ; set ; }
+        public string licenserestrictions { get ; set ; }
+        public string licensecategory { get ; set ; }
+        public DateTime licensevalidity { get ; set ; }
+        public string driverstade { get ; set ; }
+        public string assignmentstate { get ; set ; }
+        public string licenseplate { get ; set ; }
+        public string iddocumentowner { get ; set ; }
+        public string color { get ; set ; }
+        public int model { get ; set ; }
+        public int cylindercapacity { get ; set ; }
+        public string brand { get ; set ; }
+        public DateTime expeditiondatetechnomechanics { get ; set ; }
+        public DateTime expirationdatetechnomechanics { get ; set ; }
+        public DateTime expeditiondatesoat { get ; set ; }
+        public DateTime initialvaliditysoat { get ; set ; }
+        public DateTime finalvaliditysoat { get ; set ; }
+        public string statee { get ; set ; }
+        public string ownerfirstname { get ; set ; }
+        public string ownersecondname { get ; set ; }
+        public string ownersurname { get ; set ; }
+        public string ownersecondsurname { get ; set ; }
+        public string CredentialPassword { get => credentialPassword; set => credentialPassword = value; }
+        public string Transitexpender { get => transitexpender; set => transitexpender = value; }
+        public DateTime Assignmentdate { get => assignmentdate; set => assignmentdate = value; }
+        public string Service { get => service; set => service = value; }
 
-        //Para llamar a la estructura driver
-        private Driver driver;
+        Iconductor iconductor;
 
-        //variable para despues conectar a la base de datos.
         private NpgsqlConnection conexionDriver;
 
-        //Lo que hay en el modelo de la base de datos.
-        //--Credential
-        private string idDocumentPerson;
-        private string email;
         private string credentialPassword;
-        private int idRol;
-        //--Vehicle
-        private string licenseplate;
-        private string color;
-        private int model;
-        private int cylindercapacity;
-        private string brand;
-        private DateTime expeditiondatetechnomechanics;
-        private DateTime expirationdatetechnomechanics;
-        private DateTime expeditiondatesoat;
-        private DateTime initialvaliditysoat;
-        private DateTime finalvaliditysoat;
-        private string statee = "Activo";
-        //--Owner
-        private string iddocumentowner;
-        private string firstname;
-        private string secondname;
-        private string surname;
-        private string secondsurname;
-        //Driver
         private string transitexpender;
-        private DateTime expeditiondate;
-        private string restrictions;
-        private string category;
-        private string service;
-        private DateTime validity;
-        private string stade = "Activo";
-        //Vehicleassignment
         private DateTime assignmentdate;
-        private string assignmentstate;
-
-        public string IdDocumentPerson { get => idDocumentPerson; set => idDocumentPerson = value; }
-        public string Email { get => email; set => email = value; }
-        public string CredentialPassword { get => credentialPassword; set => credentialPassword = value; }
-        public int IdRol { get => idRol; set => idRol = value; }
-        public string Licenseplate { get => licenseplate; set => licenseplate = value; }
-        public string Color { get => color; set => color = value; }
-        public int Model { get => model; set => model = value; }
-        public int Cylindercapacity { get => cylindercapacity; set => cylindercapacity = value; }
-        public string Brand { get => brand; set => brand = value; }
-        public DateTime Expeditiondatetechnomechanics { get => expeditiondatetechnomechanics; set => expeditiondatetechnomechanics = value; }
-        public DateTime Expirationdatetechnomechanics { get => expirationdatetechnomechanics; set => expirationdatetechnomechanics = value; }
-        public DateTime Expeditiondatesoat { get => expeditiondatesoat; set => expeditiondatesoat = value; }
-        public DateTime Initialvaliditysoat { get => initialvaliditysoat; set => initialvaliditysoat = value; }
-        public DateTime Finalvaliditysoat { get => finalvaliditysoat; set => finalvaliditysoat = value; }
-        public string Statee { get => statee; set => statee = value; }
-        public string Iddocumentowner { get => iddocumentowner; set => iddocumentowner = value; }
-        public string Firstname { get => firstname; set => firstname = value; }
-        public string Secondname { get => secondname; set => secondname = value; }
-        public string Surname { get => surname; set => surname = value; }
-        public string Secondsurname { get => secondsurname; set => secondsurname = value; }
-        public string Transitexpender { get => transitexpender; set => transitexpender = value; }
-        public DateTime Expeditiondate { get => expeditiondate; set => expeditiondate = value; }
-        public string Restrictions { get => restrictions; set => restrictions = value; }
-        public string Category { get => category; set => category = value; }
-        public string Service { get => service; set => service = value; }
-        public DateTime Validity { get => validity; set => validity = value; }
-        public string Stade { get => stade; set => stade = value; }
-        public DateTime Assignmentdate { get => assignmentdate; set => assignmentdate = value; }
-        public string Assignmentstate { get => assignmentstate; set => assignmentstate = value; }
-
-        //Propiedad de la variable de tipo estructura
-        //Para enviar y recibir datos a cualquier variable que este dentro de driver
-
-        public Driver Driver { get => driver; set => driver = value; }
-
-        //Constructor
-        //Recibir datos para asignar valor a las variables
+        private string service;
 
         public clsDriverModel(string idDocumentPerson, string email, string credentialPassword, int idRol, string licenseplate, string color, int model, int cylindercapacity, string brand, DateTime expeditiondatetechnomechanics, DateTime expirationdatetechnomechanics, DateTime expeditiondatesoat, DateTime initialvaliditysoat, DateTime finalvaliditysoat, string statee, string iddocumentowner, string firstname, string secondname, string surname, string secondsurname, string transitexpender, DateTime expeditiondate, string restrictions, string category, string service, DateTime validity, string stade, DateTime assignmentdate, string assignmentstate)
         {
-            IdDocumentPerson = idDocumentPerson;
-            Email = email;
+            idDocumentPersonDriver = idDocumentPerson;
+            this.email = email;
             CredentialPassword = credentialPassword;
-            IdRol = idRol;
-            Licenseplate = licenseplate;
-            Color = color;
-            Model = model;
-            Cylindercapacity = cylindercapacity;
-            Brand = brand;
-            Expeditiondatetechnomechanics = expeditiondatetechnomechanics;
-            Expirationdatetechnomechanics = expirationdatetechnomechanics;
-            Expeditiondatesoat = expeditiondatesoat;
-            Initialvaliditysoat = initialvaliditysoat;
-            Finalvaliditysoat = finalvaliditysoat;
-            Statee = statee;
-            Iddocumentowner = iddocumentowner;
-            Firstname = firstname;
-            Secondname = secondname;
-            Surname = surname;
-            Secondsurname = secondsurname;
-            Transitexpender = transitexpender;
-            Expeditiondate = expeditiondate;
-            Restrictions = restrictions;
-            Category = category;
-            Service = service;
-            Validity = validity;
-            Stade = stade;
-            Assignmentdate = assignmentdate;
-            Assignmentstate = assignmentstate;
+            this.idRol = idRol;
+            this.licenseplate = licenseplate;
+            this.color = color;
+            this.model = model;
+            this.cylindercapacity = cylindercapacity;
+            this.brand = brand;
+            this.expeditiondatetechnomechanics = expeditiondatetechnomechanics;
+            this.expirationdatetechnomechanics = expirationdatetechnomechanics;
+            this.expeditiondatesoat = expeditiondatesoat;
+            this.initialvaliditysoat = initialvaliditysoat;
+            this.finalvaliditysoat = finalvaliditysoat;
+            this.statee = statee;
+            this.iddocumentowner = iddocumentowner;
+            this.ownerfirstname = firstname;
+            this.ownersecondname = secondname;
+            this.ownersurname = surname;
+            this.ownersecondsurname = secondsurname;
+            this.Transitexpender = transitexpender;
+            this.licenseexpeditiondate = expeditiondate;
+            this.licenserestrictions = restrictions;
+            this.licensecategory = category;
+            this.Service = service;
+            this.licensevalidity = validity;
+            this.driverstade = stade;
+            this.Assignmentdate = assignmentdate;
+            this.assignmentstate = assignmentstate;
             conexionDriver = clsConexion.realizarConexion();
+        }
+        
+        public clsDriverModel(string email, string credentialPassword, int idRol)
+        {
+            this.email = email;
+            CredentialPassword = credentialPassword;
+            this.idRol = idRol;
+            conexionDriver = clsConexion.realizarConexion();
+        }
+        public clsDriverModel()
+        {
+
+        }
+
+        public clsDriverModel(string idDocumentPersonDriver, DateTime dateofbirth, string firstname, string secondname, string surname, string secondsurname, string profilePicture, string gender, string state, string idcity, string email, int idRol, string licensetransitexpender, DateTime licenseexpeditiondate, string licenserestrictions, string licensecategory, DateTime licensevalidity, string driverstade, string assignmentstate, string licenseplate, string iddocumentowner, string color, int model, int cylindercapacity, string brand, DateTime expeditiondatetechnomechanics, DateTime expirationdatetechnomechanics, DateTime expeditiondatesoat, DateTime initialvaliditysoat, DateTime finalvaliditysoat, string statee, string ownerfirstname, string ownersecondname, string ownersurname, string ownersecondsurname)
+        {
+            this.idDocumentPersonDriver = idDocumentPersonDriver;
+            this.dateofbirth = dateofbirth;
+            this.firstname = firstname;
+            this.secondname = secondname;
+            this.surname = surname;
+            this.secondsurname = secondsurname;
+            this.profilePicture = profilePicture;
+            this.gender = gender;
+            this.state = state;
+            this.idcity = idcity;
+            this.email = email;
+            this.idRol = idRol;
+            this.licensetransitexpender = licensetransitexpender;
+            this.licenseexpeditiondate = licenseexpeditiondate;
+            this.licenserestrictions = licenserestrictions;
+            this.licensecategory = licensecategory;
+            this.licensevalidity = licensevalidity;
+            this.driverstade = driverstade;
+            this.assignmentstate = assignmentstate;
+            this.licenseplate = licenseplate;
+            this.iddocumentowner = iddocumentowner;
+            this.color = color;
+            this.model = model;
+            this.cylindercapacity = cylindercapacity;
+            this.brand = brand;
+            this.expeditiondatetechnomechanics = expeditiondatetechnomechanics;
+            this.expirationdatetechnomechanics = expirationdatetechnomechanics;
+            this.expeditiondatesoat = expeditiondatesoat;
+            this.initialvaliditysoat = initialvaliditysoat;
+            this.finalvaliditysoat = finalvaliditysoat;
+            this.statee = statee;
+            this.ownerfirstname = ownerfirstname;
+            this.ownersecondname = ownersecondname;
+            this.ownersurname = ownersurname;
+            this.ownersecondsurname = ownersecondsurname;
         }
 
         //Función para validar la conexion
@@ -250,48 +269,42 @@ namespace final_motoDix.Modelos
                                 "@Color, @Expeditiondatesoat, @Initialvaliditysoat, @Finalvaliditysoat, @Expeditiondatetechnomechanics, @Expirationdatetechnomechanics," +
                                 "@Transitexpender, @Expeditiondate, @Restrictions, @Category, @Service, @ValityDriver, @Assignmentdate )";
 
-            query.Parameters.Add("@IdDocumentPerson", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDocumentPerson;
+            query.Parameters.Add("@IdDocumentPerson", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDocumentPersonDriver;
             query.Parameters.Add("@Email", NpgsqlTypes.NpgsqlDbType.Varchar).Value = email;
-            query.Parameters.Add("@CredentialPassword", NpgsqlTypes.NpgsqlDbType.Varchar).Value = credentialPassword;
+            query.Parameters.Add("@CredentialPassword", NpgsqlTypes.NpgsqlDbType.Varchar).Value = CredentialPassword;
             query.Parameters.Add("@IdRol", NpgsqlTypes.NpgsqlDbType.Smallint).Value = idRol;
             query.Parameters.Add("@Licenseplate", NpgsqlTypes.NpgsqlDbType.Varchar).Value = licenseplate;
             query.Parameters.Add("@Color", NpgsqlTypes.NpgsqlDbType.Varchar).Value = color;
-            query.Parameters.Add("@Model", NpgsqlTypes.NpgsqlDbType.Varchar).Value = model;
-            query.Parameters.Add("@Cylindercapacity", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cylindercapacity;
-            query.Parameters.Add("@Brand", NpgsqlTypes.NpgsqlDbType.Date).Value = brand;
-            query.Parameters.Add("@Expeditiondatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Varchar).Value = expeditiondatetechnomechanics;
-            query.Parameters.Add("@Expirationdatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Varchar).Value = expirationdatetechnomechanics;
-            query.Parameters.Add("@Expeditiondatesoat", NpgsqlTypes.NpgsqlDbType.Varchar).Value = expeditiondatesoat;
-            query.Parameters.Add("@Initialvaliditysoat", NpgsqlTypes.NpgsqlDbType.Smallint).Value = initialvaliditysoat;
-            query.Parameters.Add("@Finalvaliditysoat", NpgsqlTypes.NpgsqlDbType.Varchar).Value = finalvaliditysoat;
+            query.Parameters.Add("@Model", NpgsqlTypes.NpgsqlDbType.Integer).Value = model;
+            query.Parameters.Add("@Cylindercapacity", NpgsqlTypes.NpgsqlDbType.Integer).Value = cylindercapacity;
+            query.Parameters.Add("@Brand", NpgsqlTypes.NpgsqlDbType.Varchar).Value = brand;
+            query.Parameters.Add("@Expeditiondatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Date).Value = expeditiondatetechnomechanics;
+            query.Parameters.Add("@Expirationdatetechnomechanics", NpgsqlTypes.NpgsqlDbType.Date).Value = expirationdatetechnomechanics;
+            query.Parameters.Add("@Expeditiondatesoat", NpgsqlTypes.NpgsqlDbType.Date).Value = expeditiondatesoat;
+            query.Parameters.Add("@Initialvaliditysoat", NpgsqlTypes.NpgsqlDbType.Date).Value = initialvaliditysoat;
+            query.Parameters.Add("@Finalvaliditysoat", NpgsqlTypes.NpgsqlDbType.Date).Value = finalvaliditysoat;
             query.Parameters.Add("@Statee", NpgsqlTypes.NpgsqlDbType.Varchar).Value = statee;
             query.Parameters.Add("@Iddocumentowner", NpgsqlTypes.NpgsqlDbType.Varchar).Value = iddocumentowner;
-            query.Parameters.Add("@Firstname", NpgsqlTypes.NpgsqlDbType.Smallint).Value = firstname;
-            query.Parameters.Add("@Secondname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondname;
-            query.Parameters.Add("@Surname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = surname;
-            query.Parameters.Add("@Secondsurname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondsurname;
-            query.Parameters.Add("@Transitexpender", NpgsqlTypes.NpgsqlDbType.Varchar).Value = transitexpender;
-            query.Parameters.Add("@Expeditiondate", NpgsqlTypes.NpgsqlDbType.Date).Value = expeditiondate;
-            query.Parameters.Add("@Restrictions", NpgsqlTypes.NpgsqlDbType.Varchar).Value = restrictions;
-            query.Parameters.Add("@Category", NpgsqlTypes.NpgsqlDbType.Varchar).Value = category;
-            query.Parameters.Add("@Service", NpgsqlTypes.NpgsqlDbType.Varchar).Value = service;
-            query.Parameters.Add("@ValityDriver", NpgsqlTypes.NpgsqlDbType.Date).Value = validity;
-            query.Parameters.Add("@Stade", NpgsqlTypes.NpgsqlDbType.Smallint).Value = stade;
-            query.Parameters.Add("@Assignmentdate", NpgsqlTypes.NpgsqlDbType.Varchar).Value = assignmentdate;
-            query.Parameters.Add("@Assignmentstate", NpgsqlTypes.NpgsqlDbType.Smallint).Value = assignmentstate;
+            query.Parameters.Add("@Firstname", NpgsqlTypes.NpgsqlDbType.Varchar).Value =ownerfirstname;
+            query.Parameters.Add("@Secondname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = ownersecondname;
+            query.Parameters.Add("@Surname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = ownersurname;
+            query.Parameters.Add("@Secondsurname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = ownersecondsurname;
+            query.Parameters.Add("@Transitexpender", NpgsqlTypes.NpgsqlDbType.Varchar).Value = Transitexpender;
+            query.Parameters.Add("@Expeditiondate", NpgsqlTypes.NpgsqlDbType.Date).Value = licenseexpeditiondate;
+            query.Parameters.Add("@Restrictions", NpgsqlTypes.NpgsqlDbType.Varchar).Value = licenserestrictions;
+            query.Parameters.Add("@Category", NpgsqlTypes.NpgsqlDbType.Varchar).Value = licensecategory;
+            query.Parameters.Add("@Service", NpgsqlTypes.NpgsqlDbType.Varchar).Value = Service;
+            query.Parameters.Add("@ValityDriver", NpgsqlTypes.NpgsqlDbType.Date).Value = licensevalidity;
+            query.Parameters.Add("@Stade", NpgsqlTypes.NpgsqlDbType.Varchar).Value = driverstade;
+            query.Parameters.Add("@Assignmentdate", NpgsqlTypes.NpgsqlDbType.Date).Value = Assignmentdate;
+            query.Parameters.Add("@Assignmentstate", NpgsqlTypes.NpgsqlDbType.Varchar).Value = assignmentstate;
 
-            //Trata de ejecutar el procedimiento almacenado 
             //Con el try catch verificamos si no hay errores
             try
             {
-                if (query.ExecuteNonQuery() == 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                query.ExecuteNonQuery();
+                return true;
+               
             }
             catch (Exception ex)
             {
@@ -301,5 +314,47 @@ namespace final_motoDix.Modelos
 
         }
 
+
+        public Iconductor loginDriver()
+        {
+
+            validarConexion();
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionDriver;
+            query.CommandText = "select * from App_login_driver(@Email,@CredentialPassword,@IdRol)";
+
+            query.Parameters.Add("@IdRol", NpgsqlTypes.NpgsqlDbType.Smallint).Value = idRol;
+            query.Parameters.Add("@Email", NpgsqlTypes.NpgsqlDbType.Varchar).Value = email;
+            query.Parameters.Add("@CredentialPassword", NpgsqlTypes.NpgsqlDbType.Varchar).Value = CredentialPassword;
+
+            try
+            {
+                NpgsqlDataReader conductor = query.ExecuteReader();
+
+                while (conductor.Read())
+                {
+                    iconductor = new clsDriverModel(conductor[0].ToString(),Convert.ToDateTime(conductor[1]),conductor[2].ToString(),conductor[3].ToString(),
+                        conductor[4].ToString(), conductor[5].ToString(), conductor[6].ToString(), conductor[7].ToString(),
+                        conductor[8].ToString(), conductor[9].ToString(), conductor[10].ToString(), Int32.Parse(conductor[11].ToString()),
+                        conductor[12].ToString(), Convert.ToDateTime(conductor[13]), conductor[14].ToString(), conductor[15].ToString(),
+                        Convert.ToDateTime(conductor[16]), conductor[17].ToString(), conductor[18].ToString(), conductor[19].ToString(),
+                        conductor[20].ToString(), conductor[21].ToString(), Int32.Parse(conductor[22].ToString()), Int32.Parse(conductor[23].ToString()),
+                        conductor[24].ToString(), Convert.ToDateTime(conductor[25]), Convert.ToDateTime(conductor[26]), Convert.ToDateTime(conductor[27]),
+                        Convert.ToDateTime(conductor[28]), Convert.ToDateTime(conductor[29]), conductor[30].ToString(), conductor[31].ToString(),
+                        conductor[32].ToString(), conductor[33].ToString(), conductor[34].ToString());
+                }
+                conductor.Close();
+
+                return iconductor;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            return null;
+        }
     }
 }

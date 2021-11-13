@@ -153,7 +153,7 @@ namespace final_motoDix.helpers
             map.Zoom = map.Zoom + 1;
             map.Zoom = map.Zoom - 1;
 
-            datos = new datosRuta("Distancia", directions.Distance.ToString());
+            datos = new datosRuta("Distancia", directions.DistanceValue.ToString());
             infoViajeRuta.Add(datos);
             datos = new datosRuta("Duracción", directions.Duration.ToString());
             infoViajeRuta.Add(datos);

@@ -282,6 +282,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\clsDriver.controller.cs" />
+    <Compile Include="Estructuras\EViaje.cs" />
+    <Compile Include="Estructuras\Iconductor.cs" />
     <Compile Include="Modelos\clsDriver.model.cs" />
     <Compile Include="Controladores\clsCiudad.controller.cs" />
     <Compile Include="Controladores\clsDepartamento.controller.cs" />
