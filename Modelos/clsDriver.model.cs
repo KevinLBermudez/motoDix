@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using NpgsqlTypes;
 using System.Windows.Forms;
 using System.Data;
 using final_motoDix.helpers;
@@ -349,7 +350,7 @@ namespace final_motoDix.Modelos
 
 
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
                 MessageBox.Show(ex.ToString());
             }

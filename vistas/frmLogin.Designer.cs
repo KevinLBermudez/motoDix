@@ -258,7 +258,7 @@ namespace final_motoDix.Vistas
             this.bftxtContraseña.ShortcutsEnabled = true;
             this.bftxtContraseña.Size = new System.Drawing.Size(224, 47);
             this.bftxtContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.bftxtContraseña.TabIndex = 7;
+            this.bftxtContraseña.TabIndex = 1;
             this.bftxtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bftxtContraseña.TextMarginBottom = 0;
             this.bftxtContraseña.TextMarginLeft = 3;
@@ -266,6 +266,7 @@ namespace final_motoDix.Vistas
             this.bftxtContraseña.TextPlaceholder = "Contraseña";
             this.bftxtContraseña.UseSystemPasswordChar = false;
             this.bftxtContraseña.WordWrap = true;
+            this.bftxtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bftxtContraseña_KeyPress);
             // 
             // btnCerrar
             // 
@@ -324,7 +325,7 @@ namespace final_motoDix.Vistas
             this.lblSignIn.Location = new System.Drawing.Point(408, 276);
             this.lblSignIn.Name = "lblSignIn";
             this.lblSignIn.Size = new System.Drawing.Size(52, 16);
-            this.lblSignIn.TabIndex = 14;
+            this.lblSignIn.TabIndex = 4;
             this.lblSignIn.Text = "Sign in";
             this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
             // 
@@ -410,7 +411,7 @@ namespace final_motoDix.Vistas
             this.bfbtnLogin.OnPressedState.IconLeftImage = null;
             this.bfbtnLogin.OnPressedState.IconRightImage = null;
             this.bfbtnLogin.Size = new System.Drawing.Size(219, 40);
-            this.bfbtnLogin.TabIndex = 16;
+            this.bfbtnLogin.TabIndex = 3;
             this.bfbtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bfbtnLogin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bfbtnLogin.TextMarginLeft = 0;

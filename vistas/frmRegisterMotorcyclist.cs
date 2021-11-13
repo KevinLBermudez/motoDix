@@ -38,16 +38,12 @@ namespace final_motoDix.Vistas
         private void bunifuButton22_Click(object sender, EventArgs e)
         {
             bfchkLoginDetails.Checked = true;
-
             bfpgRegisterVehicle.PageIndex = 1;
-            
         }
 
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
-
             bfpgRegisterVehicle.PageIndex = 2;
-
         }
 
         private void bfbtnLicenceNext_Click(object sender, EventArgs e)
@@ -77,6 +73,31 @@ namespace final_motoDix.Vistas
         private void bfpgVehicle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
+            bfpgRegisterVehicle.PageIndex = 0;
+        }
+
+        private void bfbtnAtras2_Click(object sender, EventArgs e)
+        {
+            bfpgRegisterVehicle.PageIndex = 1;
+        }
+
+        private void bfbtnAtras1_Click(object sender, EventArgs e)
+        {
+            bfpgRegisterVehicle.PageIndex = 0;
+        }
+
+        private void bfbtnAtras2_Click_1(object sender, EventArgs e)
+        {
+            bfpgRegisterVehicle.PageIndex = 1;
+        }
+
+        private void bfbtnAtras3_Click(object sender, EventArgs e)
+        {
+            bfpgRegisterVehicle.PageIndex = 2;
         }
     }
 }
