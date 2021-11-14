@@ -29,6 +29,7 @@ namespace final_motoDix.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -49,10 +50,12 @@ namespace final_motoDix.Vistas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSignIn = new System.Windows.Forms.Label();
             this.bfbtnLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.validacionLogin = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validacionLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // bftxtEmail
@@ -132,6 +135,7 @@ namespace final_motoDix.Vistas
             this.bftxtEmail.TextPlaceholder = "correo electronico";
             this.bftxtEmail.UseSystemPasswordChar = false;
             this.bftxtEmail.WordWrap = true;
+            this.bftxtEmail.TextChange += new System.EventHandler(this.bftxtEmail_TextChange);
             // 
             // bunifuLabel1
             // 
@@ -266,6 +270,7 @@ namespace final_motoDix.Vistas
             this.bftxtContraseña.TextPlaceholder = "Contraseña";
             this.bftxtContraseña.UseSystemPasswordChar = false;
             this.bftxtContraseña.WordWrap = true;
+            this.bftxtContraseña.TextChange += new System.EventHandler(this.bftxtContraseña_TextChange);
             this.bftxtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bftxtContraseña_KeyPress);
             // 
             // btnCerrar
@@ -419,6 +424,10 @@ namespace final_motoDix.Vistas
             this.bfbtnLogin.UseDefaultRadiusAndThickness = true;
             this.bfbtnLogin.Click += new System.EventHandler(this.bfbtnLogin_Click);
             // 
+            // validacionLogin
+            // 
+            this.validacionLogin.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -445,6 +454,7 @@ namespace final_motoDix.Vistas
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validacionLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,6 +472,7 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblSignIn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnLogin;
+        private System.Windows.Forms.ErrorProvider validacionLogin;
     }
 }
 
