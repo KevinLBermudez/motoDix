@@ -88,7 +88,7 @@ namespace final_motoDix.Vistas
             this.panelVertical.Margin = new System.Windows.Forms.Padding(2);
             this.panelVertical.Name = "panelVertical";
             this.panelVertical.Quality = 10;
-            this.panelVertical.Size = new System.Drawing.Size(211, 652);
+            this.panelVertical.Size = new System.Drawing.Size(211, 742);
             this.panelVertical.TabIndex = 0;
             // 
             // bfbtnVerSolicitudes
@@ -192,6 +192,7 @@ namespace final_motoDix.Vistas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 194);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bfpbImagenPerfil
             // 
@@ -226,6 +227,7 @@ namespace final_motoDix.Vistas
             this.bflblNombreUsuario.Text = "Nombre de usuario";
             this.bflblNombreUsuario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblNombreUsuario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bflblNombreUsuario.Click += new System.EventHandler(this.bflblNombreUsuario_Click);
             // 
             // bflblTipoUsuario
             // 
@@ -638,7 +640,7 @@ namespace final_motoDix.Vistas
             this.panelContenedor.Location = new System.Drawing.Point(211, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(896, 652);
+            this.panelContenedor.Size = new System.Drawing.Size(954, 742);
             this.panelContenedor.TabIndex = 17;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
@@ -659,14 +661,14 @@ namespace final_motoDix.Vistas
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Quality = 10;
-            this.panelHeader.Size = new System.Drawing.Size(896, 29);
+            this.panelHeader.Size = new System.Drawing.Size(954, 29);
             this.panelHeader.TabIndex = 0;
             // 
             // ptbMaximizar
             // 
             this.ptbMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMaximizar.Image")));
-            this.ptbMaximizar.Location = new System.Drawing.Point(851, 3);
+            this.ptbMaximizar.Location = new System.Drawing.Point(909, 3);
             this.ptbMaximizar.Name = "ptbMaximizar";
             this.ptbMaximizar.Size = new System.Drawing.Size(17, 18);
             this.ptbMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -678,7 +680,7 @@ namespace final_motoDix.Vistas
             // 
             this.ptbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptbCerrar.Image")));
-            this.ptbCerrar.Location = new System.Drawing.Point(874, 3);
+            this.ptbCerrar.Location = new System.Drawing.Point(932, 3);
             this.ptbCerrar.Name = "ptbCerrar";
             this.ptbCerrar.Size = new System.Drawing.Size(18, 18);
             this.ptbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -690,7 +692,7 @@ namespace final_motoDix.Vistas
             // 
             this.ptbMinizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMinizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMinizar.Image")));
-            this.ptbMinizar.Location = new System.Drawing.Point(826, 3);
+            this.ptbMinizar.Location = new System.Drawing.Point(884, 3);
             this.ptbMinizar.Name = "ptbMinizar";
             this.ptbMinizar.Size = new System.Drawing.Size(17, 18);
             this.ptbMinizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -710,7 +712,7 @@ namespace final_motoDix.Vistas
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1107, 652);
+            this.ClientSize = new System.Drawing.Size(1165, 742);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

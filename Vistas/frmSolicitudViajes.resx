@@ -127,7 +127,7 @@
         JeYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bftxtPuntoInicio.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKYAAAAhCAYAAABTPdAXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVHhe7dIxDQMxAARB80dlyzACIwDysuQmCH6LGema
@@ -136,16 +136,7 @@
         JeYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKYAAAAhCAYAAABTPdAXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVHhe7dIxDQMxAARB80dlyzACIwDysuQmCH6LGema
-        q3dA1t77M+f8mb290+LNcoxzQMFp8WYpTDqESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImScIkSZgk
-        CZMkYZIkTJKESZIwSRImScIkSZgkCZMkYZIkTJKESZIwSRImSX9hrrW+5zB7e6fFmyXUjPEA6PEH4fr0
-        JeYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bftxtCliente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKYAAAAhCAYAAABTPdAXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVHhe7dIxDQMxAARB80dlyzACIwDysuQmCH6LGema

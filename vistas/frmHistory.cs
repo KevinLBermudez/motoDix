@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using final_motoDix.Modelos;
+using final_motoDix.Estructuras;
 
 namespace final_motoDix.Vistas
 {
     public partial class frmHistory : Form
     {
-        public frmHistory()
+        public Iconductor infoDriver;
+        Persona infoPersona;
+        int Rol;
+
+        public frmHistory(Persona infoPersona)
         {
             InitializeComponent();
+            this.infoPersona = infoPersona;
+            Rol = 1;
+        }
+        public frmHistory(Iconductor infoConductor)
+        {
+            InitializeComponent();
+            this.infoDriver = infoConductor;
+            Rol = 2;
         }
 
         private void ptbMinizarHViajes_Click(object sender, EventArgs e)

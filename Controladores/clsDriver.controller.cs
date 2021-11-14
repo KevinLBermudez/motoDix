@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using final_motoDix.Modelos;
 using System.Windows.Forms;
+using final_motoDix.Estructuras;
 
 namespace final_motoDix.Controladores
 {
@@ -19,6 +20,11 @@ namespace final_motoDix.Controladores
             driver = new clsDriverModel(idDocumentPerson, email, credentialPassword, idRol, licenseplate, color, model, cylindercapacity, brand, expeditiondatetechnomechanics, expirationdatetechnomechanics, expeditiondatesoat, initialvaliditysoat, finalvaliditysoat, statee, iddocumentowner, firstname, secondname, surname, secondsurname, transitexpender, expeditiondate, restrictions, category, service, validity, stade, assignmentdate, assignmentstate);
         }
 
+        public clsDriverController(string email, string credentialPassword, int idrol)
+        {
+            driver = new clsDriverModel(email, credentialPassword, idrol);
+        }
+
         public void ejecutarCrearDriver()
         {
             if (driver.RegistrarConductor())
@@ -29,6 +35,15 @@ namespace final_motoDix.Controladores
             {
                 MessageBox.Show("Error interno");
             }
+        }
+
+        public Iconductor ejectutarLoginDriver()
+        {
+            Iconductor conductor;
+
+            conductor = driver.loginDriver();
+
+            return conductor;
         }
     }
 }

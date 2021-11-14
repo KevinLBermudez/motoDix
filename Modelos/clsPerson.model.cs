@@ -238,7 +238,7 @@ namespace final_motoDix.Modelos
 
                 while (persona.Read())
                 {
-                    if(persona["profilePicture"] == DBNull.Value)
+                    if(persona["profilePicture"].ToString() == "null" )
                     {
                         ProfilePicture = "";
                     }
@@ -247,16 +247,16 @@ namespace final_motoDix.Modelos
                         ProfilePicture = (string) persona["profilePicture"];
                     };
 
-                    if (persona["secondName"] == DBNull.Value)
+                    if (persona["secondName"].ToString() == "null")
                     {
-                        SecondName = "";
+                        SecondName = " ";
 
                     }
                     else
                     {
                         SecondName = (string)persona["secondName"];
                     };
-                    if(persona["secondSurname"] ==  DBNull.Value)
+                    if(persona["secondSurname"].ToString() ==  "null")
                     {
                         SecondSurname = "";
                     }
@@ -275,7 +275,7 @@ namespace final_motoDix.Modelos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                throw new Exception("Compruebe sus credenciales");
             }
 
             //conexionPersona.Close();
