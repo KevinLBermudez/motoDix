@@ -100,7 +100,7 @@ namespace final_motoDix.Vistas
 
         private void bfbtnMisViajes_Click(object sender, EventArgs e)
         {
-            if(history == null)
+            /*if(history == null)
             {
                 Form verViajes = new frmHistory();
                 verViajes.TopLevel = false;
@@ -114,7 +114,7 @@ namespace final_motoDix.Vistas
             else
             {
                 history.BringToFront();
-            }
+            }*/
                 
             
         }
@@ -149,7 +149,7 @@ namespace final_motoDix.Vistas
 
         private void bfpbImagenPerfil_Click(object sender, EventArgs e)
         {
-            if (bflblTipoUsuario.Text != "Conductor")
+            if (rolActivo == 1)
             {
                 frmPerfil perfil = new frmPerfil(infoPersona);
                 //perfil.Show();
@@ -164,7 +164,7 @@ namespace final_motoDix.Vistas
                 perfil.BringToFront();
             }
 
-            else
+            else if (rolActivo == 2)
             {
                 frmPerfilConductor perfilConductor = new frmPerfilConductor(infoDriver);
                 //perfil.Show();
@@ -177,6 +177,9 @@ namespace final_motoDix.Vistas
                 perfilConductor.Show();
                 perfilConductor.BringToFront();
             }
+            
+
+            
         }
 
         private void bfbtnTrabajaConNosotros_Click(object sender, EventArgs e)
@@ -216,9 +219,5 @@ namespace final_motoDix.Vistas
 
         }
 
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
