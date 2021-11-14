@@ -145,7 +145,39 @@ namespace final_motoDix.Vistas
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            bfbtnLogin.Enabled = false;
+        }
 
+        private void vLogin()
+        {
+            if (bftxtEmail.Text.Trim() != string.Empty && bftxtContraseña.Text != string.Empty)
+            {  
+                validacionLogin.SetError(bftxtEmail, "");
+                validacionLogin.SetError(bftxtContraseña, "");
+                bfbtnLogin.Enabled = true;
+            }
+            else
+            {
+                if (bftxtEmail.Text == string.Empty)
+                {
+                    validacionLogin.SetError(bftxtEmail, "Debe de introducir correo");
+                }
+                else
+                {
+                    validacionLogin.SetError(bftxtContraseña, "Debe de introducir contraseña");
+                }
+                bfbtnLogin.Enabled = false;
+            }         
+        }
+
+        private void bftxtContraseña_TextChange(object sender, EventArgs e)
+        {
+            vLogin();
+        }
+
+        private void bftxtEmail_TextChange(object sender, EventArgs e)
+        {
+            vLogin();
         }
 
       

@@ -15,7 +15,6 @@ namespace final_motoDix.Vistas
 {
     public partial class frmRegisterClient : Form
     {
-
         clsPersonController persona;
         clsDepartamentoController departamento;
         clsCiudadController ciudad;
@@ -34,9 +33,9 @@ namespace final_motoDix.Vistas
         {
 
         }
-
         private void frmRegister_Load(object sender, EventArgs e)
         {
+            bfbtnRegisterNext.Enabled = false;
             departamento = new  clsDepartamentoController();
             departamento.ejecutarConsultarDepartamentos(cmbDepartamento);
             ciudad = new clsCiudadController();
@@ -167,6 +166,87 @@ namespace final_motoDix.Vistas
                 login.Show();
                 this.Close();
             }
+        }
+
+        private void vRegister()
+        {
+            if (bftxtPrimerNombre.Text != string.Empty || bftxtPrimerApellido.Text != string.Empty
+                || bftxtDocumento.Text != string.Empty || (bfdpkFechaNacimiento.Value != null)
+                || (cmbGenero.SelectedIndex <= 1) || (cmbDepartamento.SelectedIndex <= 1) 
+                || (cmbCiudad.SelectedIndex <= 1))
+            {
+                validacionRegisterLogin.SetError(bftxtPrimerNombre, "");
+                validacionRegisterLogin.SetError(bftxtPrimerApellido, "");
+                validacionRegisterLogin.SetError(bftxtDocumento, "");
+                validacionRegisterLogin.SetError(bfdpkFechaNacimiento, "");
+                validacionRegisterLogin.SetError(cmbGenero, "");
+                validacionRegisterLogin.SetError(cmbDepartamento, "");
+                validacionRegisterLogin.SetError(cmbCiudad, "");
+                bfbtnRegisterNext.Enabled = true;
+            }
+            else
+            {
+                if (bftxtPrimerNombre.Text == string.Empty)
+                {
+                    validacionRegisterLogin.SetError(bftxtPrimerNombre, "Es necesario introducir tu primer nombre");
+                }
+                else if (bftxtPrimerApellido.Text == string.Empty)
+                {
+                    validacionRegisterLogin.SetError(bftxtPrimerApellido, "Es necesario introducir tu primer apellido");
+                }
+                else if (bftxtDocumento.Text == string.Empty)
+                {
+                    validacionRegisterLogin.SetError(bftxtDocumento, "Es necesario introducir tu documento de identidad");
+                }
+                else if (bfdpkFechaNacimiento.Text == null)
+                {
+                    validacionRegisterLogin.SetError(bftxtDocumento, "Es necesario introducir tu documento de identidad");
+                }
+                else if (cmbGenero.SelectedIndex <= -1)
+                {
+                    validacionRegisterLogin.SetError(cmbGenero, "Es necesario introducir tu genero");
+                }
+                else if (cmbDepartamento.SelectedIndex <= -1)
+                {
+                    validacionRegisterLogin.SetError(cmbDepartamento, "Es necesario introducir tu departamento");
+                }
+                else if (cmbCiudad.SelectedIndex <= -1)
+                {
+                    validacionRegisterLogin.SetError(cmbCiudad, "Es necesario introducir tu ciudad");
+                }
+                bfbtnRegisterNext.Enabled = false;
+
+            }
+        }
+
+        private void bftxtPrimerNombre_TextChange(object sender, EventArgs e)
+        {
+            vRegister();
+        }
+
+        private void bftxtPrimerApellido_TextChange(object sender, EventArgs e)
+        {
+            vRegister();
+        }
+
+        private void bftxtDocumento_TextChange(object sender, EventArgs e)
+        {
+            vRegister();
+        }
+
+        private void cmbGenero_TextChanged(object sender, EventArgs e)
+        {
+            vRegister();
+        }
+
+        private void cmbDepartamento_TextChanged(object sender, EventArgs e)
+        {
+            vRegister();
+        }
+
+        private void cmbCiudad_TextChanged(object sender, EventArgs e)
+        {
+            vRegister();
         }
 
         private void bftgLogin_Click(object sender, EventArgs e)
