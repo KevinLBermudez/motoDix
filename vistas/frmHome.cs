@@ -100,23 +100,31 @@ namespace final_motoDix.Vistas
 
         private void bfbtnMisViajes_Click(object sender, EventArgs e)
         {
-            /*if(history == null)
+            if (rolActivo == 1)
             {
-                Form verViajes = new frmHistory();
-                verViajes.TopLevel = false;
-                verViajes.FormBorderStyle = FormBorderStyle.None;
-                verViajes.Dock = DockStyle.Fill;
-                panelContenedor.Controls.Add(verViajes);
-                verViajes.Show();
-                verViajes.BringToFront();
-                history = verViajes;
-            }
-            else
-            {
+                Form history = new frmHistory(infoPersona);
+                history.TopLevel = false;
+                history.FormBorderStyle = FormBorderStyle.None;
+                history.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(history);
+                history.Show();
                 history.BringToFront();
-            }*/
-                
-            
+                this.history = history;
+         
+
+            }
+            else if (rolActivo == 2)
+            {
+                Form history = new frmHistory(infoDriver);
+                history.TopLevel = false;
+                history.FormBorderStyle = FormBorderStyle.None;
+                history.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(history);
+                history.Show();
+                history.BringToFront();
+                this.history = history;
+            }
+
         }
 
         private void bfbtnViajar_Click(object sender, EventArgs e)

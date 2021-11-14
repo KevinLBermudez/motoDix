@@ -837,6 +837,7 @@ namespace final_motoDix.Vistas
             this.bftgLogin.TabIndex = 2;
             this.bftgLogin.Text = "Login";
             this.bftgLogin.UseVisualStyleBackColor = true;
+            this.bftgLogin.Click += new System.EventHandler(this.bftgLogin_Click);
             // 
             // bfbtnInfoFinishPerson
             // 

@@ -19,6 +19,10 @@ namespace final_motoDix.Modelos
         private string travelId;
         private string idDocumentPerson;
         private string idDocumentPersonDriver;
+        private int rol;
+        private DateTime fechaViajeDesde;
+        private DateTime fechaViajeHasta;
+
 
         private string startPoint;
         private string arrivalPoint;
@@ -42,6 +46,9 @@ namespace final_motoDix.Modelos
         public string TimeTravel { get => timeTravel; set => timeTravel = value; }
         public int Rating { get => rating; set => rating = value; }
         public double Discount { get => discount; set => discount = value; }
+        public int Rol { get => rol; set => rol = value; }
+        public DateTime FechaViajeDesde { get => fechaViajeDesde; set => fechaViajeDesde = value; }
+        public DateTime FechaViajeHasta { get => fechaViajeHasta; set => fechaViajeHasta = value; }
 
         public clsViajeModel(string travelId, string idDocumentPerson, string startPoint, string arrivalPoint, DateTime dateTimeTrip, string state)
         {
@@ -84,6 +91,15 @@ namespace final_motoDix.Modelos
             TimeTravel = timeTravel;
             Rating = rating;
             Discount = discount;
+            conexionViaje = clsConexion.realizarConexion();
+
+        }
+        public clsViajeModel(string idDocumentPerson, int rol, DateTime desde,DateTime hasta )
+        {
+            IdDocumentPerson = idDocumentPerson;
+            Rol = rol;
+            FechaViajeDesde = desde;
+            FechaViajeHasta = hasta;
             conexionViaje = clsConexion.realizarConexion();
 
         }
@@ -179,10 +195,9 @@ namespace final_motoDix.Modelos
                 return true;
                
             }
-            catch (Exception err)
+            catch (NpgsqlException err)
             {
-                MessageBox.Show(err.ToString());
-                return false;
+                throw new Exception(err.Message);
             }
         }
 
@@ -270,6 +285,41 @@ namespace final_motoDix.Modelos
             }
 
         }
+
+
+
+        public DataTable obtenerHistorial()
+        {
+
+            validarConexion();
+            string consulta = "select * from app_see_history(@idDocumentPersona,@idRol,@desde,@hasta);";
+
+            NpgsqlCommand query = new NpgsqlCommand(consulta, conexionViaje);
+            
+            query.Parameters.Add("@idDocumentPersona", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDocumentPerson;
+            query.Parameters.Add("@idRol", NpgsqlTypes.NpgsqlDbType.Integer).Value = rol;
+            query.Parameters.Add("@desde", NpgsqlTypes.NpgsqlDbType.Timestamp).Value = fechaViajeDesde;
+            query.Parameters.Add("@hasta", NpgsqlTypes.NpgsqlDbType.Timestamp).Value = fechaViajeHasta;
+
+
+            try
+            {
+
+                DataTable dtHistorial = new DataTable();
+
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query);
+                adapter.Fill(dtHistorial);
+                return dtHistorial;
+
+            }
+            catch (Exception)
+            {
+                throw new Exception("No se pudo optener la informacion");
+            }
+
+        }
+
+
 
     }
 }

@@ -16,6 +16,7 @@ using Bunifu.UI.WinForms;
 using final_motoDix.Estructuras;
 using System.Diagnostics;
 using static final_motoDix.Estructuras.EViaje;
+using System.Threading;
 
 namespace final_motoDix.Vistas
 {
@@ -31,6 +32,8 @@ namespace final_motoDix.Vistas
         bool banderaAceptacionViaje = false;
         Stopwatch timeMeasure = new Stopwatch();
         bool viajeActivo = false;
+        PointLatLng Inicio;
+        PointLatLng Destino;
 
         public frmTravel(Persona infoPersona)
         {
@@ -42,7 +45,7 @@ namespace final_motoDix.Vistas
 
         private void frmTravel_Load(object sender, EventArgs e)
         {
-            mapa = new clsMapa();
+            mapa = new clsMapa(gMapControl);
 
             mapa.cargarConfiguracionesMapa(gMapControl);
 
@@ -73,8 +76,9 @@ namespace final_motoDix.Vistas
                 double lng = point.Lng;
                 PointLatLng punto = new PointLatLng(lat, lng);
                 
-                mapa.seleccionarPunto(punto,gMapControl);
+                mapa.seleccionarPunto(punto);
 
+                cargarLabels();
             }
         }
 
@@ -86,36 +90,49 @@ namespace final_motoDix.Vistas
 
         private void btnUbicacionAcyual_Click(object sender, EventArgs e)
         {
+    
             mapa.activarPosicionActual(gMapControl);
+
+            cargarLabels();
+          
         }
 
         private void bfbtnSolicitarViaje_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!viajeActivo)
+                if(Int32.Parse(mapa.infoViajeRuta[0].Dato) > 30000)
                 {
-                    string state = "Solicitado";
-                    mapa.validarRuta();
-                    lblDistanciaViajeValor.Text = mapa.infoViajeRuta[0].Dato + " metros";
-                    lblTiempoValor.Text = mapa.infoViajeRuta[1].Dato;
-                    bftxtInicio.Text = mapa.infoViajeRuta[2].Dato;
-                    bftxtPuntoLlegada.Text = mapa.infoViajeRuta[3].Dato;
-                    viaje = new clsViajeController(infoPersona.IdDocumentPersona, mapa.infoViajeRuta[2].Dato, mapa.infoViajeRuta[3].Dato, state);
-                    travelId = viaje.ejecutarSolicitarViaje();
-                    viaje = new clsViajeController(travelId);
-                    timeMeasure.Start();
-                    viajeActivo = true;
+                    bfSnackbarTravel.Show(this, "No se puede solicitar un viaje con una ruta de mas de 30 kilometros", BunifuSnackbar.MessageTypes.Error, 6000,
+                   "Denegado", BunifuSnackbar.Positions.BottomRight);
+                    limpiarFormulario();
                 }
                 else
                 {
-                    MessageBox.Show("No se puede solicitar un viaje mientras tiene uno en curso");
+                    if (!viajeActivo)
+                    {
+                        string state = "Solicitado";
+                        mapa.validarRuta();
+                        viaje = new clsViajeController(infoPersona.IdDocumentPersona, mapa.infoViajeRuta[2].Dato, mapa.infoViajeRuta[3].Dato, state);
+                        travelId = viaje.ejecutarSolicitarViaje();
+                        viaje = new clsViajeController(travelId);
+                        timeMeasure.Start();
+                        viajeActivo = true;
+                        bfSnackbarTravel.Show(this, "Su viaje se ha solicitado correctamente", BunifuSnackbar.MessageTypes.Success, 4000,
+                        "Solicitado", BunifuSnackbar.Positions.BottomRight);
+                    }
+                    else
+                    {
+                        bfSnackbarTravel.Show(this, "No se puede solicitar un viaje mientras tiene uno en curso", BunifuSnackbar.MessageTypes.Information, 4000,
+                        "Solicitud rechazada", BunifuSnackbar.Positions.BottomRight);
+                    }
                 }
               
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+                bfSnackbarTravel.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 4000,
+                    "Error interno", BunifuSnackbar.Positions.BottomRight);
             }
 
         }
@@ -171,16 +188,17 @@ namespace final_motoDix.Vistas
                 timeMeasure.Stop();
                 TimeSpan time = timeMeasure.Elapsed;
                 string timeElapsed = string.Format("{0:00}:{1:00}:{2:00}:{3:00}",time.Hours,time.Minutes,time.Seconds,time.Milliseconds/10);
-
                 int rating = ratingDriver.Value;
-            
                 viaje.ejecutarCompletarViaje(travelId, valorViaje, timeElapsed, rating);
                 banderaAceptacionViaje = false;
+                bfSnackbarTravel.Show(this, "Su viaje a finalizado con exito, Feliz dia", BunifuSnackbar.MessageTypes.Success, 4000,
+                "Completado", BunifuSnackbar.Positions.BottomRight);
                 limpiarFormulario();
             }
             else
             {
-                MessageBox.Show("Debes tener un viaje activo antes de Finalizarlo");
+                   bfSnackbarTravel.Show(this, "Debes tener un viaje activo para pagar y terminar", BunifuSnackbar.MessageTypes.Information, 4000,
+                 "Solicitud rechazada", BunifuSnackbar.Positions.BottomRight);
             }
 
         }
@@ -201,11 +219,46 @@ namespace final_motoDix.Vistas
             lblFacturaValor.Text = ":";
             lblDescuntoValor.Text = ":";
             lblTotalViajeValor.Text = ":";
-            mapa = new clsMapa();
+            travelId = null;
+            viajeActivo = false;
+            mapa = new clsMapa(gMapControl);
             mapa.limpiarPuntos(gMapControl);
             mapa.cargarConfiguracionesMapa(gMapControl);
 
         }
 
+        private void pbBuscarPuntoInicial_Click(object sender, EventArgs e)
+        {
+           Inicio= mapa.buscarPunto(bftxtInicio.Text);
+        }
+
+        private void pbBuscarPuntoLlegada_Click(object sender, EventArgs e)
+        {
+            Destino= mapa.buscarPunto(bftxtPuntoLlegada.Text);
+
+        }
+
+        private void lblConfirmarInicio_Click(object sender, EventArgs e)
+        {
+            mapa.seleccionarPunto(Inicio,"Punto Inicial");
+            cargarLabels();
+        }
+
+        private void lblConfirmarDestino_Click(object sender, EventArgs e)
+        {
+            mapa.seleccionarPunto(Destino, "Punto de destino");
+            cargarLabels();
+        }
+        
+        public void cargarLabels()
+        {
+            if (mapa.validarRuta())
+            {
+                lblDistanciaViajeValor.Text = mapa.infoViajeRuta[0].Dato + " metros";
+                lblTiempoValor.Text = mapa.infoViajeRuta[1].Dato;
+                bftxtInicio.Text = mapa.infoViajeRuta[2].Dato;
+                bftxtPuntoLlegada.Text = mapa.infoViajeRuta[3].Dato;
+            }
+        }
     }
 }

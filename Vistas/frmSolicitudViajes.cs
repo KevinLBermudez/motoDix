@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using final_motoDix.Controladores;
 using final_motoDix.Modelos;
 using final_motoDix.Estructuras;
+using Bunifu.UI.WinForms;
+
 namespace final_motoDix.Vistas
 {
     public partial class frmSolicitudViajes : Form
@@ -28,10 +30,21 @@ namespace final_motoDix.Vistas
         private void bfbtnAceptar_Click(object sender, EventArgs e)
         {
             viajes = new clsViajeController(travelId,infoDriver.licenseplate, infoDriver.idDocumentPersonDriver);
-            if (viajes.ejecutaraceptarViaje())
+            try
             {
-                bfbtnAceptar.Enabled = false;
+                if (viajes.ejecutaraceptarViaje())
+                {
+                    bfbtnAceptar.Enabled = false;
+                    bfSnackbarSolicitud.Show(this, "Usted acaba de aceptar un viaje", BunifuSnackbar.MessageTypes.Information, 4000,
+                    "Viaje iniciado", BunifuSnackbar.Positions.BottomRight);
+
+                }
             }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        
         }
 
         private void frmSolicitudViajes_Load(object sender, EventArgs e)

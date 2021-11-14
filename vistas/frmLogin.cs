@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bunifu;
 using final_motoDix.Modelos;
 using final_motoDix.Controladores;
 using final_motoDix.Estructuras;
+using Bunifu.UI.WinForms;
+using System.Threading;
 
 namespace final_motoDix.Vistas
 {
@@ -19,7 +20,6 @@ namespace final_motoDix.Vistas
         int rol;
         clsPersonController persona;
         clsDriverController driver;
-
         public Persona infoPersona;
         public Iconductor infoConductor;
         
@@ -57,13 +57,14 @@ namespace final_motoDix.Vistas
                 }
                 catch (Exception err)
                 {
+                    bfSnackbar.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 3000, 
+                        "Fallo inicio de sesion", BunifuSnackbar.Positions.BottomRight);
 
-                     MessageBox.Show(err.Message);
                 }
-                
-              
 
-            }else if(rol == 2)
+
+            }
+            else if(rol == 2)
             {
                 string email = bftxtEmail.Text;
                 string password = bftxtContraseña.Text;
@@ -99,13 +100,46 @@ namespace final_motoDix.Vistas
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                string email = bftxtEmail.Text;
-                string password = bftxtContraseña.Text;
-                persona = new clsPersonController(email, password, rol);
-                infoPersona = persona.ejecutarLogin();
-                frmHome home = new frmHome(infoPersona);
-                home.Show();
-                this.Close();
+                if (rol == 1)
+                {
+                    string email = bftxtEmail.Text;
+                    string password = bftxtContraseña.Text;
+                    persona = new clsPersonController(email, password, rol);
+                    try
+                    {
+                        infoPersona = persona.ejecutarLogin();
+                        frmHome home = new frmHome(infoPersona);
+                        home.Show();
+                        this.Close();
+                    }
+                    catch (Exception err)
+                    {
+                        bfSnackbar.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 3000,
+                            "Fallo inicio de sesion", BunifuSnackbar.Positions.BottomRight);
+
+                    }
+
+
+                }
+                else if (rol == 2)
+                {
+                    string email = bftxtEmail.Text;
+                    string password = bftxtContraseña.Text;
+                    driver = new clsDriverController(email, password, rol);
+                    try
+                    {
+                        infoConductor = driver.ejectutarLoginDriver();
+                        frmHome home = new frmHome(infoConductor);
+                        home.Show();
+                        this.Close();
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+
+                    }
+
+                }
             }
         }
 
@@ -113,5 +147,7 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+      
     }
 }

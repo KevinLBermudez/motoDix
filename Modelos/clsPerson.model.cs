@@ -193,7 +193,7 @@ namespace final_motoDix.Modelos
             query.Parameters.Add("@FirstName", NpgsqlTypes.NpgsqlDbType.Varchar).Value = firstName;
             query.Parameters.Add("@SecondName", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondName;
             query.Parameters.Add("@Surname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = surname;
-            query.Parameters.Add("@SecondSurname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondName;
+            query.Parameters.Add("@SecondSurname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondSurname;
             query.Parameters.Add("@ProfilePicture", NpgsqlTypes.NpgsqlDbType.Varchar).Value = profilePicture;
             query.Parameters.Add("@Gender", NpgsqlTypes.NpgsqlDbType.Varchar).Value = gender;
             query.Parameters.Add("@dateResgistration", NpgsqlTypes.NpgsqlDbType.Date).Value = dateRegistration;

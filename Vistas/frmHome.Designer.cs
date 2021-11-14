@@ -295,7 +295,7 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.IdleIconLeftImage = null;
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(2, 620);
+            this.bunifuButton21.Location = new System.Drawing.Point(3, 700);
             this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -568,7 +568,7 @@ namespace final_motoDix.Vistas
             this.bfbtnTrabajaConNosotros.IdleIconLeftImage = null;
             this.bfbtnTrabajaConNosotros.IdleIconRightImage = null;
             this.bfbtnTrabajaConNosotros.IndicateFocus = false;
-            this.bfbtnTrabajaConNosotros.Location = new System.Drawing.Point(3, 581);
+            this.bfbtnTrabajaConNosotros.Location = new System.Drawing.Point(3, 650);
             this.bfbtnTrabajaConNosotros.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnTrabajaConNosotros.Name = "bfbtnTrabajaConNosotros";
             this.bfbtnTrabajaConNosotros.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));

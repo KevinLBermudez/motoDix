@@ -29,13 +29,14 @@ namespace final_motoDix.Vistas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHistory));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            this.bfdgvHistorial = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bflblDesde = new Bunifu.UI.WinForms.BunifuLabel();
             this.bflblHasta = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfdtpkDesde = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -43,67 +44,69 @@ namespace final_motoDix.Vistas
             this.bfbtnLimpiarFiltro = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblHistorial = new System.Windows.Forms.Label();
             this.bfbtnConsultarHistorial = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            this.bfSnackbarViajeHistory = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bfdgvHistorial)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuDataGridView1
+            // bfdgvHistorial
             // 
-            this.bunifuDataGridView1.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.Name = null;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(36, 198);
-            this.bunifuDataGridView1.Name = "bunifuDataGridView1";
-            this.bunifuDataGridView1.RowHeadersVisible = false;
-            this.bunifuDataGridView1.RowTemplate.Height = 40;
-            this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(718, 267);
-            this.bunifuDataGridView1.TabIndex = 0;
-            this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bfdgvHistorial.AllowCustomTheming = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.bfdgvHistorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.bfdgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.bfdgvHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.bfdgvHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bfdgvHistorial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bfdgvHistorial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bfdgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.bfdgvHistorial.ColumnHeadersHeight = 40;
+            this.bfdgvHistorial.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bfdgvHistorial.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bfdgvHistorial.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bfdgvHistorial.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bfdgvHistorial.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bfdgvHistorial.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bfdgvHistorial.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bfdgvHistorial.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bfdgvHistorial.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bfdgvHistorial.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bfdgvHistorial.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bfdgvHistorial.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bfdgvHistorial.CurrentTheme.Name = null;
+            this.bfdgvHistorial.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bfdgvHistorial.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bfdgvHistorial.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bfdgvHistorial.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bfdgvHistorial.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bfdgvHistorial.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bfdgvHistorial.EnableHeadersVisualStyles = false;
+            this.bfdgvHistorial.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bfdgvHistorial.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bfdgvHistorial.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bfdgvHistorial.HeaderForeColor = System.Drawing.Color.White;
+            this.bfdgvHistorial.Location = new System.Drawing.Point(36, 198);
+            this.bfdgvHistorial.Name = "bfdgvHistorial";
+            this.bfdgvHistorial.RowHeadersVisible = false;
+            this.bfdgvHistorial.RowTemplate.Height = 40;
+            this.bfdgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bfdgvHistorial.Size = new System.Drawing.Size(718, 267);
+            this.bfdgvHistorial.TabIndex = 0;
+            this.bfdgvHistorial.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // bflblDesde
             // 
@@ -127,7 +130,7 @@ namespace final_motoDix.Vistas
             this.bflblHasta.AutoEllipsis = false;
             this.bflblHasta.CursorType = null;
             this.bflblHasta.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bflblHasta.Location = new System.Drawing.Point(397, 93);
+            this.bflblHasta.Location = new System.Drawing.Point(383, 93);
             this.bflblHasta.Name = "bflblHasta";
             this.bflblHasta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bflblHasta.Size = new System.Drawing.Size(30, 15);
@@ -181,12 +184,12 @@ namespace final_motoDix.Vistas
             this.bfdtpkHasta.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bfdtpkHasta.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bfdtpkHasta.LeftTextMargin = 5;
-            this.bfdtpkHasta.Location = new System.Drawing.Point(397, 122);
+            this.bfdtpkHasta.Location = new System.Drawing.Point(383, 122);
             this.bfdtpkHasta.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdtpkHasta.Name = "bfdtpkHasta";
-            this.bfdtpkHasta.Size = new System.Drawing.Size(208, 32);
+            this.bfdtpkHasta.Size = new System.Drawing.Size(247, 32);
             this.bfdtpkHasta.TabIndex = 4;
-            this.bfdtpkHasta.Value = new System.DateTime(2021, 11, 13, 0, 0, 0, 0);
+            this.bfdtpkHasta.Value = new System.DateTime(2021, 11, 14, 0, 0, 0, 0);
             // 
             // bfbtnLimpiarFiltro
             // 
@@ -207,11 +210,11 @@ namespace final_motoDix.Vistas
             this.bfbtnLimpiarFiltro.ColorContrastOnClick = 45;
             this.bfbtnLimpiarFiltro.ColorContrastOnHover = 45;
             this.bfbtnLimpiarFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = false;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = false;
-            this.bfbtnLimpiarFiltro.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = false;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = false;
+            this.bfbtnLimpiarFiltro.CustomizableEdges = borderEdges3;
             this.bfbtnLimpiarFiltro.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnLimpiarFiltro.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnLimpiarFiltro.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -306,11 +309,11 @@ namespace final_motoDix.Vistas
             this.bfbtnConsultarHistorial.ColorContrastOnClick = 45;
             this.bfbtnConsultarHistorial.ColorContrastOnHover = 45;
             this.bfbtnConsultarHistorial.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bfbtnConsultarHistorial.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bfbtnConsultarHistorial.CustomizableEdges = borderEdges4;
             this.bfbtnConsultarHistorial.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnConsultarHistorial.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnConsultarHistorial.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -375,6 +378,76 @@ namespace final_motoDix.Vistas
             this.bfbtnConsultarHistorial.TextMarginLeft = 0;
             this.bfbtnConsultarHistorial.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnConsultarHistorial.UseDefaultRadiusAndThickness = true;
+            this.bfbtnConsultarHistorial.Click += new System.EventHandler(this.bfbtnConsultarHistorial_Click);
+            // 
+            // bfSnackbarViajeHistory
+            // 
+            this.bfSnackbarViajeHistory.AllowDragging = false;
+            this.bfSnackbarViajeHistory.AllowMultipleViews = true;
+            this.bfSnackbarViajeHistory.ClickToClose = true;
+            this.bfSnackbarViajeHistory.DoubleClickToClose = true;
+            this.bfSnackbarViajeHistory.DurationAfterIdle = 4000;
+            this.bfSnackbarViajeHistory.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.ErrorOptions.ActionBorderRadius = 1;
+            this.bfSnackbarViajeHistory.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarViajeHistory.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bfSnackbarViajeHistory.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarViajeHistory.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bfSnackbarViajeHistory.ErrorOptions.IconLeftMargin = 12;
+            this.bfSnackbarViajeHistory.FadeCloseIcon = false;
+            this.bfSnackbarViajeHistory.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bfSnackbarViajeHistory.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.InformationOptions.ActionBorderRadius = 1;
+            this.bfSnackbarViajeHistory.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarViajeHistory.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarViajeHistory.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bfSnackbarViajeHistory.InformationOptions.IconLeftMargin = 12;
+            this.bfSnackbarViajeHistory.Margin = 5;
+            this.bfSnackbarViajeHistory.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarViajeHistory.MaximumViews = 7;
+            this.bfSnackbarViajeHistory.MessageRightMargin = 15;
+            this.bfSnackbarViajeHistory.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarViajeHistory.ShowBorders = false;
+            this.bfSnackbarViajeHistory.ShowCloseIcon = false;
+            this.bfSnackbarViajeHistory.ShowIcon = true;
+            this.bfSnackbarViajeHistory.ShowShadows = true;
+            this.bfSnackbarViajeHistory.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.SuccessOptions.ActionBorderRadius = 1;
+            this.bfSnackbarViajeHistory.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarViajeHistory.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bfSnackbarViajeHistory.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarViajeHistory.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bfSnackbarViajeHistory.SuccessOptions.IconLeftMargin = 12;
+            this.bfSnackbarViajeHistory.ViewsMargin = 7;
+            this.bfSnackbarViajeHistory.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarViajeHistory.WarningOptions.ActionBorderRadius = 1;
+            this.bfSnackbarViajeHistory.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarViajeHistory.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarViajeHistory.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bfSnackbarViajeHistory.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarViajeHistory.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarViajeHistory.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bfSnackbarViajeHistory.WarningOptions.IconLeftMargin = 12;
+            this.bfSnackbarViajeHistory.ZoomCloseIcon = true;
             // 
             // frmHistory
             // 
@@ -389,11 +462,12 @@ namespace final_motoDix.Vistas
             this.Controls.Add(this.bfdtpkDesde);
             this.Controls.Add(this.bflblHasta);
             this.Controls.Add(this.bflblDesde);
-            this.Controls.Add(this.bunifuDataGridView1);
+            this.Controls.Add(this.bfdgvHistorial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHistory";
             this.Text = "frmHistory";
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmHistory_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bfdgvHistorial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,7 +475,7 @@ namespace final_motoDix.Vistas
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
+        private Bunifu.UI.WinForms.BunifuDataGridView bfdgvHistorial;
         private Bunifu.UI.WinForms.BunifuLabel bflblDesde;
         private Bunifu.UI.WinForms.BunifuLabel bflblHasta;
         private Bunifu.UI.WinForms.BunifuDatePicker bfdtpkDesde;
@@ -409,5 +483,6 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnLimpiarFiltro;
         private System.Windows.Forms.Label lblHistorial;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnConsultarHistorial;
+        private Bunifu.UI.WinForms.BunifuSnackbar bfSnackbarViajeHistory;
     }
 }

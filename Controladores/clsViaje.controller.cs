@@ -89,9 +89,7 @@ namespace final_motoDix.Controladores
             }
             catch (Exception err)
             {
-
-                MessageBox.Show("Error interno");
-                return false;
+                throw new Exception(err.Message);
             }
         }   
 
@@ -121,7 +119,6 @@ namespace final_motoDix.Controladores
             {
                 if (viaje.completarViaje())
                 {
-                    MessageBox.Show("Gracias por usar nuestro servicio");
                     return true;
                 }
                 else
@@ -135,6 +132,34 @@ namespace final_motoDix.Controladores
                 return false;
 
             }
+        }
+
+
+        public bool ejecutarObtenerHistorial(string idDocumentPerson, int rol, DateTime desde, DateTime hasta,DataGridView data)
+        {
+            viaje = new clsViajeModel(idDocumentPerson, rol, desde, hasta);
+
+            try
+            {
+
+                data.DataSource = viaje.obtenerHistorial();
+                data.Columns[0].HeaderText = "Cliente";
+                data.Columns[1].HeaderText = "Conductor";
+                data.Columns[2].HeaderText = "Fecha del viaje";
+                data.Columns[3].HeaderText = "Punto de inicio";
+                data.Columns[4].HeaderText = "Destino";
+                data.Columns[5].HeaderText = "Valor del viaje";
+                data.Columns[6].HeaderText = "Descuento";
+                data.Columns[7].HeaderText = "Placa del vehiculo";
+                data.Columns[8].HeaderText = "Calificacion del viaje";
+                data.Columns[9].HeaderText = "Estado";
+                return true;
+            }
+            catch (Exception err )
+            {
+                throw new Exception(err.Message);
+            }
+
         }
 
     }

@@ -17,7 +17,7 @@ namespace final_motoDix.helpers
     {
         private string tituloDato;
         private string dato;
-
+      
         public string TituloDato { get => tituloDato; set => tituloDato = value; }
         public string Dato { get => dato; set => dato = value; }
 
@@ -32,20 +32,24 @@ namespace final_motoDix.helpers
 
     class clsMapa
     {
+
+        private GMapControl map;
         private datosRuta datos;
         PointLatLng posicionActual;
         PointLatLng puntoInicio;
         PointLatLng puntoFinal;
+        PointLatLng error;
         GDirections directions;
         GMapOverlay capaInicio;
         GMapOverlay capaFinal;
         GMapOverlay capaRuta;
         public List<datosRuta> infoViajeRuta = new List<datosRuta>();
+        public GMapControl Map { get => map; set => map = value; }
 
 
-        public clsMapa()
+        public clsMapa(GMapControl map)
         {
-
+            Map = map;
 
         }
 
@@ -82,7 +86,7 @@ namespace final_motoDix.helpers
                         lng = eve.Position.Location.Longitude;
                         posicionActual = new PointLatLng(lat, lng);
                         map.Position = posicionActual;
-                        seleccionarPunto(posicionActual, map, "Posicion actual");
+                        seleccionarPunto(posicionActual, "Posicion actual");
                         map.Zoom = 10;
 
                     }
@@ -104,7 +108,7 @@ namespace final_motoDix.helpers
         }
 
 
-        public void seleccionarPunto(PointLatLng punto, GMapControl map, string nombrePunto = "Punto inicial")
+        public void seleccionarPunto(PointLatLng punto, string nombrePunto = "Punto inicial")
         {
            
             if(puntoInicio.IsEmpty)
@@ -130,43 +134,76 @@ namespace final_motoDix.helpers
                 map.Overlays.Add(capaFinal);
                 puntoFinal = punto;
 
-                calcularRuta(map);
+                calcularRuta();
             }
 
         }
 
 
-        public void calcularRuta(GMapControl map)
+        public PointLatLng buscarPunto(string punto)
+        {
+            if (!validarRuta())
+            {
+                map.Overlays.Clear();
+                PointLatLng puntoCoordenadas;
+                map.SetPositionByKeywords(punto);
+                map.GetPositionByKeywords(punto, out puntoCoordenadas);
+                var markers = new GMapOverlay("markers");
+                GMapMarker marcador = new GMarkerGoogle(puntoCoordenadas, GMarkerGoogleType.black_small);
+                marcador.ToolTipText = "Punto encontrado";
+                marcador.ToolTipMode = MarkerTooltipMode.Always;
+                markers.Markers.Add(marcador);
+                map.Overlays.Add(markers);
+
+                return puntoCoordenadas;
+
+            }
+            else
+            {
+                return error;
+            }
+        }
+
+        public bool calcularRuta()
         {
             
             GMapProviders.GoogleMap.GetDirections(out directions, puntoInicio, puntoFinal, false, false, false, false, false);
+            try
+            {
+                GMapRoute route = new GMapRoute(directions.Route, "Ruta");
+                GMapOverlay capaRutas = new GMapOverlay("Capa de ruta");
+                capaRutas.Routes.Add(route);
+                capaRuta = capaRutas;
+                map.Overlays.Add(capaRuta);
+                map.Zoom = map.Zoom + 1;
+                map.Zoom = map.Zoom - 1;
 
-            GMapRoute route = new GMapRoute(directions.Route, "Ruta");
+                datos = new datosRuta("Distancia", directions.DistanceValue.ToString());
+                infoViajeRuta.Add(datos);
+                datos = new datosRuta("Duracción", directions.Duration.ToString());
+                infoViajeRuta.Add(datos);
+                datos = new datosRuta("Punto inicial", directions.StartAddress.ToString());
+                infoViajeRuta.Add(datos);
+                datos = new datosRuta("Punto final", directions.EndAddress.ToString());
+                infoViajeRuta.Add(datos);
 
-            GMapOverlay capaRutas = new GMapOverlay("Capa de ruta");
-            capaRutas.Routes.Add(route);
-            capaRuta = capaRutas;
-            map.Overlays.Add(capaRuta);
-            map.Zoom = map.Zoom + 1;
-            map.Zoom = map.Zoom - 1;
-
-            datos = new datosRuta("Distancia", directions.DistanceValue.ToString());
-            infoViajeRuta.Add(datos);
-            datos = new datosRuta("Duracción", directions.Duration.ToString());
-            infoViajeRuta.Add(datos);
-            datos = new datosRuta("Punto inicial", directions.StartAddress.ToString());
-            infoViajeRuta.Add(datos);
-            datos = new datosRuta("Punto final",directions.EndAddress.ToString());
-            infoViajeRuta.Add(datos);
+                return true;
+            }
+            catch (Exception)
+            {
+                throw new Exception( "No se pudo calcular la ruta");
+            }
 
         }
 
-        public void validarRuta()
+        public bool validarRuta()
         {
             if(capaRuta == null)
             {
-                throw new ArgumentException("No se ha seleccionado una ruta", nameof(capaRuta));
+                return false;
+               // throw new ArgumentException("No se ha seleccionado una ruta", nameof(capaRuta));
             }
+            return true;
         }
 
         public void limpiarPuntos(GMapControl map)

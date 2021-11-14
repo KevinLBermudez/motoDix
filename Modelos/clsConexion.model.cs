@@ -27,12 +27,12 @@ namespace final_motoDix.Modelos
                 try
                 {
                     conexion.Open();
-                    MessageBox.Show("Conexion exitosa");
                     return conexion;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("ERROR: " + ex.Message);
+
                     return null;
                 }
 

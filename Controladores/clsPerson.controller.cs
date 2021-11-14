@@ -43,9 +43,17 @@ namespace final_motoDix.Controladores
 
         public Persona ejecutarLogin()
         {
-           infoPersona =  persona.login();
+            try
+            {
+                infoPersona = persona.login();
 
-            return infoPersona;
+                return infoPersona;
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
+            }
+         
         }
 
     }

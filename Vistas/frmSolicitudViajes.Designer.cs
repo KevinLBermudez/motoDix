@@ -57,6 +57,7 @@ namespace final_motoDix.Vistas
             this.label3 = new System.Windows.Forms.Label();
             this.bfbtnAceptar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.contadorSolicitud = new System.Windows.Forms.Timer(this.components);
+            this.bfSnackbarSolicitud = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bfdgvSolicitudes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -481,8 +482,77 @@ namespace final_motoDix.Vistas
             // contadorSolicitud
             // 
             this.contadorSolicitud.Enabled = true;
-            this.contadorSolicitud.Interval = 10000;
+            this.contadorSolicitud.Interval = 5000;
             this.contadorSolicitud.Tick += new System.EventHandler(this.contadorSolicitud_Tick);
+            // 
+            // bfSnackbarSolicitud
+            // 
+            this.bfSnackbarSolicitud.AllowDragging = false;
+            this.bfSnackbarSolicitud.AllowMultipleViews = true;
+            this.bfSnackbarSolicitud.ClickToClose = true;
+            this.bfSnackbarSolicitud.DoubleClickToClose = true;
+            this.bfSnackbarSolicitud.DurationAfterIdle = 3000;
+            this.bfSnackbarSolicitud.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.ErrorOptions.ActionBorderRadius = 1;
+            this.bfSnackbarSolicitud.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarSolicitud.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bfSnackbarSolicitud.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarSolicitud.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bfSnackbarSolicitud.ErrorOptions.IconLeftMargin = 12;
+            this.bfSnackbarSolicitud.FadeCloseIcon = false;
+            this.bfSnackbarSolicitud.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bfSnackbarSolicitud.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.InformationOptions.ActionBorderRadius = 1;
+            this.bfSnackbarSolicitud.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarSolicitud.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarSolicitud.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bfSnackbarSolicitud.InformationOptions.IconLeftMargin = 12;
+            this.bfSnackbarSolicitud.Margin = 10;
+            this.bfSnackbarSolicitud.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarSolicitud.MaximumViews = 7;
+            this.bfSnackbarSolicitud.MessageRightMargin = 15;
+            this.bfSnackbarSolicitud.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarSolicitud.ShowBorders = false;
+            this.bfSnackbarSolicitud.ShowCloseIcon = false;
+            this.bfSnackbarSolicitud.ShowIcon = true;
+            this.bfSnackbarSolicitud.ShowShadows = true;
+            this.bfSnackbarSolicitud.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.SuccessOptions.ActionBorderRadius = 1;
+            this.bfSnackbarSolicitud.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarSolicitud.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bfSnackbarSolicitud.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarSolicitud.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bfSnackbarSolicitud.SuccessOptions.IconLeftMargin = 12;
+            this.bfSnackbarSolicitud.ViewsMargin = 7;
+            this.bfSnackbarSolicitud.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarSolicitud.WarningOptions.ActionBorderRadius = 1;
+            this.bfSnackbarSolicitud.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarSolicitud.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarSolicitud.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bfSnackbarSolicitud.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarSolicitud.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarSolicitud.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bfSnackbarSolicitud.WarningOptions.IconLeftMargin = 12;
+            this.bfSnackbarSolicitud.ZoomCloseIcon = true;
             // 
             // frmSolicitudViajes
             // 
@@ -520,5 +590,6 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bfbtnAceptar;
         private System.Windows.Forms.Timer contadorSolicitud;
+        private Bunifu.UI.WinForms.BunifuSnackbar bfSnackbarSolicitud;
     }
 }
