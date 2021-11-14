@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using final_motoDix.Modelos;
 using System.Windows.Forms;
+using final_motoDix.Estructuras;
 
 namespace final_motoDix.Vistas
 {
     public partial class frmPerfilConductor : Form
     {
 
-        public Driver infoDriver;
+        public Iconductor infoDriver;
 
-        public frmPerfilConductor(Driver infoDriver)
+        public frmPerfilConductor(Iconductor infoDriver)
         {
             this.infoDriver = infoDriver;
             InitializeComponent();
@@ -35,19 +36,19 @@ namespace final_motoDix.Vistas
 
         private void frmPerfilConductor_Load(object sender, EventArgs e)
         {
-            bftxtxEmail.Text = infoDriver.P_emailCredentials;
-            bftxtConfirmarEmail.Text = infoDriver.P_emailCredentials;
-            bftxtPassword.Text = infoDriver.P_credentialpasswordCredentials;
-            bftxtConfirmPassword.Text = infoDriver.P_credentialpasswordCredentials;
-            bftxtPlacaVehiculo.Text = infoDriver.P_licenseplateVehicle;
-            bftxtCilindraje.Text = Convert.ToString(infoDriver.P_cylindercapacityVehicle);
-            bftxtModelo.Text = Convert.ToString(infoDriver.P_modelVehicle);
-            bftxtMarca.Text = infoDriver.P_brandVehicle;
-            bfdtpExpedicionSoat.Value = infoDriver.P_expeditiondatesoatVehicle;
-            bfdtpFechaInicioSoat.Value = infoDriver.P_initialvaliditysoatVehicle;
-            bfdtpFechaFinalSoat.Value = infoDriver.P_finalvaliditysoatVehicle;
-            bfdtpExpedicionTecnomecanica.Value = infoDriver.P_expeditiondatetechnomechanicsVehicle;
-            bftxtExpiracionTecnomecanica.Value = infoDriver.P_expirationdatetechnomechanicsVehicle;
+            bftxtxEmail.Text = infoDriver.email;
+            bftxtConfirmarEmail.Text = infoDriver.email;
+            //bftxtPassword.Text = infoDriver.;
+            //bftxtConfirmPassword.Text = infoDriver.P_credentialpasswordCredentials;
+            bftxtPlacaVehiculo.Text = infoDriver.licenseplate;
+            bftxtCilindraje.Text = Convert.ToString(infoDriver.cylindercapacity);
+            bftxtModelo.Text = Convert.ToString(infoDriver.model);
+            bftxtMarca.Text = infoDriver.brand;
+            bfdtpExpedicionSoat.Value = infoDriver.expeditiondatesoat;
+            bfdtpFechaInicioSoat.Value = infoDriver.initialvaliditysoat;
+            bfdtpFechaFinalSoat.Value = infoDriver.finalvaliditysoat;
+            bfdtpExpedicionTecnomecanica.Value = infoDriver.expeditiondatetechnomechanics;
+            bftxtExpiracionTecnomecanica.Value = infoDriver.expirationdatetechnomechanics;
         }
     }
 }
