@@ -26,6 +26,9 @@ namespace final_motoDix.Modelos
         private DateTime dateTimeTrip;
         private string licensePlate;
         private string state;
+        private string timeTravel;
+        private int rating;
+        private double discount;
 
         public string TravelId { get => travelId; set => travelId = value; }
         public string IdDocumentPerson { get => idDocumentPerson; set => idDocumentPerson = value; }
@@ -36,6 +39,9 @@ namespace final_motoDix.Modelos
         public DateTime DateTimeTrip { get => dateTimeTrip; set => dateTimeTrip = value; }
         public string LicensePlate { get => licensePlate; set => licensePlate = value; }
         public string State { get => state; set => state = value; }
+        public string TimeTravel { get => timeTravel; set => timeTravel = value; }
+        public int Rating { get => rating; set => rating = value; }
+        public double Discount { get => discount; set => discount = value; }
 
         public clsViajeModel(string travelId, string idDocumentPerson, string startPoint, string arrivalPoint, DateTime dateTimeTrip, string state)
         {
@@ -66,6 +72,18 @@ namespace final_motoDix.Modelos
             IdDocumentPersonDriver = idDocumentPersonDriver;
             LicensePlate = licensePlate;
             State = state;
+            conexionViaje = clsConexion.realizarConexion();
+
+        }
+
+        public clsViajeModel(string travelId, double valueTravel, string state, string timeTravel,int rating,double discount) 
+        {
+            TravelId = travelId;
+            ValueTravel = valueTravel;
+            State = state;
+            TimeTravel = timeTravel;
+            Rating = rating;
+            Discount = discount;
             conexionViaje = clsConexion.realizarConexion();
 
         }
@@ -221,7 +239,37 @@ namespace final_motoDix.Modelos
             return viaje;
         }
 
+        public bool completarViaje()
+        {
 
+            validarConexion();
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionViaje;
+
+            query.CommandText = "CALL public.app_complet_travel(@travelId,@valueTravel,@timeTravel,@rating,@state)";
+
+            query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
+            query.Parameters.Add("@valueTravel", NpgsqlTypes.NpgsqlDbType.Integer).Value = valueTravel;
+            query.Parameters.Add("@discount", NpgsqlTypes.NpgsqlDbType.Integer).Value = discount;
+            query.Parameters.Add("@timeTravel", NpgsqlTypes.NpgsqlDbType.Varchar).Value = timeTravel;
+            query.Parameters.Add("@rating", NpgsqlTypes.NpgsqlDbType.Integer).Value = rating;
+            query.Parameters.Add("@state", NpgsqlTypes.NpgsqlDbType.Varchar).Value = state;
+
+
+            try
+            {
+                query.ExecuteNonQuery();
+
+                return true;
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+                return false;
+            }
+
+        }
 
     }
 }

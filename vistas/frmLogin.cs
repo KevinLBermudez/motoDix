@@ -48,10 +48,20 @@ namespace final_motoDix.Vistas
                 string email = bftxtEmail.Text;
                 string password = bftxtContraseña.Text;
                 persona = new clsPersonController(email, password, rol);
-                infoPersona = persona.ejecutarLogin();
-                frmHome home = new frmHome(infoPersona);
-                home.Show();
-                this.Close();
+                try
+                {
+                    infoPersona = persona.ejecutarLogin();
+                    frmHome home = new frmHome(infoPersona);
+                    home.Show();
+                    this.Close();
+                }
+                catch (Exception err)
+                {
+
+                     MessageBox.Show(err.Message);
+                }
+                
+              
 
             }else if(rol == 2)
             {
@@ -67,7 +77,7 @@ namespace final_motoDix.Vistas
                 }
                 catch (Exception err)
                 {
-                     MessageBox.Show("Compruebe sus credenciales");
+                     MessageBox.Show(err.Message);
 
                 }
                

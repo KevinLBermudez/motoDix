@@ -352,7 +352,7 @@ namespace final_motoDix.Modelos
             }
             catch (Exception err)
             {
-                MessageBox.Show(ex.ToString());
+                throw new Exception("Compruebe sus credenciales");
             }
 
             return null;

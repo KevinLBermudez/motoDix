@@ -275,7 +275,7 @@ namespace final_motoDix.Modelos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                throw new Exception("Compruebe sus credenciales");
             }
 
             //conexionPersona.Close();

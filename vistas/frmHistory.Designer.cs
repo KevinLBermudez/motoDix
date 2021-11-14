@@ -160,7 +160,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkDesde.Name = "bfdtpkDesde";
             this.bfdtpkDesde.Size = new System.Drawing.Size(217, 32);
             this.bfdtpkDesde.TabIndex = 3;
-            this.bfdtpkDesde.Value = new System.DateTime(2021, 10, 24, 12, 45, 0, 0);
+            this.bfdtpkDesde.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             // 
             // bfdtpkHasta
             // 
@@ -186,7 +186,7 @@ namespace final_motoDix.Vistas
             this.bfdtpkHasta.Name = "bfdtpkHasta";
             this.bfdtpkHasta.Size = new System.Drawing.Size(208, 32);
             this.bfdtpkHasta.TabIndex = 4;
-            this.bfdtpkHasta.Value = new System.DateTime(2021, 10, 24, 12, 49, 0, 0);
+            this.bfdtpkHasta.Value = new System.DateTime(2021, 11, 13, 0, 0, 0, 0);
             // 
             // bfbtnLimpiarFiltro
             // 

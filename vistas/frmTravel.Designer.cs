@@ -66,7 +66,7 @@ namespace final_motoDix.Vistas
             this.bflblColor = new Bunifu.UI.WinForms.BunifuLabel();
             this.bflblMarca = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuRating1 = new Bunifu.UI.WinForms.BunifuRating();
+            this.ratingDriver = new Bunifu.UI.WinForms.BunifuRating();
             this.lblCalificacionConductor = new System.Windows.Forms.Label();
             this.lblDistanciaViaje = new System.Windows.Forms.Label();
             this.lblTiempoViaje = new System.Windows.Forms.Label();
@@ -491,27 +491,27 @@ namespace final_motoDix.Vistas
             this.bunifuSeparator3.Size = new System.Drawing.Size(911, 26);
             this.bunifuSeparator3.TabIndex = 18;
             // 
-            // bunifuRating1
+            // ratingDriver
             // 
-            this.bunifuRating1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating1.DisabledEmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.bunifuRating1.DisabledRatedFillColor = System.Drawing.Color.DarkGray;
-            this.bunifuRating1.EmptyBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.bunifuRating1.EmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.bunifuRating1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.bunifuRating1.HoverFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.bunifuRating1.InnerRadius = 2F;
-            this.bunifuRating1.Location = new System.Drawing.Point(258, 780);
-            this.bunifuRating1.Name = "bunifuRating1";
-            this.bunifuRating1.OuterRadius = 10F;
-            this.bunifuRating1.RatedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.bunifuRating1.RatedFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.bunifuRating1.ReadOnly = false;
-            this.bunifuRating1.RightClickToClear = true;
-            this.bunifuRating1.Size = new System.Drawing.Size(121, 22);
-            this.bunifuRating1.TabIndex = 41;
-            this.bunifuRating1.Text = "Calificacion Conductor";
-            this.bunifuRating1.Value = 2;
+            this.ratingDriver.BackColor = System.Drawing.Color.Transparent;
+            this.ratingDriver.DisabledEmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.ratingDriver.DisabledRatedFillColor = System.Drawing.Color.DarkGray;
+            this.ratingDriver.EmptyBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.ratingDriver.EmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.ratingDriver.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingDriver.HoverFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingDriver.InnerRadius = 2F;
+            this.ratingDriver.Location = new System.Drawing.Point(258, 780);
+            this.ratingDriver.Name = "ratingDriver";
+            this.ratingDriver.OuterRadius = 10F;
+            this.ratingDriver.RatedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingDriver.RatedFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingDriver.ReadOnly = false;
+            this.ratingDriver.RightClickToClear = true;
+            this.ratingDriver.Size = new System.Drawing.Size(121, 22);
+            this.ratingDriver.TabIndex = 41;
+            this.ratingDriver.Text = "Calificacion Conductor";
+            this.ratingDriver.Value = 2;
             // 
             // lblCalificacionConductor
             // 
@@ -1304,7 +1304,7 @@ namespace final_motoDix.Vistas
             this.Controls.Add(this.lblEfectivo);
             this.Controls.Add(this.lblDescuento);
             this.Controls.Add(this.lblFactura);
-            this.Controls.Add(this.bunifuRating1);
+            this.Controls.Add(this.ratingDriver);
             this.Controls.Add(this.lblCalificacionConductor);
             this.Controls.Add(this.lblDistanciaViaje);
             this.Controls.Add(this.lblTiempoViaje);
@@ -1356,7 +1356,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bflblColor;
         private Bunifu.UI.WinForms.BunifuLabel bflblMarca;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
-        private Bunifu.UI.WinForms.BunifuRating bunifuRating1;
+        private Bunifu.UI.WinForms.BunifuRating ratingDriver;
         private System.Windows.Forms.Label lblCalificacionConductor;
         private System.Windows.Forms.Label lblDistanciaViaje;
         private System.Windows.Forms.Label lblTiempoViaje;

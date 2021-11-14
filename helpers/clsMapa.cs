@@ -30,13 +30,10 @@ namespace final_motoDix.helpers
     }
 
 
-
     class clsMapa
     {
         private datosRuta datos;
-
         PointLatLng posicionActual;
-
         PointLatLng puntoInicio;
         PointLatLng puntoFinal;
         GDirections directions;
@@ -170,6 +167,12 @@ namespace final_motoDix.helpers
             {
                 throw new ArgumentException("No se ha seleccionado una ruta", nameof(capaRuta));
             }
+        }
+
+        public void limpiarPuntos(GMapControl map)
+        {
+            map.Overlays.Clear();
+
         }
     }
 }

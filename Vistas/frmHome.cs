@@ -17,6 +17,8 @@ namespace final_motoDix.Vistas
         public Persona infoPersona;
         public Iconductor infoDriver;
         int rolActivo = 0;
+        Form viajeFormulario;
+        Form history;
 
         public frmHome(Persona infoPersona)
         {
@@ -64,7 +66,6 @@ namespace final_motoDix.Vistas
         private void frmHome_Load(object sender, EventArgs e)
         {
             
-
             if(rolActivo == 1)
             {
                 Form viaje = new frmTravel(infoPersona);
@@ -74,6 +75,7 @@ namespace final_motoDix.Vistas
                 panelContenedor.Controls.Add(viaje);
                 viaje.Show();
                 viaje.BringToFront();
+                viajeFormulario = viaje;
                 bflblNombreUsuario.Text = infoPersona.FirstName + " " + infoPersona.SecondName + " " + infoPersona.Surname + " " + infoPersona.SecondSurname;
                 bflblTipoUsuario.Text = infoPersona.RolName;
                 bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
@@ -95,16 +97,33 @@ namespace final_motoDix.Vistas
 
         }
 
-     
 
         private void bfbtnMisViajes_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel<frmHistory>();
+            if(history == null)
+            {
+                Form verViajes = new frmHistory();
+                verViajes.TopLevel = false;
+                verViajes.FormBorderStyle = FormBorderStyle.None;
+                verViajes.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(verViajes);
+                verViajes.Show();
+                verViajes.BringToFront();
+                history = verViajes;
+            }
+            else
+            {
+                history.BringToFront();
+            }
+                
+            
         }
 
         private void bfbtnViajar_Click(object sender, EventArgs e)
         {
-            //AbrirFormInPanel<frmTravel>();
+
+            viajeFormulario.BringToFront();
+
         }
 
         private void ptbMinizar_Click(object sender, EventArgs e)

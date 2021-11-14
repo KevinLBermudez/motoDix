@@ -38,6 +38,7 @@ namespace final_motoDix.Controladores
             viaje = new clsViajeModel(travelId, idDocumentPersonDriver, licencePlate, "Aceptado");
 
         }
+     
 
         public string ejecutarSolicitarViaje()
         {
@@ -110,6 +111,30 @@ namespace final_motoDix.Controladores
 
             }
 
+        }
+
+        public bool ejecutarCompletarViaje(string travelId, double valueTravel, string timeTravel, int rating)
+        {
+            viaje = new clsViajeModel(travelId, valueTravel, "Completado", timeTravel, rating,0);
+
+            try
+            {
+                if (viaje.completarViaje())
+                {
+                    MessageBox.Show("Gracias por usar nuestro servicio");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error interno");
+                return false;
+
+            }
         }
 
     }
