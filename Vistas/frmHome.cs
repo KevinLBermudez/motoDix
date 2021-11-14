@@ -14,7 +14,7 @@ namespace final_motoDix.Vistas
     public partial class frmHome : Form
     {
         public Persona infoPersona;
-
+        public Driver infoDriver;
 
         public frmHome(Persona infoPersona)
         {
@@ -22,8 +22,32 @@ namespace final_motoDix.Vistas
 
             InitializeComponent();
         }
-    
-        private void AbrirFormInPanel<MiFormulario> () where MiFormulario : Form, new()
+
+        private void AbrirFormInPanel<MiFormulario>() where MiFormulario : Form, new()
+        {
+            Form formulario;
+            formulario = panelContenedor.Controls.OfType<MiFormulario>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                formulario = new MiFormulario();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(formulario);
+                panelContenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+
+            }
+
+        }
+
+        private void AbrirFormInPanel1<MiFormulario>(dynamic[] args) where MiFormulario : Form, new()
         {
             Form formulario;
             formulario = panelContenedor.Controls.OfType<MiFormulario>().FirstOrDefault();
@@ -61,22 +85,7 @@ namespace final_motoDix.Vistas
             bflblNombreUsuario.Text = infoPersona.FirstName +" " + infoPersona.SecondName + " " + infoPersona.Surname + " " + infoPersona.SecondSurname;
             bflblTipoUsuario.Text = infoPersona.RolName;
             bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
-            
-        }
-
-        private void bunifuLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
+           
         }
 
         private void bfbtnMisViajes_Click(object sender, EventArgs e)
@@ -86,6 +95,7 @@ namespace final_motoDix.Vistas
 
         private void bfbtnViajar_Click(object sender, EventArgs e)
         {
+            
             //AbrirFormInPanel<frmTravel>();
         }
 
@@ -112,13 +122,39 @@ namespace final_motoDix.Vistas
 
         private void bfpbImagenPerfil_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel<frmPerfil>();    
+            if (bflblTipoUsuario.Text != "Conductor")
+            {
+                frmPerfil perfil = new frmPerfil(infoPersona);
+                //perfil.Show();
+                //AbrirFormInPanel <frmPerfil>();  
+
+                perfil.TopLevel = false;
+                perfil.FormBorderStyle = FormBorderStyle.None;
+                perfil.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(perfil);
+                panelContenedor.Tag = perfil;
+                perfil.Show();
+                perfil.BringToFront();
+            }
+
+            else
+            {
+                frmPerfilConductor perfilConductor = new frmPerfilConductor(infoDriver);
+                //perfil.Show();
+                //AbrirFormInPanel <frmPerfil>();  
+                perfilConductor.TopLevel = false;
+                perfilConductor.FormBorderStyle = FormBorderStyle.None;
+                perfilConductor.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(perfilConductor);
+                panelContenedor.Tag = perfilConductor;
+                perfilConductor.Show();
+                perfilConductor.BringToFront();
+            }
         }
 
         private void bfbtnTrabajaConNosotros_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel<frmRegisterMotorcyclist>();
-
         }
 
         private void bunifuButton21_Click(object sender, EventArgs e)
@@ -129,6 +165,11 @@ namespace final_motoDix.Vistas
         private void bfbtnVerSolicitudes_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel<frmSolicitudViajes>();
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

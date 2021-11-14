@@ -7,19 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using final_motoDix.Modelos;
 
 namespace final_motoDix.Vistas
 {
     public partial class frmPerfil : Form
     {
+
+        public Persona infoPersona;
+
+        public frmPerfil(Persona infoPersona)
+        {
+            this.infoPersona = infoPersona;
+            InitializeComponent();
+        }
+
         public frmPerfil()
         {
             InitializeComponent();
         }
 
+ 
+
         private void frmPerfil_Load(object sender, EventArgs e)
         {
-
+            bftxtPrimerNombrePerfil.Text = infoPersona.FirstName;
+            bftxtSegundoNombrePerfil.Text = infoPersona.SecondName;
+            bftxtPrimerApellidoPerfil.Text = infoPersona.Surname;
+            bftxtSegundoApellidoperfil.Text = infoPersona.SecondName;
+            bfdtpFechaNacimientoPerfil.Value = infoPersona.DateOfBirth;
+            bftxtDocumentoPerfil.Text = infoPersona.IdDocumentPersona;
+            cmbGeneroPerfil.Text = infoPersona.Gender;
+            bftxtxEmailPerfil.Text = infoPersona.Email;
+            bftxtConfirmarEmailPerfil.Text = infoPersona.Email;
+            //bftxtPasswordPerfil.Text = infoPersona.;
+            //bftxtConfirmPasswordPerfil = infoPersona.Email;
         }
 
         private void ptbCerrarPerfil_Click(object sender, EventArgs e)

@@ -70,5 +70,10 @@ namespace final_motoDix.Vistas
                 this.Close();
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
