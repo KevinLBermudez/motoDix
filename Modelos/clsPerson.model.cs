@@ -214,8 +214,9 @@ namespace final_motoDix.Modelos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
-                return false;
+
+                throw new Exception("Error interno, por favor envia un reporte para mejorar nuestro servicio");
+
             }
 
         }

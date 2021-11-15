@@ -31,16 +31,24 @@ namespace final_motoDix.Modelos
 
         public DataTable ConsultarDepartamentos()
         {
+            try
+            {
+                validarConexion();
+                NpgsqlCommand query = new NpgsqlCommand();
+                query.Connection = conexionDepartamento;
+                query.CommandText = "select idDepartment,name from tblDepartment;";
+                NpgsqlDataAdapter departamentos = new NpgsqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                departamentos.Fill(dt);
 
-            validarConexion();
-            NpgsqlCommand query = new NpgsqlCommand();
-            query.Connection = conexionDepartamento;
-            query.CommandText = "select idDepartment,name from tblDepartment;";
-            NpgsqlDataAdapter departamentos = new NpgsqlDataAdapter(query);
-            DataTable dt = new DataTable();
-            departamentos.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
 
-            return dt;
+                throw new Exception("Error interno, por favor envia un reporte para mejorar nuestro servicio");
+            }
+           
         }
 
     }

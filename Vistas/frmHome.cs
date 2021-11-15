@@ -19,14 +19,15 @@ namespace final_motoDix.Vistas
         int rolActivo = 0;
         Form viajeFormulario;
         Form history;
+        Form viajeConductor = null;
 
         public frmHome(Persona infoPersona)
         {
             this.infoPersona = infoPersona;
             rolActivo = 1;
             InitializeComponent();
-            bfbtnVerSolicitudes.Enabled = false;
-            bfbtnVerSolicitudes.Visible = false;
+            bfbtnDetallesViaje.Visible = false;
+            bfbtnDetallesViaje.Enabled = false;
 
         }
         public frmHome(Iconductor infoDriver)
@@ -82,14 +83,14 @@ namespace final_motoDix.Vistas
 
             }else if(rolActivo == 2)
             {
-                Form viajes = new frmSolicitudViajes(infoDriver);
+                Form viajes = new frmViajeConductor(infoDriver);
                 viajes.TopLevel = false;
                 viajes.FormBorderStyle = FormBorderStyle.None;
                 viajes.Dock = DockStyle.Fill;
                 panelContenedor.Controls.Add(viajes);
                 viajes.Show();
                 viajes.BringToFront();
-
+                viajeConductor = viajes;
                 bflblNombreUsuario.Text = infoDriver.firstname + " " + infoDriver.secondname + " " + infoDriver.surname + " " + infoDriver.secondname;
                 bflblTipoUsuario.Text = "Conductor";
                 bfpbImagenPerfil.ImageLocation = infoDriver.profilePicture;
@@ -186,8 +187,6 @@ namespace final_motoDix.Vistas
                 perfilConductor.BringToFront();
             }
             
-
-            
         }
 
         private void bfbtnTrabajaConNosotros_Click(object sender, EventArgs e)
@@ -200,25 +199,13 @@ namespace final_motoDix.Vistas
             AbrirFormInPanel<frmAyuda>();
         }
 
-        private void bfbtnVerSolicitudes_Click(object sender, EventArgs e)
+
+        private void bfbtnDetallesViaje_Click(object sender, EventArgs e)
         {
-            frmSolicitudViajes solicitudViajes = new frmSolicitudViajes(infoDriver);
-            solicitudViajes.TopLevel = false;
-            solicitudViajes.FormBorderStyle = FormBorderStyle.None;
-            solicitudViajes.Dock = DockStyle.Fill;
-            panelContenedor.Controls.Add(solicitudViajes);
-            solicitudViajes.Show();
-            solicitudViajes.BringToFront();
-
-        }
-
-        private void bflblNombreUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+           if(viajeConductor != null)
+           {
+                viajeConductor.BringToFront();
+           }
 
         }
 
@@ -226,6 +213,5 @@ namespace final_motoDix.Vistas
         {
 
         }
-
     }
 }

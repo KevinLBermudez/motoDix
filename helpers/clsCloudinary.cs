@@ -56,9 +56,17 @@ namespace final_motoDix.helpers
 
             if (result == DialogResult.OK)
             {
-                imagenCargada.Image = Image.FromFile(fileDialog.FileName);
+                try
+                {
+                    imagenCargada.Image = Image.FromFile(fileDialog.FileName);
 
-                 return ruta = fileDialog.FileName;
+                    return ruta = fileDialog.FileName;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error al cargar la imagen, seleccione otra por favor");
+                }
+             
 
             }
 

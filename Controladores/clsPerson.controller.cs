@@ -36,8 +36,8 @@ namespace final_motoDix.Controladores
             }
             else
             {
-                MessageBox.Show("Error interno");
-                return false;
+                throw new Exception("Error al crear al usuario, intentalo más tarde");
+
             }
         }
 

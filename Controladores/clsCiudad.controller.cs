@@ -21,9 +21,19 @@ namespace final_motoDix.Controladores
 
         public void ejecutarConsultarDepartamentos(ComboBox cmb, int idDepartment)
         {
-            cmb.DataSource = ciudad.ConsultarCiudadesDepartamento(idDepartment);
-            cmb.DisplayMember = "name";
-            cmb.ValueMember = "idcity";
+            try
+            {
+                cmb.DataSource = ciudad.ConsultarCiudadesDepartamento(idDepartment);
+                cmb.DisplayMember = "name";
+                cmb.ValueMember = "idcity";
+
+            }
+            catch (Exception)
+            {
+                throw new Exception("Error al cargar las ciudades");
+
+            }
+
         }
     }
 }

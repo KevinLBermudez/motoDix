@@ -34,21 +34,28 @@ namespace final_motoDix.Modelos
 
         public DataTable ConsultarCiudadesDepartamento(int codigoDepartamento)
         {
-            string idDeparment = codigoDepartamento.ToString();
-            validarConexion();
-            NpgsqlCommand query = new NpgsqlCommand();
-            query.Connection = conexionCiudad;
-            query.CommandText = "select idcity,name from tblcity where idDepartment = @idDepartment;";
-            query.Parameters.Add("@idDepartment", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDeparment;
+            try
+            {
+                string idDeparment = codigoDepartamento.ToString();
+                validarConexion();
+                NpgsqlCommand query = new NpgsqlCommand();
+                query.Connection = conexionCiudad;
+                query.CommandText = "select idcity,name from tblcity where idDepartment = @idDepartment;";
+                query.Parameters.Add("@idDepartment", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDeparment;
 
-            NpgsqlDataAdapter ciudades = new NpgsqlDataAdapter(query);
-            DataTable dt = new DataTable();
-            ciudades.Fill(dt);
+                NpgsqlDataAdapter ciudades = new NpgsqlDataAdapter(query);
+                DataTable dt = new DataTable();
+                ciudades.Fill(dt);
 
-            return dt;
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Error interno, por favor envia un reporte para mejorar nuestro servicio");
+
+            }
+
         }
-        
-
 
     }
 }

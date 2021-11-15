@@ -34,6 +34,11 @@ namespace final_motoDix.Modelos
         private int rating;
         private double discount;
 
+        private string latInicio;
+        private string longInicio;
+        private string latFinal;
+        private string longFinal;
+
         public string TravelId { get => travelId; set => travelId = value; }
         public string IdDocumentPerson { get => idDocumentPerson; set => idDocumentPerson = value; }
         public string IdDocumentPersonDriver { get => idDocumentPersonDriver; set => idDocumentPersonDriver = value; }
@@ -49,15 +54,27 @@ namespace final_motoDix.Modelos
         public int Rol { get => rol; set => rol = value; }
         public DateTime FechaViajeDesde { get => fechaViajeDesde; set => fechaViajeDesde = value; }
         public DateTime FechaViajeHasta { get => fechaViajeHasta; set => fechaViajeHasta = value; }
+        public string LatInicio { get => latInicio; set => latInicio = value; }
+        public string LongInicio { get => longInicio; set => longInicio = value; }
+        public string LatFinal { get => latFinal; set => latFinal = value; }
+        public string LongFinal { get => longFinal; set => longFinal = value; }
 
-        public clsViajeModel(string travelId, string idDocumentPerson, string startPoint, string arrivalPoint, DateTime dateTimeTrip, string state)
+        public clsViajeModel(string travelId, string idDocumentPerson, string startPoint, string arrivalPoint, DateTime dateTimeTrip,double valorViaje, 
+            double discount, string state, string latInicio,string longInicio,string latFinal,string longFinal)
         {
             TravelId = travelId;
             IdDocumentPerson = idDocumentPerson;
             StartPoint = startPoint;
             ArrivalPoint = arrivalPoint;
             DateTimeTrip = dateTimeTrip;
+            ValueTravel = valorViaje;
+            Discount = discount;
             State = state;
+            LatInicio = latInicio;
+            LongInicio = longInicio;
+            LatFinal = latFinal;
+            LongFinal = longFinal;
+
             conexionViaje = clsConexion.realizarConexion();
 
         }
@@ -83,14 +100,12 @@ namespace final_motoDix.Modelos
 
         }
 
-        public clsViajeModel(string travelId, double valueTravel, string state, string timeTravel,int rating,double discount) 
+        public clsViajeModel(string travelId,  string state, string timeTravel,int rating) 
         {
             TravelId = travelId;
-            ValueTravel = valueTravel;
             State = state;
             TimeTravel = timeTravel;
             Rating = rating;
-            Discount = discount;
             conexionViaje = clsConexion.realizarConexion();
 
         }
@@ -119,14 +134,22 @@ namespace final_motoDix.Modelos
             NpgsqlCommand query = new NpgsqlCommand();
             query.Connection = conexionViaje;
 
-            query.CommandText = "CALL public.app_travel_init(@travelId,@idDocumentPerson,@startPoint,@arrivalPoint,@dateTimeTrip ,@state)";
+            query.CommandText = "CALL public.app_travel_init(@travelId,@idDocumentPerson,@startPoint,@arrivalPoint,@dateTimeTrip,@valuetravel" +
+                ",@latInicio,@longInicio,@latFinal,@longFinal,@discount ,@state)";
 
             query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
             query.Parameters.Add("@idDocumentPerson", NpgsqlTypes.NpgsqlDbType.Varchar).Value = IdDocumentPerson;
             query.Parameters.Add("@startPoint", NpgsqlTypes.NpgsqlDbType.Varchar).Value = startPoint;
             query.Parameters.Add("@arrivalPoint", NpgsqlTypes.NpgsqlDbType.Varchar).Value = arrivalPoint;
             query.Parameters.Add("@dateTimeTrip", NpgsqlTypes.NpgsqlDbType.Timestamp).Value = dateTimeTrip;
+            query.Parameters.Add("@valueTravel", NpgsqlTypes.NpgsqlDbType.Integer).Value = valueTravel;
+            query.Parameters.Add("@discount", NpgsqlTypes.NpgsqlDbType.Integer).Value = discount;
             query.Parameters.Add("@state", NpgsqlTypes.NpgsqlDbType.Varchar).Value = state;
+
+            query.Parameters.Add("@latInicio", NpgsqlTypes.NpgsqlDbType.Varchar).Value = latInicio;
+            query.Parameters.Add("@longInicio", NpgsqlTypes.NpgsqlDbType.Varchar).Value = longInicio;
+            query.Parameters.Add("@latFinal", NpgsqlTypes.NpgsqlDbType.Varchar).Value = latFinal;
+            query.Parameters.Add("@longFinal", NpgsqlTypes.NpgsqlDbType.Varchar).Value = longFinal;
 
 
             try
@@ -170,7 +193,6 @@ namespace final_motoDix.Modelos
                
             }
 
-
         }
 
         public bool aceptarViaje()
@@ -197,7 +219,9 @@ namespace final_motoDix.Modelos
             }
             catch (NpgsqlException err)
             {
+
                 throw new Exception(err.Message);
+
             }
         }
 
@@ -246,13 +270,53 @@ namespace final_motoDix.Modelos
                 return viaje;
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.ToString());
+
+                throw new Exception("Error interno, por favor envia un reporte para mejorar nuestro servicio");
+
             }
 
             return viaje;
         }
+
+        public EstViaje monitorearViajeConductor()
+        {
+            validarConexion();
+
+            NpgsqlCommand query = new NpgsqlCommand();
+
+            query.Connection = conexionViaje;
+
+            query.CommandText = "select * from  Ver_estadoViajeConductor(@travelId)";
+
+            query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
+
+            try
+            {
+                NpgsqlDataReader data = query.ExecuteReader();
+            
+                while (data.Read())
+                {
+
+                    viaje = new EstViaje(data[0].ToString(), data[1].ToString(), data[2].ToString(), data[3].ToString(),
+                        double.Parse(data[4].ToString()),double.Parse( data[5].ToString()), data[6].ToString());
+
+                }
+                data.Close();
+
+                return viaje;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error interno, por favor envia un reporte para mejorar nuestro servicio");
+            }
+
+            return viaje;
+        }
+
 
         public bool completarViaje()
         {
@@ -261,11 +325,9 @@ namespace final_motoDix.Modelos
             NpgsqlCommand query = new NpgsqlCommand();
             query.Connection = conexionViaje;
 
-            query.CommandText = "CALL public.app_complet_travel(@travelId,@valueTravel,@timeTravel,@rating,@state)";
+            query.CommandText = "CALL public.app_complet_travel(@travelId,@timeTravel,@rating,@state)";
 
             query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
-            query.Parameters.Add("@valueTravel", NpgsqlTypes.NpgsqlDbType.Integer).Value = valueTravel;
-            query.Parameters.Add("@discount", NpgsqlTypes.NpgsqlDbType.Integer).Value = discount;
             query.Parameters.Add("@timeTravel", NpgsqlTypes.NpgsqlDbType.Varchar).Value = timeTravel;
             query.Parameters.Add("@rating", NpgsqlTypes.NpgsqlDbType.Integer).Value = rating;
             query.Parameters.Add("@state", NpgsqlTypes.NpgsqlDbType.Varchar).Value = state;
@@ -278,14 +340,12 @@ namespace final_motoDix.Modelos
                 return true;
 
             }
-            catch (Exception err)
+            catch (Exception )
             {
-                MessageBox.Show(err.ToString());
-                return false;
+                throw new Exception("Error al completar el viaje");
             }
 
         }
-
 
 
         public DataTable obtenerHistorial()

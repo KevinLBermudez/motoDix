@@ -20,12 +20,19 @@ namespace final_motoDix.Controladores
 
         public void ejecutarConsultarDepartamentos(ComboBox cmb)
         {
-            cmb.DataSource = departamento.ConsultarDepartamentos();
-            cmb.DisplayMember = "name";
-            cmb.ValueMember = "idDepartment";
+            try
+            {
+                cmb.DataSource = departamento.ConsultarDepartamentos();
+                cmb.DisplayMember = "name";
+                cmb.ValueMember = "idDepartment";
+            }
+            catch (Exception )
+            {
+                throw new Exception("Error al cargar los departamentos");
+
+            }
+
         }
-
-
 
     }
 }

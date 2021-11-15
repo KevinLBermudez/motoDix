@@ -33,7 +33,8 @@ namespace final_motoDix.Controladores
             }
             else
             {
-                MessageBox.Show("Error interno");
+                throw new Exception("Error al crear al conductor, intentalo más tarde");
+
             }
         }
 
@@ -41,9 +42,19 @@ namespace final_motoDix.Controladores
         {
             Iconductor conductor;
 
-            conductor = driver.loginDriver();
+            try
+            {
+                conductor = driver.loginDriver();
 
-            return conductor;
+                return conductor;
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
+
+            }
+
+
         }
     }
 }

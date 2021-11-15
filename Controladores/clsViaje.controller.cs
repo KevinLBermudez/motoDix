@@ -16,12 +16,12 @@ namespace final_motoDix.Controladores
         private clsViajeModel viaje;
         EstViaje eViaje;
 
-        public clsViajeController( string idDocumentPerson, string startPoint, string arrivalPoint, string state)
+        public clsViajeController( string idDocumentPerson, string startPoint, string arrivalPoint,double valueTravel,double discount, string state, string latInicio, string longInicio, string latFinal, string longFinal)
         {
             var guid = Guid.NewGuid();
             DateTime horaActual = DateTime.Now;
 
-            viaje = new clsViajeModel(guid.ToString(),idDocumentPerson,startPoint,arrivalPoint,horaActual,state);
+            viaje = new clsViajeModel(guid.ToString(),idDocumentPerson,startPoint,arrivalPoint,horaActual, valueTravel,discount,state,  latInicio,  longInicio,  latFinal,  longFinal);
 
         }
         public clsViajeController()
@@ -38,7 +38,7 @@ namespace final_motoDix.Controladores
             viaje = new clsViajeModel(travelId, idDocumentPersonDriver, licencePlate, "Aceptado");
 
         }
-     
+
 
         public string ejecutarSolicitarViaje()
         {
@@ -49,11 +49,9 @@ namespace final_motoDix.Controladores
             }
             catch (Exception err)
             {
+                throw new Exception(err.Message);
 
-                MessageBox.Show("Error al solicitar viaje");
-                return null;
             }
-           
 
         }
 
@@ -69,14 +67,20 @@ namespace final_motoDix.Controladores
                 data.Columns[4].HeaderText = "Punto de inicio";
                 data.Columns[5].HeaderText = "Destino";
                 data.Columns[6].HeaderText = "Fecha de la solicitud";
+
                 data.Columns[0].Visible = false;
                 data.Columns[1].Visible = false;
+                data.Columns[7].Visible = false;
+                data.Columns[8].Visible = false;
+                data.Columns[9].Visible = false;
+                data.Columns[10].Visible = false;
 
 
             }
             catch (Exception err)
             {
-                MessageBox.Show("Error interno");
+                throw new Exception(err.Message);
+
             }
         }
 
@@ -100,20 +104,19 @@ namespace final_motoDix.Controladores
                 eViaje = viaje.monitorearViaje();
                 return eViaje;
             }
-            catch (Exception)
+            catch (Exception err)
             {
 
-                MessageBox.Show("Error interno");
+                throw new Exception(err.Message);
 
-                return eViaje;
 
             }
 
         }
 
-        public bool ejecutarCompletarViaje(string travelId, double valueTravel, string timeTravel, int rating)
+        public bool ejecutarCompletarViaje(string travelId, string timeTravel, int rating)
         {
-            viaje = new clsViajeModel(travelId, valueTravel, "Completado", timeTravel, rating,0);
+            viaje = new clsViajeModel(travelId, "Completado", timeTravel, rating);
 
             try
             {
@@ -160,6 +163,25 @@ namespace final_motoDix.Controladores
                 throw new Exception(err.Message);
             }
 
+        }
+
+
+        public EstViaje ejecutarMonitorearViajeConductor(string travelId)
+        {
+            try
+            {
+                viaje = new clsViajeModel(travelId);
+
+                eViaje = viaje.monitorearViajeConductor();
+                return eViaje;
+            }
+            catch (Exception err)
+            {
+
+                throw new Exception(err.Message);
+
+
+            }
         }
 
     }

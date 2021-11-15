@@ -25,6 +25,7 @@ namespace final_motoDix.Vistas
         clsMapa mapa;
         double baseKilometro = 2500;
         double valorViaje = 4000;
+        double descuento = 0;
         clsViajeController viaje;
         Persona infoPersona;
         EstViaje viajeEstructura;
@@ -47,7 +48,7 @@ namespace final_motoDix.Vistas
         {
             mapa = new clsMapa(gMapControl);
 
-            mapa.cargarConfiguracionesMapa(gMapControl);
+            mapa.cargarConfiguracionesMapa();
 
         }
 
@@ -113,7 +114,12 @@ namespace final_motoDix.Vistas
                     {
                         string state = "Solicitado";
                         mapa.validarRuta();
-                        viaje = new clsViajeController(infoPersona.IdDocumentPersona, mapa.infoViajeRuta[2].Dato, mapa.infoViajeRuta[3].Dato, state);
+
+                        viaje = new clsViajeController(infoPersona.IdDocumentPersona, mapa.infoViajeRuta[2].Dato, mapa.infoViajeRuta[3].Dato,
+                            valorViaje, descuento, state,mapa.puntoInicio.Lat.ToString(),mapa.puntoInicio.Lng.ToString(),mapa.puntoFinal.Lat.ToString(),
+                            mapa.puntoFinal.Lng.ToString());
+
+
                         travelId = viaje.ejecutarSolicitarViaje();
                         viaje = new clsViajeController(travelId);
                         timeMeasure.Start();
@@ -169,11 +175,6 @@ namespace final_motoDix.Vistas
 
                         banderaAceptacionViaje = true;
 
-                        double distancia =double.Parse(mapa.infoViajeRuta[0].Dato);
-
-                        valorViaje = valorViaje + (distancia / 1000 * baseKilometro);
-                        lblFacturaValor.Text = valorViaje.ToString();
-
                     }
 
                 }
@@ -189,7 +190,7 @@ namespace final_motoDix.Vistas
                 TimeSpan time = timeMeasure.Elapsed;
                 string timeElapsed = string.Format("{0:00}:{1:00}:{2:00}:{3:00}",time.Hours,time.Minutes,time.Seconds,time.Milliseconds/10);
                 int rating = ratingDriver.Value;
-                viaje.ejecutarCompletarViaje(travelId, valorViaje, timeElapsed, rating);
+                viaje.ejecutarCompletarViaje(travelId, timeElapsed, rating);
                 banderaAceptacionViaje = false;
                 bfSnackbarTravel.Show(this, "Su viaje a finalizado con exito, Feliz dia", BunifuSnackbar.MessageTypes.Success, 4000,
                 "Completado", BunifuSnackbar.Positions.BottomRight);
@@ -223,7 +224,7 @@ namespace final_motoDix.Vistas
             viajeActivo = false;
             mapa = new clsMapa(gMapControl);
             mapa.limpiarPuntos(gMapControl);
-            mapa.cargarConfiguracionesMapa(gMapControl);
+            mapa.cargarConfiguracionesMapa();
 
         }
 
@@ -258,6 +259,11 @@ namespace final_motoDix.Vistas
                 lblTiempoValor.Text = mapa.infoViajeRuta[1].Dato;
                 bftxtInicio.Text = mapa.infoViajeRuta[2].Dato;
                 bftxtPuntoLlegada.Text = mapa.infoViajeRuta[3].Dato;
+
+                double distancia = double.Parse(mapa.infoViajeRuta[0].Dato);
+
+                valorViaje = valorViaje + (distancia / 1000 * baseKilometro);
+                lblFacturaValor.Text = valorViaje.ToString();
             }
         }
     }

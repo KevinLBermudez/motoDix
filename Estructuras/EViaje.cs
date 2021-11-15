@@ -21,6 +21,13 @@ namespace final_motoDix.Estructuras
             private string color;
             private string licencePLate;
             private string state;
+            private string firstNameCustomer;
+            private string surnameCustomer;
+            private string profilePictureCustomer;
+            private double valueTravel;
+            private double discount;
+
+
 
             public string TravelId { get => travelId; set => travelId = value; }
             public string FirstNameDriver { get => firstNameDriver; set => firstNameDriver = value; }
@@ -32,8 +39,13 @@ namespace final_motoDix.Estructuras
             public string Color { get => color; set => color = value; }
             public string LicencePLate { get => licencePLate; set => licencePLate = value; }
             public string State { get => state; set => state = value; }
+            public string FirstNameCustomer { get => firstNameCustomer; set => firstNameCustomer = value; }
+            public string SurnameCustomer { get => surnameCustomer; set => surnameCustomer = value; }
+            public string ProfilePictureCustomer { get => profilePictureCustomer; set => profilePictureCustomer = value; }
+            public double ValueTravel { get => valueTravel; set => valueTravel = value; }
+            public double Discount { get => discount; set => discount = value; }
 
-            public EstViaje(string travelId, string firstNameDriver, string secondNameDriver, string surnameDriver, string secondSurname, string profilePictureDriver, string brand, string color, string licencePLate, string state) : this()
+            public EstViaje(string travelId, string firstNameDriver, string secondNameDriver, string surnameDriver, string secondSurname, string profilePictureDriver, string brand, string color, string licencePLate, string state) :this()
             {
                 TravelId = travelId;
                 FirstNameDriver = firstNameDriver;
@@ -45,6 +57,17 @@ namespace final_motoDix.Estructuras
                 Color = color;
                 LicencePLate = licencePLate;
                 State = state;
+            }
+
+            public EstViaje(string travelId, string firstNameCustomer, string surnameCustomer, string profilePictureCustomer,  double valueTravel, double discount, string state) : this()
+            {
+                TravelId = travelId;
+                State = state;
+                FirstNameCustomer = firstNameCustomer;
+                SurnameCustomer = surnameCustomer;
+                ProfilePictureCustomer = profilePictureCustomer;
+                ValueTravel = valueTravel;
+                Discount = discount;
             }
         }
 

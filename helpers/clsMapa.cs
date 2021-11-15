@@ -35,9 +35,9 @@ namespace final_motoDix.helpers
 
         private GMapControl map;
         private datosRuta datos;
-        PointLatLng posicionActual;
-        PointLatLng puntoInicio;
-        PointLatLng puntoFinal;
+        public PointLatLng posicionActual;
+        public PointLatLng puntoInicio;
+        public PointLatLng puntoFinal;
         PointLatLng error;
         GDirections directions;
         GMapOverlay capaInicio;
@@ -54,7 +54,7 @@ namespace final_motoDix.helpers
         }
 
 
-        public void cargarConfiguracionesMapa(GMapControl map )
+        public void cargarConfiguracionesMapa()
         {
             
             GMapProviders.GoogleMap.ApiKey = "AIzaSyD53-lwKKlRgkrmqM2kb19laYtq_BdG_RY";
@@ -123,6 +123,7 @@ namespace final_motoDix.helpers
                 puntoInicio = punto;
                 map.Position = puntoInicio;
 
+
             }else if (puntoFinal.IsEmpty)
             {
                 var markers = new GMapOverlay("markers");
@@ -177,6 +178,7 @@ namespace final_motoDix.helpers
                 map.Overlays.Add(capaRuta);
                 map.Zoom = map.Zoom + 1;
                 map.Zoom = map.Zoom - 1;
+                map.Position = puntoInicio;
 
                 datos = new datosRuta("Distancia", directions.DistanceValue.ToString());
                 infoViajeRuta.Add(datos);
@@ -192,6 +194,39 @@ namespace final_motoDix.helpers
             catch (Exception)
             {
                 throw new Exception( "No se pudo calcular la ruta");
+            }
+
+        }
+
+        public bool calcularRutaTexto(PointLatLng inicio, PointLatLng final)
+        {
+            try
+            {
+
+                map.Overlays.Clear();
+
+                var markers = new GMapOverlay("markers");
+                GMapMarker marcador = new GMarkerGoogle(inicio, GMarkerGoogleType.black_small);
+                marcador.ToolTipText = "Punto Inicio";
+                marcador.ToolTipMode = MarkerTooltipMode.Always;
+                markers.Markers.Add(marcador);
+                map.Overlays.Add(markers);
+                puntoInicio = inicio;
+
+                GMapMarker marcador2 = new GMarkerGoogle(final, GMarkerGoogleType.black_small);
+                marcador2.ToolTipText = "Destino";
+                marcador2.ToolTipMode = MarkerTooltipMode.Always;
+                markers.Markers.Add(marcador2);
+                map.Overlays.Add(markers);
+                puntoFinal = final;
+
+                calcularRuta();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                throw new Exception("No se pudo calcular la ruta");
             }
 
         }
