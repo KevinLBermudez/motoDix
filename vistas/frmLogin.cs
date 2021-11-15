@@ -179,7 +179,5 @@ namespace final_motoDix.Vistas
         {
             vLogin();
         }
-
-      
     }
 }

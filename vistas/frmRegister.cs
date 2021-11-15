@@ -28,14 +28,8 @@ namespace final_motoDix.Vistas
             InitializeComponent();
 
         }
-
-        private void bflblCreateAccount_Click(object sender, EventArgs e)
-        {
-
-        }
         private void frmRegister_Load(object sender, EventArgs e)
         {
-            bfbtnRegisterNext.Enabled = false;
             departamento = new  clsDepartamentoController();
             departamento.ejecutarConsultarDepartamentos(cmbDepartamento);
             ciudad = new clsCiudadController();
@@ -44,27 +38,44 @@ namespace final_motoDix.Vistas
             cmbGenero.Items.Add("Femenino");
 
         }
-
-        private void bftxtConfirmPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bflblCreateAccount2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bfbtnRegisterNext_Click(object sender, EventArgs e)
         {
-            bfpgPersonInfo.PageIndex = 1;
+            if (bftxtPrimerNombre.Text != string.Empty && bftxtPrimerApellido.Text != string.Empty
+                && bftxtDocumento.Text != string.Empty && (cmbGenero.SelectedIndex != -1) && (cmbDepartamento.SelectedIndex != -1)
+                && (cmbCiudad.SelectedIndex != -1))
+            {
+                validacionRegister.SetError(panelDatosPersonales, "");
+                bfpgPersonInfo.PageIndex = 1;
+            }
+            else
+            {
+                if (bftxtPrimerNombre.Text == string.Empty)
+                {
+                    validacionRegister.SetError(panelDatosPersonales, "Es necesario introducir tu primer nombre");
+                }
+                else if (bftxtPrimerApellido.Text == string.Empty)
+                {
+                    validacionRegister.SetError(panelDatosPersonales, "Es necesario introducir tu primer apellido");
+                }
+                else if (bftxtDocumento.Text == string.Empty)
+                {
+                    validacionRegister.SetError(panelDatosPersonales, "Es necesario introducir tu documento de identidad");
+                }
+                else if (cmbGenero.SelectedIndex <= -1)
+                {
+                    validacionRegister.SetError(panelDatosPersonales, "Es necesario introducir tu genero");
+                }
+                else if (cmbDepartamento.SelectedIndex <= -1)
+                {
+                    validacionRegister.SetError(panelDatosPersonales, "Es necesario introducir tu departamento");
+                }
+                else if (cmbCiudad.SelectedIndex <= -1)
+                {
+                    validacionRegister.SetError(panelDatosPersonales, "Es necesario introducir tu ciudad");
+                }       
+            }
+            
         }
-
-        private void bftpInfoPersonal_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bfbtnInfoFinish_Click_1(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin(1);
@@ -81,14 +92,6 @@ namespace final_motoDix.Vistas
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void bftxtPrimerNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void cmbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             int num;
@@ -125,131 +128,61 @@ namespace final_motoDix.Vistas
 
         private void bfbtnInfoFinishPerson_Click(object sender, EventArgs e)
         {
-            string idDocumentPerson = bftxtDocumento.Text;
-            DateTime dateOfBirth = bfdpkFechaNacimiento.Value;
-            string firstName = bftxtPrimerNombre.Text;
-            string secondName = bftxtSegundoNombre.Text == "" ? "null" : bftxtSegundoNombre.Text;
-            string surname = bftxtPrimerApellido.Text;
-            string secondSurname = bftxtSegundoApellido.Text == "" ? "null" : bftxtSegundoApellido.Text;
-            string gender = cmbGenero.Text;
-            string idCity = cmbCiudad.SelectedValue.ToString();
-            //login
-            string email = bftxtxEmail.Text;
-            string credentialPassword = bftxtPassword.Text;
-            int idRol = 1;
-
-            /*if(bftxtxEmail.Text != bftxtConfirmarEmail.Text)
+            if (bftxtxEmail.Text != bftxtConfirmarEmail.Text)
             {
-                errorProvider.SetError(bftxtConfirmarEmail, "El email no coincide");
+                validacionLogin.SetError(panelCredenciales, "Los correos no coinciden");
+
+            }
+            else if (bftxtPassword.Text != bftxtConfirmPassword.Text)
+            {
+                validacionLogin.SetError(panelCredenciales, "Las contraseñas no coinciden");
+            }
+            else if (bftxtxEmail.Text != string.Empty && bftxtConfirmarEmail.Text != string.Empty
+                   && bftxtPassword.Text != string.Empty && bftxtConfirmPassword.Text != string.Empty)
+            {
+                validacionLogin.SetError(panelCredenciales, "");
+                string idDocumentPerson = bftxtDocumento.Text;
+                DateTime dateOfBirth = bfdpkFechaNacimiento.Value;
+                string firstName = bftxtPrimerNombre.Text;
+                string secondName = bftxtSegundoNombre.Text == "" ? "null" : bftxtSegundoNombre.Text;
+                string surname = bftxtPrimerApellido.Text;
+                string secondSurname = bftxtSegundoApellido.Text == "" ? "null" : bftxtSegundoApellido.Text;
+                string gender = cmbGenero.Text;
+                string idCity = cmbCiudad.SelectedValue.ToString();
+                //login
+                string email = bftxtxEmail.Text;
+                string credentialPassword = bftxtPassword.Text;
+                int idRol = 1;
+
+                persona = new clsPersonController(idDocumentPerson, dateOfBirth, firstName, secondName, surname, secondSurname, profilePicture, gender, idCity, email, credentialPassword, idRol);
+
+                if (persona.ejecutarCrearPersona())
+                {
+                    frmLogin login = new frmLogin(1);
+                    login.Show();
+                    this.Close();
+                }
             }
             else
             {
-                errorProvider.SetError(bftxtConfirmarEmail,"");
+                if (bftxtxEmail.Text == string.Empty)
+                {
+                    validacionRegister.SetError(panelCredenciales, "Es necesario introducir el email");
+                }
+                else if (bftxtConfirmarEmail.Text == string.Empty)
+                {
+                    validacionRegister.SetError(panelCredenciales, "Es necesario confirmar tu email");
+                }
+                else if (bftxtPassword.Text == string.Empty)
+                {
+                    validacionRegister.SetError(panelCredenciales, "Es necesario introducir una contraseña");
+                }
+
+                else if (bftxtConfirmPassword.Text == string.Empty)
+                {
+                    validacionRegister.SetError(panelCredenciales, "Es necesario confirmar tu contraseña");
+                }
             }
-
-            if(bftxtPassword.Text != bftxtConfirmPassword.Text)
-            {
-                errorProvider.SetError(bftxtConfirmPassword, "Las contraseñas no coinciden");
-            }
-            else
-            {
-                errorProvider.SetError(bftxtConfirmPassword, "");
-            }*/
-
-            persona = new clsPersonController(idDocumentPerson, dateOfBirth, firstName, secondName, surname, secondSurname, profilePicture, gender, idCity, email, credentialPassword, idRol);
-
-            if (persona.ejecutarCrearPersona())
-            {
-                frmLogin login = new frmLogin(1);
-                login.Show();
-                this.Close();
-            }
-        }
-
-        private void vRegister()
-        {
-            if (bftxtPrimerNombre.Text != string.Empty || bftxtPrimerApellido.Text != string.Empty
-                || bftxtDocumento.Text != string.Empty || (bfdpkFechaNacimiento.Value != null)
-                || (cmbGenero.SelectedIndex <= 1) || (cmbDepartamento.SelectedIndex <= 1) 
-                || (cmbCiudad.SelectedIndex <= 1))
-            {
-                validacionRegisterLogin.SetError(bftxtPrimerNombre, "");
-                validacionRegisterLogin.SetError(bftxtPrimerApellido, "");
-                validacionRegisterLogin.SetError(bftxtDocumento, "");
-                validacionRegisterLogin.SetError(bfdpkFechaNacimiento, "");
-                validacionRegisterLogin.SetError(cmbGenero, "");
-                validacionRegisterLogin.SetError(cmbDepartamento, "");
-                validacionRegisterLogin.SetError(cmbCiudad, "");
-                bfbtnRegisterNext.Enabled = true;
-            }
-            else
-            {
-                if (bftxtPrimerNombre.Text == string.Empty)
-                {
-                    validacionRegisterLogin.SetError(bftxtPrimerNombre, "Es necesario introducir tu primer nombre");
-                }
-                else if (bftxtPrimerApellido.Text == string.Empty)
-                {
-                    validacionRegisterLogin.SetError(bftxtPrimerApellido, "Es necesario introducir tu primer apellido");
-                }
-                else if (bftxtDocumento.Text == string.Empty)
-                {
-                    validacionRegisterLogin.SetError(bftxtDocumento, "Es necesario introducir tu documento de identidad");
-                }
-                else if (bfdpkFechaNacimiento.Text == null)
-                {
-                    validacionRegisterLogin.SetError(bftxtDocumento, "Es necesario introducir tu documento de identidad");
-                }
-                else if (cmbGenero.SelectedIndex <= -1)
-                {
-                    validacionRegisterLogin.SetError(cmbGenero, "Es necesario introducir tu genero");
-                }
-                else if (cmbDepartamento.SelectedIndex <= -1)
-                {
-                    validacionRegisterLogin.SetError(cmbDepartamento, "Es necesario introducir tu departamento");
-                }
-                else if (cmbCiudad.SelectedIndex <= -1)
-                {
-                    validacionRegisterLogin.SetError(cmbCiudad, "Es necesario introducir tu ciudad");
-                }
-                bfbtnRegisterNext.Enabled = false;
-
-            }
-        }
-
-        private void bftxtPrimerNombre_TextChange(object sender, EventArgs e)
-        {
-            vRegister();
-        }
-
-        private void bftxtPrimerApellido_TextChange(object sender, EventArgs e)
-        {
-            vRegister();
-        }
-
-        private void bftxtDocumento_TextChange(object sender, EventArgs e)
-        {
-            vRegister();
-        }
-
-        private void cmbGenero_TextChanged(object sender, EventArgs e)
-        {
-            vRegister();
-        }
-
-        private void cmbDepartamento_TextChanged(object sender, EventArgs e)
-        {
-            vRegister();
-        }
-
-        private void cmbCiudad_TextChanged(object sender, EventArgs e)
-        {
-            vRegister();
-        }
-
-        private void bftgLogin_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
