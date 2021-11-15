@@ -43,7 +43,7 @@ namespace final_motoDix.Vistas
         private void bfbtnLogin_Click(object sender, EventArgs e)
         {
 
-            if(rol == 1)
+            if(rol == 1 || rol ==3)
             {
                 string email = bftxtEmail.Text;
                 string password = bftxtContraseña.Text;
@@ -51,15 +51,25 @@ namespace final_motoDix.Vistas
                 try
                 {
                     infoPersona = persona.ejecutarLogin();
-                    frmHome home = new frmHome(infoPersona);
-                    home.Show();
-                    this.Close();
+
+                    if(rol == 1)
+                    {
+                        frmHome home = new frmHome(infoPersona, 1);
+                        home.Show();
+                        this.Close();
+
+                    }else if(rol == 3)
+                    {
+                        frmHome home = new frmHome(infoPersona, 3);
+                        home.Show();
+                        this.Close();
+                    }
+                   
                 }
                 catch (Exception err)
                 {
                     bfSnackbar.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 3000, 
                         "Fallo inicio de sesion", BunifuSnackbar.Positions.BottomRight);
-
                 }
 
 
@@ -108,7 +118,7 @@ namespace final_motoDix.Vistas
                     try
                     {
                         infoPersona = persona.ejecutarLogin();
-                        frmHome home = new frmHome(infoPersona);
+                        frmHome home = new frmHome(infoPersona,1);
                         home.Show();
                         this.Close();
                     }
@@ -180,6 +190,5 @@ namespace final_motoDix.Vistas
             vLogin();
         }
 
-      
     }
 }

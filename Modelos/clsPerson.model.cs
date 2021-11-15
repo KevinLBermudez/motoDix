@@ -233,19 +233,19 @@ namespace final_motoDix.Modelos
             query.Parameters.Add("@Email", NpgsqlTypes.NpgsqlDbType.Varchar).Value = email;
             query.Parameters.Add("@CredentialPassword", NpgsqlTypes.NpgsqlDbType.Varchar).Value = credentialPassword;
 
-            try
-            {
+           try
+           {
                 NpgsqlDataReader persona = query.ExecuteReader();
 
                 while (persona.Read())
                 {
-                    if(persona["profilePicture"].ToString() == "null" )
+                    if(persona["profilePicture"] == DBNull.Value )
                     {
                         ProfilePicture = "";
                     }
                     else
                     {
-                        ProfilePicture = (string) persona["profilePicture"];
+                        ProfilePicture = (string)persona["profilePicture"];
                     };
 
                     if (persona["secondName"].ToString() == "null")
@@ -272,17 +272,18 @@ namespace final_motoDix.Modelos
 
                 }
                 persona.Close();
-                
+
+                return Persona;
+
             }
-            catch (Exception ex)
+            catch (NpgsqlException err)
+           {
+                throw new Exception(err.Message);
+           }
+            catch(Exception err)
             {
-                throw new Exception("Compruebe sus credenciales");
+                throw new Exception("Error interno");
             }
-
-            //conexionPersona.Close();
-            return Persona;
-        
         }
-
     }
 }

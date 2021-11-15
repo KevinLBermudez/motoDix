@@ -21,13 +21,26 @@ namespace final_motoDix.Vistas
         Form history;
         Form viajeConductor = null;
 
-        public frmHome(Persona infoPersona)
+        public frmHome(Persona infoPersona,int rol)
         {
             this.infoPersona = infoPersona;
-            rolActivo = 1;
+            rolActivo = rol;
             InitializeComponent();
             bfbtnDetallesViaje.Visible = false;
             bfbtnDetallesViaje.Enabled = false;
+            bfbtnSolicitudesCondutor.Enabled = false;
+            bfbtnSolicitudesCondutor.Visible = false;
+         
+
+            if(rol == 3)
+            {
+                bfbtnSolicitudesCondutor.Enabled = true;
+                bfbtnSolicitudesCondutor.Visible = true;
+                bfbtnViajar.Enabled = false;
+                bfbtnViajar.Visible = false;
+                bfbtnMisViajes.Enabled = false;
+                bfbtnMisViajes.Visible = false;
+            }
 
         }
         public frmHome(Iconductor infoDriver)
@@ -94,6 +107,22 @@ namespace final_motoDix.Vistas
                 bflblNombreUsuario.Text = infoDriver.firstname + " " + infoDriver.secondname + " " + infoDriver.surname + " " + infoDriver.secondname;
                 bflblTipoUsuario.Text = "Conductor";
                 bfpbImagenPerfil.ImageLocation = infoDriver.profilePicture;
+            }
+            else if (rolActivo == 3)
+            {
+
+                frmAdmin perfilAdmin = new frmAdmin();
+                perfilAdmin.TopLevel = false;
+                perfilAdmin.FormBorderStyle = FormBorderStyle.None;
+                perfilAdmin.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(perfilAdmin);
+                panelContenedor.Tag = perfilAdmin;
+                perfilAdmin.Show();
+                perfilAdmin.BringToFront();
+                bflblNombreUsuario.Text = infoPersona.FirstName + " " + infoPersona.SecondName + " " + infoPersona.Surname + " " + infoPersona.SecondSurname;
+                bflblTipoUsuario.Text = "Administrador";
+                bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
+
             }
 
         }
@@ -186,6 +215,7 @@ namespace final_motoDix.Vistas
                 perfilConductor.Show();
                 perfilConductor.BringToFront();
             }
+           
             
         }
 
@@ -210,6 +240,11 @@ namespace final_motoDix.Vistas
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bfbtnSolicitudesCondutor_Click(object sender, EventArgs e)
         {
 
         }
