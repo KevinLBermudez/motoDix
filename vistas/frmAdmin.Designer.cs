@@ -29,15 +29,24 @@ namespace final_motoDix.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bfdgvSolicitudesConductor = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bfbtnAceptar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnRechazar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bftxtIdDocumentDrive = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.lblTituloDocumento = new System.Windows.Forms.Label();
+            this.bfSnackbarAdmin = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.lblRefrescar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bfdgvSolicitudesConductor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +109,7 @@ namespace final_motoDix.Vistas
             this.bfdgvSolicitudesConductor.Size = new System.Drawing.Size(766, 328);
             this.bfdgvSolicitudesConductor.TabIndex = 3;
             this.bfdgvSolicitudesConductor.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bfdgvSolicitudesConductor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bfdgvSolicitudesConductor_CellClick);
             // 
             // bfbtnAceptar
             // 
@@ -190,6 +200,7 @@ namespace final_motoDix.Vistas
             this.bfbtnAceptar.TextMarginLeft = 0;
             this.bfbtnAceptar.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnAceptar.UseDefaultRadiusAndThickness = true;
+            this.bfbtnAceptar.Click += new System.EventHandler(this.bfbtnAceptar_Click);
             // 
             // bfbtnRechazar
             // 
@@ -239,7 +250,7 @@ namespace final_motoDix.Vistas
             this.bfbtnRechazar.IdleIconLeftImage = null;
             this.bfbtnRechazar.IdleIconRightImage = null;
             this.bfbtnRechazar.IndicateFocus = false;
-            this.bfbtnRechazar.Location = new System.Drawing.Point(394, 394);
+            this.bfbtnRechazar.Location = new System.Drawing.Point(432, 394);
             this.bfbtnRechazar.Name = "bfbtnRechazar";
             this.bfbtnRechazar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnRechazar.OnDisabledState.BorderRadius = 1;
@@ -280,12 +291,179 @@ namespace final_motoDix.Vistas
             this.bfbtnRechazar.TextMarginLeft = 0;
             this.bfbtnRechazar.TextPadding = new System.Windows.Forms.Padding(0);
             this.bfbtnRechazar.UseDefaultRadiusAndThickness = true;
+            this.bfbtnRechazar.Click += new System.EventHandler(this.bfbtnRechazar_Click);
+            // 
+            // bftxtIdDocumentDrive
+            // 
+            this.bftxtIdDocumentDrive.AcceptsReturn = false;
+            this.bftxtIdDocumentDrive.AcceptsTab = false;
+            this.bftxtIdDocumentDrive.AnimationSpeed = 200;
+            this.bftxtIdDocumentDrive.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bftxtIdDocumentDrive.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bftxtIdDocumentDrive.AutoSizeHeight = true;
+            this.bftxtIdDocumentDrive.BackColor = System.Drawing.Color.Transparent;
+            this.bftxtIdDocumentDrive.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bftxtIdDocumentDrive.BackgroundImage")));
+            this.bftxtIdDocumentDrive.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.bftxtIdDocumentDrive.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bftxtIdDocumentDrive.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bftxtIdDocumentDrive.BorderColorIdle = System.Drawing.Color.Silver;
+            this.bftxtIdDocumentDrive.BorderRadius = 1;
+            this.bftxtIdDocumentDrive.BorderThickness = 1;
+            this.bftxtIdDocumentDrive.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bftxtIdDocumentDrive.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bftxtIdDocumentDrive.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bftxtIdDocumentDrive.DefaultText = "";
+            this.bftxtIdDocumentDrive.FillColor = System.Drawing.Color.White;
+            this.bftxtIdDocumentDrive.HideSelection = true;
+            this.bftxtIdDocumentDrive.IconLeft = null;
+            this.bftxtIdDocumentDrive.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bftxtIdDocumentDrive.IconPadding = 10;
+            this.bftxtIdDocumentDrive.IconRight = null;
+            this.bftxtIdDocumentDrive.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bftxtIdDocumentDrive.Lines = new string[0];
+            this.bftxtIdDocumentDrive.Location = new System.Drawing.Point(29, 390);
+            this.bftxtIdDocumentDrive.MaxLength = 32767;
+            this.bftxtIdDocumentDrive.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bftxtIdDocumentDrive.Modified = false;
+            this.bftxtIdDocumentDrive.Multiline = false;
+            this.bftxtIdDocumentDrive.Name = "bftxtIdDocumentDrive";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bftxtIdDocumentDrive.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bftxtIdDocumentDrive.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bftxtIdDocumentDrive.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bftxtIdDocumentDrive.OnIdleState = stateProperties4;
+            this.bftxtIdDocumentDrive.Padding = new System.Windows.Forms.Padding(3);
+            this.bftxtIdDocumentDrive.PasswordChar = '\0';
+            this.bftxtIdDocumentDrive.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bftxtIdDocumentDrive.PlaceholderText = "Primer nombre";
+            this.bftxtIdDocumentDrive.ReadOnly = false;
+            this.bftxtIdDocumentDrive.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bftxtIdDocumentDrive.SelectedText = "";
+            this.bftxtIdDocumentDrive.SelectionLength = 0;
+            this.bftxtIdDocumentDrive.SelectionStart = 0;
+            this.bftxtIdDocumentDrive.ShortcutsEnabled = true;
+            this.bftxtIdDocumentDrive.Size = new System.Drawing.Size(193, 37);
+            this.bftxtIdDocumentDrive.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.bftxtIdDocumentDrive.TabIndex = 44;
+            this.bftxtIdDocumentDrive.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bftxtIdDocumentDrive.TextMarginBottom = 0;
+            this.bftxtIdDocumentDrive.TextMarginLeft = 3;
+            this.bftxtIdDocumentDrive.TextMarginTop = 1;
+            this.bftxtIdDocumentDrive.TextPlaceholder = "Primer nombre";
+            this.bftxtIdDocumentDrive.UseSystemPasswordChar = false;
+            this.bftxtIdDocumentDrive.WordWrap = true;
+            // 
+            // lblTituloDocumento
+            // 
+            this.lblTituloDocumento.AutoSize = true;
+            this.lblTituloDocumento.Location = new System.Drawing.Point(35, 374);
+            this.lblTituloDocumento.Name = "lblTituloDocumento";
+            this.lblTituloDocumento.Size = new System.Drawing.Size(85, 13);
+            this.lblTituloDocumento.TabIndex = 45;
+            this.lblTituloDocumento.Text = "Solicitud tomada";
+            // 
+            // bfSnackbarAdmin
+            // 
+            this.bfSnackbarAdmin.AllowDragging = false;
+            this.bfSnackbarAdmin.AllowMultipleViews = true;
+            this.bfSnackbarAdmin.ClickToClose = true;
+            this.bfSnackbarAdmin.DoubleClickToClose = true;
+            this.bfSnackbarAdmin.DurationAfterIdle = 4000;
+            this.bfSnackbarAdmin.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.ErrorOptions.ActionBorderRadius = 1;
+            this.bfSnackbarAdmin.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarAdmin.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bfSnackbarAdmin.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarAdmin.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bfSnackbarAdmin.ErrorOptions.IconLeftMargin = 12;
+            this.bfSnackbarAdmin.FadeCloseIcon = false;
+            this.bfSnackbarAdmin.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bfSnackbarAdmin.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.InformationOptions.ActionBorderRadius = 1;
+            this.bfSnackbarAdmin.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarAdmin.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarAdmin.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bfSnackbarAdmin.InformationOptions.IconLeftMargin = 12;
+            this.bfSnackbarAdmin.Margin = 5;
+            this.bfSnackbarAdmin.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarAdmin.MaximumViews = 7;
+            this.bfSnackbarAdmin.MessageRightMargin = 15;
+            this.bfSnackbarAdmin.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarAdmin.ShowBorders = false;
+            this.bfSnackbarAdmin.ShowCloseIcon = false;
+            this.bfSnackbarAdmin.ShowIcon = true;
+            this.bfSnackbarAdmin.ShowShadows = true;
+            this.bfSnackbarAdmin.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.SuccessOptions.ActionBorderRadius = 1;
+            this.bfSnackbarAdmin.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarAdmin.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bfSnackbarAdmin.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarAdmin.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bfSnackbarAdmin.SuccessOptions.IconLeftMargin = 12;
+            this.bfSnackbarAdmin.ViewsMargin = 7;
+            this.bfSnackbarAdmin.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarAdmin.WarningOptions.ActionBorderRadius = 1;
+            this.bfSnackbarAdmin.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarAdmin.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarAdmin.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bfSnackbarAdmin.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarAdmin.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarAdmin.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bfSnackbarAdmin.WarningOptions.IconLeftMargin = 12;
+            this.bfSnackbarAdmin.ZoomCloseIcon = true;
+            // 
+            // lblRefrescar
+            // 
+            this.lblRefrescar.AutoSize = true;
+            this.lblRefrescar.Location = new System.Drawing.Point(742, 355);
+            this.lblRefrescar.Name = "lblRefrescar";
+            this.lblRefrescar.Size = new System.Drawing.Size(53, 13);
+            this.lblRefrescar.TabIndex = 46;
+            this.lblRefrescar.Text = "Refrescar";
+            this.lblRefrescar.Click += new System.EventHandler(this.lblRefrescar_Click);
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 455);
+            this.Controls.Add(this.lblRefrescar);
+            this.Controls.Add(this.lblTituloDocumento);
+            this.Controls.Add(this.bftxtIdDocumentDrive);
             this.Controls.Add(this.bfbtnRechazar);
             this.Controls.Add(this.bfbtnAceptar);
             this.Controls.Add(this.bfdgvSolicitudesConductor);
@@ -294,6 +472,7 @@ namespace final_motoDix.Vistas
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bfdgvSolicitudesConductor)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -302,5 +481,9 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuDataGridView bfdgvSolicitudesConductor;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnAceptar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnRechazar;
+        private Bunifu.UI.WinForms.BunifuTextBox bftxtIdDocumentDrive;
+        private System.Windows.Forms.Label lblTituloDocumento;
+        private Bunifu.UI.WinForms.BunifuSnackbar bfSnackbarAdmin;
+        private System.Windows.Forms.Label lblRefrescar;
     }
 }
