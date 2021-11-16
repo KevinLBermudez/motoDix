@@ -50,6 +50,8 @@ namespace final_motoDix.Vistas
             InitializeComponent();
             bfbtnViajar.Enabled = false;
             bfbtnViajar.Visible = false;
+            bfbtnSolicitudesCondutor.Enabled = false;
+            bfbtnSolicitudesCondutor.Visible = false;
 
         }
 
@@ -111,7 +113,7 @@ namespace final_motoDix.Vistas
             else if (rolActivo == 3)
             {
 
-                frmAdmin perfilAdmin = new frmAdmin();
+                frmAdmin perfilAdmin = new frmAdmin(infoPersona);
                 perfilAdmin.TopLevel = false;
                 perfilAdmin.FormBorderStyle = FormBorderStyle.None;
                 perfilAdmin.Dock = DockStyle.Fill;
