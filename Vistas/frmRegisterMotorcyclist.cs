@@ -54,31 +54,6 @@ namespace final_motoDix.Vistas
                 }
             }
         }
-
-        private void bfbtnInfoFinish_Click(object sender, EventArgs e)
-        {
-            if (bftxtTransitoExpendedor.Text != string.Empty
-                   && bfCategoria.Text != string.Empty)
-            {
-                validacionLicencia.SetError(panelLicencia, "");
-                bfchkLicence.Checked = true;
-                clsDriverController controladorConductor = new clsDriverController(bftxtDocumentoIdentidad.Text, bftxtxEmail.Text, bftxtPassword.Text, 2, bftxtPlacaVehiculo.Text, bftxtColor.Text, Convert.ToInt32(bftxtModelo.Text), Convert.ToInt32(bftxtCilindraje.Text), bftxtMarca.Text, bfdtpExpedicionTecnomecanica.Value, bftxtExpiracionTecnomecanica.Value, bfdtpExpedicionSoat.Value, bfdtpFechaInicioSoat.Value, bfdtpFechaFinalSoat.Value, "Solicitado", bftxtDocumentoPropietario.Text, bftxtPrimerNombrePropietario.Text, bftxtSegundoNombrePropietario.Text, bftxtPrimerApellidoPropietario.Text, bftxtSegundoApellidoPropietario.Text, bftxtTransitoExpendedor.Text, bfdtpExpedicion.Value, bftxtRestricciones.Text, bfCategoria.Text, "Privado", bfdtpVigencia.Value, "Valido", DateTime.Now);
-                controladorConductor.ejecutarCrearDriver();
-                frmLogin login = new frmLogin(1);
-                
-            }
-            else
-            {
-                if (bftxtTransitoExpendedor.Text == string.Empty)
-                {
-                    validacionLicencia.SetError(panelLicencia, "Es necesario introducir el transito expendedor");
-                }
-                else if (bfCategoria.Text == string.Empty)
-                {
-                    validacionLicencia.SetError(panelLicencia, "Es necesario introducir una categoria");
-                }
-            }
-        }
         private void bunifuButton23_Click(object sender, EventArgs e)
         {
             bfpgRegisterVehicle.PageIndex = 0;
@@ -181,6 +156,32 @@ namespace final_motoDix.Vistas
                 else if (bftxtColor.Text == string.Empty)
                 {
                     validacionLogin.SetError(panelVehicle, "Es necesario introducir el color");
+                }
+            }
+        }
+
+        private void bfbtnFinish_Click(object sender, EventArgs e)
+        {
+            if (bftxtTransitoExpendedor.Text != string.Empty
+                  && bfCategoria.Text != string.Empty)
+            {
+                validacionLicencia.SetError(panelLicencia, "");
+                bfchkLicence.Checked = true;
+                clsDriverController controladorConductor = new clsDriverController(bftxtDocumentoIdentidad.Text, bftxtxEmail.Text, bftxtPassword.Text, 2, bftxtPlacaVehiculo.Text, bftxtColor.Text, Convert.ToInt32(bftxtModelo.Text), Convert.ToInt32(bftxtCilindraje.Text), bftxtMarca.Text, bfdtpExpedicionTecnomecanica.Value, bftxtExpiracionTecnomecanica.Value, bfdtpExpedicionSoat.Value, bfdtpFechaInicioSoat.Value, bfdtpFechaFinalSoat.Value, "Solicitado", bftxtDocumentoPropietario.Text, bftxtPrimerNombrePropietario.Text, bftxtSegundoNombrePropietario.Text, bftxtPrimerApellidoPropietario.Text, bftxtSegundoApellidoPropietario.Text, bftxtTransitoExpendedor.Text, bfdtpExpedicion.Value, bftxtRestricciones.Text, bfCategoria.Text, "Privado", bfdtpVigencia.Value, "Valido", DateTime.Now);
+                controladorConductor.ejecutarCrearDriver();
+                frmLogin login = new frmLogin(1);
+                this.Close();
+                //frmTravel viaje = new frmTravel ()
+            }
+            else
+            {
+                if (bftxtTransitoExpendedor.Text == string.Empty)
+                {
+                    validacionLicencia.SetError(panelLicencia, "Es necesario introducir el transito expendedor");
+                }
+                else if (bfCategoria.Text == string.Empty)
+                {
+                    validacionLicencia.SetError(panelLicencia, "Es necesario introducir una categoria");
                 }
             }
         }
