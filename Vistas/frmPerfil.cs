@@ -82,7 +82,7 @@ namespace final_motoDix.Vistas
 
                 if (persona.ejecutarActualizarPersona())
                 {
-                MessageBox.Show("Datos actualizados correctamente");
+                    MessageBox.Show("Datos actualizados correctamente");
                 }       
         }
     }

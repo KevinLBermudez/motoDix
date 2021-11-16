@@ -108,6 +108,8 @@ namespace final_motoDix.Vistas
             this.bflblDepartamento = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCiudad = new Bunifu.UI.WinForms.BunifuLabel();
             this.validacionLogin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaCerrar)).BeginInit();
             this.bfpgPersonInfo.SuspendLayout();
@@ -841,6 +843,8 @@ namespace final_motoDix.Vistas
             // 
             // panelCredenciales
             // 
+            this.panelCredenciales.Controls.Add(this.bunifuLabel5);
+            this.panelCredenciales.Controls.Add(this.bunifuLabel4);
             this.panelCredenciales.Controls.Add(this.bftxtConfirmPassword);
             this.panelCredenciales.Controls.Add(this.bftxtConfirmarEmail);
             this.panelCredenciales.Controls.Add(this.bftxtPassword);
@@ -880,7 +884,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmPassword.IconRight = null;
             this.bftxtConfirmPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmPassword.Lines = new string[0];
-            this.bftxtConfirmPassword.Location = new System.Drawing.Point(332, 87);
+            this.bftxtConfirmPassword.Location = new System.Drawing.Point(332, 120);
             this.bftxtConfirmPassword.MaxLength = 32767;
             this.bftxtConfirmPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtConfirmPassword.Modified = false;
@@ -907,7 +911,7 @@ namespace final_motoDix.Vistas
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtConfirmPassword.OnIdleState = stateProperties24;
             this.bftxtConfirmPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.bftxtConfirmPassword.PasswordChar = '\0';
+            this.bftxtConfirmPassword.PasswordChar = '*';
             this.bftxtConfirmPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtConfirmPassword.PlaceholderText = "Confirmar Contraseña";
             this.bftxtConfirmPassword.ReadOnly = false;
@@ -955,7 +959,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmarEmail.IconRight = null;
             this.bftxtConfirmarEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmarEmail.Lines = new string[0];
-            this.bftxtConfirmarEmail.Location = new System.Drawing.Point(332, 20);
+            this.bftxtConfirmarEmail.Location = new System.Drawing.Point(332, 38);
             this.bftxtConfirmarEmail.MaxLength = 32767;
             this.bftxtConfirmarEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtConfirmarEmail.Modified = false;
@@ -1030,7 +1034,7 @@ namespace final_motoDix.Vistas
             this.bftxtPassword.IconRight = null;
             this.bftxtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPassword.Lines = new string[0];
-            this.bftxtPassword.Location = new System.Drawing.Point(18, 87);
+            this.bftxtPassword.Location = new System.Drawing.Point(18, 120);
             this.bftxtPassword.MaxLength = 32767;
             this.bftxtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPassword.Modified = false;
@@ -1057,7 +1061,7 @@ namespace final_motoDix.Vistas
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtPassword.OnIdleState = stateProperties32;
             this.bftxtPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.bftxtPassword.PasswordChar = '\0';
+            this.bftxtPassword.PasswordChar = '*';
             this.bftxtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtPassword.PlaceholderText = "Contraseña";
             this.bftxtPassword.ReadOnly = false;
@@ -1105,7 +1109,7 @@ namespace final_motoDix.Vistas
             this.bftxtxEmail.IconRight = null;
             this.bftxtxEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtxEmail.Lines = new string[0];
-            this.bftxtxEmail.Location = new System.Drawing.Point(18, 20);
+            this.bftxtxEmail.Location = new System.Drawing.Point(18, 38);
             this.bftxtxEmail.MaxLength = 32767;
             this.bftxtxEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtxEmail.Modified = false;
@@ -1457,6 +1461,36 @@ namespace final_motoDix.Vistas
             // 
             this.validacionLogin.ContainerControl = this;
             // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel4.Location = new System.Drawing.Point(18, 99);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(60, 15);
+            this.bunifuLabel4.TabIndex = 6;
+            this.bunifuLabel4.Text = "Contraseña";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.CursorType = null;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel5.Location = new System.Drawing.Point(332, 99);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(115, 15);
+            this.bunifuLabel5.TabIndex = 7;
+            this.bunifuLabel5.Text = "Confirmar contraseña";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // frmRegisterClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1481,6 +1515,7 @@ namespace final_motoDix.Vistas
             this.panelDatosPersonales.PerformLayout();
             this.bftgLogin.ResumeLayout(false);
             this.panelCredenciales.ResumeLayout(false);
+            this.panelCredenciales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bfImagenPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validacionRegister)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validacionLogin)).EndInit();
@@ -1527,5 +1562,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private System.Windows.Forms.ErrorProvider validacionLogin;
         private System.Windows.Forms.Panel panelCredenciales;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
     }
 }
