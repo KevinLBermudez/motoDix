@@ -137,6 +137,7 @@ namespace final_motoDix.Vistas
             this.bftxtEmail.UseSystemPasswordChar = false;
             this.bftxtEmail.WordWrap = true;
             this.bftxtEmail.TextChange += new System.EventHandler(this.bftxtEmail_TextChange);
+            //this.bftxtEmail.TextChanged += new System.EventHandler(this.bftxtEmail_TextChanged);
             // 
             // bunifuLabel1
             // 

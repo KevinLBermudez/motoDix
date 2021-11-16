@@ -22,11 +22,11 @@ namespace final_motoDix.Vistas
         clsDriverController driver;
         public Persona infoPersona;
         public Iconductor infoConductor;
-        
+
 
         public frmLogin(int rol)
         {
-            this.rol =rol;
+            this.rol = rol;
             InitializeComponent();
         }
 
@@ -38,12 +38,12 @@ namespace final_motoDix.Vistas
             this.Close();
         }
 
-       
+
 
         private void bfbtnLogin_Click(object sender, EventArgs e)
         {
 
-            if(rol == 1 || rol ==3)
+            if (rol == 1 || rol == 3)
             {
                 string email = bftxtEmail.Text;
                 string password = bftxtContraseña.Text;
@@ -52,29 +52,30 @@ namespace final_motoDix.Vistas
                 {
                     infoPersona = persona.ejecutarLogin();
 
-                    if(rol == 1)
+                    if (rol == 1)
                     {
                         frmHome home = new frmHome(infoPersona, 1);
                         home.Show();
                         this.Close();
 
-                    }else if(rol == 3)
+                    }
+                    else if (rol == 3)
                     {
                         frmHome home = new frmHome(infoPersona, 3);
                         home.Show();
                         this.Close();
                     }
-                   
+
                 }
                 catch (Exception err)
                 {
-                    bfSnackbar.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 3000, 
+                    bfSnackbar.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 3000,
                         "Fallo inicio de sesion", BunifuSnackbar.Positions.BottomRight);
                 }
 
 
             }
-            else if(rol == 2)
+            else if (rol == 2)
             {
                 string email = bftxtEmail.Text;
                 string password = bftxtContraseña.Text;
@@ -88,12 +89,12 @@ namespace final_motoDix.Vistas
                 }
                 catch (Exception err)
                 {
-                     MessageBox.Show(err.Message);
+                    MessageBox.Show(err.Message);
 
                 }
-               
+
             }
-        
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace final_motoDix.Vistas
                     try
                     {
                         infoPersona = persona.ejecutarLogin();
-                        frmHome home = new frmHome(infoPersona,1);
+                        frmHome home = new frmHome(infoPersona, 1);
                         home.Show();
                         this.Close();
                     }
@@ -161,7 +162,7 @@ namespace final_motoDix.Vistas
         private void vLogin()
         {
             if (bftxtEmail.Text.Trim() != string.Empty && bftxtContraseña.Text != string.Empty)
-            {  
+            {
                 validacionLogin.SetError(bftxtEmail, "");
                 validacionLogin.SetError(bftxtContraseña, "");
                 bfbtnLogin.Enabled = true;
@@ -177,7 +178,7 @@ namespace final_motoDix.Vistas
                     validacionLogin.SetError(bftxtContraseña, "Debe de introducir contraseña");
                 }
                 bfbtnLogin.Enabled = false;
-            }         
+            }
         }
 
         private void bftxtContraseña_TextChange(object sender, EventArgs e)

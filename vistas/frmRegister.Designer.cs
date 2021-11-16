@@ -77,9 +77,13 @@ namespace final_motoDix.Vistas
             this.ptbCrearCuentaCerrar = new System.Windows.Forms.PictureBox();
             this.bfpgPersonInfo = new Bunifu.UI.WinForms.BunifuPages();
             this.bftpInfoPersonal = new System.Windows.Forms.TabPage();
+            this.lblDatosPersonales = new System.Windows.Forms.Label();
+            this.panelDatosPersonales = new System.Windows.Forms.Panel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cmbCiudad = new System.Windows.Forms.ComboBox();
             this.cmbDepartamento = new System.Windows.Forms.ComboBox();
-            this.lblDatosPersonales = new System.Windows.Forms.Label();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.bfbtnRegisterNext = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfdpkFechaNacimiento = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -89,6 +93,7 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerApellido = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtSegundoApellido = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftgLogin = new System.Windows.Forms.TabPage();
+            this.panelCredenciales = new System.Windows.Forms.Panel();
             this.bftxtConfirmPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtConfirmarEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -97,18 +102,22 @@ namespace final_motoDix.Vistas
             this.brbtnCargarImagenPerfil = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfImagenPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.validacionRegisterLogin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.validacionRegister = new System.Windows.Forms.ErrorProvider(this.components);
             this.bflblFechaNacimiento = new Bunifu.UI.WinForms.BunifuLabel();
             this.bflblGenero = new Bunifu.UI.WinForms.BunifuLabel();
             this.bflblDepartamento = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCiudad = new Bunifu.UI.WinForms.BunifuLabel();
+            this.validacionLogin = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaCerrar)).BeginInit();
             this.bfpgPersonInfo.SuspendLayout();
             this.bftpInfoPersonal.SuspendLayout();
+            this.panelDatosPersonales.SuspendLayout();
             this.bftgLogin.SuspendLayout();
+            this.panelCredenciales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bfImagenPerfil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validacionRegisterLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validacionRegister)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validacionLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // bflblCreateAccount1
@@ -179,10 +188,10 @@ namespace final_motoDix.Vistas
             this.bfpgPersonInfo.Location = new System.Drawing.Point(67, 86);
             this.bfpgPersonInfo.Multiline = true;
             this.bfpgPersonInfo.Name = "bfpgPersonInfo";
-            this.bfpgPersonInfo.Page = this.bftpInfoPersonal;
-            this.bfpgPersonInfo.PageIndex = 0;
-            this.bfpgPersonInfo.PageName = "bftpInfoPersonal";
-            this.bfpgPersonInfo.PageTitle = "Register";
+            this.bfpgPersonInfo.Page = this.bftgLogin;
+            this.bfpgPersonInfo.PageIndex = 1;
+            this.bfpgPersonInfo.PageName = "bftgLogin";
+            this.bfpgPersonInfo.PageTitle = "Login";
             this.bfpgPersonInfo.SelectedIndex = 0;
             this.bfpgPersonInfo.Size = new System.Drawing.Size(725, 412);
             this.bfpgPersonInfo.TabIndex = 17;
@@ -206,17 +215,8 @@ namespace final_motoDix.Vistas
             // 
             // bftpInfoPersonal
             // 
-            this.bftpInfoPersonal.Controls.Add(this.cmbCiudad);
-            this.bftpInfoPersonal.Controls.Add(this.cmbDepartamento);
             this.bftpInfoPersonal.Controls.Add(this.lblDatosPersonales);
-            this.bftpInfoPersonal.Controls.Add(this.cmbGenero);
-            this.bftpInfoPersonal.Controls.Add(this.bfbtnRegisterNext);
-            this.bftpInfoPersonal.Controls.Add(this.bfdpkFechaNacimiento);
-            this.bftpInfoPersonal.Controls.Add(this.bftxtPrimerNombre);
-            this.bftpInfoPersonal.Controls.Add(this.bftxtSegundoNombre);
-            this.bftpInfoPersonal.Controls.Add(this.bftxtDocumento);
-            this.bftpInfoPersonal.Controls.Add(this.bftxtPrimerApellido);
-            this.bftpInfoPersonal.Controls.Add(this.bftxtSegundoApellido);
+            this.bftpInfoPersonal.Controls.Add(this.panelDatosPersonales);
             this.bftpInfoPersonal.Location = new System.Drawing.Point(4, 4);
             this.bftpInfoPersonal.Name = "bftpInfoPersonal";
             this.bftpInfoPersonal.Padding = new System.Windows.Forms.Padding(3);
@@ -224,30 +224,6 @@ namespace final_motoDix.Vistas
             this.bftpInfoPersonal.TabIndex = 1;
             this.bftpInfoPersonal.Text = "Register";
             this.bftpInfoPersonal.UseVisualStyleBackColor = true;
-            // 
-            // cmbCiudad
-            // 
-            this.cmbCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCiudad.FormattingEnabled = true;
-            this.cmbCiudad.Location = new System.Drawing.Point(104, 345);
-            this.cmbCiudad.Name = "cmbCiudad";
-            this.cmbCiudad.Size = new System.Drawing.Size(161, 21);
-            this.cmbCiudad.TabIndex = 9;
-            this.cmbCiudad.SelectedIndexChanged += new System.EventHandler(this.cmbCiudad_SelectedIndexChanged);
-            this.cmbCiudad.TextChanged += new System.EventHandler(this.cmbCiudad_TextChanged);
-            // 
-            // cmbDepartamento
-            // 
-            this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDepartamento.FormattingEnabled = true;
-            this.cmbDepartamento.Location = new System.Drawing.Point(385, 299);
-            this.cmbDepartamento.Name = "cmbDepartamento";
-            this.cmbDepartamento.Size = new System.Drawing.Size(161, 21);
-            this.cmbDepartamento.TabIndex = 8;
-            this.cmbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cmbDepartamento_SelectedIndexChanged);
-            this.cmbDepartamento.TextChanged += new System.EventHandler(this.cmbDepartamento_TextChanged);
             // 
             // lblDatosPersonales
             // 
@@ -259,16 +235,104 @@ namespace final_motoDix.Vistas
             this.lblDatosPersonales.TabIndex = 42;
             this.lblDatosPersonales.Text = "Datos personales";
             // 
+            // panelDatosPersonales
+            // 
+            this.panelDatosPersonales.Controls.Add(this.bunifuLabel3);
+            this.panelDatosPersonales.Controls.Add(this.bunifuLabel2);
+            this.panelDatosPersonales.Controls.Add(this.bunifuLabel1);
+            this.panelDatosPersonales.Controls.Add(this.cmbCiudad);
+            this.panelDatosPersonales.Controls.Add(this.cmbDepartamento);
+            this.panelDatosPersonales.Controls.Add(this.cmbGenero);
+            this.panelDatosPersonales.Controls.Add(this.bfbtnRegisterNext);
+            this.panelDatosPersonales.Controls.Add(this.bfdpkFechaNacimiento);
+            this.panelDatosPersonales.Controls.Add(this.bftxtPrimerNombre);
+            this.panelDatosPersonales.Controls.Add(this.bftxtSegundoNombre);
+            this.panelDatosPersonales.Controls.Add(this.bftxtDocumento);
+            this.panelDatosPersonales.Controls.Add(this.bftxtPrimerApellido);
+            this.panelDatosPersonales.Controls.Add(this.bftxtSegundoApellido);
+            this.validacionRegister.SetIconAlignment(this.panelDatosPersonales, System.Windows.Forms.ErrorIconAlignment.BottomRight);
+            this.panelDatosPersonales.Location = new System.Drawing.Point(33, 39);
+            this.panelDatosPersonales.Name = "panelDatosPersonales";
+            this.panelDatosPersonales.Size = new System.Drawing.Size(653, 336);
+            this.panelDatosPersonales.TabIndex = 43;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel3.Location = new System.Drawing.Point(61, 280);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(54, 15);
+            this.bunifuLabel3.TabIndex = 13;
+            this.bunifuLabel3.Text = "Municipio";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel2.Location = new System.Drawing.Point(342, 213);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(76, 15);
+            this.bunifuLabel2.TabIndex = 12;
+            this.bunifuLabel2.Text = "Departamento";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(61, 213);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(38, 15);
+            this.bunifuLabel1.TabIndex = 11;
+            this.bunifuLabel1.Text = "Genero";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cmbCiudad
+            // 
+            this.cmbCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCiudad.FormattingEnabled = true;
+            this.cmbCiudad.Location = new System.Drawing.Point(61, 301);
+            this.cmbCiudad.Name = "cmbCiudad";
+            this.cmbCiudad.Size = new System.Drawing.Size(161, 21);
+            this.cmbCiudad.TabIndex = 9;
+            this.cmbCiudad.SelectedIndexChanged += new System.EventHandler(this.cmbCiudad_SelectedIndexChanged);
+            // 
+            // cmbDepartamento
+            // 
+            this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDepartamento.FormattingEnabled = true;
+            this.cmbDepartamento.Location = new System.Drawing.Point(342, 234);
+            this.cmbDepartamento.Name = "cmbDepartamento";
+            this.cmbDepartamento.Size = new System.Drawing.Size(161, 21);
+            this.cmbDepartamento.TabIndex = 8;
+            this.cmbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cmbDepartamento_SelectedIndexChanged);
+            // 
             // cmbGenero
             // 
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(104, 299);
+            this.cmbGenero.Location = new System.Drawing.Point(61, 234);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(161, 21);
             this.cmbGenero.TabIndex = 7;
-            this.cmbGenero.TextChanged += new System.EventHandler(this.cmbGenero_TextChanged);
             // 
             // bfbtnRegisterNext
             // 
@@ -317,7 +381,7 @@ namespace final_motoDix.Vistas
             this.bfbtnRegisterNext.IdleIconLeftImage = null;
             this.bfbtnRegisterNext.IdleIconRightImage = null;
             this.bfbtnRegisterNext.IndicateFocus = false;
-            this.bfbtnRegisterNext.Location = new System.Drawing.Point(612, 345);
+            this.bfbtnRegisterNext.Location = new System.Drawing.Point(568, 309);
             this.bfbtnRegisterNext.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnRegisterNext.Name = "bfbtnRegisterNext";
             this.bfbtnRegisterNext.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -352,7 +416,7 @@ namespace final_motoDix.Vistas
             this.bfbtnRegisterNext.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bfbtnRegisterNext.OnPressedState.IconLeftImage = null;
             this.bfbtnRegisterNext.OnPressedState.IconRightImage = null;
-            this.bfbtnRegisterNext.Size = new System.Drawing.Size(75, 25);
+            this.bfbtnRegisterNext.Size = new System.Drawing.Size(68, 25);
             this.bfbtnRegisterNext.TabIndex = 10;
             this.bfbtnRegisterNext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bfbtnRegisterNext.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -380,7 +444,7 @@ namespace final_motoDix.Vistas
             this.bfdpkFechaNacimiento.IconColor = System.Drawing.Color.Gray;
             this.bfdpkFechaNacimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bfdpkFechaNacimiento.LeftTextMargin = 5;
-            this.bfdpkFechaNacimiento.Location = new System.Drawing.Point(104, 243);
+            this.bfdpkFechaNacimiento.Location = new System.Drawing.Point(61, 165);
             this.bfdpkFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdpkFechaNacimiento.Name = "bfdpkFechaNacimiento";
             this.bfdpkFechaNacimiento.Size = new System.Drawing.Size(202, 32);
@@ -415,7 +479,7 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerNombre.IconRight = null;
             this.bftxtPrimerNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPrimerNombre.Lines = new string[0];
-            this.bftxtPrimerNombre.Location = new System.Drawing.Point(104, 71);
+            this.bftxtPrimerNombre.Location = new System.Drawing.Point(61, 27);
             this.bftxtPrimerNombre.MaxLength = 32767;
             this.bftxtPrimerNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPrimerNombre.Modified = false;
@@ -461,7 +525,6 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerNombre.TextPlaceholder = "Primer nombre";
             this.bftxtPrimerNombre.UseSystemPasswordChar = false;
             this.bftxtPrimerNombre.WordWrap = true;
-            this.bftxtPrimerNombre.TextChange += new System.EventHandler(this.bftxtPrimerNombre_TextChange);
             // 
             // bftxtSegundoNombre
             // 
@@ -491,7 +554,7 @@ namespace final_motoDix.Vistas
             this.bftxtSegundoNombre.IconRight = null;
             this.bftxtSegundoNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSegundoNombre.Lines = new string[0];
-            this.bftxtSegundoNombre.Location = new System.Drawing.Point(385, 71);
+            this.bftxtSegundoNombre.Location = new System.Drawing.Point(342, 27);
             this.bftxtSegundoNombre.MaxLength = 32767;
             this.bftxtSegundoNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtSegundoNombre.Modified = false;
@@ -566,7 +629,7 @@ namespace final_motoDix.Vistas
             this.bftxtDocumento.IconRight = null;
             this.bftxtDocumento.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtDocumento.Lines = new string[0];
-            this.bftxtDocumento.Location = new System.Drawing.Point(385, 236);
+            this.bftxtDocumento.Location = new System.Drawing.Point(342, 165);
             this.bftxtDocumento.MaxLength = 32767;
             this.bftxtDocumento.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtDocumento.Modified = false;
@@ -612,7 +675,6 @@ namespace final_motoDix.Vistas
             this.bftxtDocumento.TextPlaceholder = "Documento de identidad";
             this.bftxtDocumento.UseSystemPasswordChar = false;
             this.bftxtDocumento.WordWrap = true;
-            this.bftxtDocumento.TextChange += new System.EventHandler(this.bftxtDocumento_TextChange);
             // 
             // bftxtPrimerApellido
             // 
@@ -642,7 +704,7 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerApellido.IconRight = null;
             this.bftxtPrimerApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPrimerApellido.Lines = new string[0];
-            this.bftxtPrimerApellido.Location = new System.Drawing.Point(104, 154);
+            this.bftxtPrimerApellido.Location = new System.Drawing.Point(61, 96);
             this.bftxtPrimerApellido.MaxLength = 32767;
             this.bftxtPrimerApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPrimerApellido.Modified = false;
@@ -688,7 +750,6 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerApellido.TextPlaceholder = "Primer Apellido";
             this.bftxtPrimerApellido.UseSystemPasswordChar = false;
             this.bftxtPrimerApellido.WordWrap = true;
-            this.bftxtPrimerApellido.TextChange += new System.EventHandler(this.bftxtPrimerApellido_TextChange);
             // 
             // bftxtSegundoApellido
             // 
@@ -718,7 +779,7 @@ namespace final_motoDix.Vistas
             this.bftxtSegundoApellido.IconRight = null;
             this.bftxtSegundoApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSegundoApellido.Lines = new string[0];
-            this.bftxtSegundoApellido.Location = new System.Drawing.Point(385, 154);
+            this.bftxtSegundoApellido.Location = new System.Drawing.Point(342, 96);
             this.bftxtSegundoApellido.MaxLength = 32767;
             this.bftxtSegundoApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtSegundoApellido.Modified = false;
@@ -767,11 +828,7 @@ namespace final_motoDix.Vistas
             // 
             // bftgLogin
             // 
-            this.bftgLogin.Controls.Add(this.bftxtConfirmPassword);
-            this.bftgLogin.Controls.Add(this.bftxtConfirmarEmail);
-            this.bftgLogin.Controls.Add(this.bftxtPassword);
-            this.bftgLogin.Controls.Add(this.bftxtxEmail);
-            this.bftgLogin.Controls.Add(this.bfbtnInfoFinishPerson);
+            this.bftgLogin.Controls.Add(this.panelCredenciales);
             this.bftgLogin.Controls.Add(this.brbtnCargarImagenPerfil);
             this.bftgLogin.Controls.Add(this.bfImagenPerfil);
             this.bftgLogin.Location = new System.Drawing.Point(4, 4);
@@ -781,7 +838,19 @@ namespace final_motoDix.Vistas
             this.bftgLogin.TabIndex = 2;
             this.bftgLogin.Text = "Login";
             this.bftgLogin.UseVisualStyleBackColor = true;
-            this.bftgLogin.Click += new System.EventHandler(this.bftgLogin_Click);
+            // 
+            // panelCredenciales
+            // 
+            this.panelCredenciales.Controls.Add(this.bftxtConfirmPassword);
+            this.panelCredenciales.Controls.Add(this.bftxtConfirmarEmail);
+            this.panelCredenciales.Controls.Add(this.bftxtPassword);
+            this.panelCredenciales.Controls.Add(this.bftxtxEmail);
+            this.panelCredenciales.Controls.Add(this.bfbtnInfoFinishPerson);
+            this.validacionRegister.SetIconAlignment(this.panelCredenciales, System.Windows.Forms.ErrorIconAlignment.BottomRight);
+            this.panelCredenciales.Location = new System.Drawing.Point(67, 145);
+            this.panelCredenciales.Name = "panelCredenciales";
+            this.panelCredenciales.Size = new System.Drawing.Size(629, 214);
+            this.panelCredenciales.TabIndex = 43;
             // 
             // bftxtConfirmPassword
             // 
@@ -811,7 +880,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmPassword.IconRight = null;
             this.bftxtConfirmPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmPassword.Lines = new string[0];
-            this.bftxtConfirmPassword.Location = new System.Drawing.Point(406, 249);
+            this.bftxtConfirmPassword.Location = new System.Drawing.Point(332, 87);
             this.bftxtConfirmPassword.MaxLength = 32767;
             this.bftxtConfirmPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtConfirmPassword.Modified = false;
@@ -886,7 +955,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmarEmail.IconRight = null;
             this.bftxtConfirmarEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmarEmail.Lines = new string[0];
-            this.bftxtConfirmarEmail.Location = new System.Drawing.Point(406, 182);
+            this.bftxtConfirmarEmail.Location = new System.Drawing.Point(332, 20);
             this.bftxtConfirmarEmail.MaxLength = 32767;
             this.bftxtConfirmarEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtConfirmarEmail.Modified = false;
@@ -961,7 +1030,7 @@ namespace final_motoDix.Vistas
             this.bftxtPassword.IconRight = null;
             this.bftxtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPassword.Lines = new string[0];
-            this.bftxtPassword.Location = new System.Drawing.Point(92, 249);
+            this.bftxtPassword.Location = new System.Drawing.Point(18, 87);
             this.bftxtPassword.MaxLength = 32767;
             this.bftxtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPassword.Modified = false;
@@ -1036,7 +1105,7 @@ namespace final_motoDix.Vistas
             this.bftxtxEmail.IconRight = null;
             this.bftxtxEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtxEmail.Lines = new string[0];
-            this.bftxtxEmail.Location = new System.Drawing.Point(92, 182);
+            this.bftxtxEmail.Location = new System.Drawing.Point(18, 20);
             this.bftxtxEmail.MaxLength = 32767;
             this.bftxtxEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtxEmail.Modified = false;
@@ -1124,13 +1193,13 @@ namespace final_motoDix.Vistas
             this.bfbtnInfoFinishPerson.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bfbtnInfoFinishPerson.IconSize = 25;
             this.bfbtnInfoFinishPerson.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.bfbtnInfoFinishPerson.IdleBorderRadius = 37;
+            this.bfbtnInfoFinishPerson.IdleBorderRadius = 23;
             this.bfbtnInfoFinishPerson.IdleBorderThickness = 1;
             this.bfbtnInfoFinishPerson.IdleFillColor = System.Drawing.Color.DodgerBlue;
             this.bfbtnInfoFinishPerson.IdleIconLeftImage = null;
             this.bfbtnInfoFinishPerson.IdleIconRightImage = null;
             this.bfbtnInfoFinishPerson.IndicateFocus = false;
-            this.bfbtnInfoFinishPerson.Location = new System.Drawing.Point(545, 329);
+            this.bfbtnInfoFinishPerson.Location = new System.Drawing.Point(504, 189);
             this.bfbtnInfoFinishPerson.Name = "bfbtnInfoFinishPerson";
             this.bfbtnInfoFinishPerson.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnInfoFinishPerson.OnDisabledState.BorderRadius = 1;
@@ -1164,7 +1233,7 @@ namespace final_motoDix.Vistas
             this.bfbtnInfoFinishPerson.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bfbtnInfoFinishPerson.OnPressedState.IconLeftImage = null;
             this.bfbtnInfoFinishPerson.OnPressedState.IconRightImage = null;
-            this.bfbtnInfoFinishPerson.Size = new System.Drawing.Size(150, 39);
+            this.bfbtnInfoFinishPerson.Size = new System.Drawing.Size(122, 25);
             this.bfbtnInfoFinishPerson.TabIndex = 5;
             this.bfbtnInfoFinishPerson.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bfbtnInfoFinishPerson.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1319,9 +1388,9 @@ namespace final_motoDix.Vistas
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // validacionRegisterLogin
+            // validacionRegister
             // 
-            this.validacionRegisterLogin.ContainerControl = this;
+            this.validacionRegister.ContainerControl = this;
             // 
             // bflblFechaNacimiento
             // 
@@ -1384,12 +1453,16 @@ namespace final_motoDix.Vistas
             this.lblCiudad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCiudad.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // validacionLogin
+            // 
+            this.validacionLogin.ContainerControl = this;
+            // 
             // frmRegisterClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(863, 510);
+            this.ClientSize = new System.Drawing.Size(847, 510);
             this.Controls.Add(this.bfpgPersonInfo);
             this.Controls.Add(this.ptbCrearCuentaCerrar);
             this.Controls.Add(this.ptbCrearCuentaMinimizar);
@@ -1404,9 +1477,13 @@ namespace final_motoDix.Vistas
             this.bfpgPersonInfo.ResumeLayout(false);
             this.bftpInfoPersonal.ResumeLayout(false);
             this.bftpInfoPersonal.PerformLayout();
+            this.panelDatosPersonales.ResumeLayout(false);
+            this.panelDatosPersonales.PerformLayout();
             this.bftgLogin.ResumeLayout(false);
+            this.panelCredenciales.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bfImagenPerfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validacionRegisterLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validacionRegister)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validacionLogin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1423,7 +1500,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 brbtnCargarImagenPerfil;
         private Bunifu.UI.WinForms.BunifuPictureBox bfImagenPerfil;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnInfoFinishPerson;
-        private System.Windows.Forms.ErrorProvider validacionRegisterLogin;
+        private System.Windows.Forms.ErrorProvider validacionRegister;
         private System.Windows.Forms.TabPage bftpInfoPersonal;
         private System.Windows.Forms.ComboBox cmbCiudad;
         private System.Windows.Forms.ComboBox cmbDepartamento;
@@ -1444,5 +1521,11 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bflblGenero;
         private Bunifu.UI.WinForms.BunifuLabel bflblDepartamento;
         private Bunifu.UI.WinForms.BunifuLabel lblCiudad;
+        private System.Windows.Forms.Panel panelDatosPersonales;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private System.Windows.Forms.ErrorProvider validacionLogin;
+        private System.Windows.Forms.Panel panelCredenciales;
     }
 }
