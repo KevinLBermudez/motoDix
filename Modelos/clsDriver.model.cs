@@ -107,6 +107,7 @@ namespace final_motoDix.Modelos
         }
         public clsDriverModel()
         {
+            conexionDriver = clsConexion.realizarConexion();
 
         }
 
@@ -147,6 +148,8 @@ namespace final_motoDix.Modelos
             this.ownersecondname = ownersecondname;
             this.ownersurname = ownersurname;
             this.ownersecondsurname = ownersecondsurname;
+            conexionDriver = clsConexion.realizarConexion();
+
         }
 
         //Función para validar la conexion
@@ -258,5 +261,33 @@ namespace final_motoDix.Modelos
             }
 
         }
+
+        public DataTable obtenerSolicitudesConductor()
+        {
+
+            validarConexion();
+            string consulta = "select * from consultar_solicitudes(); ;";
+
+            NpgsqlCommand query = new NpgsqlCommand(consulta, conexionDriver);
+
+            try
+            {
+                DataTable dtSolicitudes = new DataTable();
+
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query);
+                adapter.Fill(dtSolicitudes);
+                return dtSolicitudes;
+
+
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
+
+            }
+
+        }
+
+
     }
 }
