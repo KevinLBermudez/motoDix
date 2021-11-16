@@ -27,6 +27,10 @@ namespace final_motoDix.Vistas
 
         private void bfbtnLicenceNext_Click(object sender, EventArgs e)
         {
+            
+
+
+            
             if (bftxtPrimerNombrePropietario.Text != string.Empty && bftxtPrimerApellidoPropietario.Text != string.Empty 
                    && bftxtDocumentoPropietario.Text != string.Empty)
             {
