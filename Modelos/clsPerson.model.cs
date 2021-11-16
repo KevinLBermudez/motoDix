@@ -128,6 +128,22 @@ namespace final_motoDix.Modelos
             cloud = new clsCloudinary();
         }
 
+        //Constructor para ActualizarDatos
+        public clsPersonModel(string idDocumentPerson, string email, int idRol, string firstName, string secondName, string surname, string secondSurname, string gender, string credentialPassword)
+        {
+
+            IdDocumentPerson = idDocumentPerson;
+            Email = email;
+            IdRol = idRol;
+            FirstName = firstName;
+            SecondName = secondName;
+            Surname = surname;
+            SecondSurname = secondSurname;
+            Gender = gender;
+            CredentialPassword = credentialPassword;
+            conexionPersona = clsConexion.realizarConexion();
+        }
+
         //Constructor para login
         public clsPersonModel(string email, string credentialPassword, int idRol)
         {
@@ -220,6 +236,51 @@ namespace final_motoDix.Modelos
             }
 
         }
+
+        //Función para actualizar datos de una persona
+        public bool ActualizarPersona()
+        {
+            validarConexion();
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionPersona;
+
+
+            query.CommandText = "CALL public.app_update_users_register(@IdDocumentPerson, @Email," +
+                " @IdRol, @FirstName, @SecondName , @Surname, @SecondSurname, " +
+                " @Gender,@CredentialPassword)";
+
+            //Parametros para el procedimiento
+            query.Parameters.Add("@IdDocumentPerson", NpgsqlTypes.NpgsqlDbType.Varchar).Value = idDocumentPerson;
+            query.Parameters.Add("@Email", NpgsqlTypes.NpgsqlDbType.Varchar).Value = email;
+            query.Parameters.Add("@IdRol", NpgsqlTypes.NpgsqlDbType.Smallint).Value = idRol;
+            query.Parameters.Add("@FirstName", NpgsqlTypes.NpgsqlDbType.Varchar).Value = firstName;
+            query.Parameters.Add("@SecondName", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondName;
+            query.Parameters.Add("@Surname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = surname;
+            query.Parameters.Add("@SecondSurname", NpgsqlTypes.NpgsqlDbType.Varchar).Value = secondSurname;
+            query.Parameters.Add("@Gender", NpgsqlTypes.NpgsqlDbType.Varchar).Value = gender;
+            query.Parameters.Add("@CredentialPassword", NpgsqlTypes.NpgsqlDbType.Varchar).Value = credentialPassword;
+
+
+            try
+            {
+                //Trata de ejecutar el procedimiento almacenado 
+                //Con el try catch verificamos si no hay errores
+                query.ExecuteNonQuery();
+
+                return true;
+
+            }
+            catch (NpgsqlException err)
+
+            {
+                throw new Exception(err.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error interno, por favor envia un reporte para mejorar nuestro servicio");
+            }
+        }
+
 
         //Función para logearse
         public Persona login()

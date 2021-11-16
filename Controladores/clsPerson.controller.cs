@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using final_motoDix.Modelos;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace final_motoDix.Controladores
 {
@@ -20,6 +21,11 @@ namespace final_motoDix.Controladores
         {
 
             persona = new clsPersonModel(idDocumentPerson, dateOfBirth, firstName, secondName, surname, secondSurname, profilePicture, gender, idCity,email,credentialPassword,idRol);
+        }
+
+        public clsPersonController(string idDocumentPerson, string email, int idRol, string firstName, string secondName, string surname, string secondSurname, string gender, string credentialPassword)
+        {
+            persona = new clsPersonModel(idDocumentPerson, email, idRol,firstName, secondName, surname, secondSurname, gender, credentialPassword);
         }
 
         public clsPersonController(string email, string credentialPassword, int idRol)
@@ -39,6 +45,30 @@ namespace final_motoDix.Controladores
                 throw new Exception("Error al crear al usuario, intentalo más tarde");
 
             }
+        }
+
+        public bool ejecutarActualizarPersona()
+        {
+            try
+            {
+                if (persona.ActualizarPersona())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (NpgsqlException err)
+            {
+               throw new Exception(err.Message);
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Error al actualiar los datos, intentalo más tarde");
+            }
+
         }
 
         public Persona ejecutarLogin()

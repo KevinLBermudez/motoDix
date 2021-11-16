@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using final_motoDix.Modelos;
+using final_motoDix.Controladores;
 
 namespace final_motoDix.Vistas
 {
     public partial class frmPerfil : Form
     {
-
         public Persona infoPersona;
+        clsPersonController persona;
 
         public frmPerfil(Persona infoPersona)
         {
@@ -64,5 +65,26 @@ namespace final_motoDix.Vistas
         {
 
         }
+
+        private void bfbtnActualizar_Click(object sender, EventArgs e)
+        {
+                string idDocumentPerson = infoPersona.IdDocumentPersona;
+                string email = bftxtxEmailPerfil.Text;
+                int idRol = infoPersona.IdRol;
+                string firstName = bftxtPrimerNombrePerfil.Text;
+                string secondName = bftxtSegundoNombrePerfil.Text == "" ? "null" : bftxtSegundoNombrePerfil.Text;
+                string surname = bftxtPrimerApellidoPerfil.Text;
+                string secondSurname = bftxtSegundoApellidoperfil.Text == "" ? "null" : bftxtSegundoApellidoperfil.Text;
+                string gender = cmbGeneroPerfil.Text;
+                string credentialPassword = bftxtPasswordPerfil.Text;
+
+            persona = new clsPersonController(idDocumentPerson, email, idRol, firstName, secondName, surname, secondSurname, gender, credentialPassword);
+
+                if (persona.ejecutarActualizarPersona())
+                {
+                MessageBox.Show("Datos actualizados correctamente");
+                }       
+        }
     }
+    
 }
