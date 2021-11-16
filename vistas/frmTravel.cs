@@ -42,13 +42,6 @@ namespace final_motoDix.Vistas
 
             InitializeComponent();
 
-
-
-
-
-
-
-
         }
 
         private void frmTravel_Load(object sender, EventArgs e)

@@ -361,15 +361,16 @@ namespace final_motoDix.Modelos
             try
             {
 
-                if (query.ExecuteNonQuery()==1)
-                {
-                    return true;
+                query.ExecuteNonQuery();
+                
 
-                }
-                else
-                {
-                    return false;
-                }
+                return true;
+
+
+            }
+            catch(NpgsqlException err)
+            {
+                throw new Exception(err.Message);
 
             }
             catch (Exception err)

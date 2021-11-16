@@ -71,7 +71,7 @@ namespace final_motoDix.Vistas
             this.bftxtPasswordPerfil = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtConfirmarEmailPerfil = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtxEmailPerfil = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bfFotoPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.lblNombreUsuarioPerfil = new System.Windows.Forms.Label();
             this.lblTipoUsuarioPerfil = new System.Windows.Forms.Label();
             this.lblDatosPersonales = new System.Windows.Forms.Label();
@@ -86,7 +86,10 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerNombrePerfil = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bfbtnActualizar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.panelPerfil = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.bfFotoPerfil)).BeginInit();
             this.panelPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,7 +121,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmPasswordPerfil.IconRight = null;
             this.bftxtConfirmPasswordPerfil.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmPasswordPerfil.Lines = new string[0];
-            this.bftxtConfirmPasswordPerfil.Location = new System.Drawing.Point(316, 412);
+            this.bftxtConfirmPasswordPerfil.Location = new System.Drawing.Point(316, 440);
             this.bftxtConfirmPasswordPerfil.MaxLength = 32767;
             this.bftxtConfirmPasswordPerfil.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtConfirmPasswordPerfil.Modified = false;
@@ -145,7 +148,7 @@ namespace final_motoDix.Vistas
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtConfirmPasswordPerfil.OnIdleState = stateProperties4;
             this.bftxtConfirmPasswordPerfil.Padding = new System.Windows.Forms.Padding(3);
-            this.bftxtConfirmPasswordPerfil.PasswordChar = '\0';
+            this.bftxtConfirmPasswordPerfil.PasswordChar = '*';
             this.bftxtConfirmPasswordPerfil.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtConfirmPasswordPerfil.PlaceholderText = "Confirmar Contraseña";
             this.bftxtConfirmPasswordPerfil.ReadOnly = false;
@@ -193,7 +196,7 @@ namespace final_motoDix.Vistas
             this.bftxtPasswordPerfil.IconRight = null;
             this.bftxtPasswordPerfil.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPasswordPerfil.Lines = new string[0];
-            this.bftxtPasswordPerfil.Location = new System.Drawing.Point(49, 412);
+            this.bftxtPasswordPerfil.Location = new System.Drawing.Point(49, 440);
             this.bftxtPasswordPerfil.MaxLength = 32767;
             this.bftxtPasswordPerfil.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPasswordPerfil.Modified = false;
@@ -220,7 +223,7 @@ namespace final_motoDix.Vistas
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bftxtPasswordPerfil.OnIdleState = stateProperties8;
             this.bftxtPasswordPerfil.Padding = new System.Windows.Forms.Padding(3);
-            this.bftxtPasswordPerfil.PasswordChar = '\0';
+            this.bftxtPasswordPerfil.PasswordChar = '*';
             this.bftxtPasswordPerfil.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bftxtPasswordPerfil.PlaceholderText = "Contraseña";
             this.bftxtPasswordPerfil.ReadOnly = false;
@@ -260,6 +263,7 @@ namespace final_motoDix.Vistas
             this.bftxtConfirmarEmailPerfil.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtConfirmarEmailPerfil.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bftxtConfirmarEmailPerfil.DefaultText = "";
+            this.bftxtConfirmarEmailPerfil.Enabled = false;
             this.bftxtConfirmarEmailPerfil.FillColor = System.Drawing.Color.White;
             this.bftxtConfirmarEmailPerfil.HideSelection = true;
             this.bftxtConfirmarEmailPerfil.IconLeft = null;
@@ -335,6 +339,7 @@ namespace final_motoDix.Vistas
             this.bftxtxEmailPerfil.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtxEmailPerfil.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bftxtxEmailPerfil.DefaultText = "";
+            this.bftxtxEmailPerfil.Enabled = false;
             this.bftxtxEmailPerfil.FillColor = System.Drawing.Color.White;
             this.bftxtxEmailPerfil.HideSelection = true;
             this.bftxtxEmailPerfil.IconLeft = null;
@@ -390,22 +395,22 @@ namespace final_motoDix.Vistas
             this.bftxtxEmailPerfil.UseSystemPasswordChar = false;
             this.bftxtxEmailPerfil.WordWrap = true;
             // 
-            // bunifuPictureBox1
+            // bfFotoPerfil
             // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 59;
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(29, 56);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(118, 118);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 38;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            this.bunifuPictureBox1.Click += new System.EventHandler(this.bunifuPictureBox1_Click);
+            this.bfFotoPerfil.AllowFocused = false;
+            this.bfFotoPerfil.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bfFotoPerfil.AutoSizeHeight = true;
+            this.bfFotoPerfil.BorderRadius = 59;
+            this.bfFotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("bfFotoPerfil.Image")));
+            this.bfFotoPerfil.IsCircle = true;
+            this.bfFotoPerfil.Location = new System.Drawing.Point(29, 62);
+            this.bfFotoPerfil.Name = "bfFotoPerfil";
+            this.bfFotoPerfil.Size = new System.Drawing.Size(118, 118);
+            this.bfFotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bfFotoPerfil.TabIndex = 38;
+            this.bfFotoPerfil.TabStop = false;
+            this.bfFotoPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bfFotoPerfil.Click += new System.EventHandler(this.bunifuPictureBox1_Click);
             // 
             // lblNombreUsuarioPerfil
             // 
@@ -488,6 +493,7 @@ namespace final_motoDix.Vistas
             this.bfdtpFechaNacimientoPerfil.DisplayWeekNumbers = false;
             this.bfdtpFechaNacimientoPerfil.DPHeight = 0;
             this.bfdtpFechaNacimientoPerfil.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.bfdtpFechaNacimientoPerfil.Enabled = false;
             this.bfdtpFechaNacimientoPerfil.FillDatePicker = false;
             this.bfdtpFechaNacimientoPerfil.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bfdtpFechaNacimientoPerfil.ForeColor = System.Drawing.Color.Black;
@@ -522,6 +528,7 @@ namespace final_motoDix.Vistas
             this.bftxtDocumentoPerfil.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtDocumentoPerfil.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.bftxtDocumentoPerfil.DefaultText = "";
+            this.bftxtDocumentoPerfil.Enabled = false;
             this.bftxtDocumentoPerfil.FillColor = System.Drawing.Color.White;
             this.bftxtDocumentoPerfil.HideSelection = true;
             this.bftxtDocumentoPerfil.IconLeft = null;
@@ -969,6 +976,9 @@ namespace final_motoDix.Vistas
             // 
             // panelPerfil
             // 
+            this.panelPerfil.Controls.Add(this.bunifuLabel3);
+            this.panelPerfil.Controls.Add(this.bunifuLabel2);
+            this.panelPerfil.Controls.Add(this.bunifuLabel1);
             this.panelPerfil.Controls.Add(this.cmbGeneroPerfil);
             this.panelPerfil.Controls.Add(this.bflblGenero);
             this.panelPerfil.Controls.Add(this.bflblFechaNacimiento);
@@ -987,6 +997,55 @@ namespace final_motoDix.Vistas
             this.panelPerfil.Size = new System.Drawing.Size(621, 550);
             this.panelPerfil.TabIndex = 54;
             // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel3.Location = new System.Drawing.Point(316, 419);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(115, 15);
+            this.bunifuLabel3.TabIndex = 54;
+            this.bunifuLabel3.Text = "Confirmar contraseña";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel2.Location = new System.Drawing.Point(51, 419);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(60, 15);
+            this.bunifuLabel2.TabIndex = 53;
+            this.bunifuLabel2.Text = "Contraseña";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.bunifuLabel1.Location = new System.Drawing.Point(51, 389);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(262, 15);
+            this.bunifuLabel1.TabIndex = 52;
+            this.bunifuLabel1.Text = "Para actualizar datos debes ingresar tu contraseña";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -997,13 +1056,13 @@ namespace final_motoDix.Vistas
             this.Controls.Add(this.lblDatosPersonales);
             this.Controls.Add(this.lblTipoUsuarioPerfil);
             this.Controls.Add(this.lblNombreUsuarioPerfil);
-            this.Controls.Add(this.bunifuPictureBox1);
+            this.Controls.Add(this.bfFotoPerfil);
             this.Controls.Add(this.panelPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPerfil";
             this.Text = "frmPerfil";
             this.Load += new System.EventHandler(this.frmPerfil_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bfFotoPerfil)).EndInit();
             this.panelPerfil.ResumeLayout(false);
             this.panelPerfil.PerformLayout();
             this.ResumeLayout(false);
@@ -1017,7 +1076,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuTextBox bftxtPasswordPerfil;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtConfirmarEmailPerfil;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtxEmailPerfil;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private Bunifu.UI.WinForms.BunifuPictureBox bfFotoPerfil;
         private System.Windows.Forms.Label lblNombreUsuarioPerfil;
         private System.Windows.Forms.Label lblTipoUsuarioPerfil;
         private System.Windows.Forms.Label lblDatosPersonales;
@@ -1032,5 +1091,8 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuTextBox bftxtPrimerNombrePerfil;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnActualizar;
         private System.Windows.Forms.Panel panelPerfil;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }

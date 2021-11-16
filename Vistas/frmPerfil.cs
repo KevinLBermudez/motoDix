@@ -41,8 +41,9 @@ namespace final_motoDix.Vistas
             cmbGeneroPerfil.Text = infoPersona.Gender;
             bftxtxEmailPerfil.Text = infoPersona.Email;
             bftxtConfirmarEmailPerfil.Text = infoPersona.Email;
-            //bftxtPasswordPerfil.Text = infoPersona.;
-            //bftxtConfirmPasswordPerfil = infoPersona.Email;
+            bfFotoPerfil.ImageLocation = infoPersona.ProfilePicture;
+
+
         }
 
         private void ptbCerrarPerfil_Click(object sender, EventArgs e)
@@ -82,7 +83,7 @@ namespace final_motoDix.Vistas
 
                 if (persona.ejecutarActualizarPersona())
                 {
-                MessageBox.Show("Datos actualizados correctamente");
+                    MessageBox.Show("Datos actualizados correctamente");
                 }       
         }
     }

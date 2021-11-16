@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using final_motoDix.Modelos;
 using System.Windows.Forms;
 using final_motoDix.Estructuras;
+using Npgsql;
 
 namespace final_motoDix.Controladores
 {
@@ -150,7 +151,11 @@ namespace final_motoDix.Controladores
                     return false;
                 }
             }
-            catch (Exception err)
+            catch (NpgsqlException err)
+            {
+                return false;
+            }
+            catch(Exception err)
             {
                 throw new Exception(err.Message);
             }

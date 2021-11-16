@@ -47,7 +47,7 @@ namespace final_motoDix.Vistas
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 56);
+            this.label1.Location = new System.Drawing.Point(15, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace final_motoDix.Vistas
             // 
             this.lblNombreUsuarioAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreUsuarioAyuda.AutoSize = true;
-            this.lblNombreUsuarioAyuda.Location = new System.Drawing.Point(154, 56);
+            this.lblNombreUsuarioAyuda.Location = new System.Drawing.Point(154, 98);
             this.lblNombreUsuarioAyuda.Name = "lblNombreUsuarioAyuda";
             this.lblNombreUsuarioAyuda.Size = new System.Drawing.Size(104, 25);
             this.lblNombreUsuarioAyuda.TabIndex = 1;
@@ -65,11 +65,11 @@ namespace final_motoDix.Vistas
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 108);
+            this.label3.Location = new System.Drawing.Point(16, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(582, 65);
+            this.label3.Size = new System.Drawing.Size(767, 65);
             this.label3.TabIndex = 2;
             this.label3.Text = "Esté es tu menú de ayuda, describe brevemente tu solicitud y te daremos respuesta" +
     " lo más pronto posible.";
@@ -103,7 +103,7 @@ namespace final_motoDix.Vistas
             this.bftxtProblema.IconRight = null;
             this.bftxtProblema.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtProblema.Lines = new string[0];
-            this.bftxtProblema.Location = new System.Drawing.Point(20, 231);
+            this.bftxtProblema.Location = new System.Drawing.Point(20, 306);
             this.bftxtProblema.MaxLength = 32767;
             this.bftxtProblema.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtProblema.Modified = false;
@@ -139,7 +139,7 @@ namespace final_motoDix.Vistas
             this.bftxtProblema.SelectionLength = 0;
             this.bftxtProblema.SelectionStart = 0;
             this.bftxtProblema.ShortcutsEnabled = true;
-            this.bftxtProblema.Size = new System.Drawing.Size(586, 196);
+            this.bftxtProblema.Size = new System.Drawing.Size(771, 196);
             this.bftxtProblema.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bftxtProblema.TabIndex = 3;
             this.bftxtProblema.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -198,7 +198,7 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.IdleIconLeftImage = null;
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(521, 433);
+            this.bunifuButton21.Location = new System.Drawing.Point(521, 517);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.OnDisabledState.BorderRadius = 25;
@@ -232,7 +232,7 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton21.OnPressedState.IconLeftImage = null;
             this.bunifuButton21.OnPressedState.IconRightImage = null;
-            this.bunifuButton21.Size = new System.Drawing.Size(77, 34);
+            this.bunifuButton21.Size = new System.Drawing.Size(262, 34);
             this.bunifuButton21.TabIndex = 4;
             this.bunifuButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton21.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -244,7 +244,7 @@ namespace final_motoDix.Vistas
             // cmbTipoComentario
             // 
             this.cmbTipoComentario.FormattingEnabled = true;
-            this.cmbTipoComentario.Location = new System.Drawing.Point(20, 176);
+            this.cmbTipoComentario.Location = new System.Drawing.Point(20, 256);
             this.cmbTipoComentario.Name = "cmbTipoComentario";
             this.cmbTipoComentario.Size = new System.Drawing.Size(150, 33);
             this.cmbTipoComentario.TabIndex = 5;
@@ -254,7 +254,7 @@ namespace final_motoDix.Vistas
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(626, 479);
+            this.ClientSize = new System.Drawing.Size(811, 563);
             this.Controls.Add(this.cmbTipoComentario);
             this.Controls.Add(this.bunifuButton21);
             this.Controls.Add(this.bftxtProblema);

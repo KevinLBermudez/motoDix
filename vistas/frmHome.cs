@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using final_motoDix.Estructuras;
 using final_motoDix.Modelos;
 using final_motoDix.Controladores;
+using Bunifu.UI.WinForms;
 
 namespace final_motoDix.Vistas
 {
@@ -67,7 +68,6 @@ namespace final_motoDix.Vistas
             if (infoDriver.state != "Activo")
             {
                 bfbtnMisViajes.Enabled = false;
-
             }
 
         }
@@ -122,10 +122,12 @@ namespace final_motoDix.Vistas
                         bfbtnTrabajaConNosotros.Enabled = false;
                         bfbtnTrabajaConNosotros.Visible = false;
                     }
+
                 }
                 catch
                 {
-
+                    bfSnackbarHome.Show(this, "Error al comprobar el estado", BunifuSnackbar.MessageTypes.Error, 6000,
+                    "Denegado", BunifuSnackbar.Positions.BottomRight);
                 }
 
             }
