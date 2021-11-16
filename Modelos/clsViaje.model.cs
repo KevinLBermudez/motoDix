@@ -381,5 +381,44 @@ namespace final_motoDix.Modelos
 
 
 
+        public string verEstadoViaje()
+        {
+            validarConexion();
+            string estado = null; ;
+            NpgsqlCommand query = new NpgsqlCommand();
+
+            query.Connection = conexionViaje;
+
+            query.CommandText = "select * from app_ver_estadoviaje(@travelId);";
+
+            query.Parameters.Add("@travelId", NpgsqlTypes.NpgsqlDbType.Varchar).Value = travelId;
+
+            try
+            {
+                NpgsqlDataReader data = query.ExecuteReader();
+
+                while (data.Read())
+                {
+
+                    estado = data[0].ToString();
+
+                }
+                data.Close();
+
+                return estado;
+
+            }
+            catch(NpgsqlException err)
+            {
+                throw new Exception(err.Message);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error interno");
+            }
+
+        }
+
     }
 }

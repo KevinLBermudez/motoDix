@@ -20,13 +20,20 @@ namespace final_motoDix.Vistas
         clsCiudadController ciudad;
         clsCloudinary cloud;
         string profilePicture = "null";
+        int rol = 1;
 
+        public frmRegisterClient(int idRol)
+        {
+            rol = idRol;
+            InitializeComponent();
+            ptbCrearCuentaMinimizar.Enabled = false;
+            ptbCrearCuentaMinimizar.Visible = false;
+
+        }
 
         public frmRegisterClient()
         {
-
             InitializeComponent();
-
         }
         private void frmRegister_Load(object sender, EventArgs e)
         {
@@ -152,9 +159,8 @@ namespace final_motoDix.Vistas
                 //login
                 string email = bftxtxEmail.Text;
                 string credentialPassword = bftxtPassword.Text;
-                int idRol = 1;
 
-                persona = new clsPersonController(idDocumentPerson, dateOfBirth, firstName, secondName, surname, secondSurname, profilePicture, gender, idCity, email, credentialPassword, idRol);
+                persona = new clsPersonController(idDocumentPerson, dateOfBirth, firstName, secondName, surname, secondSurname, profilePicture, gender, idCity, email, credentialPassword, rol);
 
                 if (persona.ejecutarCrearPersona())
                 {

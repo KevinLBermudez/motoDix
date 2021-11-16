@@ -42,6 +42,13 @@ namespace final_motoDix.Vistas
 
             InitializeComponent();
 
+
+
+
+
+
+
+
         }
 
         private void frmTravel_Load(object sender, EventArgs e)
@@ -175,6 +182,12 @@ namespace final_motoDix.Vistas
 
                         banderaAceptacionViaje = true;
 
+                        if(viajeEstructura.State == "Aceptado")
+                        {
+                            bfpgbEstadoViaje.Value = 50;
+
+                        }
+
                     }
 
                 }
@@ -192,6 +205,8 @@ namespace final_motoDix.Vistas
                 int rating = ratingDriver.Value;
                 viaje.ejecutarCompletarViaje(travelId, timeElapsed, rating);
                 banderaAceptacionViaje = false;
+                bfpgbEstadoViaje.Value = 100;
+                lblEstadoViaje.Text = "completado";
                 bfSnackbarTravel.Show(this, "Su viaje a finalizado con exito, Feliz dia", BunifuSnackbar.MessageTypes.Success, 4000,
                 "Completado", BunifuSnackbar.Positions.BottomRight);
                 limpiarFormulario();
@@ -220,6 +235,8 @@ namespace final_motoDix.Vistas
             lblFacturaValor.Text = ":";
             lblDescuntoValor.Text = ":";
             lblTotalViajeValor.Text = ":";
+            bfpgbEstadoViaje.Value = 20;
+            lblEstadoViaje.Text = "Solicitado";
             travelId = null;
             viajeActivo = false;
             mapa = new clsMapa(gMapControl);

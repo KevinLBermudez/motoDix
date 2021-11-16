@@ -21,6 +21,8 @@ namespace final_motoDix.Vistas
         Form viajeFormulario;
         Form history;
         Form viajeConductor = null;
+        Form vistaCrearAdmin =null;
+        Form solicitudesConductores = null;
 
         public frmHome(Persona infoPersona,int rol)
         {
@@ -31,9 +33,10 @@ namespace final_motoDix.Vistas
             bfbtnDetallesViaje.Enabled = false;
             bfbtnSolicitudesCondutor.Enabled = false;
             bfbtnSolicitudesCondutor.Visible = false;
-         
+            bfbtnCrearAdministrador.Enabled = false;
+            bfbtnCrearAdministrador.Visible = false;
 
-            if(rol == 3)
+            if (rol == 3)
             {
                 bfbtnSolicitudesCondutor.Enabled = true;
                 bfbtnSolicitudesCondutor.Visible = true;
@@ -41,6 +44,9 @@ namespace final_motoDix.Vistas
                 bfbtnViajar.Visible = false;
                 bfbtnMisViajes.Enabled = false;
                 bfbtnMisViajes.Visible = false;
+                bfbtnCrearAdministrador.Enabled = true;
+                bfbtnCrearAdministrador.Visible = true;
+
             }
 
         }
@@ -53,6 +59,14 @@ namespace final_motoDix.Vistas
             bfbtnViajar.Visible = false;
             bfbtnSolicitudesCondutor.Enabled = false;
             bfbtnSolicitudesCondutor.Visible = false;
+            bfbtnTrabajaConNosotros.Enabled = false;
+            bfbtnCrearAdministrador.Enabled = false;
+            bfbtnCrearAdministrador.Visible = false;
+            if (infoDriver.state != "Activo")
+            {
+                bfbtnMisViajes.Enabled = false;
+
+            }
 
         }
 
@@ -129,18 +143,23 @@ namespace final_motoDix.Vistas
             }
             else if (rolActivo == 3)
             {
-
-                frmAdmin perfilAdmin = new frmAdmin(infoPersona);
-                perfilAdmin.TopLevel = false;
-                perfilAdmin.FormBorderStyle = FormBorderStyle.None;
-                perfilAdmin.Dock = DockStyle.Fill;
-                panelContenedor.Controls.Add(perfilAdmin);
-                panelContenedor.Tag = perfilAdmin;
-                perfilAdmin.Show();
-                perfilAdmin.BringToFront();
-                bflblNombreUsuario.Text = infoPersona.FirstName + " " + infoPersona.SecondName + " " + infoPersona.Surname + " " + infoPersona.SecondSurname;
-                bflblTipoUsuario.Text = "Administrador";
-                bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
+                if(solicitudesConductores == null)
+                {
+                    frmAdmin perfilAdmin = new frmAdmin(infoPersona);
+                    perfilAdmin.TopLevel = false;
+                    perfilAdmin.FormBorderStyle = FormBorderStyle.None;
+                    perfilAdmin.Dock = DockStyle.Fill;
+                    panelContenedor.Controls.Add(perfilAdmin);
+                    panelContenedor.Tag = perfilAdmin;
+                    perfilAdmin.Show();
+                    perfilAdmin.BringToFront();
+                    solicitudesConductores = perfilAdmin;
+                    bflblNombreUsuario.Text = infoPersona.FirstName + " " + infoPersona.SecondName + " " + infoPersona.Surname + " " + infoPersona.SecondSurname;
+                    bflblTipoUsuario.Text = "Administrador";
+                    bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
+                }
+            
+              
 
             }
 
@@ -209,9 +228,6 @@ namespace final_motoDix.Vistas
             if (rolActivo == 1)
             {
                 frmPerfil perfil = new frmPerfil(infoPersona);
-                //perfil.Show();
-                //AbrirFormInPanel <frmPerfil>();  
-
                 perfil.TopLevel = false;
                 perfil.FormBorderStyle = FormBorderStyle.None;
                 perfil.Dock = DockStyle.Fill;
@@ -224,8 +240,6 @@ namespace final_motoDix.Vistas
             else if (rolActivo == 2)
             {
                 frmPerfilConductor perfilConductor = new frmPerfilConductor(infoDriver);
-                //perfil.Show();
-                //AbrirFormInPanel <frmPerfil>();  
                 perfilConductor.TopLevel = false;
                 perfilConductor.FormBorderStyle = FormBorderStyle.None;
                 perfilConductor.Dock = DockStyle.Fill;
@@ -234,7 +248,6 @@ namespace final_motoDix.Vistas
                 perfilConductor.Show();
                 perfilConductor.BringToFront();
             }
-           
             
         }
 
@@ -265,7 +278,39 @@ namespace final_motoDix.Vistas
 
         private void bfbtnSolicitudesCondutor_Click(object sender, EventArgs e)
         {
+            if(solicitudesConductores != null)
+            {
+                solicitudesConductores.BringToFront();
 
+            }
+
+        }
+
+        private void bfbtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void bfbtnCrearAdministrador_Click(object sender, EventArgs e)
+        {
+            if(vistaCrearAdmin == null)
+            {
+                frmRegisterClient crearAdmin = new frmRegisterClient(3);
+                crearAdmin.TopLevel = false;
+                crearAdmin.FormBorderStyle = FormBorderStyle.None;
+                crearAdmin.Dock = DockStyle.Fill;
+                panelContenedor.Controls.Add(crearAdmin);
+                panelContenedor.Tag = crearAdmin;
+                crearAdmin.Show();
+                crearAdmin.BringToFront();
+                vistaCrearAdmin = crearAdmin;
+            }
+            else
+            {
+                vistaCrearAdmin.BringToFront();
+            }
+         
         }
     }
 }

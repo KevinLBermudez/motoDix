@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using final_motoDix.Modelos;
 using System.Data;
 using static final_motoDix.Estructuras.EViaje;
+using Npgsql;
 
 namespace final_motoDix.Controladores
 {
@@ -181,6 +182,24 @@ namespace final_motoDix.Controladores
                 throw new Exception(err.Message);
 
 
+            }
+        
+        }
+
+        public string ejecutarVerEstado()
+        {
+            try
+            {
+                return viaje.verEstadoViaje();
+            }
+            catch (NpgsqlException err)
+            {
+                throw new Exception(err.Message);
+
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
             }
         }
 

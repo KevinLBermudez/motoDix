@@ -94,6 +94,7 @@ namespace final_motoDix.Vistas
             this.gMapControl = new GMap.NET.WindowsForms.GMapControl();
             this.contadorSolicitud = new System.Windows.Forms.Timer(this.components);
             this.bfSnackbarSolicitud = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.timerVerEstado = new System.Windows.Forms.Timer(this.components);
             this.bfpgTramitesViaje.SuspendLayout();
             this.bftpSolicitudes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bfdgvSolicitudes)).BeginInit();
@@ -110,10 +111,10 @@ namespace final_motoDix.Vistas
             this.bfpgTramitesViaje.Location = new System.Drawing.Point(12, 12);
             this.bfpgTramitesViaje.Multiline = true;
             this.bfpgTramitesViaje.Name = "bfpgTramitesViaje";
-            this.bfpgTramitesViaje.Page = this.bftpSolicitudes;
-            this.bfpgTramitesViaje.PageIndex = 0;
-            this.bfpgTramitesViaje.PageName = "bftpSolicitudes";
-            this.bfpgTramitesViaje.PageTitle = "Solicitudes";
+            this.bfpgTramitesViaje.Page = this.bftgResumenViaje;
+            this.bfpgTramitesViaje.PageIndex = 1;
+            this.bfpgTramitesViaje.PageName = "bftgResumenViaje";
+            this.bfpgTramitesViaje.PageTitle = "DetallesViaje";
             this.bfpgTramitesViaje.SelectedIndex = 0;
             this.bfpgTramitesViaje.Size = new System.Drawing.Size(878, 574);
             this.bfpgTramitesViaje.TabIndex = 18;
@@ -1192,6 +1193,12 @@ namespace final_motoDix.Vistas
             this.bfSnackbarSolicitud.WarningOptions.IconLeftMargin = 12;
             this.bfSnackbarSolicitud.ZoomCloseIcon = true;
             // 
+            // timerVerEstado
+            // 
+            this.timerVerEstado.Enabled = true;
+            this.timerVerEstado.Interval = 10000;
+            this.timerVerEstado.Tick += new System.EventHandler(this.timerVerEstado_Tick);
+            // 
             // frmViajeConductor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1251,5 +1258,6 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.Label lblFacturaValor;
         private System.Windows.Forms.Label lblDistanciaValor;
         private System.Windows.Forms.Label lblTiempoValor;
+        private System.Windows.Forms.Timer timerVerEstado;
     }
 }

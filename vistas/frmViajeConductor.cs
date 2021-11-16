@@ -190,5 +190,24 @@ namespace final_motoDix.Vistas
 
             inicioPoint = new PointLatLng();
         }
+
+        private void timerVerEstado_Tick(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if(travelId != null)
+                {
+                    lblEstadoViaje.Text = viajes.ejecutarVerEstado();
+
+                }
+            }
+            catch (Exception err)
+            {
+                bfSnackbarSolicitud.Show(this,err.Message, BunifuSnackbar.MessageTypes.Error, 4000,
+                   "Error", BunifuSnackbar.Positions.BottomRight);
+            }
+
+        }
     }
 }

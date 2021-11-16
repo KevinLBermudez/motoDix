@@ -240,6 +240,8 @@ namespace final_motoDix.Modelos
 
         public Iconductor loginDriver()
         {
+            string segundoNombre = "";
+            string segundoApellido = "";
 
             validarConexion();
             NpgsqlCommand query = new NpgsqlCommand();
@@ -256,8 +258,18 @@ namespace final_motoDix.Modelos
 
                 while (conductor.Read())
                 {
-                    iconductor = new clsDriverModel(conductor[0].ToString(),Convert.ToDateTime(conductor[1]),conductor[2].ToString(),conductor[3].ToString(),
-                        conductor[4].ToString(), conductor[5].ToString(), conductor[6].ToString(), conductor[7].ToString(),
+                    if(conductor[3].ToString() != "null")
+                    {
+                        segundoNombre = conductor[3].ToString();
+                    }
+                    if(conductor[5].ToString() != "null")
+                    {
+                        segundoApellido = conductor[5].ToString();
+                    }
+                     
+
+                    iconductor = new clsDriverModel(conductor[0].ToString(),Convert.ToDateTime(conductor[1]),conductor[2].ToString(),segundoNombre,
+                        conductor[4].ToString(), segundoApellido, conductor[6].ToString(), conductor[7].ToString(),
                         conductor[8].ToString(), conductor[9].ToString(), conductor[10].ToString(), Int32.Parse(conductor[11].ToString()),
                         conductor[12].ToString(), Convert.ToDateTime(conductor[13]), conductor[14].ToString(), conductor[15].ToString(),
                         Convert.ToDateTime(conductor[16]), conductor[17].ToString(), conductor[18].ToString(), conductor[19].ToString(),
