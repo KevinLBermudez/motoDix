@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel;
+
 namespace final_motoDix.Vistas
 {
     partial class frmPerfil
@@ -85,7 +87,6 @@ namespace final_motoDix.Vistas
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfSnackbarPerfil = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.panelPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1064,5 +1065,6 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuSnackbar bfSnackbarPerfil;
+        private ISupportInitialize bunifuPictureBox1;
     }
 }
