@@ -31,14 +31,14 @@ namespace final_motoDix.Vistas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.panelVertical = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bfbtnCerrarSesion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnSolicitudesCondutor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -60,6 +60,7 @@ namespace final_motoDix.Vistas
             this.ptbMinizar = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bfbtnCrearAdministrador = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelVertical.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bfpbImagenPerfil)).BeginInit();
@@ -70,6 +71,7 @@ namespace final_motoDix.Vistas
             ((System.ComponentModel.ISupportInitialize)(this.ptbMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinizar)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelVertical
@@ -78,14 +80,10 @@ namespace final_motoDix.Vistas
             this.panelVertical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelVertical.BackgroundImage")));
             this.panelVertical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelVertical.BorderRadius = 1;
-            this.panelVertical.Controls.Add(this.bfbtnCrearAdministrador);
-            this.panelVertical.Controls.Add(this.bfbtnCerrarSesion);
-            this.panelVertical.Controls.Add(this.bfbtnSolicitudesCondutor);
-            this.panelVertical.Controls.Add(this.bfbtnDetallesViaje);
+            this.panelVertical.Controls.Add(this.flowLayoutPanel1);
             this.panelVertical.Controls.Add(this.panel1);
+            this.panelVertical.Controls.Add(this.bfbtnCerrarSesion);
             this.panelVertical.Controls.Add(this.bunifuButton21);
-            this.panelVertical.Controls.Add(this.bfbtnMisViajes);
-            this.panelVertical.Controls.Add(this.bfbtnViajar);
             this.panelVertical.Controls.Add(this.bfbtnTrabajaConNosotros);
             this.panelVertical.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -97,7 +95,7 @@ namespace final_motoDix.Vistas
             this.panelVertical.Margin = new System.Windows.Forms.Padding(2);
             this.panelVertical.Name = "panelVertical";
             this.panelVertical.Quality = 10;
-            this.panelVertical.Size = new System.Drawing.Size(211, 742);
+            this.panelVertical.Size = new System.Drawing.Size(218, 742);
             this.panelVertical.TabIndex = 0;
             // 
             // bfbtnCerrarSesion
@@ -119,11 +117,11 @@ namespace final_motoDix.Vistas
             this.bfbtnCerrarSesion.ColorContrastOnClick = 45;
             this.bfbtnCerrarSesion.ColorContrastOnHover = 45;
             this.bfbtnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bfbtnCerrarSesion.CustomizableEdges = borderEdges2;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.bfbtnCerrarSesion.CustomizableEdges = borderEdges6;
             this.bfbtnCerrarSesion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnCerrarSesion.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnCerrarSesion.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -210,11 +208,11 @@ namespace final_motoDix.Vistas
             this.bfbtnSolicitudesCondutor.ColorContrastOnClick = 45;
             this.bfbtnSolicitudesCondutor.ColorContrastOnHover = 45;
             this.bfbtnSolicitudesCondutor.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.bfbtnSolicitudesCondutor.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.bfbtnSolicitudesCondutor.CustomizableEdges = borderEdges4;
             this.bfbtnSolicitudesCondutor.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnSolicitudesCondutor.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnSolicitudesCondutor.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -238,7 +236,7 @@ namespace final_motoDix.Vistas
             this.bfbtnSolicitudesCondutor.IdleIconLeftImage = null;
             this.bfbtnSolicitudesCondutor.IdleIconRightImage = null;
             this.bfbtnSolicitudesCondutor.IndicateFocus = false;
-            this.bfbtnSolicitudesCondutor.Location = new System.Drawing.Point(4, 343);
+            this.bfbtnSolicitudesCondutor.Location = new System.Drawing.Point(2, 132);
             this.bfbtnSolicitudesCondutor.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnSolicitudesCondutor.Name = "bfbtnSolicitudesCondutor";
             this.bfbtnSolicitudesCondutor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -301,11 +299,11 @@ namespace final_motoDix.Vistas
             this.bfbtnDetallesViaje.ColorContrastOnClick = 45;
             this.bfbtnDetallesViaje.ColorContrastOnHover = 45;
             this.bfbtnDetallesViaje.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bfbtnDetallesViaje.CustomizableEdges = borderEdges4;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bfbtnDetallesViaje.CustomizableEdges = borderEdges3;
             this.bfbtnDetallesViaje.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnDetallesViaje.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnDetallesViaje.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -329,7 +327,7 @@ namespace final_motoDix.Vistas
             this.bfbtnDetallesViaje.IdleIconLeftImage = null;
             this.bfbtnDetallesViaje.IdleIconRightImage = null;
             this.bfbtnDetallesViaje.IndicateFocus = false;
-            this.bfbtnDetallesViaje.Location = new System.Drawing.Point(5, 301);
+            this.bfbtnDetallesViaje.Location = new System.Drawing.Point(2, 90);
             this.bfbtnDetallesViaje.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnDetallesViaje.Name = "bfbtnDetallesViaje";
             this.bfbtnDetallesViaje.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -457,11 +455,11 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
             this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges5;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.bunifuButton21.CustomizableEdges = borderEdges7;
             this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -485,7 +483,7 @@ namespace final_motoDix.Vistas
             this.bunifuButton21.IdleIconLeftImage = null;
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(1, 650);
+            this.bunifuButton21.Location = new System.Drawing.Point(4, 650);
             this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -548,11 +546,11 @@ namespace final_motoDix.Vistas
             this.bfbtnMisViajes.ColorContrastOnClick = 45;
             this.bfbtnMisViajes.ColorContrastOnHover = 45;
             this.bfbtnMisViajes.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.bfbtnMisViajes.CustomizableEdges = borderEdges6;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bfbtnMisViajes.CustomizableEdges = borderEdges2;
             this.bfbtnMisViajes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnMisViajes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnMisViajes.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -576,7 +574,7 @@ namespace final_motoDix.Vistas
             this.bfbtnMisViajes.IdleIconLeftImage = null;
             this.bfbtnMisViajes.IdleIconRightImage = null;
             this.bfbtnMisViajes.IndicateFocus = false;
-            this.bfbtnMisViajes.Location = new System.Drawing.Point(3, 255);
+            this.bfbtnMisViajes.Location = new System.Drawing.Point(2, 44);
             this.bfbtnMisViajes.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnMisViajes.Name = "bfbtnMisViajes";
             this.bfbtnMisViajes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -639,11 +637,11 @@ namespace final_motoDix.Vistas
             this.bfbtnViajar.ColorContrastOnClick = 45;
             this.bfbtnViajar.ColorContrastOnHover = 45;
             this.bfbtnViajar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.bfbtnViajar.CustomizableEdges = borderEdges7;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bfbtnViajar.CustomizableEdges = borderEdges1;
             this.bfbtnViajar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnViajar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnViajar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -667,7 +665,7 @@ namespace final_motoDix.Vistas
             this.bfbtnViajar.IdleIconLeftImage = null;
             this.bfbtnViajar.IdleIconRightImage = null;
             this.bfbtnViajar.IndicateFocus = false;
-            this.bfbtnViajar.Location = new System.Drawing.Point(5, 213);
+            this.bfbtnViajar.Location = new System.Drawing.Point(2, 2);
             this.bfbtnViajar.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnViajar.Name = "bfbtnViajar";
             this.bfbtnViajar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -758,7 +756,7 @@ namespace final_motoDix.Vistas
             this.bfbtnTrabajaConNosotros.IdleIconLeftImage = null;
             this.bfbtnTrabajaConNosotros.IdleIconRightImage = null;
             this.bfbtnTrabajaConNosotros.IndicateFocus = false;
-            this.bfbtnTrabajaConNosotros.Location = new System.Drawing.Point(2, 611);
+            this.bfbtnTrabajaConNosotros.Location = new System.Drawing.Point(3, 611);
             this.bfbtnTrabajaConNosotros.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnTrabajaConNosotros.Name = "bfbtnTrabajaConNosotros";
             this.bfbtnTrabajaConNosotros.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -827,10 +825,10 @@ namespace final_motoDix.Vistas
             this.panelContenedor.Controls.Add(this.panelHeader);
             this.panelContenedor.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(211, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(218, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(954, 742);
+            this.panelContenedor.Size = new System.Drawing.Size(947, 742);
             this.panelContenedor.TabIndex = 17;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
@@ -851,14 +849,14 @@ namespace final_motoDix.Vistas
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Quality = 10;
-            this.panelHeader.Size = new System.Drawing.Size(954, 29);
+            this.panelHeader.Size = new System.Drawing.Size(947, 29);
             this.panelHeader.TabIndex = 0;
             // 
             // ptbMaximizar
             // 
             this.ptbMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMaximizar.Image")));
-            this.ptbMaximizar.Location = new System.Drawing.Point(909, 3);
+            this.ptbMaximizar.Location = new System.Drawing.Point(902, 3);
             this.ptbMaximizar.Name = "ptbMaximizar";
             this.ptbMaximizar.Size = new System.Drawing.Size(17, 18);
             this.ptbMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -870,7 +868,7 @@ namespace final_motoDix.Vistas
             // 
             this.ptbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptbCerrar.Image")));
-            this.ptbCerrar.Location = new System.Drawing.Point(932, 3);
+            this.ptbCerrar.Location = new System.Drawing.Point(925, 3);
             this.ptbCerrar.Name = "ptbCerrar";
             this.ptbCerrar.Size = new System.Drawing.Size(18, 18);
             this.ptbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -882,7 +880,7 @@ namespace final_motoDix.Vistas
             // 
             this.ptbMinizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMinizar.Image = ((System.Drawing.Image)(resources.GetObject("ptbMinizar.Image")));
-            this.ptbMinizar.Location = new System.Drawing.Point(884, 3);
+            this.ptbMinizar.Location = new System.Drawing.Point(877, 3);
             this.ptbMinizar.Name = "ptbMinizar";
             this.ptbMinizar.Size = new System.Drawing.Size(17, 18);
             this.ptbMinizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -916,11 +914,11 @@ namespace final_motoDix.Vistas
             this.bfbtnCrearAdministrador.ColorContrastOnClick = 45;
             this.bfbtnCrearAdministrador.ColorContrastOnHover = 45;
             this.bfbtnCrearAdministrador.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bfbtnCrearAdministrador.CustomizableEdges = borderEdges1;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.bfbtnCrearAdministrador.CustomizableEdges = borderEdges5;
             this.bfbtnCrearAdministrador.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnCrearAdministrador.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnCrearAdministrador.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -944,7 +942,7 @@ namespace final_motoDix.Vistas
             this.bfbtnCrearAdministrador.IdleIconLeftImage = null;
             this.bfbtnCrearAdministrador.IdleIconRightImage = null;
             this.bfbtnCrearAdministrador.IndicateFocus = false;
-            this.bfbtnCrearAdministrador.Location = new System.Drawing.Point(4, 385);
+            this.bfbtnCrearAdministrador.Location = new System.Drawing.Point(2, 174);
             this.bfbtnCrearAdministrador.Margin = new System.Windows.Forms.Padding(2);
             this.bfbtnCrearAdministrador.Name = "bfbtnCrearAdministrador";
             this.bfbtnCrearAdministrador.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -988,6 +986,19 @@ namespace final_motoDix.Vistas
             this.bfbtnCrearAdministrador.UseDefaultRadiusAndThickness = true;
             this.bfbtnCrearAdministrador.Click += new System.EventHandler(this.bfbtnCrearAdministrador_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(54)))), ((int)(((byte)(66)))));
+            this.flowLayoutPanel1.Controls.Add(this.bfbtnViajar);
+            this.flowLayoutPanel1.Controls.Add(this.bfbtnMisViajes);
+            this.flowLayoutPanel1.Controls.Add(this.bfbtnDetallesViaje);
+            this.flowLayoutPanel1.Controls.Add(this.bfbtnSolicitudesCondutor);
+            this.flowLayoutPanel1.Controls.Add(this.bfbtnCrearAdministrador);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 211);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(208, 225);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1017,6 +1028,7 @@ namespace final_motoDix.Vistas
             ((System.ComponentModel.ISupportInitialize)(this.ptbMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinizar)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1044,5 +1056,6 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnSolicitudesCondutor;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnCerrarSesion;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnCrearAdministrador;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
