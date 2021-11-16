@@ -65,8 +65,8 @@ namespace final_motoDix.Controladores
                throw new Exception(err.Message);
             }
             catch (Exception err)
-            {
-                throw new Exception("Error al actualiar los datos, intentalo más tarde");
+            {          
+                throw new Exception(err.Message);
             }
 
         }

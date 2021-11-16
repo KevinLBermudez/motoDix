@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using final_motoDix.Modelos;
 using final_motoDix.Controladores;
+using Bunifu.UI.WinForms;
 
 namespace final_motoDix.Vistas
 {
@@ -79,11 +80,19 @@ namespace final_motoDix.Vistas
                 string credentialPassword = bftxtPasswordPerfil.Text;
 
             persona = new clsPersonController(idDocumentPerson, email, idRol, firstName, secondName, surname, secondSurname, gender, credentialPassword);
-
+            try
+            {
                 if (persona.ejecutarActualizarPersona())
                 {
                     MessageBox.Show("Datos actualizados correctamente");
-                }       
+                }
+            }
+            catch (Exception)
+            {
+                bfSnackbarPerfil.Show(this, "Contraseña invalida", BunifuSnackbar.MessageTypes.Error, 6000,
+                 "Fallo de credenciales", BunifuSnackbar.Positions.BottomRight);
+            }
+                    
         }
     }
     
