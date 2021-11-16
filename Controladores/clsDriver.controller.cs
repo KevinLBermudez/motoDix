@@ -108,5 +108,28 @@ namespace final_motoDix.Controladores
 
             }
         }
+
+
+        public bool ejecutarAceptarUnConductor(string idDocumentDriver,int idRol,string state,string stateAssignment)
+        {
+            driver = new clsDriverModel(idDocumentDriver, idRol,state, stateAssignment);
+            try
+            {
+                if (driver.aceptarUnConductor())
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new Exception("No se pudo aceptar la solicitud seleccionada");
+                }
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
+            }
+
+        }
+
     }
 }

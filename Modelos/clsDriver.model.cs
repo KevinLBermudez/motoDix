@@ -111,6 +111,16 @@ namespace final_motoDix.Modelos
 
         }
 
+        public clsDriverModel(string idDocumentPersonDriver, int idRol, string state,string assignmentstate)
+        {
+            this.idDocumentPersonDriver = idDocumentPersonDriver;
+            this.idRol = idRol;
+            this.state = state;
+            this.assignmentstate = assignmentstate;
+            conexionDriver = clsConexion.realizarConexion();
+
+        }
+
         public clsDriverModel(string idDocumentPersonDriver, DateTime dateofbirth, string firstname, string secondname, string surname, string secondsurname, string profilePicture, string gender, string state, string idcity, string email, int idRol, string licensetransitexpender, DateTime licenseexpeditiondate, string licenserestrictions, string licensecategory, DateTime licensevalidity, string driverstade, string assignmentstate, string licenseplate, string iddocumentowner, string color, int model, int cylindercapacity, string brand, DateTime expeditiondatetechnomechanics, DateTime expirationdatetechnomechanics, DateTime expeditiondatesoat, DateTime initialvaliditysoat, DateTime finalvaliditysoat, string statee, string ownerfirstname, string ownersecondname, string ownersurname, string ownersecondsurname)
         {
             this.idDocumentPersonDriver = idDocumentPersonDriver;
@@ -285,9 +295,36 @@ namespace final_motoDix.Modelos
                 throw new Exception(err.Message);
 
             }
-
         }
 
+        public bool aceptarUnConductor()
+        {
 
+            validarConexion();
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionDriver;
+            query.CommandText = "SELECT public.app_accept_driver(@idDocumentDrive,@idRol,@state,@assignmentstate);";
+
+            query.Parameters.Add("@idRol", NpgsqlTypes.NpgsqlDbType.Smallint).Value = idRol;
+            query.Parameters.Add("@idDocumentDrive", NpgsqlDbType.Varchar).Value = idDocumentPersonDriver;
+            query.Parameters.Add("@state", NpgsqlDbType.Varchar).Value = state;
+            query.Parameters.Add("@assignmentstate", NpgsqlDbType.Varchar).Value = assignmentstate;
+
+            try
+            {
+                query.ExecuteNonQuery();
+                return true;
+            }
+            catch (NpgsqlException err)
+            {
+                throw new Exception(err.Message);
+            }
+            catch(Exception err)
+            {
+                throw new Exception(err.Message);
+
+            }
+
+        }
     }
 }

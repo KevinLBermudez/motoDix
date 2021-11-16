@@ -55,36 +55,41 @@ namespace final_motoDix.Vistas
 
         private void bfdgvSolicitudes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int filaViaje = bfdgvSolicitudes.CurrentRow.Index;
-            inicio= bfdgvSolicitudes.Rows[filaViaje].Cells[4].Value.ToString();
-            final = bfdgvSolicitudes.Rows[filaViaje].Cells[5].Value.ToString();
-            bftxtPuntoInicio.Text = inicio;
-            bftxtPuntoLlegada.Text = final;
-            bftxtCliente.Text = bfdgvSolicitudes.Rows[filaViaje].Cells[2].Value.ToString() + " " + bfdgvSolicitudes.Rows[filaViaje].Cells[3].Value.ToString();
-            travelId = bfdgvSolicitudes.Rows[filaViaje].Cells[0].Value.ToString();
-
-            inicioPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[7].Value.ToString());
-            inicioPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[8].Value.ToString());
-            finalPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[9].Value.ToString());
-            finalPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[10].Value.ToString());
-
-            inicioPoint = new PointLatLng();
+           
 
         }
 
         private void frmViajeConductor_Load(object sender, EventArgs e)
         {
-            viajes = new clsViajeController();
-            viajes.ejecutarObtenerViajesSolicitados(bfdgvSolicitudes);
+            if (infoDriver.driverstade == "Activo")
+            {
+                viajes = new clsViajeController();
+                viajes.ejecutarObtenerViajesSolicitados(bfdgvSolicitudes);
+
+            }
+            else if(infoDriver.driverstade == "Rechazado")
+            {
+                bfSnackbarSolicitud.Show(this, "Lamentablemente su solicitud fue rechazada, esperamos que en un futuro trabaje con nosotros", BunifuSnackbar.MessageTypes.Error, 10000,
+                         "Peticion rechazada", BunifuSnackbar.Positions.BottomRight);
+            }
+            else
+            {
+                bfSnackbarSolicitud.Show(this, "Usted aun no se encuentra activo como conductor, espere hasta que aprueben su solicitud", BunifuSnackbar.MessageTypes.Error, 5000,
+                 "Acceso denegado", BunifuSnackbar.Positions.BottomRight);
+            }
         }
 
         private void contadorSolicitud_Tick(object sender, EventArgs e)
         {
-            if (!viendoDetalles)
+            if (infoDriver.driverstade == "Activo")
             {
-                viajes.ejecutarObtenerViajesSolicitados(bfdgvSolicitudes);
+                if (!viendoDetalles)
+                {
+                    viajes.ejecutarObtenerViajesSolicitados(bfdgvSolicitudes);
 
+                }
             }
+           
         }
 
         private void bfbtnVerDetalles_Click(object sender, EventArgs e)
@@ -166,6 +171,24 @@ namespace final_motoDix.Vistas
                 "Error", BunifuSnackbar.Positions.BottomRight);
             }
 
+        }
+
+        private void bfdgvSolicitudes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int filaViaje = bfdgvSolicitudes.CurrentRow.Index;
+            inicio = bfdgvSolicitudes.Rows[filaViaje].Cells[4].Value.ToString();
+            final = bfdgvSolicitudes.Rows[filaViaje].Cells[5].Value.ToString();
+            bftxtPuntoInicio.Text = inicio;
+            bftxtPuntoLlegada.Text = final;
+            bftxtCliente.Text = bfdgvSolicitudes.Rows[filaViaje].Cells[2].Value.ToString() + " " + bfdgvSolicitudes.Rows[filaViaje].Cells[3].Value.ToString();
+            travelId = bfdgvSolicitudes.Rows[filaViaje].Cells[0].Value.ToString();
+
+            inicioPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[7].Value.ToString());
+            inicioPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[8].Value.ToString());
+            finalPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[9].Value.ToString());
+            finalPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[10].Value.ToString());
+
+            inicioPoint = new PointLatLng();
         }
     }
 }

@@ -69,6 +69,10 @@ namespace final_motoDix.Vistas
             this.bfdgvSolicitudes = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.bftgResumenViaje = new System.Windows.Forms.TabPage();
+            this.lblDescuentoValor = new System.Windows.Forms.Label();
+            this.lblFacturaValor = new System.Windows.Forms.Label();
+            this.lblDistanciaValor = new System.Windows.Forms.Label();
+            this.lblTiempoValor = new System.Windows.Forms.Label();
             this.bfbtnAceptar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblEfectivo = new System.Windows.Forms.Label();
             this.lblDescuento = new System.Windows.Forms.Label();
@@ -90,10 +94,6 @@ namespace final_motoDix.Vistas
             this.gMapControl = new GMap.NET.WindowsForms.GMapControl();
             this.contadorSolicitud = new System.Windows.Forms.Timer(this.components);
             this.bfSnackbarSolicitud = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            this.lblTiempoValor = new System.Windows.Forms.Label();
-            this.lblDistanciaValor = new System.Windows.Forms.Label();
-            this.lblFacturaValor = new System.Windows.Forms.Label();
-            this.lblDescuentoValor = new System.Windows.Forms.Label();
             this.bfpgTramitesViaje.SuspendLayout();
             this.bftpSolicitudes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bfdgvSolicitudes)).BeginInit();
@@ -110,10 +110,10 @@ namespace final_motoDix.Vistas
             this.bfpgTramitesViaje.Location = new System.Drawing.Point(12, 12);
             this.bfpgTramitesViaje.Multiline = true;
             this.bfpgTramitesViaje.Name = "bfpgTramitesViaje";
-            this.bfpgTramitesViaje.Page = this.bftgResumenViaje;
-            this.bfpgTramitesViaje.PageIndex = 1;
-            this.bfpgTramitesViaje.PageName = "bftgResumenViaje";
-            this.bfpgTramitesViaje.PageTitle = "DetallesViaje";
+            this.bfpgTramitesViaje.Page = this.bftpSolicitudes;
+            this.bfpgTramitesViaje.PageIndex = 0;
+            this.bfpgTramitesViaje.PageName = "bftpSolicitudes";
+            this.bfpgTramitesViaje.PageTitle = "Solicitudes";
             this.bfpgTramitesViaje.SelectedIndex = 0;
             this.bfpgTramitesViaje.Size = new System.Drawing.Size(878, 574);
             this.bfpgTramitesViaje.TabIndex = 18;
@@ -559,6 +559,7 @@ namespace final_motoDix.Vistas
             this.bfdgvSolicitudes.Size = new System.Drawing.Size(804, 204);
             this.bfdgvSolicitudes.TabIndex = 2;
             this.bfdgvSolicitudes.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bfdgvSolicitudes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bfdgvSolicitudes_CellClick);
             this.bfdgvSolicitudes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bfdgvSolicitudes_CellContentClick);
             // 
             // lblTitulo
@@ -604,6 +605,46 @@ namespace final_motoDix.Vistas
             this.bftgResumenViaje.Text = "DetallesViaje";
             this.bftgResumenViaje.UseVisualStyleBackColor = true;
             this.bftgResumenViaje.Enter += new System.EventHandler(this.bftgResumenViaje_Enter);
+            // 
+            // lblDescuentoValor
+            // 
+            this.lblDescuentoValor.AutoSize = true;
+            this.lblDescuentoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescuentoValor.Location = new System.Drawing.Point(539, 446);
+            this.lblDescuentoValor.Name = "lblDescuentoValor";
+            this.lblDescuentoValor.Size = new System.Drawing.Size(13, 20);
+            this.lblDescuentoValor.TabIndex = 99;
+            this.lblDescuentoValor.Text = ":";
+            // 
+            // lblFacturaValor
+            // 
+            this.lblFacturaValor.AutoSize = true;
+            this.lblFacturaValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacturaValor.Location = new System.Drawing.Point(520, 417);
+            this.lblFacturaValor.Name = "lblFacturaValor";
+            this.lblFacturaValor.Size = new System.Drawing.Size(13, 20);
+            this.lblFacturaValor.TabIndex = 98;
+            this.lblFacturaValor.Text = ":";
+            // 
+            // lblDistanciaValor
+            // 
+            this.lblDistanciaValor.AutoSize = true;
+            this.lblDistanciaValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDistanciaValor.Location = new System.Drawing.Point(593, 389);
+            this.lblDistanciaValor.Name = "lblDistanciaValor";
+            this.lblDistanciaValor.Size = new System.Drawing.Size(13, 20);
+            this.lblDistanciaValor.TabIndex = 97;
+            this.lblDistanciaValor.Text = ":";
+            // 
+            // lblTiempoValor
+            // 
+            this.lblTiempoValor.AutoSize = true;
+            this.lblTiempoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempoValor.Location = new System.Drawing.Point(657, 356);
+            this.lblTiempoValor.Name = "lblTiempoValor";
+            this.lblTiempoValor.Size = new System.Drawing.Size(13, 20);
+            this.lblTiempoValor.TabIndex = 96;
+            this.lblTiempoValor.Text = ":";
             // 
             // bfbtnAceptar
             // 
@@ -1150,46 +1191,6 @@ namespace final_motoDix.Vistas
             this.bfSnackbarSolicitud.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
             this.bfSnackbarSolicitud.WarningOptions.IconLeftMargin = 12;
             this.bfSnackbarSolicitud.ZoomCloseIcon = true;
-            // 
-            // lblTiempoValor
-            // 
-            this.lblTiempoValor.AutoSize = true;
-            this.lblTiempoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempoValor.Location = new System.Drawing.Point(657, 356);
-            this.lblTiempoValor.Name = "lblTiempoValor";
-            this.lblTiempoValor.Size = new System.Drawing.Size(13, 20);
-            this.lblTiempoValor.TabIndex = 96;
-            this.lblTiempoValor.Text = ":";
-            // 
-            // lblDistanciaValor
-            // 
-            this.lblDistanciaValor.AutoSize = true;
-            this.lblDistanciaValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistanciaValor.Location = new System.Drawing.Point(593, 389);
-            this.lblDistanciaValor.Name = "lblDistanciaValor";
-            this.lblDistanciaValor.Size = new System.Drawing.Size(13, 20);
-            this.lblDistanciaValor.TabIndex = 97;
-            this.lblDistanciaValor.Text = ":";
-            // 
-            // lblFacturaValor
-            // 
-            this.lblFacturaValor.AutoSize = true;
-            this.lblFacturaValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacturaValor.Location = new System.Drawing.Point(520, 417);
-            this.lblFacturaValor.Name = "lblFacturaValor";
-            this.lblFacturaValor.Size = new System.Drawing.Size(13, 20);
-            this.lblFacturaValor.TabIndex = 98;
-            this.lblFacturaValor.Text = ":";
-            // 
-            // lblDescuentoValor
-            // 
-            this.lblDescuentoValor.AutoSize = true;
-            this.lblDescuentoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescuentoValor.Location = new System.Drawing.Point(539, 446);
-            this.lblDescuentoValor.Name = "lblDescuentoValor";
-            this.lblDescuentoValor.Size = new System.Drawing.Size(13, 20);
-            this.lblDescuentoValor.TabIndex = 99;
-            this.lblDescuentoValor.Text = ":";
             // 
             // frmViajeConductor
             // 
