@@ -29,6 +29,11 @@ namespace final_motoDix.Controladores
         {
             driver = new clsDriverModel();
         }
+        public clsDriverController(string idDocumentDriver)
+        {
+            driver = new clsDriverModel(idDocumentDriver);
+
+        }
 
         public void ejecutarCrearDriver()
         {
@@ -122,6 +127,27 @@ namespace final_motoDix.Controladores
                 else
                 {
                     throw new Exception("No se pudo aceptar la solicitud seleccionada");
+                }
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.Message);
+            }
+
+        }
+
+        public bool ejecutarCheckDriver()
+        {
+
+            try
+            {
+                if (driver.checkDriver())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
             catch (Exception err)

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using final_motoDix.Estructuras;
 using final_motoDix.Modelos;
+using final_motoDix.Controladores;
 
 namespace final_motoDix.Vistas
 {
@@ -96,7 +97,23 @@ namespace final_motoDix.Vistas
                 bflblTipoUsuario.Text = infoPersona.RolName;
                 bfpbImagenPerfil.ImageLocation = infoPersona.ProfilePicture;
 
-            }else if(rolActivo == 2)
+                ///metodo
+                clsDriverController drive = new clsDriverController(infoPersona.IdDocumentPersona);
+                try
+                {
+                    if (drive.ejecutarCheckDriver())
+                    {
+                        bfbtnTrabajaConNosotros.Enabled = false;
+                        bfbtnTrabajaConNosotros.Visible = false;
+                    }
+                }
+                catch
+                {
+
+                }
+
+            }
+            else if(rolActivo == 2)
             {
                 Form viajes = new frmViajeConductor(infoDriver);
                 viajes.TopLevel = false;

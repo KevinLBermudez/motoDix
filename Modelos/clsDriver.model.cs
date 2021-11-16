@@ -111,6 +111,13 @@ namespace final_motoDix.Modelos
 
         }
 
+        public clsDriverModel(string idDocumentPersonDriver)
+        {
+            this.idDocumentPersonDriver = idDocumentPersonDriver;
+            conexionDriver = clsConexion.realizarConexion();
+
+        }
+
         public clsDriverModel(string idDocumentPersonDriver, int idRol, string state,string assignmentstate)
         {
             this.idDocumentPersonDriver = idDocumentPersonDriver;
@@ -320,6 +327,40 @@ namespace final_motoDix.Modelos
                 throw new Exception(err.Message);
             }
             catch(Exception err)
+            {
+                throw new Exception(err.Message);
+
+            }
+
+        }
+
+
+        public bool checkDriver()
+        {
+
+            validarConexion();
+
+            NpgsqlCommand query = new NpgsqlCommand();
+            query.Connection = conexionDriver;
+            query.CommandText = "SELECT public.checkdriver(@idDocumentDrive);";
+
+            query.Parameters.Add("@idDocumentDrive", NpgsqlDbType.Varchar).Value = idDocumentPersonDriver;
+  
+            try
+            {
+
+                if (query.ExecuteNonQuery()==1)
+                {
+                    return true;
+
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception err)
             {
                 throw new Exception(err.Message);
 
