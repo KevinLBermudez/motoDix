@@ -332,6 +332,12 @@
     <Compile Include="Vistas\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\frmMoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmMoto.Designer.cs">
+      <DependentUpon>frmMoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\frmPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmMoto.resx">
+      <DependentUpon>frmMoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>

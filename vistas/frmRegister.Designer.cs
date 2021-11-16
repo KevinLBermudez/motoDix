@@ -108,6 +108,7 @@ namespace final_motoDix.Vistas
             this.bflblDepartamento = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCiudad = new Bunifu.UI.WinForms.BunifuLabel();
             this.validacionLogin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bfSnackbarRegister = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaCerrar)).BeginInit();
             this.bfpgPersonInfo.SuspendLayout();
@@ -1199,7 +1200,7 @@ namespace final_motoDix.Vistas
             this.bfbtnInfoFinishPerson.IdleIconLeftImage = null;
             this.bfbtnInfoFinishPerson.IdleIconRightImage = null;
             this.bfbtnInfoFinishPerson.IndicateFocus = false;
-            this.bfbtnInfoFinishPerson.Location = new System.Drawing.Point(504, 189);
+            this.bfbtnInfoFinishPerson.Location = new System.Drawing.Point(504, 186);
             this.bfbtnInfoFinishPerson.Name = "bfbtnInfoFinishPerson";
             this.bfbtnInfoFinishPerson.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnInfoFinishPerson.OnDisabledState.BorderRadius = 1;
@@ -1457,6 +1458,75 @@ namespace final_motoDix.Vistas
             // 
             this.validacionLogin.ContainerControl = this;
             // 
+            // bfSnackbarRegister
+            // 
+            this.bfSnackbarRegister.AllowDragging = false;
+            this.bfSnackbarRegister.AllowMultipleViews = true;
+            this.bfSnackbarRegister.ClickToClose = true;
+            this.bfSnackbarRegister.DoubleClickToClose = true;
+            this.bfSnackbarRegister.DurationAfterIdle = 4000;
+            this.bfSnackbarRegister.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.ErrorOptions.ActionBorderRadius = 1;
+            this.bfSnackbarRegister.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarRegister.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bfSnackbarRegister.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarRegister.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bfSnackbarRegister.ErrorOptions.IconLeftMargin = 12;
+            this.bfSnackbarRegister.FadeCloseIcon = false;
+            this.bfSnackbarRegister.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bfSnackbarRegister.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.InformationOptions.ActionBorderRadius = 1;
+            this.bfSnackbarRegister.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarRegister.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarRegister.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bfSnackbarRegister.InformationOptions.IconLeftMargin = 12;
+            this.bfSnackbarRegister.Margin = 5;
+            this.bfSnackbarRegister.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarRegister.MaximumViews = 7;
+            this.bfSnackbarRegister.MessageRightMargin = 15;
+            this.bfSnackbarRegister.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bfSnackbarRegister.ShowBorders = false;
+            this.bfSnackbarRegister.ShowCloseIcon = false;
+            this.bfSnackbarRegister.ShowIcon = true;
+            this.bfSnackbarRegister.ShowShadows = true;
+            this.bfSnackbarRegister.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.SuccessOptions.ActionBorderRadius = 1;
+            this.bfSnackbarRegister.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarRegister.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bfSnackbarRegister.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarRegister.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bfSnackbarRegister.SuccessOptions.IconLeftMargin = 12;
+            this.bfSnackbarRegister.ViewsMargin = 7;
+            this.bfSnackbarRegister.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bfSnackbarRegister.WarningOptions.ActionBorderRadius = 1;
+            this.bfSnackbarRegister.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bfSnackbarRegister.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bfSnackbarRegister.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bfSnackbarRegister.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bfSnackbarRegister.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bfSnackbarRegister.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bfSnackbarRegister.WarningOptions.IconLeftMargin = 12;
+            this.bfSnackbarRegister.ZoomCloseIcon = true;
+            // 
             // frmRegisterClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1527,5 +1597,6 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private System.Windows.Forms.ErrorProvider validacionLogin;
         private System.Windows.Forms.Panel panelCredenciales;
+        private Bunifu.UI.WinForms.BunifuSnackbar bfSnackbarRegister;
     }
 }

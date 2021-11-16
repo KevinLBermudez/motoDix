@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 using final_motoDix.Controladores;
 using final_motoDix.helpers;
 
@@ -164,9 +165,19 @@ namespace final_motoDix.Vistas
 
                 if (persona.ejecutarCrearPersona())
                 {
-                    frmLogin login = new frmLogin(1);
-                    login.Show();
-                    this.Close();
+                    try
+                    {
+                        frmLogin login = new frmLogin(1);
+                        login.Show();
+                        this.Close();
+                    }
+                    catch (Exception err)
+                    {
+
+                        bfSnackbarRegister.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 6000,
+                        "Error", BunifuSnackbar.Positions.BottomRight);
+                    }
+                 
                 }
             }
             else

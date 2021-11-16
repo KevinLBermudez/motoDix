@@ -44,6 +44,8 @@ namespace final_motoDix.Vistas
                 bfbtnViajar.Visible = false;
                 bfbtnMisViajes.Enabled = false;
                 bfbtnMisViajes.Visible = false;
+                bfbtnTrabajaConNosotros.Enabled = false;
+                bfbtnTrabajaConNosotros.Visible = false;
                 bfbtnCrearAdministrador.Enabled = true;
                 bfbtnCrearAdministrador.Visible = true;
 

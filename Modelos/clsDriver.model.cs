@@ -286,7 +286,7 @@ namespace final_motoDix.Modelos
             }
             catch (Exception err)
             {
-                throw new Exception("Compruebe sus credenciales");
+                throw new Exception(err.Message);
             }
 
         }

@@ -221,11 +221,16 @@ namespace final_motoDix.Modelos
 
             try
             {
-                //Trata de ejecutar el procedimiento almacenado 
-                //Con el try catch verificamos si no hay errores
+               
                 query.ExecuteNonQuery();
                 
                 return true;
+
+            }
+            catch (NpgsqlException ex)
+            {
+
+                throw new Exception(ex.Message);
 
             }
             catch (Exception ex)
