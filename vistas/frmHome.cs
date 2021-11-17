@@ -240,7 +240,6 @@ namespace final_motoDix.Vistas
                 perfil.Show();
                 perfil.BringToFront();
             }
-
             else if (rolActivo == 2)
             {
                 frmPerfilConductor perfilConductor = new frmPerfilConductor(infoDriver);
