@@ -32,6 +32,7 @@ namespace final_motoDix.Vistas
         double inicioPointLng;
         double finalPointLat;
         double finalPointLng;
+        bool viajeActivo = false;
 
 
         public frmViajeConductor(Iconductor infoDriver)
@@ -106,6 +107,9 @@ namespace final_motoDix.Vistas
                 lblFacturaValor.Text = viaje.ValueTravel.ToString();
                 lblNombreCliente.Text = viaje.FirstNameCustomer + " " +  viaje.SurnameCustomer;
                 bfImagenCliente.ImageLocation = viaje.ProfilePictureCustomer;
+                lblDistanciaValor.Text = mapa.infoViajeRuta[0].Dato + " metros";
+                lblTiempoValor.Text = mapa.infoViajeRuta[1].Dato;
+
 
             }
             else
@@ -118,7 +122,7 @@ namespace final_motoDix.Vistas
 
         private void bfbtnAceptar_Click(object sender, EventArgs e)
         {
-            if(travelId != null)
+            if(!viajeActivo)
             {
                 try
                 {
@@ -137,7 +141,7 @@ namespace final_motoDix.Vistas
                         bfbtnAceptar.Enabled = false;
                         bfSnackbarSolicitud.Show(this, "Usted acaba de aceptar un viaje", BunifuSnackbar.MessageTypes.Information, 4000,
                         "Viaje iniciado", BunifuSnackbar.Positions.BottomRight);
-
+                        lblEstadoViaje.Text = "Aceptado";
                     }
                 }
                 catch (Exception err)
@@ -148,7 +152,7 @@ namespace final_motoDix.Vistas
             else
             {
                 bfSnackbarSolicitud.Show(this, "Debe seleccionar un vaije para aceptarlo", BunifuSnackbar.MessageTypes.Information, 4000,
-                        "Viaje rechazado", BunifuSnackbar.Positions.BottomRight);
+                 "Viaje rechazado", BunifuSnackbar.Positions.BottomRight);
             }
           
         }
@@ -193,13 +197,25 @@ namespace final_motoDix.Vistas
 
         private void timerVerEstado_Tick(object sender, EventArgs e)
         {
-
             try
             {
                 if(travelId != null)
                 {
                     lblEstadoViaje.Text = viajes.ejecutarVerEstado();
 
+                    if(lblEstadoViaje.Text == "Completado")
+                    {
+                        travelId = null;
+                        bfpgbEstadoViaje.Value = 100;
+                        viajeActivo = true;
+                        bfSnackbarSolicitud.Show(this, "El viaje ha finalizado", BunifuSnackbar.MessageTypes.Success, 4000,
+                      "Completado", BunifuSnackbar.Positions.BottomRight);
+
+                    }
+                    if (lblEstadoViaje.Text == "Aceptado")
+                    {
+                        bfpgbEstadoViaje.Value = 50;
+                    }
                 }
             }
             catch (Exception err)
@@ -208,6 +224,15 @@ namespace final_motoDix.Vistas
                    "Error", BunifuSnackbar.Positions.BottomRight);
             }
 
+        }
+
+        private void bfbtnRegresar_Click(object sender, EventArgs e)
+        {
+            if(!viajeActivo)
+            {
+                bfpgTramitesViaje.PageIndex = 0;
+
+            }
         }
     }
 }

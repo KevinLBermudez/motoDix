@@ -48,7 +48,7 @@ namespace final_motoDix.Vistas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -57,6 +57,7 @@ namespace final_motoDix.Vistas
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bfpgTramitesViaje = new Bunifu.UI.WinForms.BunifuPages();
             this.bftpSolicitudes = new System.Windows.Forms.TabPage();
             this.bfbtnVerDetalles = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -95,6 +96,7 @@ namespace final_motoDix.Vistas
             this.contadorSolicitud = new System.Windows.Forms.Timer(this.components);
             this.bfSnackbarSolicitud = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.timerVerEstado = new System.Windows.Forms.Timer(this.components);
+            this.bfbtnRegresar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfpgTramitesViaje.SuspendLayout();
             this.bftpSolicitudes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bfdgvSolicitudes)).BeginInit();
@@ -108,7 +110,7 @@ namespace final_motoDix.Vistas
             this.bfpgTramitesViaje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bfpgTramitesViaje.Controls.Add(this.bftpSolicitudes);
             this.bfpgTramitesViaje.Controls.Add(this.bftgResumenViaje);
-            this.bfpgTramitesViaje.Location = new System.Drawing.Point(12, 12);
+            this.bfpgTramitesViaje.Location = new System.Drawing.Point(12, 22);
             this.bfpgTramitesViaje.Multiline = true;
             this.bfpgTramitesViaje.Name = "bfpgTramitesViaje";
             this.bfpgTramitesViaje.Page = this.bftgResumenViaje;
@@ -116,7 +118,7 @@ namespace final_motoDix.Vistas
             this.bfpgTramitesViaje.PageName = "bftgResumenViaje";
             this.bfpgTramitesViaje.PageTitle = "DetallesViaje";
             this.bfpgTramitesViaje.SelectedIndex = 0;
-            this.bfpgTramitesViaje.Size = new System.Drawing.Size(878, 574);
+            this.bfpgTramitesViaje.Size = new System.Drawing.Size(878, 595);
             this.bfpgTramitesViaje.TabIndex = 18;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -575,6 +577,7 @@ namespace final_motoDix.Vistas
             // 
             // bftgResumenViaje
             // 
+            this.bftgResumenViaje.Controls.Add(this.bfbtnRegresar);
             this.bftgResumenViaje.Controls.Add(this.lblDescuentoValor);
             this.bftgResumenViaje.Controls.Add(this.lblFacturaValor);
             this.bftgResumenViaje.Controls.Add(this.lblDistanciaValor);
@@ -601,7 +604,7 @@ namespace final_motoDix.Vistas
             this.bftgResumenViaje.Location = new System.Drawing.Point(4, 4);
             this.bftgResumenViaje.Name = "bftgResumenViaje";
             this.bftgResumenViaje.Padding = new System.Windows.Forms.Padding(3);
-            this.bftgResumenViaje.Size = new System.Drawing.Size(870, 548);
+            this.bftgResumenViaje.Size = new System.Drawing.Size(870, 569);
             this.bftgResumenViaje.TabIndex = 2;
             this.bftgResumenViaje.Text = "DetallesViaje";
             this.bftgResumenViaje.UseVisualStyleBackColor = true;
@@ -667,11 +670,11 @@ namespace final_motoDix.Vistas
             this.bfbtnAceptar.ColorContrastOnClick = 45;
             this.bfbtnAceptar.ColorContrastOnHover = 45;
             this.bfbtnAceptar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bfbtnAceptar.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bfbtnAceptar.CustomizableEdges = borderEdges3;
             this.bfbtnAceptar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bfbtnAceptar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnAceptar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -695,7 +698,7 @@ namespace final_motoDix.Vistas
             this.bfbtnAceptar.IdleIconLeftImage = null;
             this.bfbtnAceptar.IdleIconRightImage = null;
             this.bfbtnAceptar.IndicateFocus = false;
-            this.bfbtnAceptar.Location = new System.Drawing.Point(680, 495);
+            this.bfbtnAceptar.Location = new System.Drawing.Point(693, 515);
             this.bfbtnAceptar.Name = "bfbtnAceptar";
             this.bfbtnAceptar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bfbtnAceptar.OnDisabledState.BorderRadius = 1;
@@ -945,7 +948,7 @@ namespace final_motoDix.Vistas
             this.bftptxtDestino2.IconRight = null;
             this.bftptxtDestino2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftptxtDestino2.Lines = new string[0];
-            this.bftptxtDestino2.Location = new System.Drawing.Point(680, 157);
+            this.bftptxtDestino2.Location = new System.Drawing.Point(680, 167);
             this.bftptxtDestino2.MaxLength = 32767;
             this.bftptxtDestino2.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftptxtDestino2.Modified = false;
@@ -1021,7 +1024,7 @@ namespace final_motoDix.Vistas
             this.bftptxtPuntoInicio2.IconRight = null;
             this.bftptxtPuntoInicio2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftptxtPuntoInicio2.Lines = new string[0];
-            this.bftptxtPuntoInicio2.Location = new System.Drawing.Point(685, 54);
+            this.bftptxtPuntoInicio2.Location = new System.Drawing.Point(685, 64);
             this.bftptxtPuntoInicio2.MaxLength = 32767;
             this.bftptxtPuntoInicio2.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftptxtPuntoInicio2.Modified = false;
@@ -1073,7 +1076,7 @@ namespace final_motoDix.Vistas
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(681, 118);
+            this.label1.Location = new System.Drawing.Point(681, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 79;
@@ -1084,7 +1087,7 @@ namespace final_motoDix.Vistas
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(681, 15);
+            this.label2.Location = new System.Drawing.Point(681, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 20);
             this.label2.TabIndex = 78;
@@ -1199,12 +1202,103 @@ namespace final_motoDix.Vistas
             this.timerVerEstado.Interval = 10000;
             this.timerVerEstado.Tick += new System.EventHandler(this.timerVerEstado_Tick);
             // 
+            // bfbtnRegresar
+            // 
+            this.bfbtnRegresar.AllowAnimations = true;
+            this.bfbtnRegresar.AllowMouseEffects = true;
+            this.bfbtnRegresar.AllowToggling = false;
+            this.bfbtnRegresar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bfbtnRegresar.AnimationSpeed = 200;
+            this.bfbtnRegresar.AutoGenerateColors = false;
+            this.bfbtnRegresar.AutoRoundBorders = false;
+            this.bfbtnRegresar.AutoSizeLeftIcon = true;
+            this.bfbtnRegresar.AutoSizeRightIcon = true;
+            this.bfbtnRegresar.BackColor = System.Drawing.Color.Transparent;
+            this.bfbtnRegresar.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bfbtnRegresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bfbtnRegresar.BackgroundImage")));
+            this.bfbtnRegresar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnRegresar.ButtonText = "Regresar";
+            this.bfbtnRegresar.ButtonTextMarginLeft = 0;
+            this.bfbtnRegresar.ColorContrastOnClick = 45;
+            this.bfbtnRegresar.ColorContrastOnHover = 45;
+            this.bfbtnRegresar.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bfbtnRegresar.CustomizableEdges = borderEdges2;
+            this.bfbtnRegresar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bfbtnRegresar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnRegresar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnRegresar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnRegresar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.bfbtnRegresar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bfbtnRegresar.ForeColor = System.Drawing.Color.White;
+            this.bfbtnRegresar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bfbtnRegresar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnRegresar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bfbtnRegresar.IconMarginLeft = 11;
+            this.bfbtnRegresar.IconPadding = 10;
+            this.bfbtnRegresar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bfbtnRegresar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bfbtnRegresar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bfbtnRegresar.IconSize = 25;
+            this.bfbtnRegresar.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnRegresar.IdleBorderRadius = 1;
+            this.bfbtnRegresar.IdleBorderThickness = 1;
+            this.bfbtnRegresar.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnRegresar.IdleIconLeftImage = null;
+            this.bfbtnRegresar.IdleIconRightImage = null;
+            this.bfbtnRegresar.IndicateFocus = false;
+            this.bfbtnRegresar.Location = new System.Drawing.Point(483, 515);
+            this.bfbtnRegresar.Name = "bfbtnRegresar";
+            this.bfbtnRegresar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bfbtnRegresar.OnDisabledState.BorderRadius = 1;
+            this.bfbtnRegresar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnRegresar.OnDisabledState.BorderThickness = 1;
+            this.bfbtnRegresar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bfbtnRegresar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bfbtnRegresar.OnDisabledState.IconLeftImage = null;
+            this.bfbtnRegresar.OnDisabledState.IconRightImage = null;
+            this.bfbtnRegresar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnRegresar.onHoverState.BorderRadius = 1;
+            this.bfbtnRegresar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnRegresar.onHoverState.BorderThickness = 1;
+            this.bfbtnRegresar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bfbtnRegresar.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnRegresar.onHoverState.IconLeftImage = null;
+            this.bfbtnRegresar.onHoverState.IconRightImage = null;
+            this.bfbtnRegresar.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnRegresar.OnIdleState.BorderRadius = 1;
+            this.bfbtnRegresar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnRegresar.OnIdleState.BorderThickness = 1;
+            this.bfbtnRegresar.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bfbtnRegresar.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnRegresar.OnIdleState.IconLeftImage = null;
+            this.bfbtnRegresar.OnIdleState.IconRightImage = null;
+            this.bfbtnRegresar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnRegresar.OnPressedState.BorderRadius = 1;
+            this.bfbtnRegresar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bfbtnRegresar.OnPressedState.BorderThickness = 1;
+            this.bfbtnRegresar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bfbtnRegresar.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bfbtnRegresar.OnPressedState.IconLeftImage = null;
+            this.bfbtnRegresar.OnPressedState.IconRightImage = null;
+            this.bfbtnRegresar.Size = new System.Drawing.Size(158, 38);
+            this.bfbtnRegresar.TabIndex = 100;
+            this.bfbtnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bfbtnRegresar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bfbtnRegresar.TextMarginLeft = 0;
+            this.bfbtnRegresar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bfbtnRegresar.UseDefaultRadiusAndThickness = true;
+            this.bfbtnRegresar.Click += new System.EventHandler(this.bfbtnRegresar_Click);
+            // 
             // frmViajeConductor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(946, 609);
+            this.ClientSize = new System.Drawing.Size(946, 629);
             this.Controls.Add(this.bfpgTramitesViaje);
             this.Name = "frmViajeConductor";
             this.Text = "frmViajeConductor";
@@ -1259,5 +1353,6 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.Label lblDistanciaValor;
         private System.Windows.Forms.Label lblTiempoValor;
         private System.Windows.Forms.Timer timerVerEstado;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnRegresar;
     }
 }
