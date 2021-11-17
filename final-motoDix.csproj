@@ -332,12 +332,6 @@
     <Compile Include="Vistas\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\frmMoto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\frmMoto.Designer.cs">
-      <DependentUpon>frmMoto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\frmPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,12 +343,6 @@
     </Compile>
     <Compile Include="Vistas\frmPerfilConductor.Designer.cs">
       <DependentUpon>frmPerfilConductor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\frmProblemasComentarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\frmProblemasComentarios.Designer.cs">
-      <DependentUpon>frmProblemasComentarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\frmRegister.cs">
       <SubType>Form</SubType>
@@ -400,17 +388,11 @@
     <EmbeddedResource Include="Vistas\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\frmMoto.resx">
-      <DependentUpon>frmMoto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmPerfilConductor.resx">
       <DependentUpon>frmPerfilConductor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\frmProblemasComentarios.resx">
-      <DependentUpon>frmProblemasComentarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>

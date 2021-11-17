@@ -28,7 +28,6 @@ namespace final_motoDix.Estructuras
             private double discount;
 
 
-
             public string TravelId { get => travelId; set => travelId = value; }
             public string FirstNameDriver { get => firstNameDriver; set => firstNameDriver = value; }
             public string SecondNameDriver { get => secondNameDriver; set => secondNameDriver = value; }

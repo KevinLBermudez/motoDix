@@ -336,7 +336,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(87, 20);
             this.bunifuLabel2.TabIndex = 6;
-            this.bunifuLabel2.Text = "Inicio sesion";
+            this.bunifuLabel2.Text = "Inicio sesión";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -352,7 +352,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(165, 20);
             this.bunifuLabel3.TabIndex = 7;
-            this.bunifuLabel3.Text = "Licencia de conduccion";
+            this.bunifuLabel3.Text = "Licencia de cónduccion";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -438,7 +438,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(57, 20);
             this.bunifuLabel4.TabIndex = 10;
-            this.bunifuLabel4.Text = "vehiculo";
+            this.bunifuLabel4.Text = "vehículo";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

@@ -179,20 +179,29 @@ namespace final_motoDix.Vistas
 
         private void bfdgvSolicitudes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int filaViaje = bfdgvSolicitudes.CurrentRow.Index;
-            inicio = bfdgvSolicitudes.Rows[filaViaje].Cells[4].Value.ToString();
-            final = bfdgvSolicitudes.Rows[filaViaje].Cells[5].Value.ToString();
-            bftxtPuntoInicio.Text = inicio;
-            bftxtPuntoLlegada.Text = final;
-            bftxtCliente.Text = bfdgvSolicitudes.Rows[filaViaje].Cells[2].Value.ToString() + " " + bfdgvSolicitudes.Rows[filaViaje].Cells[3].Value.ToString();
-            travelId = bfdgvSolicitudes.Rows[filaViaje].Cells[0].Value.ToString();
+            try
+            {
+                int filaViaje = bfdgvSolicitudes.CurrentRow.Index;
+                inicio = bfdgvSolicitudes.Rows[filaViaje].Cells[4].Value.ToString();
+                final = bfdgvSolicitudes.Rows[filaViaje].Cells[5].Value.ToString();
+                bftxtPuntoInicio.Text = inicio;
+                bftxtPuntoLlegada.Text = final;
+                bftxtCliente.Text = bfdgvSolicitudes.Rows[filaViaje].Cells[2].Value.ToString() + " " + bfdgvSolicitudes.Rows[filaViaje].Cells[3].Value.ToString();
+                travelId = bfdgvSolicitudes.Rows[filaViaje].Cells[0].Value.ToString();
 
-            inicioPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[7].Value.ToString());
-            inicioPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[8].Value.ToString());
-            finalPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[9].Value.ToString());
-            finalPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[10].Value.ToString());
+                inicioPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[7].Value.ToString());
+                inicioPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[8].Value.ToString());
+                finalPointLat = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[9].Value.ToString());
+                finalPointLng = double.Parse(bfdgvSolicitudes.Rows[filaViaje].Cells[10].Value.ToString());
 
-            inicioPoint = new PointLatLng();
+                inicioPoint = new PointLatLng();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Seleccione una celda valida");
+                
+            }
+          
         }
 
         private void timerVerEstado_Tick(object sender, EventArgs e)
