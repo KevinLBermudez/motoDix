@@ -87,6 +87,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfSnackbarPerfil = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bfFotoPerfil)).BeginInit();
             this.panelPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -383,7 +384,7 @@ namespace final_motoDix.Vistas
             this.bflblGenero.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bflblGenero.Size = new System.Drawing.Size(38, 15);
             this.bflblGenero.TabIndex = 50;
-            this.bflblGenero.Text = "Genero";
+            this.bflblGenero.Text = "Género";
             this.bflblGenero.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblGenero.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
