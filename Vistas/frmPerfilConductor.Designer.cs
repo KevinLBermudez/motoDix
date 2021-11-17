@@ -137,7 +137,6 @@ namespace final_motoDix.Vistas
             this.bftxtCilindraje = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtPlacaVehiculo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bfpgPropietario = new System.Windows.Forms.TabPage();
-            this.bflblPropietario = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfbtnLicenceNext = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bftxtSegundoApellidoPropietario = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtPrimerApellidoPropietario = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -145,7 +144,6 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerNombrePropietario = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtDocumentoPropietario = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bfpgLicence = new System.Windows.Forms.TabPage();
-            this.bflblLicenciaConduccion = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfbtnInfoFinish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bflblVigencia = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuDatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -153,6 +151,8 @@ namespace final_motoDix.Vistas
             this.bftxtRestricciones = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtFechaExpedicion = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtTransitoExpendedor = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.bfpgRegisterVehicle.SuspendLayout();
             this.bfpgLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
@@ -172,10 +172,10 @@ namespace final_motoDix.Vistas
             this.bfpgRegisterVehicle.Location = new System.Drawing.Point(16, -3);
             this.bfpgRegisterVehicle.Multiline = true;
             this.bfpgRegisterVehicle.Name = "bfpgRegisterVehicle";
-            this.bfpgRegisterVehicle.Page = this.bfpgVehicle;
-            this.bfpgRegisterVehicle.PageIndex = 1;
-            this.bfpgRegisterVehicle.PageName = "bfpgVehicle";
-            this.bfpgRegisterVehicle.PageTitle = "Vehicle";
+            this.bfpgRegisterVehicle.Page = this.bfpgLicence;
+            this.bfpgRegisterVehicle.PageIndex = 3;
+            this.bfpgRegisterVehicle.PageName = "bfpgLicence";
+            this.bfpgRegisterVehicle.PageTitle = "licencia";
             this.bfpgRegisterVehicle.SelectedIndex = 0;
             this.bfpgRegisterVehicle.Size = new System.Drawing.Size(768, 457);
             this.bfpgRegisterVehicle.TabIndex = 12;
@@ -875,7 +875,7 @@ namespace final_motoDix.Vistas
             this.bflblFechaExpedicionTecno.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bflblFechaExpedicionTecno.Size = new System.Drawing.Size(108, 15);
             this.bflblFechaExpedicionTecno.TabIndex = 61;
-            this.bflblFechaExpedicionTecno.Text = "Fecha de expedicion";
+            this.bflblFechaExpedicionTecno.Text = "Fecha de expedición";
             this.bflblFechaExpedicionTecno.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblFechaExpedicionTecno.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -891,7 +891,7 @@ namespace final_motoDix.Vistas
             this.bflblFexhaExpiracionTecnomecanica.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bflblFexhaExpiracionTecnomecanica.Size = new System.Drawing.Size(105, 15);
             this.bflblFexhaExpiracionTecnomecanica.TabIndex = 60;
-            this.bflblFexhaExpiracionTecnomecanica.Text = "Fecha de expiracion";
+            this.bflblFexhaExpiracionTecnomecanica.Text = "Fecha de expiración";
             this.bflblFexhaExpiracionTecnomecanica.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bflblFexhaExpiracionTecnomecanica.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1352,7 +1352,7 @@ namespace final_motoDix.Vistas
             this.bftxtPlacaVehiculo.Padding = new System.Windows.Forms.Padding(3);
             this.bftxtPlacaVehiculo.PasswordChar = '\0';
             this.bftxtPlacaVehiculo.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bftxtPlacaVehiculo.PlaceholderText = "Placa vehiculo";
+            this.bftxtPlacaVehiculo.PlaceholderText = "Placa vehículo";
             this.bftxtPlacaVehiculo.ReadOnly = false;
             this.bftxtPlacaVehiculo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bftxtPlacaVehiculo.SelectedText = "";
@@ -1366,13 +1366,13 @@ namespace final_motoDix.Vistas
             this.bftxtPlacaVehiculo.TextMarginBottom = 0;
             this.bftxtPlacaVehiculo.TextMarginLeft = 3;
             this.bftxtPlacaVehiculo.TextMarginTop = 1;
-            this.bftxtPlacaVehiculo.TextPlaceholder = "Placa vehiculo";
+            this.bftxtPlacaVehiculo.TextPlaceholder = "Placa vehículo";
             this.bftxtPlacaVehiculo.UseSystemPasswordChar = false;
             this.bftxtPlacaVehiculo.WordWrap = true;
             // 
             // bfpgPropietario
             // 
-            this.bfpgPropietario.Controls.Add(this.bflblPropietario);
+            this.bfpgPropietario.Controls.Add(this.label1);
             this.bfpgPropietario.Controls.Add(this.bfbtnLicenceNext);
             this.bfpgPropietario.Controls.Add(this.bftxtSegundoApellidoPropietario);
             this.bfpgPropietario.Controls.Add(this.bftxtPrimerApellidoPropietario);
@@ -1386,21 +1386,6 @@ namespace final_motoDix.Vistas
             this.bfpgPropietario.TabIndex = 4;
             this.bfpgPropietario.Text = "Propietario";
             this.bfpgPropietario.UseVisualStyleBackColor = true;
-            // 
-            // bflblPropietario
-            // 
-            this.bflblPropietario.AllowParentOverrides = false;
-            this.bflblPropietario.AutoEllipsis = false;
-            this.bflblPropietario.CursorType = null;
-            this.bflblPropietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bflblPropietario.Location = new System.Drawing.Point(29, 31);
-            this.bflblPropietario.Name = "bflblPropietario";
-            this.bflblPropietario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblPropietario.Size = new System.Drawing.Size(76, 20);
-            this.bflblPropietario.TabIndex = 46;
-            this.bflblPropietario.Text = "Propieterio";
-            this.bflblPropietario.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bflblPropietario.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bfbtnLicenceNext
             // 
@@ -1520,7 +1505,7 @@ namespace final_motoDix.Vistas
             this.bftxtSegundoApellidoPropietario.IconRight = null;
             this.bftxtSegundoApellidoPropietario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSegundoApellidoPropietario.Lines = new string[0];
-            this.bftxtSegundoApellidoPropietario.Location = new System.Drawing.Point(296, 149);
+            this.bftxtSegundoApellidoPropietario.Location = new System.Drawing.Point(296, 186);
             this.bftxtSegundoApellidoPropietario.MaxLength = 32767;
             this.bftxtSegundoApellidoPropietario.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtSegundoApellidoPropietario.Modified = false;
@@ -1595,7 +1580,7 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerApellidoPropietario.IconRight = null;
             this.bftxtPrimerApellidoPropietario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPrimerApellidoPropietario.Lines = new string[0];
-            this.bftxtPrimerApellidoPropietario.Location = new System.Drawing.Point(29, 149);
+            this.bftxtPrimerApellidoPropietario.Location = new System.Drawing.Point(29, 186);
             this.bftxtPrimerApellidoPropietario.MaxLength = 32767;
             this.bftxtPrimerApellidoPropietario.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPrimerApellidoPropietario.Modified = false;
@@ -1670,7 +1655,7 @@ namespace final_motoDix.Vistas
             this.bftxtSegundoNombrePropietario.IconRight = null;
             this.bftxtSegundoNombrePropietario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSegundoNombrePropietario.Lines = new string[0];
-            this.bftxtSegundoNombrePropietario.Location = new System.Drawing.Point(296, 84);
+            this.bftxtSegundoNombrePropietario.Location = new System.Drawing.Point(296, 121);
             this.bftxtSegundoNombrePropietario.MaxLength = 32767;
             this.bftxtSegundoNombrePropietario.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtSegundoNombrePropietario.Modified = false;
@@ -1745,7 +1730,7 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerNombrePropietario.IconRight = null;
             this.bftxtPrimerNombrePropietario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPrimerNombrePropietario.Lines = new string[0];
-            this.bftxtPrimerNombrePropietario.Location = new System.Drawing.Point(29, 84);
+            this.bftxtPrimerNombrePropietario.Location = new System.Drawing.Point(29, 121);
             this.bftxtPrimerNombrePropietario.MaxLength = 32767;
             this.bftxtPrimerNombrePropietario.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPrimerNombrePropietario.Modified = false;
@@ -1820,7 +1805,7 @@ namespace final_motoDix.Vistas
             this.bftxtDocumentoPropietario.IconRight = null;
             this.bftxtDocumentoPropietario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtDocumentoPropietario.Lines = new string[0];
-            this.bftxtDocumentoPropietario.Location = new System.Drawing.Point(29, 215);
+            this.bftxtDocumentoPropietario.Location = new System.Drawing.Point(29, 252);
             this.bftxtDocumentoPropietario.MaxLength = 32767;
             this.bftxtDocumentoPropietario.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtDocumentoPropietario.Modified = false;
@@ -1869,7 +1854,7 @@ namespace final_motoDix.Vistas
             // 
             // bfpgLicence
             // 
-            this.bfpgLicence.Controls.Add(this.bflblLicenciaConduccion);
+            this.bfpgLicence.Controls.Add(this.label2);
             this.bfpgLicence.Controls.Add(this.bfbtnInfoFinish);
             this.bfpgLicence.Controls.Add(this.bflblVigencia);
             this.bfpgLicence.Controls.Add(this.bunifuDatePicker2);
@@ -1884,21 +1869,6 @@ namespace final_motoDix.Vistas
             this.bfpgLicence.TabIndex = 5;
             this.bfpgLicence.Text = "licencia";
             this.bfpgLicence.UseVisualStyleBackColor = true;
-            // 
-            // bflblLicenciaConduccion
-            // 
-            this.bflblLicenciaConduccion.AllowParentOverrides = false;
-            this.bflblLicenciaConduccion.AutoEllipsis = false;
-            this.bflblLicenciaConduccion.CursorType = null;
-            this.bflblLicenciaConduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bflblLicenciaConduccion.Location = new System.Drawing.Point(51, 33);
-            this.bflblLicenciaConduccion.Name = "bflblLicenciaConduccion";
-            this.bflblLicenciaConduccion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bflblLicenciaConduccion.Size = new System.Drawing.Size(165, 20);
-            this.bflblLicenciaConduccion.TabIndex = 46;
-            this.bflblLicenciaConduccion.Text = "Licencia de conduccion";
-            this.bflblLicenciaConduccion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bflblLicenciaConduccion.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bfbtnInfoFinish
             // 
@@ -1999,7 +1969,7 @@ namespace final_motoDix.Vistas
             this.bflblVigencia.Cursor = System.Windows.Forms.Cursors.Default;
             this.bflblVigencia.CursorType = System.Windows.Forms.Cursors.Default;
             this.bflblVigencia.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bflblVigencia.Location = new System.Drawing.Point(48, 228);
+            this.bflblVigencia.Location = new System.Drawing.Point(35, 244);
             this.bflblVigencia.Name = "bflblVigencia";
             this.bflblVigencia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bflblVigencia.Size = new System.Drawing.Size(45, 15);
@@ -2027,10 +1997,10 @@ namespace final_motoDix.Vistas
             this.bunifuDatePicker2.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker2.LeftTextMargin = 5;
-            this.bunifuDatePicker2.Location = new System.Drawing.Point(48, 249);
+            this.bunifuDatePicker2.Location = new System.Drawing.Point(35, 265);
             this.bunifuDatePicker2.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker2.Name = "bunifuDatePicker2";
-            this.bunifuDatePicker2.Size = new System.Drawing.Size(210, 32);
+            this.bunifuDatePicker2.Size = new System.Drawing.Size(231, 32);
             this.bunifuDatePicker2.TabIndex = 42;
             // 
             // bfCategoria
@@ -2061,7 +2031,7 @@ namespace final_motoDix.Vistas
             this.bfCategoria.IconRight = null;
             this.bfCategoria.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bfCategoria.Lines = new string[0];
-            this.bfCategoria.Location = new System.Drawing.Point(282, 157);
+            this.bfCategoria.Location = new System.Drawing.Point(269, 173);
             this.bfCategoria.MaxLength = 32767;
             this.bfCategoria.MinimumSize = new System.Drawing.Size(1, 1);
             this.bfCategoria.Modified = false;
@@ -2136,7 +2106,7 @@ namespace final_motoDix.Vistas
             this.bftxtRestricciones.IconRight = null;
             this.bftxtRestricciones.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtRestricciones.Lines = new string[0];
-            this.bftxtRestricciones.Location = new System.Drawing.Point(48, 157);
+            this.bftxtRestricciones.Location = new System.Drawing.Point(35, 173);
             this.bftxtRestricciones.MaxLength = 32767;
             this.bftxtRestricciones.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtRestricciones.Modified = false;
@@ -2211,7 +2181,7 @@ namespace final_motoDix.Vistas
             this.bftxtFechaExpedicion.IconRight = null;
             this.bftxtFechaExpedicion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtFechaExpedicion.Lines = new string[0];
-            this.bftxtFechaExpedicion.Location = new System.Drawing.Point(282, 90);
+            this.bftxtFechaExpedicion.Location = new System.Drawing.Point(269, 106);
             this.bftxtFechaExpedicion.MaxLength = 32767;
             this.bftxtFechaExpedicion.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtFechaExpedicion.Modified = false;
@@ -2286,7 +2256,7 @@ namespace final_motoDix.Vistas
             this.bftxtTransitoExpendedor.IconRight = null;
             this.bftxtTransitoExpendedor.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtTransitoExpendedor.Lines = new string[0];
-            this.bftxtTransitoExpendedor.Location = new System.Drawing.Point(48, 90);
+            this.bftxtTransitoExpendedor.Location = new System.Drawing.Point(35, 106);
             this.bftxtTransitoExpendedor.MaxLength = 32767;
             this.bftxtTransitoExpendedor.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtTransitoExpendedor.Modified = false;
@@ -2332,6 +2302,26 @@ namespace final_motoDix.Vistas
             this.bftxtTransitoExpendedor.TextPlaceholder = "Transito Expendedor";
             this.bftxtTransitoExpendedor.UseSystemPasswordChar = false;
             this.bftxtTransitoExpendedor.WordWrap = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Propietario";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(259, 23);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Licencia de conducción";
             // 
             // frmPerfilConductor
             // 
@@ -2389,7 +2379,6 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuTextBox bftxtCilindraje;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtPlacaVehiculo;
         private System.Windows.Forms.TabPage bfpgPropietario;
-        private Bunifu.UI.WinForms.BunifuLabel bflblPropietario;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnLicenceNext;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtSegundoApellidoPropietario;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtPrimerApellidoPropietario;
@@ -2397,7 +2386,6 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuTextBox bftxtPrimerNombrePropietario;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtDocumentoPropietario;
         private System.Windows.Forms.TabPage bfpgLicence;
-        private Bunifu.UI.WinForms.BunifuLabel bflblLicenciaConduccion;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bfbtnInfoFinish;
         private Bunifu.UI.WinForms.BunifuLabel bflblVigencia;
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker2;
@@ -2409,5 +2397,7 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.Label lblTipoUsuarioPerfil;
         private System.Windows.Forms.Label lblNombreUsuarioPerfil;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
