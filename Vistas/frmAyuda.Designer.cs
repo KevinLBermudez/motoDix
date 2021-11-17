@@ -36,7 +36,6 @@ namespace final_motoDix.Vistas
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblNombreUsuarioAyuda = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bftxtProblema = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -53,21 +52,11 @@ namespace final_motoDix.Vistas
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido";
             // 
-            // lblNombreUsuarioAyuda
-            // 
-            this.lblNombreUsuarioAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombreUsuarioAyuda.AutoSize = true;
-            this.lblNombreUsuarioAyuda.Location = new System.Drawing.Point(154, 98);
-            this.lblNombreUsuarioAyuda.Name = "lblNombreUsuarioAyuda";
-            this.lblNombreUsuarioAyuda.Size = new System.Drawing.Size(104, 25);
-            this.lblNombreUsuarioAyuda.TabIndex = 1;
-            this.lblNombreUsuarioAyuda.Text = "NOMBRE";
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 150);
+            this.label3.Location = new System.Drawing.Point(16, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(767, 65);
             this.label3.TabIndex = 2;
@@ -103,7 +92,7 @@ namespace final_motoDix.Vistas
             this.bftxtProblema.IconRight = null;
             this.bftxtProblema.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtProblema.Lines = new string[0];
-            this.bftxtProblema.Location = new System.Drawing.Point(20, 306);
+            this.bftxtProblema.Location = new System.Drawing.Point(20, 287);
             this.bftxtProblema.MaxLength = 32767;
             this.bftxtProblema.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtProblema.Modified = false;
@@ -244,7 +233,7 @@ namespace final_motoDix.Vistas
             // cmbTipoComentario
             // 
             this.cmbTipoComentario.FormattingEnabled = true;
-            this.cmbTipoComentario.Location = new System.Drawing.Point(20, 256);
+            this.cmbTipoComentario.Location = new System.Drawing.Point(20, 230);
             this.cmbTipoComentario.Name = "cmbTipoComentario";
             this.cmbTipoComentario.Size = new System.Drawing.Size(150, 33);
             this.cmbTipoComentario.TabIndex = 5;
@@ -259,7 +248,6 @@ namespace final_motoDix.Vistas
             this.Controls.Add(this.bunifuButton21);
             this.Controls.Add(this.bftxtProblema);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblNombreUsuarioAyuda);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -275,7 +263,6 @@ namespace final_motoDix.Vistas
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblNombreUsuarioAyuda;
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuTextBox bftxtProblema;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;

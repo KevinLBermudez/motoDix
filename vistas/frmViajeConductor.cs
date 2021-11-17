@@ -207,10 +207,10 @@ namespace final_motoDix.Vistas
                     {
                         travelId = null;
                         bfpgbEstadoViaje.Value = 100;
-                        viajeActivo = true;
+                        viajeActivo = false;
                         bfSnackbarSolicitud.Show(this, "El viaje ha finalizado", BunifuSnackbar.MessageTypes.Success, 4000,
                       "Completado", BunifuSnackbar.Positions.BottomRight);
-
+                        
                     }
                     if (lblEstadoViaje.Text == "Aceptado")
                     {
