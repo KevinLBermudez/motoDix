@@ -77,7 +77,6 @@ namespace final_motoDix.Vistas
             this.ptbCrearCuentaCerrar = new System.Windows.Forms.PictureBox();
             this.bfpgPersonInfo = new Bunifu.UI.WinForms.BunifuPages();
             this.bftpInfoPersonal = new System.Windows.Forms.TabPage();
-            this.lblDatosPersonales = new System.Windows.Forms.Label();
             this.panelDatosPersonales = new System.Windows.Forms.Panel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -94,6 +93,8 @@ namespace final_motoDix.Vistas
             this.bftxtSegundoApellido = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftgLogin = new System.Windows.Forms.TabPage();
             this.panelCredenciales = new System.Windows.Forms.Panel();
+            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bftxtConfirmPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtConfirmarEmail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -108,9 +109,8 @@ namespace final_motoDix.Vistas
             this.bflblDepartamento = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCiudad = new Bunifu.UI.WinForms.BunifuLabel();
             this.validacionLogin = new System.Windows.Forms.ErrorProvider(this.components);
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bfSnackbarRegister = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.lblDatosPersonales = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaCerrar)).BeginInit();
             this.bfpgPersonInfo.SuspendLayout();
@@ -228,16 +228,6 @@ namespace final_motoDix.Vistas
             this.bftpInfoPersonal.Text = "Register";
             this.bftpInfoPersonal.UseVisualStyleBackColor = true;
             // 
-            // lblDatosPersonales
-            // 
-            this.lblDatosPersonales.AutoSize = true;
-            this.lblDatosPersonales.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosPersonales.Location = new System.Drawing.Point(289, 12);
-            this.lblDatosPersonales.Name = "lblDatosPersonales";
-            this.lblDatosPersonales.Size = new System.Drawing.Size(155, 24);
-            this.lblDatosPersonales.TabIndex = 42;
-            this.lblDatosPersonales.Text = "Datos personales";
-            // 
             // panelDatosPersonales
             // 
             this.panelDatosPersonales.Controls.Add(this.bunifuLabel3);
@@ -301,7 +291,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(38, 15);
             this.bunifuLabel1.TabIndex = 11;
-            this.bunifuLabel1.Text = "Genero";
+            this.bunifuLabel1.Text = "Género";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -632,7 +622,7 @@ namespace final_motoDix.Vistas
             this.bftxtDocumento.IconRight = null;
             this.bftxtDocumento.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtDocumento.Lines = new string[0];
-            this.bftxtDocumento.Location = new System.Drawing.Point(342, 165);
+            this.bftxtDocumento.Location = new System.Drawing.Point(342, 158);
             this.bftxtDocumento.MaxLength = 32767;
             this.bftxtDocumento.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtDocumento.Modified = false;
@@ -856,6 +846,37 @@ namespace final_motoDix.Vistas
             this.panelCredenciales.Name = "panelCredenciales";
             this.panelCredenciales.Size = new System.Drawing.Size(629, 214);
             this.panelCredenciales.TabIndex = 43;
+            // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.CursorType = null;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel5.Location = new System.Drawing.Point(332, 99);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(115, 15);
+            this.bunifuLabel5.TabIndex = 7;
+            this.bunifuLabel5.Text = "Confirmar contraseña";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuLabel4.Location = new System.Drawing.Point(18, 99);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(60, 15);
+            this.bunifuLabel4.TabIndex = 6;
+            this.bunifuLabel4.Text = "Contraseña";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bftxtConfirmPassword
             // 
@@ -1531,35 +1552,15 @@ namespace final_motoDix.Vistas
             this.bfSnackbarRegister.WarningOptions.IconLeftMargin = 12;
             this.bfSnackbarRegister.ZoomCloseIcon = true;
             // 
-            // bunifuLabel4
+            // lblDatosPersonales
             // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(18, 99);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(60, 15);
-            this.bunifuLabel4.TabIndex = 6;
-            this.bunifuLabel4.Text = "Contraseña";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel5
-            // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.CursorType = null;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel5.Location = new System.Drawing.Point(332, 99);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(115, 15);
-            this.bunifuLabel5.TabIndex = 7;
-            this.bunifuLabel5.Text = "Confirmar contraseña";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblDatosPersonales.AutoSize = true;
+            this.lblDatosPersonales.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosPersonales.Location = new System.Drawing.Point(231, 13);
+            this.lblDatosPersonales.Name = "lblDatosPersonales";
+            this.lblDatosPersonales.Size = new System.Drawing.Size(233, 23);
+            this.lblDatosPersonales.TabIndex = 57;
+            this.lblDatosPersonales.Text = "DATOS PERSONALES";
             // 
             // frmRegisterClient
             // 
@@ -1609,7 +1610,6 @@ namespace final_motoDix.Vistas
         private System.Windows.Forms.TabPage bftpInfoPersonal;
         private System.Windows.Forms.ComboBox cmbCiudad;
         private System.Windows.Forms.ComboBox cmbDepartamento;
-        private System.Windows.Forms.Label lblDatosPersonales;
         private System.Windows.Forms.ComboBox cmbGenero;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bfbtnRegisterNext;
         private Bunifu.UI.WinForms.BunifuDatePicker bfdpkFechaNacimiento;
@@ -1635,5 +1635,6 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuSnackbar bfSnackbarRegister;
+        private System.Windows.Forms.Label lblDatosPersonales;
     }
 }

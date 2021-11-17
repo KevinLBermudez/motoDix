@@ -119,7 +119,7 @@ namespace final_motoDix.Vistas
             this.bftxtEmail.Padding = new System.Windows.Forms.Padding(4);
             this.bftxtEmail.PasswordChar = '\0';
             this.bftxtEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bftxtEmail.PlaceholderText = "correo electronico";
+            this.bftxtEmail.PlaceholderText = "correo electrónico";
             this.bftxtEmail.ReadOnly = false;
             this.bftxtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bftxtEmail.SelectedText = "";
@@ -133,11 +133,10 @@ namespace final_motoDix.Vistas
             this.bftxtEmail.TextMarginBottom = 0;
             this.bftxtEmail.TextMarginLeft = 3;
             this.bftxtEmail.TextMarginTop = 1;
-            this.bftxtEmail.TextPlaceholder = "correo electronico";
+            this.bftxtEmail.TextPlaceholder = "correo electrónico";
             this.bftxtEmail.UseSystemPasswordChar = false;
             this.bftxtEmail.WordWrap = true;
             this.bftxtEmail.TextChange += new System.EventHandler(this.bftxtEmail_TextChange);
-            //this.bftxtEmail.TextChanged += new System.EventHandler(this.bftxtEmail_TextChanged);
             // 
             // bunifuLabel1
             // 

@@ -123,6 +123,7 @@ namespace final_motoDix.Vistas
             this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.bfpgPropietario = new System.Windows.Forms.TabPage();
             this.panelPropietario = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.bfbtnAtras2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bfbtnLicenceNext = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bftxtSegundoApellidoPropietario = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -157,6 +158,7 @@ namespace final_motoDix.Vistas
             this.bftxtCilindraje = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bftxtPlacaVehiculo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bfpgLogin = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.bftxtDocumentoIdentidad = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bfbtnNext0 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -183,8 +185,6 @@ namespace final_motoDix.Vistas
             this.validacionVehicle = new System.Windows.Forms.ErrorProvider(this.components);
             this.validacionPropietario = new System.Windows.Forms.ErrorProvider(this.components);
             this.validacionLicencia = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.bfpgPropietario.SuspendLayout();
             this.panelPropietario.SuspendLayout();
             this.bfpgVehicle.SuspendLayout();
@@ -494,6 +494,17 @@ namespace final_motoDix.Vistas
             this.panelPropietario.Name = "panelPropietario";
             this.panelPropietario.Size = new System.Drawing.Size(711, 388);
             this.panelPropietario.TabIndex = 47;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 23);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Propietario";
             // 
             // bfbtnAtras2
             // 
@@ -2004,6 +2015,17 @@ namespace final_motoDix.Vistas
             this.bfpgLogin.Text = "Login";
             this.bfpgLogin.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(196, 23);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Datos personales";
+            // 
             // panelLogin
             // 
             this.panelLogin.Controls.Add(this.bftxtDocumentoIdentidad);
@@ -2850,7 +2872,7 @@ namespace final_motoDix.Vistas
             this.bfdtpVigencia.Location = new System.Drawing.Point(37, 241);
             this.bfdtpVigencia.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdtpVigencia.Name = "bfdtpVigencia";
-            this.bfdtpVigencia.Size = new System.Drawing.Size(210, 32);
+            this.bfdtpVigencia.Size = new System.Drawing.Size(227, 32);
             this.bfdtpVigencia.TabIndex = 5;
             // 
             // bfCategoria
@@ -2911,7 +2933,7 @@ namespace final_motoDix.Vistas
             this.bfCategoria.Padding = new System.Windows.Forms.Padding(3);
             this.bfCategoria.PasswordChar = '\0';
             this.bfCategoria.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bfCategoria.PlaceholderText = "Categoria";
+            this.bfCategoria.PlaceholderText = "Categoría";
             this.bfCategoria.ReadOnly = false;
             this.bfCategoria.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bfCategoria.SelectedText = "";
@@ -2925,7 +2947,7 @@ namespace final_motoDix.Vistas
             this.bfCategoria.TextMarginBottom = 0;
             this.bfCategoria.TextMarginLeft = 3;
             this.bfCategoria.TextMarginTop = 1;
-            this.bfCategoria.TextPlaceholder = "Categoria";
+            this.bfCategoria.TextPlaceholder = "Categoría";
             this.bfCategoria.UseSystemPasswordChar = false;
             this.bfCategoria.WordWrap = true;
             // 
@@ -3063,7 +3085,7 @@ namespace final_motoDix.Vistas
             this.bftxtTransitoExpendedor.Padding = new System.Windows.Forms.Padding(3);
             this.bftxtTransitoExpendedor.PasswordChar = '\0';
             this.bftxtTransitoExpendedor.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bftxtTransitoExpendedor.PlaceholderText = "Transito Expendedor";
+            this.bftxtTransitoExpendedor.PlaceholderText = "Tránsito Expendedor";
             this.bftxtTransitoExpendedor.ReadOnly = false;
             this.bftxtTransitoExpendedor.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bftxtTransitoExpendedor.SelectedText = "";
@@ -3077,7 +3099,7 @@ namespace final_motoDix.Vistas
             this.bftxtTransitoExpendedor.TextMarginBottom = 0;
             this.bftxtTransitoExpendedor.TextMarginLeft = 3;
             this.bftxtTransitoExpendedor.TextMarginTop = 1;
-            this.bftxtTransitoExpendedor.TextPlaceholder = "Transito Expendedor";
+            this.bftxtTransitoExpendedor.TextPlaceholder = "Tránsito Expendedor";
             this.bftxtTransitoExpendedor.UseSystemPasswordChar = false;
             this.bftxtTransitoExpendedor.WordWrap = true;
             // 
@@ -3136,28 +3158,6 @@ namespace final_motoDix.Vistas
             // validacionLicencia
             // 
             this.validacionLicencia.ContainerControl = this;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 23);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Propietario";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 23);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "Datos personales";
             // 
             // frmRegisterMotorcyclist
             // 
