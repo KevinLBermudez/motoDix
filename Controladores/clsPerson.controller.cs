@@ -35,16 +35,25 @@ namespace final_motoDix.Controladores
 
         public bool ejecutarCrearPersona()
         {
-            if (persona.CrearPersona())
+            try
             {
-                MessageBox.Show("Persona creado correctamente");
-                return true;
-            }
-            else
-            {
-                throw new Exception("Error al crear al usuario, intentalo más tarde");
+                if (persona.CrearPersona())
+                {
+                    MessageBox.Show("Persona creado correctamente");
+                    return true;
+                }
+                else
+                {
+                    return false;
 
+                }
             }
+            catch (Exception err)
+            {
+
+                throw new Exception(err.Message);
+            }
+          
         }
 
         public bool ejecutarActualizarPersona()

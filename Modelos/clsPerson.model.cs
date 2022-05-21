@@ -236,7 +236,7 @@ namespace final_motoDix.Modelos
             catch (Exception ex)
             {
 
-                throw new Exception("Error interno, por favor envia un reporte para mejorar nuestro servicio");
+                throw new Exception("Tu correo esta registrado");
 
             }
 
