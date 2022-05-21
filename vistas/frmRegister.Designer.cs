@@ -77,6 +77,7 @@ namespace final_motoDix.Vistas
             this.ptbCrearCuentaCerrar = new System.Windows.Forms.PictureBox();
             this.bfpgPersonInfo = new Bunifu.UI.WinForms.BunifuPages();
             this.bftpInfoPersonal = new System.Windows.Forms.TabPage();
+            this.lblDatosPersonales = new System.Windows.Forms.Label();
             this.panelDatosPersonales = new System.Windows.Forms.Panel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -110,7 +111,8 @@ namespace final_motoDix.Vistas
             this.lblCiudad = new Bunifu.UI.WinForms.BunifuLabel();
             this.validacionLogin = new System.Windows.Forms.ErrorProvider(this.components);
             this.bfSnackbarRegister = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            this.lblDatosPersonales = new System.Windows.Forms.Label();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.lblDondeVives = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrearCuentaCerrar)).BeginInit();
             this.bfpgPersonInfo.SuspendLayout();
@@ -191,10 +193,10 @@ namespace final_motoDix.Vistas
             this.bfpgPersonInfo.Location = new System.Drawing.Point(67, 86);
             this.bfpgPersonInfo.Multiline = true;
             this.bfpgPersonInfo.Name = "bfpgPersonInfo";
-            this.bfpgPersonInfo.Page = this.bftgLogin;
-            this.bfpgPersonInfo.PageIndex = 1;
-            this.bfpgPersonInfo.PageName = "bftgLogin";
-            this.bfpgPersonInfo.PageTitle = "Login";
+            this.bfpgPersonInfo.Page = this.bftpInfoPersonal;
+            this.bfpgPersonInfo.PageIndex = 0;
+            this.bfpgPersonInfo.PageName = "bftpInfoPersonal";
+            this.bfpgPersonInfo.PageTitle = "Register";
             this.bfpgPersonInfo.SelectedIndex = 0;
             this.bfpgPersonInfo.Size = new System.Drawing.Size(725, 412);
             this.bfpgPersonInfo.TabIndex = 17;
@@ -228,8 +230,20 @@ namespace final_motoDix.Vistas
             this.bftpInfoPersonal.Text = "Register";
             this.bftpInfoPersonal.UseVisualStyleBackColor = true;
             // 
+            // lblDatosPersonales
+            // 
+            this.lblDatosPersonales.AutoSize = true;
+            this.lblDatosPersonales.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosPersonales.Location = new System.Drawing.Point(231, 13);
+            this.lblDatosPersonales.Name = "lblDatosPersonales";
+            this.lblDatosPersonales.Size = new System.Drawing.Size(233, 23);
+            this.lblDatosPersonales.TabIndex = 57;
+            this.lblDatosPersonales.Text = "DATOS PERSONALES";
+            // 
             // panelDatosPersonales
             // 
+            this.panelDatosPersonales.Controls.Add(this.lblDondeVives);
+            this.panelDatosPersonales.Controls.Add(this.lblFechaNacimiento);
             this.panelDatosPersonales.Controls.Add(this.bunifuLabel3);
             this.panelDatosPersonales.Controls.Add(this.bunifuLabel2);
             this.panelDatosPersonales.Controls.Add(this.bunifuLabel1);
@@ -255,7 +269,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(61, 280);
+            this.bunifuLabel3.Location = new System.Drawing.Point(342, 280);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(54, 15);
@@ -270,7 +284,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(342, 213);
+            this.bunifuLabel2.Location = new System.Drawing.Point(61, 270);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(76, 15);
@@ -286,7 +300,7 @@ namespace final_motoDix.Vistas
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(61, 213);
+            this.bunifuLabel1.Location = new System.Drawing.Point(61, 210);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(38, 15);
@@ -300,7 +314,7 @@ namespace final_motoDix.Vistas
             this.cmbCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCiudad.FormattingEnabled = true;
-            this.cmbCiudad.Location = new System.Drawing.Point(61, 301);
+            this.cmbCiudad.Location = new System.Drawing.Point(342, 301);
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(161, 21);
             this.cmbCiudad.TabIndex = 9;
@@ -311,7 +325,7 @@ namespace final_motoDix.Vistas
             this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDepartamento.FormattingEnabled = true;
-            this.cmbDepartamento.Location = new System.Drawing.Point(342, 234);
+            this.cmbDepartamento.Location = new System.Drawing.Point(61, 291);
             this.cmbDepartamento.Name = "cmbDepartamento";
             this.cmbDepartamento.Size = new System.Drawing.Size(161, 21);
             this.cmbDepartamento.TabIndex = 8;
@@ -322,7 +336,7 @@ namespace final_motoDix.Vistas
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(61, 234);
+            this.cmbGenero.Location = new System.Drawing.Point(117, 210);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(161, 21);
             this.cmbGenero.TabIndex = 7;
@@ -437,7 +451,7 @@ namespace final_motoDix.Vistas
             this.bfdpkFechaNacimiento.IconColor = System.Drawing.Color.Gray;
             this.bfdpkFechaNacimiento.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bfdpkFechaNacimiento.LeftTextMargin = 5;
-            this.bfdpkFechaNacimiento.Location = new System.Drawing.Point(61, 165);
+            this.bfdpkFechaNacimiento.Location = new System.Drawing.Point(61, 158);
             this.bfdpkFechaNacimiento.MinimumSize = new System.Drawing.Size(4, 32);
             this.bfdpkFechaNacimiento.Name = "bfdpkFechaNacimiento";
             this.bfdpkFechaNacimiento.Size = new System.Drawing.Size(202, 32);
@@ -697,7 +711,7 @@ namespace final_motoDix.Vistas
             this.bftxtPrimerApellido.IconRight = null;
             this.bftxtPrimerApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtPrimerApellido.Lines = new string[0];
-            this.bftxtPrimerApellido.Location = new System.Drawing.Point(61, 96);
+            this.bftxtPrimerApellido.Location = new System.Drawing.Point(61, 80);
             this.bftxtPrimerApellido.MaxLength = 32767;
             this.bftxtPrimerApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtPrimerApellido.Modified = false;
@@ -772,7 +786,7 @@ namespace final_motoDix.Vistas
             this.bftxtSegundoApellido.IconRight = null;
             this.bftxtSegundoApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bftxtSegundoApellido.Lines = new string[0];
-            this.bftxtSegundoApellido.Location = new System.Drawing.Point(342, 96);
+            this.bftxtSegundoApellido.Location = new System.Drawing.Point(342, 80);
             this.bftxtSegundoApellido.MaxLength = 32767;
             this.bftxtSegundoApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.bftxtSegundoApellido.Modified = false;
@@ -1552,15 +1566,23 @@ namespace final_motoDix.Vistas
             this.bfSnackbarRegister.WarningOptions.IconLeftMargin = 12;
             this.bfSnackbarRegister.ZoomCloseIcon = true;
             // 
-            // lblDatosPersonales
+            // lblFechaNacimiento
             // 
-            this.lblDatosPersonales.AutoSize = true;
-            this.lblDatosPersonales.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosPersonales.Location = new System.Drawing.Point(231, 13);
-            this.lblDatosPersonales.Name = "lblDatosPersonales";
-            this.lblDatosPersonales.Size = new System.Drawing.Size(233, 23);
-            this.lblDatosPersonales.TabIndex = 57;
-            this.lblDatosPersonales.Text = "DATOS PERSONALES";
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(64, 137);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(106, 13);
+            this.lblFechaNacimiento.TabIndex = 14;
+            this.lblFechaNacimiento.Text = "Fecha de nacimiento";
+            // 
+            // lblDondeVives
+            // 
+            this.lblDondeVives.AutoSize = true;
+            this.lblDondeVives.Location = new System.Drawing.Point(58, 245);
+            this.lblDondeVives.Name = "lblDondeVives";
+            this.lblDondeVives.Size = new System.Drawing.Size(128, 13);
+            this.lblDondeVives.TabIndex = 15;
+            this.lblDondeVives.Text = "Donde vives actualmente";
             // 
             // frmRegisterClient
             // 
@@ -1636,5 +1658,7 @@ namespace final_motoDix.Vistas
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuSnackbar bfSnackbarRegister;
         private System.Windows.Forms.Label lblDatosPersonales;
+        private System.Windows.Forms.Label lblDondeVives;
+        private System.Windows.Forms.Label lblFechaNacimiento;
     }
 }

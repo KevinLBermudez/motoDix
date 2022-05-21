@@ -136,70 +136,80 @@ namespace final_motoDix.Vistas
 
         private void bfbtnInfoFinishPerson_Click(object sender, EventArgs e)
         {
-            if (bftxtxEmail.Text != bftxtConfirmarEmail.Text)
+            try
             {
-                validacionLogin.SetError(panelCredenciales, "Los correos no coinciden");
-
-            }
-            else if (bftxtPassword.Text != bftxtConfirmPassword.Text)
-            {
-                validacionLogin.SetError(panelCredenciales, "Las contraseñas no coinciden");
-            }
-            else if (bftxtxEmail.Text != string.Empty && bftxtConfirmarEmail.Text != string.Empty
-                   && bftxtPassword.Text != string.Empty && bftxtConfirmPassword.Text != string.Empty)
-            {
-                validacionLogin.SetError(panelCredenciales, "");
-                string idDocumentPerson = bftxtDocumento.Text;
-                DateTime dateOfBirth = bfdpkFechaNacimiento.Value;
-                string firstName = bftxtPrimerNombre.Text;
-                string secondName = bftxtSegundoNombre.Text == "" ? "null" : bftxtSegundoNombre.Text;
-                string surname = bftxtPrimerApellido.Text;
-                string secondSurname = bftxtSegundoApellido.Text == "" ? "null" : bftxtSegundoApellido.Text;
-                string gender = cmbGenero.Text;
-                string idCity = cmbCiudad.SelectedValue.ToString();
-                //login
-                string email = bftxtxEmail.Text;
-                string credentialPassword = bftxtPassword.Text;
-
-                persona = new clsPersonController(idDocumentPerson, dateOfBirth, firstName, secondName, surname, secondSurname, profilePicture, gender, idCity, email, credentialPassword, rol);
-
-                if (persona.ejecutarCrearPersona())
+                if (bftxtxEmail.Text != bftxtConfirmarEmail.Text)
                 {
-                    try
+                    validacionLogin.SetError(panelCredenciales, "Los correos no coinciden");
+
+                }
+                else if (bftxtPassword.Text != bftxtConfirmPassword.Text)
+                {
+                    validacionLogin.SetError(panelCredenciales, "Las contraseñas no coinciden");
+                }
+                else if (bftxtxEmail.Text != string.Empty && bftxtConfirmarEmail.Text != string.Empty
+                       && bftxtPassword.Text != string.Empty && bftxtConfirmPassword.Text != string.Empty)
+                {
+                    validacionLogin.SetError(panelCredenciales, "");
+                    string idDocumentPerson = bftxtDocumento.Text;
+                    DateTime dateOfBirth = bfdpkFechaNacimiento.Value;
+                    string firstName = bftxtPrimerNombre.Text;
+                    string secondName = bftxtSegundoNombre.Text == "" ? "null" : bftxtSegundoNombre.Text;
+                    string surname = bftxtPrimerApellido.Text;
+                    string secondSurname = bftxtSegundoApellido.Text == "" ? "null" : bftxtSegundoApellido.Text;
+                    string gender = cmbGenero.Text;
+                    string idCity = cmbCiudad.SelectedValue.ToString();
+                    //login
+                    string email = bftxtxEmail.Text;
+                    string credentialPassword = bftxtPassword.Text;
+
+                    persona = new clsPersonController(idDocumentPerson, dateOfBirth, firstName, secondName, surname, secondSurname, profilePicture, gender, idCity, email, credentialPassword, rol);
+
+                    if (persona.ejecutarCrearPersona())
                     {
-                        frmLogin login = new frmLogin(1);
-                        login.Show();
-                        this.Close();
+                        try
+                        {
+                            frmLogin login = new frmLogin(1);
+                            login.Show();
+                            this.Close();
+                        }
+                        catch (Exception err)
+                        {
+
+                            bfSnackbarRegister.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 6000,
+                            "Error", BunifuSnackbar.Positions.BottomRight);
+                        }
+
                     }
-                    catch (Exception err)
+                }
+                else
+                {
+                    if (bftxtxEmail.Text == string.Empty)
                     {
-
-                        bfSnackbarRegister.Show(this, err.Message, BunifuSnackbar.MessageTypes.Error, 6000,
-                        "Error", BunifuSnackbar.Positions.BottomRight);
+                        validacionRegister.SetError(panelCredenciales, "Es necesario introducir el email");
                     }
-                 
-                }
-            }
-            else
-            {
-                if (bftxtxEmail.Text == string.Empty)
-                {
-                    validacionRegister.SetError(panelCredenciales, "Es necesario introducir el email");
-                }
-                else if (bftxtConfirmarEmail.Text == string.Empty)
-                {
-                    validacionRegister.SetError(panelCredenciales, "Es necesario confirmar tu email");
-                }
-                else if (bftxtPassword.Text == string.Empty)
-                {
-                    validacionRegister.SetError(panelCredenciales, "Es necesario introducir una contraseña");
-                }
+                    else if (bftxtConfirmarEmail.Text == string.Empty)
+                    {
+                        validacionRegister.SetError(panelCredenciales, "Es necesario confirmar tu email");
+                    }
+                    else if (bftxtPassword.Text == string.Empty)
+                    {
+                        validacionRegister.SetError(panelCredenciales, "Es necesario introducir una contraseña");
+                    }
 
-                else if (bftxtConfirmPassword.Text == string.Empty)
-                {
-                    validacionRegister.SetError(panelCredenciales, "Es necesario confirmar tu contraseña");
+                    else if (bftxtConfirmPassword.Text == string.Empty)
+                    {
+                        validacionRegister.SetError(panelCredenciales, "Es necesario confirmar tu contraseña");
+                    }
                 }
             }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+                
+            }
+
+            
         }
     }
 }
