@@ -57,7 +57,7 @@ namespace final_motoDix.helpers
         public void cargarConfiguracionesMapa()
         {
             
-            GMapProviders.GoogleMap.ApiKey = "AIzaSyD53-lwKKlRgkrmqM2kb19laYtq_BdG_RY";
+            GMapProviders.GoogleMap.ApiKey = "";
             map.DragButton = MouseButtons.Left;
             map.MapProvider = GMapProviders.GoogleMap;
             map.Zoom = 10;

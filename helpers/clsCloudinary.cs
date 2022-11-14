@@ -16,7 +16,7 @@ namespace final_motoDix.helpers
 
         public clsCloudinary()
         {
-            Account account = new Account("dhameorhz", "995748695649763", "IhOi2VxIm0Q6XJRgt_KqpqR0RKM");
+            Account account = new Account(CLOUD, APIKEY, APYSECRET);
             cloud = new Cloudinary(account);
         }
 

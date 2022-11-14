@@ -12,11 +12,11 @@ namespace final_motoDix.Modelos
     {
         private static NpgsqlConnection conexion;
 
-        private static readonly string host = "kevin-dev-uni.postgres.database.azure.com";
-        private static readonly string user = "kevin";
-        private static readonly string dbo = "dboMotoDix";
-        private static readonly string password = "Klnmw230147";
-        private static readonly string port = "5432"; 
+        private static readonly string host = "";
+        private static readonly string user = "";
+        private static readonly string dbo = "";
+        private static readonly string password = "";
+        private static readonly string port = ""; 
 
         public static NpgsqlConnection realizarConexion()
         {
